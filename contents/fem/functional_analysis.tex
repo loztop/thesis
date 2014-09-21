@@ -1,0 +1,52 @@
+\section{Functional analysis}
+Let $\Omega$ be a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and $\partial\Omega$ be the associated boundary. The space of square integrable functions is then given by
+\begin{equation*}
+L^{2}(\Omega)  = \left\lbrace  u : \int_{\Omega} |u(x)|^{2} \mbox{d}x < \infty \right\rbrace,
+\end{equation*}
+with norm
+\begin{equation*}
+\ltwonorm{u}  = \left\lbrace \int_{\Omega} |u(x)|^{2} \mbox{d}x  \right\rbrace^{1/2}.
+\end{equation*}
+This space is equipped with the inner product
+\begin{equation*}
+(u,v)  :=  \int_{\Omega} u(x)v(x) \mbox{d}x,
+\end{equation*}
+such that $\ltwonorm{u}=(u,v)^{1/2}$. Throughout this thesis we shall frequently refer to the Hilbertian Sobolev spaces
+$H^{1}(\Omega)$ and $H^{2}(\Omega)$. The definitions of these are as follows:
+%
+\begin{equation*}
+H^{1}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \right\rbrace
+\end{equation*}
+\begin{equation*}
+H^{2}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \;  \frac{\partial^{2} u }{\partial x_{i} \partial x_{j}} \in L_{2}(\Omega), \; i,j=1,\ldots ,n \right\rbrace
+\end{equation*}
+The corresponding norms are defined as
+\begin{equation*}
+\honenorm{u}  = \left\lbrace \ltwonorm{u}^{2} + \sum_{j=1}^{n} \ltwonorm{\frac{\partial u }{\partial x_{j}}}   \right\rbrace^{1/2},
+\end{equation*}
+\begin{equation*}
+\htwonorm{u}  = \left\lbrace \ltwonorm{u}^{2} + \sum_{j=1}^{n} \ltwonorm{\frac{\partial u }{\partial x_{j}}}  + \sum_{i,j=1}^{n} \ltwonorm{\frac{\partial^{2} u }{\partial x_{i} \partial x_{j}}}  \right\rbrace^{1/2}.
+\end{equation*}
+We also define the divergence space 
+\begin{equation*}
+H_{div}(\Omega)=\left\lbrace \boldsymbol{v}\in L^{2}(\Omega): \nabla \cdot \boldsymbol{v} \in L^{2}(\Omega) \right\rbrace.
+\end{equation*}
+The set of functions of $L^{2}(\partial \Omega)$ which are traces of functions of $H^{1}(\Omega)$ constitutes a subspace of $L^{2}(\partial \Omega)$ denoted by $H^{1/2}(\partial \Omega)$. We will also briefly use linear and bounded functionals (dual spaces) of $H^{1},H^{1/2}$ and $H_{div}$, which will be denoted by $H^{-1},H^{-1/2}$ and $H_{div}^{-1}$, respectively. Finally we define the following continuous time-dependent norms 
+\begin{equation*}
+   \doublenorm{v}_{L^{2}(L^{2})} = \left( \int_{0}^{T} \ltwonorm{v(\cdot,t_{n})}^{2} dt \right)^{1/2}            ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \end{equation*}
+   \begin{equation*}
+   \doublenorm{v}_{L^{\infty}(L^{2})} =  \sup\left\lbrace \ltwonorm{v(\cdot,t_{n})} : t_{n} \in [0,T] \right\rbrace,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \end{equation*}
+and their discrete in time counterparts
+\begin{equation*}
+  \doublenorm{v}_{l^{2}(L^{2})} = \left( \sum_{n=0}^{N} \Delta t_{n} \ltwonorm{v(\cdot,t_{n})}^{2} \right)^{1/2}            ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \end{equation*}
+   \begin{equation*}
+  \doublenorm{v}_{l^{\infty}(L^{2})} =  \max\left\lbrace \ltwonorm{v(\cdot,t_{n})} : t_{n} \in [0,t_{1},t_{2},...,T] \right\rbrace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \end{equation*} Definitions for slightly different combinations of temporal and spatial norms such as $\doublenorm{v}_{H^{1}(L^{2})}$ are straightforward adaptations of the above.Additional shorthand notation we will be introduced throughout the thesis as is needed.
+
+
+
+%Let $L^{2}(\Omega)  := \left\lbrace  u : \int_{\Omega} u^{2} < \infty %\right\rbrace$ be the usual space of square integrable functions with inner %product $(v,w)=  \int_{\Omega} v(x)w(x) \mbox{d}x $ and norm $\ltwonorm{v}= %(v,v)^{1/2}$. We further define $L_{0}^{2}=\lbrace \pconttest \in L^{2}(\Omega): %\int_{\Omega} \pconttest = 0  \rbrace$.  
+%
+%We also introduce the space of functions with derivatives $\partial^{{\alpha}}v \in L^{2}(\Omega)$ for $|{\alpha}| \leq m$, where $ {\alpha}=\left\lbrace \alpha_{1}, \alpha_{2} \right\rbrace$, $|{\alpha}|= \alpha_{1}+\alpha_{2}$, $\alpha_{i}$ non-negative integers, equipped with the inner product $(v,w)_{m}=  \int_{\Omega} \partial^{\alpha} v(x) \partial^{\alpha}w(x) \mbox{d}x $ and norm $\hmnorm{v}= (v,v)_{m}^{1/2}$. 
+%
+%
+%

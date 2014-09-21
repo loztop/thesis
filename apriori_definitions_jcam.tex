@@ -1,0 +1,24 @@
+%\subsection{Notation}
+We define the finite element error functions
+\begin{eqnarray*}
+\fedisp :=\dispcont - \dispdisc, ,\; \; \;  \feflux:=\fluxcont - \fluxdisc, \;\; \;  \fep:={\pcont} - {\pdisc}.
+\label{eqn:int_def}
+\end{eqnarray*}
+We introduce the following projection errors:
+\begin{eqnarray*}
+\intdisp:=\dispcont - \projlinear\dispcont, \; \intflux :=\fluxcont - \projlinear \fluxcont,\; \eta_p :={\pcont} - \projconst{\pcont},\; 
+\label{eqn:int_def}
+\end{eqnarray*}
+where we have assumed $\fluxcontn \in (H^1(\Omega))^d$.
+
+Auxiliary errors:
+\begin{equation}
+\auxdispn (\cdot ):=\projlinear\dispcontn-\dispdisc^{n} (\cdot ),\; \auxfluxn (\cdot ):=\projlinear\fluxcontn-\fluxdisc^{n} (\cdot ),\; \auxpn (\cdot ):= \projconst\pcontn-\pdisc^{n} (\cdot ),\; 
+\label{eqn:aux_def}
+\end{equation} 
+and time-discretization errors:
+\begin{equation}
+\disptimerrn (\cdot ):= \frac{\dispcontn-\dispcont(t_{n-1},\cdot)}{\Delta t}  - \frac{ \partial \dispcontn }{\partial t},\;
+\ptimerrn:= \frac{\pcontn-\pcont(t_{n-1},\cdot)}{\Delta t}  - \frac{ \partial \pcontn }{\partial t}.
+\end{equation}
+

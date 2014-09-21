@@ -1,0 +1,118 @@
+\documentclass[letterpaper,12pt]{report}
+\usepackage{thesis}
+
+\newcommand{\spacing}{1.3}
+\renewcommand{\baselinestretch}{\spacing}
+
+%\usepackage{fullpage}
+\usepackage[sort&compress,square,comma,authoryear]{natbib}
+
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{bm} 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+
+%\usepackage{nomencl}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{subfig}
+\usepackage{epsfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+\usepackage{pstricks}
+\usepackage{url}
+%\usepackage{nomencl}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\def\red{\textcolor[rgb]{0,0,0}}
+\def\green{\textcolor[rgb]{0,0,0}}
+
+%\input{defines}
+
+\graphicspath{./figures/}
+
+\graphicspath{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/}
+
+\graphicspath{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/figures}
+
+%\makenomenclature
+%\renewcommand{\nomname}{Nomenclature}
+
+
+
+
+\begin{document}
+
+
+
+\title{Theory and Numerics for Solving the General Incompressible Poroelastic Equations }
+\author{Lorenz Berger}
+\maketitle
+
+
+
+\pagenumbering{roman}
+
+% Fill in the title, author, degree name, department, and month/year.
+% Upon completion, this should look like the following:
+%\thesistitle
+%	{Complicated and Important-Sounding Thesis Title}
+%	{John P. Doe}
+%	{Master of Science}
+%	{Department of Computer Science}
+%	{May 2009}
+% The \thesistitle definition is in thesis.sty.  Other customizations
+% can be made there.
+
+%\include{abstract}
+
+%Command for nomenclature
+%makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+%\printnomenclature
+
+\pagenumbering{arabic}
+
+
+
+
+
+%%Stabilized poroelasticity 
+
+
+%%Large deformation poroelasticity 
+
+
+
+%%Coupled lung model
+
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/introduction}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/literature}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/physiology}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/breathing_mechanics}
+\input/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_assumptions_united}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/proposed_lung_model}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/summary_model_equations}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/implementation}
+\input/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_generation}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/simulation_lung}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion}
+%\input{users/lorenzb/Dphil/poroelasticity_papers/contents/future_work}
+
+
+
+%UTC\nomenclature{UTC}{Coordinated Universal Time} is 3 hours behind ADT\nomenclature{ADT}{Atlantic Daylight Time} and 10 hours ahead of EST\nomenclature{EST}{Eastern Standard Time}.
+
+\bibliographystyle{plainnat}
+%Central bibliography
+\bibliography{/home/scratch/Dropbox/Dphil/bibliography/lung}
+
+\appendix
+%\include{apdxa}
+
+
+\end{document}

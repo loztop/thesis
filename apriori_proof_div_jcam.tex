@@ -1,0 +1,101 @@
+\begin{proof}
+%This proof is very similar to the previous proof. We will therefore only show the main intermediate results. We obtain the following Galerkin orthogonality result by subtracting the fully-discrete weak formulation (\ref{eqns:weak_fulldisc_system}) from the continuous formulation (\ref{eqns:weak_cont_system}),
+%\begin{subequations}
+%\begin{equation}
+%a(\dispcont(t_{n}) - \dispdisc^{n},\dispdisctest)-(\pcont(t_{n}) - \pdisc^{n},\nabla \cdot \dispdisctest)=0\;\; \;\; \forall\dispdisctest\in \dispspacedisctest, \label{eqn:weak_fulldisc_elast_mom_galerk}
+%\end{equation}
+%\begin{equation}
+%(\perminv (\fluxcont(t_{n}) - \fluxdisc^{n}),\fluxdisctest)-(\pcont(t_{n}) - \pdisc^{n},\nabla \cdot \fluxdisctest)= 0 \;\; \;\; \forall\fluxdisctest\in \fluxspacedisctest,  \label{eqn:weak_fulldisc_flux_mom_galerk}
+%\end{equation}
+%\begin{equation}
+%(\nabla \cdot (\dispconttimediscn- \dispdisctimediscn) +\nabla \cdot (\fluxcont(t_{n}) -\fluxdisc^{n}),\pdisctest)+J(\pconttime(t_{n}) - \pdisctimediscn,\pdisctest)=(\nabla \cdot \disptimerrn,\pdisctest) + J(\ptimerrn,\pdisctest) \;\; \;\; \forall \pdisctest\in \pspacedisctest.
+%\label{eqn:weak_fulldisc_mass_galerk}
+%\end{equation}
+%\end{subequations}
+%Note that this also holds at the previous time step such that
+%\begin{subequations}
+%\begin{align}
+%a(\dispcont(t_{n-1}) - \dispdisc^{n-1},\dispdisctest)-(\pcont(t_{n-1}) - \pdisc^{n-1},\nabla \cdot \dispdisctest)=0\;\; \;\; \forall\dispdisctest\in \dispspacedisctest,
+%\label{eqn:weak_fulldisc_elast_mom_m1} \\
+%(\perminv (\fluxcont(t_{n-1}) - \fluxdisc^{n-1}),\fluxdisctest)-(\pcont(t_{n-1}) - \pdisc^{n-1},\nabla \cdot \fluxdisctest)= 0 \;\; \;\; \forall\fluxdisctest\in \fluxspacedisctest.
+%\label{eqn:weak_fulldisc_flux_mom_m1} 
+%\end{align}
+%\end{subequations}
+%Subtracting (\ref{eqn:weak_fulldisc_elast_mom_m1}) from (\ref{eqn:weak_fulldisc_elast_mom_galerk}) and dividing by $\Delta t$, and performing a similar operation for (\ref{eqn:weak_fulldisc_flux_mom_m1}) and (\ref{eqn:weak_fulldisc_flux_mom_galerk}), we obtain 
+%\begin{subequations}
+%\begin{equation}
+%a(\dispconttimediscn - \dispdisctimediscn,\dispdisctest)-(\pconttimediscn - \pdisctimediscn,\nabla \cdot \dispdisctest)=0\;\; \;\; \forall\dispdisctest\in \dispspacedisctest,
+%\label{eqn:weak_fulldisc_elast_mom_diff}
+%\end{equation}
+%\begin{equation}
+%(\perminv (\fluxconttimediscn - \fluxdisctimediscn),\fluxdisctest)-(\pconttimediscn - \pdisctimediscn,\nabla \cdot \fluxdisctest)= 0 \;\; \;\; \forall\fluxdisctest\in \fluxspacedisctest,
+%\label{eqn:weak_fulldisc_flux_mom_diff}
+%\end{equation}
+%\begin{equation}
+%(\nabla \cdot (\dispconttimediscn- \dispdisctimediscn),\pdisctest)+(\nabla \cdot (\fluxcont(t_{n}) -\fluxdisc^{n}),\pdisctest)+J(\pconttime(t_{n}) - \pdisctimediscn,\pdisctest)=(\nabla \cdot \disptimerrn,\pdisctest) + J(\ptimerrn,\pdisctest) \; \;\; \forall\pdisctest\in \pspacedisctest.
+%\label{eqn:weak_fulldisc_mass_diff}
+%\end{equation}
+%\end{subequations}
+%Writing
+%\begin{equation*}
+%\dispconttimediscn -\dispdisctimediscn = (\dispconttimediscn -\projscott \dispconttimediscn) + (\projscott \dispconttimediscn-\dispdisctimediscn)= \intdispntime + \auxdispntime,
+%\end{equation*}
+%and similarly for the other variables. Choosing $\dispdisctest=\beta \auxdispntime + \projscott \vthetadtn$, $\fluxdisctest= \beta \auxfluxn$, $\pdisctest= \beta \auxpntime + \nabla \cdot \auxfluxn $,  with $ \nabla \cdot \vp = \auxptime $, adding (\ref{eqn:weak_fulldisc_elast_mom_diff}), (\ref{eqn:weak_fulldisc_flux_mom_diff}) and (\ref{eqn:weak_fulldisc_mass_diff}), noting that $(\intpntime, \nabla \cdot( \beta \auxdispntime + \projscott \vthetadtn))=0$, $( \intpntime, \nabla \cdot  \beta \auxfluxn)=0$ due to (\ref{eqn:projconst}), rearranging, multiplying by $\Delta t$, and summing we have,
+Similarly to the approach taken in obtaining (\ref{eqn:Bstar_weakform}) we may easily obtain the following identity
+\begin{IEEEeqnarray*}{rCl}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[(\auxdispn,\auxfluxn,\auxpn ), ( \beta\auxdispntime + \projscott \vthetadtn,  \beta \auxfluxn, \beta \auxpntime + \nabla \cdot \auxfluxn  )] & =& \Psi_{1} + \Psi_{2} +\Psi_{3} +\Psi_{4} +\Psi_{5} +\Psi_{6},\\
+\IEEEyesnumber
+\label{eqn:apriori_div_sum}
+\end{IEEEeqnarray*}
+where
+\begin{IEEEeqnarray*}{rcccl}
+&\Psi_{1}&=-\sum^{N}_{n=1} \Delta ta({\intdispntime},\beta\auxdispntime+ \projscott \vthetadtn),\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; &\Psi_{2}&= -\sum^{N}_{n=1} \Delta t (\nabla \cdot ( \intdispntime +  \intfluxn) ,\nabla \cdot \auxfluxn  + \beta \auxpntime), \;\;\;\; \\ &\Psi_{3}&=\sum^{N}_{n=1} \Delta t J(\intpntime,\beta \auxpntime + \nabla \cdot \auxfluxn), \;\;\;\;  &\Psi_{4}&=-\sum^{N}_{n=1} \Delta t(\perminv(\intfluxntime, \beta \auxfluxn )), \\  &\Psi_{5}&= \sum^{N}_{n=1} \Delta tJ(\ptimerrn,\beta \auxpntime+\nabla \cdot \auxfluxn ), \;\;\;\; &\Psi_{6}&= \sum^{N}_{n=1} \Delta t(\nabla \cdot \disptimerrn,\beta \auxpntime +\nabla \cdot \auxfluxn  ).
+\end{IEEEeqnarray*}
+%Using (\ref{eqn:lemmabstar_final}), and $\auxflux^{0}=0$,  we can immediately bound the left hand side of (\ref{eqn:apriori_div_sum}), such that
+%\begin{multline} 
+%\left( \beta C_{k}  - \frac{C_{p}+C}{2 \epsilon } \right) \honetimenorm{\auxdisptime}^{2}     + \frac{\beta\lambda_{max}^{-1}}{2} \ltwonorm{\auxflux^{N}}^{2}  +\left(\beta -   \frac{3}{4 \epsilon}\right) \jtimenorm{\auxptime}^{2} +\left(1 -  {\epsilon}(1+C)\right) \ltwotimenorm{\nabla \cdot \auxflux }^{2} \\  + \left(1-C{\epsilon}\right) \ltwotimenorm{\auxptime}^{2}   \leq \sum_{n=1}^{N} \Delta t \mathcal{B}_{h}^{n}[(\auxdispn+ \projscott \vthetadtn,\auxfluxn,\auxpn ), ( \beta\auxdispntime  ,  \beta \auxfluxn, \beta \auxpntime + \nabla \cdot \auxfluxn  )].  \label{eqn:aprioridiv_lhs_bound}
+%\end{multline}
+
+We now bound the terms on the right hand side of (\ref{eqn:apriori_div_sum}) using machinery developed during the previous proof:
+
+To bound the first quantity, we use (\ref{eq: time deriv error}), Lemma \ref{interp_error}, the triangle, Cauchy-Schwarz and Young's inequalities, $\auxdisp^{0}=0$, (\ref{clem_bound}), (\ref{J_bound}), (\ref{eqn:a_cont}), and Lemma \ref{interp_error}, 
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{1} &\leq&  \frac{C\epsilon}{ 2 } \honetimenorm{\auxdisptime}^{2} + \frac{\hat{c}^{2}\epsilon}{ 2 } \ltwotimenorm{\auxptime}^{2} +  \frac{ Ch^2}{2\epsilon} \htwotimenorm{\dispcont_t}^{2} + \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2},
+\IEEEyesnumber
+\label{eqn:rhsdiv_1}
+\end{IEEEeqnarray*} 
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{2} &\leq&  \epsilon \ltwotimenorm{\nabla \cdot \auxflux }^{2} +{  \epsilon }\ltwotimenorm{\auxptime }^{2} + \frac{ Ch^2}{2\epsilon}  \left(  \htwotimenorm{\dispcont_t}^{2} +  \htwotimenorm{\fluxcont}^{2} \right) + \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2} , 
+\IEEEyesnumber
+\label{eqn:rhsdiv_2}
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{3} &\leq&   {\epsilon C}\ltwotimenorm{\nabla \cdot \auxflux}^{2} + {\epsilon} \jtimenorm{\auxpntime }^{2}  +
+ \frac{ Ch^2}{2\epsilon} \honetimenorm{\pcont_t}^{2} + \frac{C}{2\epsilon} \Delta t^{2} \jtimenorm{\pcont_{tt}}^{2},
+\IEEEyesnumber
+\label{eqn:rhsdiv_3}
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{4} &\leq&   \epsilon \ltwotimenorm{\auxflux}^{2} +
+ \frac{ Ch^2}{2\epsilon} \honetimenorm{\fluxcont_t}^{2} + \frac{C}{2\epsilon} \Delta t^{2} \ltwotimenorm{\fluxcont_{tt}}^{2},
+\IEEEyesnumber
+\label{eqn:rhsdiv_4}
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{5} &\leq&  \epsilon \jtimenorm{\auxptime}^{2} + { \epsilon C} \ltwotimenorm{\nabla \cdot \auxflux}^{2}+ \frac{ C \Delta t^{2} }{2\epsilon}   \jtimenorm{ \pcont_{tt} }^{2} 
+\IEEEyesnumber
+\label{eqn:rhsdiv_5}
+\end{IEEEeqnarray*}
+\begin{IEEEeqnarray*}{rCl}
+\Psi_{6} &\leq& { \epsilon}\ltwotimenorm{\auxptime}^{2} +  \epsilon \ltwotimenorm{\nabla \cdot \auxflux}^{2}+ \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2}.
+\IEEEyesnumber
+\label{eqn:rhsdiv_6}
+\end{IEEEeqnarray*}
+We can now combine the individual bounds (\ref{eqn:rhsdiv_1}), (\ref{eqn:rhsdiv_2}), (\ref{eqn:rhsdiv_3}), (\ref{eqn:rhsdiv_4}), (\ref{eqn:rhsdiv_5}), and (\ref{eqn:rhsdiv_6}), with the coercivity result Lemma \ref{lemma_bstar}, choosing $\beta$ sufficiently large, use the assumption $\auxflux^{0}=0$, the assumed regularity of ${\bf u}, {\bf z}$ and $p$, and choosing $\epsilon$ sufficiently small  to obtain
+\begin{equation*}
+\ltwonorm{\auxflux^{N}}^{2}   + \ltwotimenorm{\nabla \cdot \auxflux}^{2}  
+ \leq   
+C \ltwotimenorm{\auxflux}^{2}+ C(h^2 + \Delta t^2).
+\end{equation*}
+Applying Gronwall's lemma, we get the desired result.
+\end{proof}

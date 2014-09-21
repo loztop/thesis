@@ -1,0 +1,119 @@
+\section{Model problem}
+It is instructive to begin at a simple level and proceed by incrementally adding to the
+complexity of the equations we are discretising when explaining the use of the FEM, so
+we begin by considering the heat equation problem: given $T>0$, for $t \in[0,T]$ ind $u(x,t)$ such that
+\begin{subequations}
+\begin{align}
+\label{eqn:heat_strong}
+\frac{\partial u}{\partial t} - \nabla \cdot \nabla u = 0\;\;\; \mbox{in} \; \Omega_{t},\\
+\boldsymbol{n} \cdot \nabla u = {g}_{N}   \;\;\; \mbox{on}\; \Gamma_{N},
+\\
+\label{eqn:heat_dirichlet}
+ u = {g}_{D}   \;\;\; \mbox{on}\; \Gamma_{D},
+\\
+ u(x,0) = u^{0}(x)   \;\;\; \mbox{in}\; \Omega.
+\end{align}
+\label{eqn:laplace}
+\end{subequations}
+Here $\Omega$ is a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, with boundary $\partial\Omega = \Gamma_{N}  \cup \Gamma_{D} $, that has an outward pointing unit normal $\boldsymbol{n}$. The initial condition is given by $u^{0}(x)$. In the case where ${g}_{N}= 0$, system (\ref{eqn:laplace}) can describe the evolution of heat in an
+object with geometry described by $\Omega$, where we have perfect thermal insulation on $\Gamma_{N}$ and fixed temperature distributions given by the function ${g}_{D}$ defined on the boundary due to some part of the environment with fixed temperature contacting the object along $\Gamma_{D}$.
+
+\subsection{Weak formulation}
+
+The strong form of (\ref{eqn:laplace}) requires $u$ to be at least twice differentiable. To weaken the regularity restrictions we multiply equation (\ref{eqn:heat_strong}) by an arbitrary function $v$, called a test function, and integrate over $\Omega$: 
+\begin{equation*}
+\left( \frac{\partial u}{\partial t},v \right)  -\left(\nabla \cdot \nabla u,v \right) = 0.
+\end{equation*}
+Applying the divergence theorem, this equation can be rewritten:
+\begin{multline*}
+\left( \frac{\partial u}{\partial t},v \right)  -\left(\nabla u \cdot \normal ,v \right)_{\partial \Omega}+ \left(\nabla u,\nabla v \right)\\= \left( \frac{\partial u}{\partial t},v \right)  -\left(\nabla u \cdot \normal ,v \right)_{\Gamma D}-\left(g_{N} ,v \right)_{\Gamma N}+ \left(\nabla u,\nabla v \right)=0.
+\end{multline*}
+Here $\left(\cdot ,\cdot\right)_{\Gamma_{N}}$ and $\left(\cdot ,\cdot\right)_{\Gamma_{D}}$ denote the inner product taken over $\Gamma_{N}$ and $\Gamma_{D}$, respectively. Taking note of the Dirichlet condition (\ref{eqn:heat_dirichlet}), and letting $v = 0$ on $\Gamma_{D}$, we arrive at the following equation:
+\begin{equation*}
+\left( \frac{\partial u}{\partial t},v \right) + \left(\nabla u,\nabla v \right)=\left(g_{N} ,v \right)_{\Gamma N}.
+\end{equation*}
+Note that in this equation the second derivatives of $u$ need not exist. With that in mind, both the solution and the test functions can come from the space $H^1(\Omega)$, as long as they satisfy the appropriate Dirichlet boundary conditions. For convenience we will use the notation $X_{D}=\left\lbrace v \in H^{1}(\Omega) | v = u_{D} \;\mbox{on} \; \Gamma_{D} \right\rbrace$ and $X_{0}=\left\lbrace v \in H^{1}(\Omega) | v = 0 \;\mbox{on} \; \Gamma_{D} \right\rbrace$. The weak formulation of (\ref{eqn:heat_strong}) is as follows: Find $u\in X_{D}$ such that
+\begin{equation}
+\left( \frac{\partial u}{\partial t},v \right) + \left(\nabla u,\nabla v \right)=\left(g_{N} ,v \right)_{\Gamma N}\;\;\forall v \in X_{0}.
+\label{eqn:heat_weak}
+\end{equation}
+
+\subsection{Time discretisation}
+
+We also need to choose a method of treating the time derivative. In this work, we do so using Euler difference quotients, and so we make the approximation $u_{t}(x,t+\Delta t) \approx \frac{u(x,t+\Delta t) - u(x,t)}{\Delta t}$ for some constant time step $\Delta t$. We write $u(x)^{n}$ for the the temporally-semidiscrete approximation to $u(x,n\Delta t)$, and our numerical scheme will yield approximations at times $t=0,\Delta t,2\Delta t,...,T$. Inserting this difference quotient and assuming that $\Delta T$ divides $T$, Equation (\ref{eqn:heat_weak}) becomes: for $n=1,2,...,\frac{T}{\Delta t}$, find $u^{n}\in X_{D}$ such that
+\begin{equation}
+\left( u^{n},v \right) + \Delta t \left(\nabla u,\nabla v \right)=\left(g_{N} ,v \right)_{\Gamma N}+\left( u^{n-1},v \right) \;\;\forall v \in X_{0}.
+\label{eqn:heat_weak}
+\end{equation}
+%
+\subsection{Finite element discretisation}
+In order to solve this problem numerically, we must make it finite dimensional by discretising it suitably. The finite element approximation space is constructed as follows: first, the problem domain is partitioned into small element domains, and second, the element is defined by prescribing for each element domain a set of nodes and nodal values, and defining  suitable basis functions on these, for example, as piecewise-linear basis functions. 
+
+Element domains are normally shaped as triangles or squares in $\mathbb{R}^{2}$, tetrahedra or hexahedra in $\mathbb{R}^{3}$. All the nodes, edges and faces of element domains constitute
+the problem mesh. Defining local basis functions completes the finite element space. For a rigorous definition of finite elements, and a description of different types of elements we refer to \citet{brenner2008mathematical}. 
+
+Let $\mathcal{T}^{h}$ be a partition of $\Omega$ into non-overlapping elements $K$. We denote by $h$ the size of the largest element in $\mathcal{T}^{h}$ and assume that the partition is quasi-uniform. On the given partition $\mathcal{T}^{h}$  we then define the following  finite element spaces, to solve the model problem
+%
+\begin{equation*}
+X_{hD}=\left\lbrace u  \in C^{0}(\Omega) : u |_{K} \in P_{1}(K); u  = u_{D} \;\mbox{on} \;\Gamma_{D} ; \forall K \in \mathcal{T}^{h} \right\rbrace,
+\label{eqn:fespace_modelD}
+\end{equation*}
+\begin{equation*}
+X_{h0}=\left\lbrace u  \in C^{0}(\Omega) : u |_{K} \in P_{1}(K); u  = 0 \;\mbox{on} \;\Gamma_{D} ; \forall K \in \mathcal{T}^{h} \right\rbrace,
+\label{eqn:fespace_model0}
+\end{equation*}
+where  $P_{1}(K)$ is the space of linear polynomials on $K$, and $C^{0}(\Omega)$ is the space of continous functions on $\Omega$. The discretised problem, for each time step, is to find $u^{n}_{h}\in X_{hD}$ such that 
+\begin{equation}
+\left( u^{n}_{h},v_{h} \right) + \Delta t \left(\nabla u_{h},\nabla v_{h} \right)=\left(g_{N} ,v_{h} \right)_{\Gamma N}+\left( u^{n-1}_{h},v_{h} \right) \;\;\forall v_{h} \in X_{h0}.
+\label{eqn:heat_weak_disc}
+\end{equation}
+We now choose the Lagrangian basis $\left\lbrace \phi_{1},\phi_{2},...,\phi_{m} \right\rbrace$ of $X^{h}$ defined by the nodal values at the nodes $\left\lbrace \mathbf{x}_{1},\mathbf{x}_{2},...,\mathbf{x}_{m} \right\rbrace$, namely
+%
+\begin{equation*}
+\phi_{i}(\mathbf{x}_{j}) =\delta_{i.j}= \left\lbrace
+  \begin{array}{l l}
+    1,\;\;i=j\\    
+    0,\;\;i \neq j
+  \end{array} \right. ,
+\end{equation*}
+%
+%
+We observe that a basis of $X_{h0}$ can be constructed by removing $\phi_{i}$ with $\mathbf{x}_{i}\in \Gamma_{D}$ from the basis of $X_{h}$. Let us assume that the indices of such basis functions are
+$1,...,m,$ and therefore $X_{h0} = \mbox{span}\left\lbrace \phi_{1},...,\phi_{m} \right\rbrace$. The finite-dimensional weak
+problem (\ref{eqn:heat_weak_disc}) is equivalent to: Find $u^{n}_{h}\in X_{hD}$ such that 
+\begin{equation}
+\left( u^{n}_{h},\phi_{i} \right) + \Delta t \left(\nabla u_{h},\nabla \phi_{i} \right)=\left(g_{N} ,\phi_{i} \right)_{\Gamma N}+\left( u^{n-1}_{h},\phi_{i} \right) \;\;\forall i=1,...,m.
+\label{eqn:heat_weak_basis}
+\end{equation}
+Any function from $X_{h}$ can be presented in the form of a basis expansion. Let this basis expansion for $u_{h}$ be
+\begin{equation*}
+u_{h}^{n}=\sum^{m}_{i=1} u_{i}^{n}\phi_{i},
+\end{equation*}
+with $u_{i}^{n}=u_{h}^{n}(\mathbf{x}_{i})$. We define the vector of nodal values to be $\mathbf{u}^{n} = \left[u_{1}^{n},...,u_{m}^{n} \right]$. Substituting this expression into (\ref{eqn:heat_weak_basis}), we finally obtain a linear system which we can solve for $\mathbf{u}^{n}$:
+\begin{equation}
+(\mathbf{M}+\Delta t \mathbf{A})\mathbf{u}^{n}=\mathbf{M}\mathbf{u}^{n-1} + \mathbf{g},
+\label{eqn:heat_linear_system}
+\end{equation}
+ where we have defined the following matrices and vectors:
+ \begin{equation*}
+  \mathbf{A}=[\mathbf{a}_{ij}], \;\; \mathbf{a}_{ij}=\int_{\Omega} \nabla \mathbf{\phi}_{i} \cdot \nabla\mathbf{\phi}_{j},
+ \end{equation*}
+ \begin{equation*}
+  \mathbf{M}=[\mathbf{m}_{ij}], \;\; \mathbf{m}_{ij}=\int_{\Omega}  \mathbf{\phi}_{i} \cdot \mathbf{\phi}_{j}, 
+ \end{equation*}
+  \begin{equation*}
+  \mathbf{g}=[\mathbf{g}_{i}], \;\; \mathbf{g}_{i}=\int_{\Gamma_{N}}{{g}_{N}} \cdot {\phi}_{i}, 
+ \end{equation*}
+\begin{equation*}
+  \mathbf{u}^{n}=(u_{1}^{n},...,u_{m}^{n})^{T}. 
+ \end{equation*}
+%Matrices $\mathbf{A}$ and $\mathbf{M}$ are often referred as the stiffness and mass matrices, with terminology from early applications of FEM in structural mechanics.
+%
+The linear system of equations (\ref{eqn:heat_linear_system}) can be solved using standard methods such as Gaussian elimination.
+
+
+
+
+
+
+

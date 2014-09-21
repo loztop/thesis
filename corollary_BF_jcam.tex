@@ -1,0 +1,19 @@
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = ( \dispdisctimediscn + \projscott \vphn, \fluxdisc^{n},  \pdisc^{n}$) in (\ref{eqn:B_star}),  multiplying by $\Delta t$, and summing yields
+\begin{IEEEeqnarray*}{rCl}
+\sum^{N}_{n=1} \Delta t B^n_{\delta t, h} [\disctriplen,(\dispdisctimediscn + \projscott \vphn, \fluxdisc^{n} ,\pdisc^{n} )]  &=&  \sum^{N}_{n=1} \Delta t (\mathbf{f}^{n},\dispdisctimediscn + \projscott \vphn) \\ && + \sum^{N}_{n=1} \Delta t (\mathbf{b}^{n},\fluxdisc^{n})    +\sum^{N}_{n=1} \Delta t(g^{n},\pdisc^{n}).
+\end{IEEEeqnarray*}
+Let us note that the standard result, for any $\epsilon > 0$ 
+\begin{equation}
+\label{eq:time_derive_switch}
+\sum^{N}_{n=1} \Delta t (\mathbf{f}^{n},\dispdisctimediscn ) \leq C \left(\frac{1}{2 \epsilon} \left(  \ltwonorm{\mathbf{f}^{0}}^{2}+ \ltwonorm{\mathbf{f}^{N}}^{2} +   \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} \right) + \frac{\epsilon}{2} \left(  \ltwonorm{\dispdisc^{0}}^{2} +  \ltwonorm{\dispdisc^{N}}^{2} + \ltwotimenorm{\dispdisc}^{2} \right) \right).
+\end{equation}
+Now using the above, lemma \ref{lemma_bf},  the Cauchy-Schwarz and  Young's inequalities, choosing $\epsilon$ sufficiently small, and noting (\ref{clem_bound}), we arrive at
+\begin{multline*}
+\honenorm{\dispdisc^{N}}^{2} + \jnorm{\pdisc^{N}}^{2}  +  \ltwotimenorm{\fluxdisc}^{2} + \ltwotimenorm{\pdisc}^{2}  \leq   C \left( \honetimenorm{\dispdisc}^{2} +  \jtimenorm{\pdisc}^{2} +   \ltwonorm{\mathbf{f}^{N}}^{2}  \right. \\
+   + \left. \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} + \ltwonorm{\dispdisc^{0}}^{2} + \jnorm{\pdisc^{0}}^{2}  + \ltwotimenorm{{\mathbf{f}^{0}}}^{2}  +\ltwotimenorm{{\mathbf{f}}}^{2} +  \ltwotimenorm{{\mathbf{b}}}^{2}   + \ltwotimenorm{g}^{2} \right) .
+\end{multline*}
+Using (\ref{eqn:f_bound}), (\ref{eqn:b_bound}), (\ref{eqn:g_bound}) and (\ref{eqns:weak_disc_initial}) to bound the third term and upwards on the righthand side we obtain \
+\begin{equation*}
+\honenorm{\dispdisc^{N}}^{2} + \jnorm{\pdisc^{N}}^{2}  +  \ltwotimenorm{\fluxdisc}^{2} + \ltwotimenorm{\pdisc}^{2}  \leq   C \left( 1 + \honetimenorm{\dispdisc}^{2} +  \jtimenorm{\pdisc}^2 \right) .
+\end{equation*}
+Upon applying the Gronwall lemma to the above inequality we obtain the desired result.  

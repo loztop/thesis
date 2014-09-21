@@ -1,0 +1,33 @@
+\begin{proof}
+Using  Lemma \ref{garlerkinorthog} and choosing $\dispdisctest^n=\auxdispntime + \projscott \vphn$, $\fluxdisctest^n=  \auxfluxn $, $\pdisctest^n=  \auxpn$,  we get
+\begin{IEEEeqnarray*}{rCl}
+B_{\delta t,h}^{n}[({\auxdispn+\intdispn}, {\auxfluxn+\intfluxn}, \auxpn+\intpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] = (\nabla \cdot \disptimerrn, \auxpn)+  J(\ptimerrn, \auxpn)
+\end{IEEEeqnarray*}
+Rearranging gives 
+\begin{IEEEeqnarray*}{rCl}
+B_{\delta t,h}^{n}[({\auxdispn}, {\auxfluxn}, \auxpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] & = & (\nabla \cdot \disptimerrn, \auxpn)+  J(\ptimerrn, \auxpn)  \\ 
+&& - B_{\delta t,h}^{n}[({\intdispn}, {\intfluxn},\intpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] 
+\end{IEEEeqnarray*}
+Expanding the righthand side, noting that $(\intpn, \nabla \cdot( \auxdispntime+ \projscott \vp))=0,\;( \intpn, \nabla \cdot  \auxfluxn )=0$, multiplying both sides by $\Delta t$ and summing gives
+\begin{IEEEeqnarray}{rCl}
+\label{theta_bilin}
+\sum_{n=1}^N \Delta t B_{\delta t,h}^{n}[({\auxdispn}, {\auxfluxn}, \auxpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] & = & \Phi_{1}+\Phi_{2}+\Phi_{3}+\Phi_{4}+\Phi_{5}+\Phi_{6}+\Phi_{7}, 
+\end{IEEEeqnarray}
+where 
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{1}:=-\sum^{N}_{n=1} \Delta ta({\intdispn},\auxdispntime),\;\;\;\;& \Phi_{2}:= -\sum^{N}_{n=1} \Delta t(\perminv(\intfluxn,  \auxfluxn )), \;\;\;\; &\Phi_{3}:=-\sum^{N}_{n=1} \Delta t a(\intdispn, \projscott \vp), \\ \Phi_{4}:=-\sum^{N}_{n=1} \Delta t J(\intpntime, \auxpn),\;\;\;\; &\Phi_{5}:= \sum^{N}_{n=1} \Delta t(\nabla \cdot \disptimerrn, \auxpn ), \;\;\;\; &\Phi_{6}:= \sum^{N}_{n=1} \Delta tJ(\ptimerrn, \auxpn),\\ &\Phi_{7}:=-\sum^{N}_{n=1} \Delta t (\auxpn, \nabla\cdot (\intdispntime + \intfluxn)).&
+\end{IEEEeqnarray*}
+
+\input{apriori_individual_bounds_jcam}
+
+\noindent Combining these bounds with an application of coercivity Lemma \ref{lemma_bf} to (\ref{theta_bilin}), noting the assumed regularity of the continuous solution and  choosing $\epsilon$ sufficiently small, gives
+\begin{multline}
+\honenorm{\auxdisp^{N}}^{2} + \jnorm{\auxp^{N}}^{2}  +  \ltwotimenorm{\auxflux}^{2}  + \ltwotimenorm{\auxp}^{2} \leq   C\left( \honetimenorm{\auxdisp}^{2} + \jtimenorm{\auxp}^{2} + h^2 + \Delta t^2 \right). 
+\label{eqn:combine_results_1} 
+\end{multline}
+An application of Gronwall's lemma gives
+\begin{IEEEeqnarray*}{rCl}
+\honenorm{\auxdisp^{N}}^{2} + \jnorm{\auxp^{N}}^{2}  +  \ltwotimenorm{\auxflux}^{2}  + \ltwotimenorm{\auxp}^{2} \leq   C(T) \left( h^2 + \Delta t^2 \right). 
+\end{IEEEeqnarray*}
+Because the above holds for all time steps $n=0, 1,..., N$, we can get the desired $L^{\infty}$ bounds to complete the proof of the theorem.
+\end{proof}

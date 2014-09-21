@@ -1,0 +1,100 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/dev)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: plainnat.bst
+Database file #1: /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 2131 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{tawhai2009supine
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2999 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{mow1980biphasic
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3061 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{cookson2011novel
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3093 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{lande2006analysis
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3489 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @book{quarteroni2008numerical
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3527 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{barucq2005some
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3571 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{babuvska1971error
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3883 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{khaled2003role
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3929 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{lee1983finite
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3953 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{yin2013multiscale
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4365 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+ : @article{white2008stabilized
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ciarlet2002"
+Warning--to sort, need author or key in bowenporouslectures
+Warning--empty author in bowenporouslectures
+Warning--empty journal in bowenporouslectures
+Warning--empty year in bowenporouslectures
+Warning--empty year in bowenporouslectures
+Warning--empty journal in bental
+Warning--empty year in bental
+Warning--empty year in bental
+You've used 97 entries,
+            2773 wiz_defined-function locations,
+            1129 strings with 21696 characters,
+and the built_in function-call counts, 44710 in all, are:
+= -- 4014
+> -- 2525
+< -- 65
++ -- 862
+- -- 762
+* -- 3743
+:= -- 6887
+add.period$ -- 291
+call.type$ -- 97
+change.case$ -- 525
+chr.to.int$ -- 94
+cite$ -- 203
+duplicate$ -- 1992
+empty$ -- 3678
+format.name$ -- 922
+if$ -- 9271
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 102
+newline$ -- 490
+num.names$ -- 384
+pop$ -- 1023
+preamble$ -- 1
+purify$ -- 447
+quote$ -- 0
+skip$ -- 1510
+stack$ -- 0
+substring$ -- 1981
+swap$ -- 149
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1002
+warning$ -- 8
+while$ -- 421
+width$ -- 0
+write$ -- 1247
+(There were 11 error messages)

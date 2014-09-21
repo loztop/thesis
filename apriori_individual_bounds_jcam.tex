@@ -1,0 +1,43 @@
+We now individually consider the terms on the right hand side of (\ref{theta_bilin}):
+
+To bound the first quantity, we use (\ref{eq: time deriv error}), Lemma \ref{interp_error}, the triangle, Cauchy-Schwarz and Young's inequalities, $\auxdisp^{0}=0$, and (\ref{eqn:a_cont}),
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{1}&=& - \sum^{N}_{n=1} a({\intdispn},\auxdispn-\auxdispnm)\\
+ &=&-a(\intdisp^{N},\auxdisp^{N}) + \sum^{N}_{n=1} a({\intdispn-\intdispnm},\auxdispnm)\\
+ &=&-a(\intdisp^{N},\auxdisp^{N}) +\Delta t\sum^{N}_{n=1} a\left(  \left(I-\projlinear\right)\left(\disptimerrn +  \frac{ \partial \dispcontn }{\partial t}\right) ,\auxdispnm\right) \\
+ &\leq& {\epsilon C}\honenorm{\auxdisp^{N}}^{2} + \frac{C h^2}{\epsilon}\htwonorm{\dispcont^{N}}^{2} + {\epsilon C } \honetimenorm{\auxdisp}^{2}+ \frac{ C h^2}{2\epsilon} \htwotimenorm{\dispcont_t}^{2} + \frac{C \Delta t^{2}}{2\epsilon}  \honetimenorm{\dispcont_{tt}}^{2}.\\
+\IEEEyesnumber
+\label{eqn:rhs_1}
+\end{IEEEeqnarray*}
+Next, using (\ref{eqn:m_coercive}), Young's inequality,  (\ref{clem_bound}) and Lemma \ref{interp_error},
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{2} &\leq& \frac{\epsilon}{ 2 } \ltwotimenorm{\auxflux}^{2} +  \frac{\lambda_{min}^{-2} h^2}{ 2 \epsilon } \honetimenorm{\fluxcont}^{2} .
+\IEEEyesnumber
+\label{eqn:rhs_2}
+\end{IEEEeqnarray*}
+Using (\ref{eqn:a_cont}), Young's inequality and  Lemma \ref{interp_error},
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{3}\leq \frac{ \epsilon}{ 2 } \honetimenorm{\projscott \vphn}^{2} +  \frac{  C}{ 2 \epsilon}\honetimenorm{\intdisp}^{2} 
+\leq \frac{ \epsilon \hat{c}^{2}}{ 2 } \ltwotimenorm{\auxp}^{2} +  \frac{C h^2}{ 2 \epsilon }\htwotimenorm{\dispcont}^{2}.
+\IEEEyesnumber
+\label{eqn:rhs_3}
+\end{IEEEeqnarray*}
+The bound on $\Phi_4$ is obtained using a similar argument to the bound on $\Phi_1$,
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{4} &\leq& {\epsilon }  \jtimenorm{\auxp}^{2}+ \frac{h^2 }{2\epsilon}  \honetimenorm{p_t}^{2} + \frac{\Delta t^{2}}{2\epsilon}  \honetimenorm{p_{tt}}^{2}.
+\IEEEyesnumber
+\label{eqn:rhs_4}
+\end{IEEEeqnarray*}
+Using the Cauchy-Schwarz and Young's inequalities and lemma \ref{interp_error},
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{5} \leq  \frac{ \epsilon}{2} \ltwotimenorm{\auxp}^{2} + \frac{\Delta t^{2} }{2\epsilon}  \ltwotimenorm{\dispcont_{tt}}^{2} \mbox{  and  } 
+\Phi_{6} &\leq&  \frac{ \epsilon}{2} \jtimenorm{\auxp}^{2} + \frac{ \Delta t^{2} }{2\epsilon}   \ltwotimenorm{p_{tt}}^{2} .
+\IEEEyesnumber
+\label{eqn:rhs_6}
+\end{IEEEeqnarray*}
+Finally, using the Cauchy-Schwarz and Young's inequalities, and a similar argument to the bound on $\Phi_1$,
+\begin{IEEEeqnarray*}{rCl}
+\Phi_{7} &\leq&  \frac{ 3\epsilon }{2} \ltwotimenorm{\auxp}^{2} + \frac{h^2 }{2\epsilon}  \htwotimenorm{ \dispcont_t}^{2} + \frac{\Delta t^{2}}{2\epsilon}Ê \honetimenorm{\dispcont_{tt}}^{2} + \frac{ h^2 }{2\epsilon}  \htwotimenorm{\fluxcont}^2.
+\IEEEyesnumber
+\label{eqn:rhs_7}
+\end{IEEEeqnarray*}

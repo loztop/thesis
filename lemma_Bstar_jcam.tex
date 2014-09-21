@@ -1,0 +1,45 @@
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = (\beta \dispdisctimediscn + \projscott \vphn,   \beta \fluxdisc^{n},   \beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n} $) in (\ref{eqn:Bstar_weakform})  
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[\disctriple, ( \beta \dispdisctimediscn + \projscott \vp  ,  \beta \fluxdisc^{n}, \beta\pdisctimediscn   + \nabla \cdot \fluxdisc^{n}  )]\\=\sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\beta \dispdisctimediscn) + \sum^{N}_{n=1} \Delta t \perminv(\fluxdisctimediscn,  \beta\fluxdisc^{n})   + \sum^{N}_{n=1} \Delta t (\nabla \cdot \fluxdisc^{n}, \nabla \cdot \fluxdisc^{n})   +   \sum^{N}_{n=1} \Delta t( \dispdisctimediscn , \nabla \cdot \fluxdisc^{n}) \\ +   \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn ,\nabla \cdot \fluxdisc^{n} )+   \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn , \beta\pdisctimediscn)   +\sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\projscott \vp)-\sum^{N}_{n=1} \Delta t (\pdisctimediscn,\nabla \cdot \projscott \vp). 
+\label{eqn:sum_Bstar} 
+\end{multline}
+For all $\epsilon > 0$ using  (\ref{eqn:a_coercive}), (\ref{eqn:m_coercive}), the Cauchy-Schwarz, Young's and  Poincar\'{e} inequalities, (\ref{J_bound}) on $ \nabla \cdot \fluxdisc^{n}$, and an approach similar to step 2 in the proof of Theorem \ref{discrete_infsup} for the final two terms on the righthand side, we obtain
+%
+%We now give some individual intermediate bounds for the above terms on the right hand side of (\ref{eqn:sum_Bstar}) before combining the results. 
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\beta\dispdisctimediscn)\geq \beta C_{k} \honetimenorm{\dispdisctimediscn}^{2},
+%\IEEEyesnumber
+%\label{eqn:lemmaBstar_1}
+%\end{IEEEeqnarray*}
+%where we have used (\ref{eqn:a_coercive}). Next 
+%using (\ref{eqn:m_coercive}) we have
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t \perminv(\fluxdisctimediscn,  \beta\fluxdisc^{n})\geq  \frac{\beta\lambda_{max}^{-1}}{2} \ltwonorm{\fluxdisc^{N}}^{2}-\frac{ \beta\lambda_{min}^{-1}  }{2}\ltwonorm{\fluxdisc^{0}}^{2}.
+%\IEEEyesnumber
+%\label{eqn:lemmaBstar_2}
+%\end{IEEEeqnarray*}
+%Using the Cauchy-Schwarz, Young's and the Poincar\'{e} inequalities we have
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t( \dispdisctimediscn , \nabla \cdot \fluxdisc^{n})   \leq \frac{C_{p}}{2 \epsilon }\honetimenorm{\dispdisctimedisc}^{2}+ \frac{\epsilon}{2}\ltwotimenorm{\nabla \cdot \fluxdisc}^{2}.
+%\IEEEyesnumber
+%\label{eqn:lemmaBstar_4}
+%\end{IEEEeqnarray*}
+%Again using the Cauchy-Schwarz and Young's inequalities and (\ref{eqn:J_pdivzbound}) we have
+%\begin{IEEEeqnarray*}{rCl}
+%\Delta tJ( \pdisctimediscn ,\nabla \cdot \fluxdisc^{n} ) \leq  \frac{1}{2 \epsilon }\jtimenorm{\pdisctimedisc}^{2}+{\epsilon c_{z}}\ltwotimenorm{\nabla \cdot \fluxdisc}^{2}.
+%\IEEEyesnumber
+%\label{eqn:lemmaBstar_4}
+%\end{IEEEeqnarray*}
+%Using an approach very similar to step 2 in the proof of Theorem \ref{discrete_infsup} we have
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\projscott \vp)-\sum^{N}_{n=1} \Delta t (\pdisctimediscn,\nabla \cdot \projscott \vp)  &\geq& -\frac{C_{c}}{2\epsilon} \honetimenorm{\dispdisctime}^{2}+ \left(1-C {\epsilon}\right) \ltwotimenorm{\pdisctimedisc}^{2} \\
+%&&-  \frac{1}{4 \epsilon}  \jtimenorm{\pdisctimedisc}^{2}.
+%\IEEEyesnumber
+%\label{eqn:lemmaBstar_5}
+%\end{IEEEeqnarray*}
+%We can now combine these intermediate results to obtain the following result
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[\disctriple, ( \beta \dispdisctimediscn + \projscott {\vp},  \beta \fluxdisc^{n}, \beta\pdisctimediscn   + \nabla \cdot \fluxdisc^{n}  )]  \geq \left( \beta C_{k}  - \frac{C_{p}+C_{c}}{2 \epsilon } \right) \honetimenorm{\dispdisctimedisc}^{2}    \\ + \frac{\beta\lambda_{max}^{-1}}{2} \ltwonorm{\fluxdisc^{N}}^{2}  +\left(\beta -   \frac{3}{4 \epsilon}\right) \jtimenorm{\pdisctimedisc}^{2} +\left(1 -  {\epsilon}(1+c_{z})\right) \ltwotimenorm{\nabla \cdot \fluxdisc }^{2} \\ -\frac{ \beta \lambda_{min}^{-1} }{2}\ltwonorm{\fluxdisc^{0}}^{2}  + \left(1-C{\epsilon}\right) \ltwotimenorm{\pdisctimedisc}^{2}. 
+\label{eqn:lemmabstar_final} 
+\end{multline}
+Finally choosing $\epsilon$ sufficiently small and $\beta \geq \max \left[ \frac{C_{p}}{2 C_{k} \epsilon }, \frac{3}{4 \epsilon }\right] $ completes the proof.

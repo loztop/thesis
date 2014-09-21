@@ -1,0 +1,11 @@
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = (\beta \dispdisctimediscn + \projscott \vphn,   \beta \fluxdisc^{n},   \beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n} $) in (\ref{eqn:Bstar_weakform})  yielding
+\begin{IEEEeqnarray*}{rCl}
+\sum^{N}_{n=1} \Delta t \mathcal{B}_{h}^{n}[\disctriplen,(\beta \dispdisctimediscn + \projlinear \vphn, \fluxdisc^{n} ,\beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n})]  &=&  \sum^{N}_{n=1} \Delta t (\mathbf{f}^{n}_{\delta t},\beta \dispdisctimediscn + \projlinear \vphn) + \sum^{N}_{n=1} \Delta t (\mathbf{b}^{n}_{\delta t},\beta\fluxdisc^{n})  \\ &&  +\sum^{N}_{n=1} \Delta t(g^{n},\beta\pdisctimediscn+ \nabla \cdot \fluxdisc^{n}).
+\end{IEEEeqnarray*}
+
+Using lemma \ref{lemma_bstar}, the Cauchy-Schwarz and Young's inequalities, and (\ref{clem_bound}), along with ideas already presented in the proof of lemma \ref{corollary_BF}
+\begin{multline*}\honetimenorm{\dispdisctimedisc}^{2} +  \ltwotimenorm{\pdisctimedisc}^{2} +   \jtimenorm{\pdisctimedisc}^{2}  +  \ltwonorm{\fluxdisc^{N}}^{2} 
++ \ltwotimenorm{\nabla \cdot \fluxdisc}^{2} \\
+\leq  C \left(  \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} +   \ltwotimecontnorm{{\mathbf{b}}_{t}}^{2}  +  \ltwotimenorm{\pdisc}^{2}  +\ltwotimenorm{\fluxdisc}^{2} \right.  \left. +   \ltwotimecontnorm{{g}}^{2}  \right) .
+\end{multline*}
+Finally, using Lemma \ref{corollary_BF} to bound $\ltwotimenorm{\pdisc}$, applying a Gronwall lemma, and using the regularity assumptions (\ref{eqn:f_bound}), (\ref{eqn:b_bound}) and (\ref{eqn:g_bound}), we obtain the desired result.

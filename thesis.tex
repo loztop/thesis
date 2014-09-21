@@ -1,0 +1,220 @@
+\documentclass[letterpaper,12pt]{report}
+
+\usepackage{thesis}
+
+%\usepackage[pdftex,colorlinks=true,linkcolor=black,citecolor=black,filecolor=black,urlcolor=black,pdftitle={\xtitle},pdfauthor={\xauthor},pdfkeywords={\xkeywords},pdfsubject={\xsubject}]{hyperref} %
+
+% Our stuff to set chapters, page size etc
+%\usepackage{Setup/avlthesis}
+% Our stuff to set math defs etc
+%\usepackage{Setup/avldefs}   
+% My stuff to set very personal defs
+%\usepackage{Setup/mydefs}  
+
+
+\usepackage{setspace}
+\doublespacing
+
+%\usepackage{fullpage}
+\usepackage[sort&compress,square,comma,authoryear]{natbib}
+
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{bm} 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+
+%\usepackage{nomencl}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{subfig}
+\usepackage{epsfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+\usepackage{pstricks}
+\usepackage{url}
+%\usepackage{nomencl}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\usepackage{IEEEtrantools}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\def\red{\textcolor[rgb]{0,0,0}}
+\def\green{\textcolor[rgb]{0,0,0}}
+
+% Title is overwritten in title.tex
+\def\xtitle{A finite element method for linear and non-linear poroelasticity: theory and application to lung modelling}
+%A Computational Investigation of Acute Ischaemia-induced Changes in Cardiac Electrophysiology: From Rabbit Experiments to Drug Safety in Human
+\def\xauthor{Lorenz Berger}
+\def\xcollege{Keble College}
+\def\xterm{Michaelmas Term 2014}
+\def\xkeywords{some keywords}
+\def\xsubject{a subject}
+
+
+\newenvironment{abstractchap}{\rightskip1in\itshape}{}
+
+
+%Defines
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/defines}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/defines_poro}
+\input{contents/defines_thesis}
+
+\graphicspath{{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/}{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/}{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/}}
+
+
+
+%\makenomenclature
+%\renewcommand{\nomname}{Nomenclature}
+
+
+
+
+\begin{document}
+
+
+\def\localpath{contents/frontmatter}
+\input{contents/frontmatter/title}
+\input{contents/frontmatter/abstract}
+\tableofcontents
+\newpage
+\input{contents/frontmatter/acknowledgements}
+
+
+%\tableofcontents
+
+
+\pagenumbering{roman}
+
+% Fill in the title, author, degree name, department, and month/year.
+% Upon completion, this should look like the following:
+%\thesistitle
+%	{Complicated and Important-Sounding Thesis Title}
+%	{John P. Doe}
+%	{Master of Science}
+%	{Department of Computer Science}
+%	{May 2009}
+% The \thesistitle definition is in thesis.sty.  Other customizations
+% can be made there.
+
+%\include{abstract}
+
+%Command for nomenclature
+%makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+%\printnomenclature
+
+\pagenumbering{arabic}
+
+
+\chapter{Introduction}
+\input{contents/introduction_chapter}
+ 
+\chapter{Background}
+\input{contents/background_chapter}
+
+\chapter{Poroelasticity theory}
+\input{contents/poroelasticity_chapter}
+
+
+
+%% FEM intro
+\chapter{Finite element method}
+\input{contents/fem_chapter}
+
+
+%\begin{comment}
+
+
+%%Stabilized poroelasticity 
+\chapter{Stabilized low-order finite element approximation for linear three-field poroelasticity}
+\label{chap:linear_poro}
+%\begin{abstractchap}
+% \input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/abstract}
+%\end{abstractchap}
+
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/introduction_jcam}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/themodel_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/bilinearforms_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cont_formulations_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/full_discrete_model_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/stability_fully_discrete_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/energy_fully_discrete_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/apriori_jcam}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/implementation}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/simulations}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/conclusion}
+
+
+%%Large deformation poroelasticity 
+\chapter{A stabilized nonlinear finite element method for three-field incompressible poroelasticity valid in large deformations}
+
+%\begin{abstractchap}
+% \input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/abstract}
+%\end{abstractchap}
+
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/review}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/overview}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_theory}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/continuum_mechanics_theory}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/mixture_theory}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_fem}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/cont_weak_fem}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/discretized_fem}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/implementation_fem}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/simulations}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/conclusion}
+%
+%%Coupled lung model
+\chapter{A poroelastic model coupled to a fluid network with applications
+in lung modelling}
+%
+
+%\begin{abstractchap}
+% \input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/abstract}
+%\end{abstractchap}
+
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/introduction}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/literature}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/physiology}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/breathing_mechanics}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_assumptions_united}
+% Split this up bit (take out/divide up poro theory)
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/proposed_lung_model}
+%
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/summary_model_equations}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/implementation}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_generation}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/simulation_lung}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
+
+%\end{comment}
+
+%% Conclusion
+\chapter{Conclusion}
+
+
+
+%UTC\nomenclature{UTC}{Coordinated Universal Time} is 3 hours behind ADT\nomenclature{ADT}{Atlantic Daylight Time} and 10 hours ahead of EST\nomenclature{EST}{Eastern Standard Time}.
+
+
+
+\appendix
+\chapter{}
+
+%%coupling paper appendix
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
+\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/appendix_paper}
+
+\bibliographystyle{plainnat}
+%Central bibliography
+\bibliography{/home/scratch/Dropbox/Dphil/bibliography/lung}
+
+\end{document}

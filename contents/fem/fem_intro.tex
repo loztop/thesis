@@ -1,0 +1,60 @@
+
+\section{Introduction}
+%Miguel
+A large proportion of the mathematical models in science and engineering take the
+form of differential equations. Only in the simplest cases, or under strong assumptions,
+is it possible to find exact analytical solutions to the equations in the model.
+%Often, one has to rely on numerical techniques for finding approximate solutions
+%for particular parameter sets using computers. 
+%The finite element method is a general
+%technique for the numerical solution of differential equations. 
+%
+%The method was introduced by engineers in the late 1950's and early 1960's for the numerical
+%solution of PDEs in structural engineering. When the mathematical study
+%of the finite element method started in the mid 1960's it soon became clear that in
+%fact the method is a general technique for numerical solution of partial differential
+%equations with roots in the variational methods in mathematics introduced at the
+%beginning of the 20th century.
+%
+%
+%
+%
+%Lyia
+Numerical methods are an established means of solving differential equations that are
+of practical interest in a variety of applied problems. Finite difference, finite volume
+and finite element methods are the most widely used types of such methods. Their
+basic idea is replacing the original infinite-dimensional problem by a finite-dimensional
+approximation, which is, generally speaking, easier to solve.
+%
+%The main idea of finite difference methods is to approximate the derivatives appearing
+%n the equations with finite differences at a set of discrete points in the domain
+%of interest. Their advantages include relative simplicity of derivation and implementation.
+%However, finite difference methods are best suited for simple domain shapes
+%and regular meshes, while using them for problems on complex geometries requires
+%non-standard treatment even for standard differential equations. For an introduction
+%to finite differences in partial differential equations we refer to [90, 116, 114].
+%Finite volume methods [87, 121] rely on the application of the divergence theorem
+%within small subdomains of the original domain – finite volumes – and approximating
+%fluxes through volume boundaries. These methods are traditionally used in the
+%field of computational fluid dynamics due to their conservative properties, although
+%9
+%formulating problems on complex geometries is again far from trivial.
+Finite element methods are based on weakening the restrictions on the solution
+space in the continuous setting, and searching for the approximate solution in the
+subspace which spans basis functions supported on small regions inside the domain.
+These methods are well-suited to solving problems on complex domains, and are
+therefore widely used in practical applications.
+In this work we consider only finite element methods (FEMs) for solving partial
+differential equations.
+This chapter comprises an overview of several theoretical and practical aspects of classical FEMs. The theory and notation presented here are essential in developing
+the techniques that form the core of this thesis. Most of the work presented in this chapter is based on work already presented in \citet{arthursthesis,asnerthesis,bernabeusthesis,burman2007unified}.
+%
+%Chris
+%The method that we use for spatially discretising our equations in this work is the finite
+%element method (FEM) for obtaining approximations to the solution of partial differential
+%equations. It was introduced in its present form in 1942 by Richard L. Courant as an
+%appendix to his paper on variational methods [75], although it does not then appear in
+%the literature again for another sixteen years [76]. It was further developed by engineers
+%during the late 1950s and early 1960s as a method of solving equations in structural engineering
+%[77], and has since developed into a general tool for the numerical approximation
+%of solutions to PDEs.

@@ -1,0 +1,40 @@
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = ( \dispdisctimediscn + \projscott \vphn, \fluxdisc^{n},  \pdisc^{n}$) in (\ref{eqn:BF}), multiplying by $\Delta t$, and summing over all time steps, we get
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  B_{\delta t,h}^{n}[\disctriple, ( \dispdisctimediscn + \projscott {\vphn},  \fluxdisc^{n}, \pdisc^{n}     )]  =  \sum^{N}_{n=1} \Delta t a(\dispdisc^{n},\dispdisctimediscn)    +   \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn ,\pdisc^{n})+ \sum^{N}_{n=1} \Delta t \perminv(\fluxdisc^{n}, \fluxdisc^{n})\\ 
++\sum^{N}_{n=1} \Delta t a(\dispdisc^{n},\projscott \vphn) -\sum^{N}_{n=1} \Delta t (\pdisc^{n},\nabla \cdot \projscott \vphn)  . 
+\label{eqn:sum_BF}
+\end{multline}
+%We now bound each of the above terms on the right hand side of (\ref{eqn:sum_BF}) individually before combining the results. 
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t a({\dispdisc^{n}},\dispdisctimediscn)& \geq &\frac{ C_{k} }{2} \honenorm{\dispdisc^{N}}^{2} - \frac{C_{c}}{2}\honenorm{\dispdisc^{0}}^{2},
+%\IEEEyesnumber
+%\label{eqn:lemmabf_1}
+%\end{IEEEeqnarray*}
+%where we have used (\ref{eqn:a_cont}) and (\ref{eqn:a_coercive}) in the last step. Using (\ref{ltwopbound}) we have
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t a(\dispdisc^{n},\projscott \vphn)-\sum^{N}_{n=1} \Delta t (\pdisc^{n},\nabla \cdot \projscott \vphn)  &\geq& -\frac{C_{c}}{2\epsilon} \honetimenorm{\dispdisc}^{2}+ \left(1-\left(\hat{c}+\frac{c_{t}}{2}\right) \frac{\epsilon}{2}\right) \ltwotimenorm{\pdisc}^{2} \\
+%&&-  \frac{1}{4 \epsilon}  \jtimenorm{\pdisc}^{2}.
+%\IEEEyesnumber
+%\label{eqn:lemmabf_2}
+%\end{IEEEeqnarray*}
+%Using (\ref{eqn:m_coercive}),
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t (\perminv(\fluxdisc^{n},  \fluxdisc^{n} )))&\geq&{\lambda_{max}^{-1}} \ltwotimenorm{\fluxdisc}^{2}.
+%\IEEEyesnumber\label{eqn:lemmabf_3}
+%\end{IEEEeqnarray*}
+%The intermediate steps for the next bound have been omitted because they are very similar to (\ref{eqn:lemmabf_1}). Thus
+%\begin{IEEEeqnarray*}{rCl}
+%\sum^{N}_{n=1} \Delta t J(\pdisctimediscn, \pdisc^{n})&\geq& \frac{1}{2} \jnorm{\pdisc^{N}}^{2}-\frac{1}{2} \jnorm{\pdisc^{0}}^{2}.
+%\IEEEyesnumber\label{eqn:lemmabf_4}
+%\end{IEEEeqnarray*}
+%\noindent We can now combine these intermediate results (\ref{eqn:lemmabf_1}), (\ref{eqn:lemmabf_2}), (\ref{eqn:lemmabf_3}) and (\ref{eqn:lemmabf_4}) to obtain from (\ref{eqn:sum_BF})
+By telescoping out the first two terms on the righthand side, using  (\ref{eqn:m_coercive}) on the third, and applying  (\ref{eqn:sum_BF}) to the final two terms we obtain the inequality
+\begin{multline}
+\sum_{n=0}^{N} \Delta t  B_{\delta t,h}^{n}[\disctriple, ( \dispdisctimediscn + \projscott {\vphn},  \fluxdisc^{n}, \pdisc^{n}     )]  + \frac{C_{c}}{2}\honenorm{\dispdisc^{0}}^{2} + \frac{C_{c}}{2\epsilon}\honetimenorm{\dispdisc}^{2} + \frac{1}{4 \epsilon} \jtimenorm{\pdisc}^{2} + \frac{1}{2} \jnorm{\pdisc^{0}}^{2} \\ \geq  \frac{ C_{k} }{2}\honenorm{\dispdisc^{N}}^{2} + \frac{1}{2}\jnorm{\pdisc^{N}}^{2}  + \lambda_{max}^{-1} \ltwotimenorm{\fluxdisc}^{2}  
++\left(1-C{\epsilon}\right) \ltwotimenorm{\pdisc}^{2} .  
+\label{eqn:lemmabf_finalworking} 
+\end{multline}
+Finally, choosing $\epsilon$ sufficiently small completes the proof.
+
+%Finally choosing $\epsilon$ small, using (\ref{eqn:a_cont}) and (\ref{eqn:initial}), and applying a discrete version of Gronwall's lemma \citep[see,][]{quarteroni2008numerical} completes the proof.
+

@@ -1,0 +1,138 @@
+\section{Mixed methods}
+\label{sec:mixed}
+Before considering the discretisation of the poroelasticity equations in chapter ?? we first consider the problems of Dracy and Stokes flow. Solving the three-field poroelasticity problem is essentially equivalent to coupling the Stokes equations (elasticity of the porous mixture) with the Darcy equations (fluid flow through pores), with a modified incompressibility constraint that combines the divergence of the displacement velocity and the fluid flux. 
+%These, along with poroelasticty, require mixed finite element methods to ensure stability of the discretisation.
+Mixed methods refer to the discretisation of different variable using different finite elements. 
+%This section closely follows work already presented in \citet{burman2007unified}. 
+Be begin with a unified formulation of both the Darcy and Stokes flow equations:% find $\boldsymbol{u}$, $p$ such that
+%
+%
+\begin{subequations}
+\begin{align}
+\boldsymbol{A}(\boldsymbol{u})+ \nabla p = \boldsymbol{f}\;\;\; \mbox{in} \; \Omega_{t},\\
+\nabla \cdot \boldsymbol{u} =0\;\;\; \mbox{in} \; \Omega_{t},
+\end{align}
+\label{eqn:mixed_stokes_darcy}
+\end{subequations}
+where $\boldsymbol{u}$ denotes the velocity vector and $p$ the pressure and $\boldsymbol{f}\in[L^{2}(\Omega)]^{d}$, with $d=2,3$. For simplicity we assume Dirichlet conditions on the boundary, that is, $\boldsymbol{u}=0$ on $\Gamma_{D}$ for Stokes and $\boldsymbol{u} \cdot \boldsymbol{n}  = 0$ on for Darcy.
+%
+For the choice of $\boldsymbol{A}$ we focus on two cases
+\begin{itemize}
+\item $\boldsymbol{A}(\boldsymbol{u}):=   \permscalar\boldsymbol{I}\boldsymbol{u}$, corresponding to Darcy's equation.
+\item $\boldsymbol{A}(\boldsymbol{u}):= -2 \mu_{f} \nabla \cdot \mathbf{\epsilon}(\boldsymbol{u})$, corresponding to Stokes equation.
+\end{itemize}
+In order to formulate our finite element method we first introduce the weak formulation of problem (\ref{eqn:mixed_stokes_darcy}). We introduce the spaces
+\begin{equation*}
+W^{D}=\left\lbrace \boldsymbol{v} \in H_{div}(\Omega): \boldsymbol{v} \cdot \boldsymbol{n} = 0 \; \mbox{on} \; \partial \Omega \right\rbrace,
+\end{equation*}
+\begin{equation*}
+W^{S}=\left\lbrace \boldsymbol{v} \in [H_{1}(\Omega)]^{d}: \boldsymbol{v} = 0 \; \mbox{on} \; \Gamma_{D} \right\rbrace,
+\end{equation*}
+and 
+\begin{equation*}
+L^{2}_{0}=\left\lbrace q \in L_{2}(\Omega): \int_{\Gamma} q \; \mbox{d}x=0 \right\rbrace.
+\end{equation*}
+We denote the product space $W^{X} \times L^{2}_{0}$ by $\mathcal{W}^{X}$ where $X$ is chosen to be $D$ for the Darcy equation or $S$ for the Stokes equation. We also define the following norm on $\mathcal{W}^{X}$:
+\begin{equation*}
+\doublenorm{(\boldsymbol{u},p)}_{\mathcal{W}^{X}}^{2}=\doublenorm{\boldsymbol{u}}_{l,\Omega}^{2}+\doublenorm{\nabla \cdot \boldsymbol{u}}_{0,\Omega}^{2}+\doublenorm{p}_{0,\Omega}^{2},
+\end{equation*}
+with $l=0$ for Darcy and $l=1$ for Stokes. Let $a(\boldsymbol{u},\boldsymbol{v})$ be the bilinear form corresponding to the weak formulation of $A(\boldsymbol{u})$ and consider the combined bilinear form
+\begin{equation*}
+B[(\boldsymbol{u},p),(\boldsymbol{v},q)]=a(\boldsymbol{u},\boldsymbol{v})-(p,\nabla \cdot \boldsymbol{v}) + (q,\nabla \cdot \boldsymbol{u}).
+\end{equation*}
+The continuous weak formulation of (\ref{eqn:mixed_stokes_darcy}) is now to find $(\boldsymbol{u},p) \in \mathcal{W}^{X}$ such that
+%
+\begin{equation*}
+B[(\boldsymbol{u},p),(\boldsymbol{v},q)]= (\boldsymbol{f},\boldsymbol{v}) \;\; \forall (\boldsymbol{u},p) \in \mathcal{W}^{X}.
+\end{equation*}
+%
+By considering the discrete subspace $\mathcal{W}^{X}_{h} \in \mathcal{W}^{X}$, we arrive at the following discrete formulation of the problem: find $(\boldsymbol{u}_{h},p_{h})\in \mathcal{W}^{X}_{h}$ such that:
+%
+\begin{equation*}
+B[(\boldsymbol{u}_{h},p_{h}),(\boldsymbol{v}_{h},q_{h})]= (\boldsymbol{f},\boldsymbol{v}_{h}) \;\; \forall (\boldsymbol{v}_{h},q_{h}) \in \mathcal{W}^{X}_{h}.
+\label{eqn:mixed_disc}
+\end{equation*}
+%
+%
+%
+%For a particular choice of mixed finite elements we have %to prove that (\ref{eqn:mixed_disc}) satisfies the %following discrete inf-sup condition
+%
+To ensure stability and convergence of the discretisation, the discrete subspace (mixed element) has to be chosen such that the following discrete inf-sup condition \citep{babuvska1971error} is fullfilled. Let $\gamma>0$ be a constant independent of any mesh parameters.  
+\begin{equation}
+  \gamma \doublenorm{(\boldsymbol{u}_{h},p_{h})}_{\mathcal{W}^{X}_{h}} \leq \sup_{(\boldsymbol{v}_{h},q_{h})\in \mathcal{W}^{X}_{h}}\frac{B_{h}[(\boldsymbol{u}_{h},p_{h}),(\boldsymbol{v}_{h},q_{h})]}{\doublenorm{(\boldsymbol{v},q)}_{\mathcal{W}^{X}_{h}}} \;\; \forall (\boldsymbol{u},p) \in \mathcal{W}^{X}_{h}.
+\label{eqn:mixed_infsup}
+\end{equation}
+Establishing this condition ensures wellposedness of the discretization so that the linear system arising from the fully discrete method is non-singular and can be solved using standard methods. It is not trival to prove $(\ref{eqn:mixed_infsup})$ for different finite element combinations. This has been a major research topics for many decades, and zillions of papers have been published. In table \ref{tab:mixied_elements_stokes} we have documented some popular standard finite element pairs for solving the Stokes and Darcy equations, and outlined whether these satisfy (\ref{eqn:mixed_infsup}), and therefore yield a stable and optimally converging method or not. Note that many other possible discretisations exists.
+\begin{comment}
+\begin{table}[h]
+\begin{center}
+\scalebox{0.9}{
+\begin{tabular}{ l c c c}
+\hline Mixed element &Stokes&Darcy & Reference \\
+\hline
+P1-P1   & \xmark & \xmark & \citet{burman2007unified}\\
+P2-P1 & \cmark& \xmark & \citet{brezzi1991mixed,burman2007unified}\\
+P1-P1+stab & \cmark& \cmark&\citet{bochev2006computational}\\
+P1-P0 & \xmark& \xmark&\citet{burman2007unified}\\
+RT-P0 & \xmark& \cmark&\cite{raviart1977mixed}\\
+P1-P0+stab  & \cmark& \cmark& \citet{burman2007unified}\\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Possible finite element combinations for Stokes and Darcy flow, showing whether a particular choice of elements is stable and optimally converging or not.} \label{tab:mixied_elements_stokes}
+\end{table}
+\end{comment}
+%
+\begin{table}[h]
+\begin{center}
+\scalebox{0.9}{
+\begin{tabular}{ l c c c}
+\hline Mixed element &Stokes&Darcy  \\
+\hline
+P1-P1   & \xmark & \xmark  \\
+P2-P1 & \cmark& \xmark  \\
+P1-P1+stab & \cmark &\cmark \\
+P1-P0 & \xmark& \xmark \\
+RT-P0 & \xmark& \cmark \\
+P1-P0+stab  & \cmark& \cmark \\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Possible finite element combinations for Stokes and Darcy flow, showing whether a particular choice of elements is stable and optimally converging or not.} \label{tab:mixied_elements_stokes}
+\end{table}
+
+%In table \ref{tab:mixied_elements_stokes} P1 denotes piecewise linear elements; P2 piecewise quadratic elements; P0 piecewise constant elements, and RT denotes the Raviart-Thomas elements, which are divergence free elements \citet{}; stab refers to a mixed formulation that has been stabilized.
+%
+The naive choice of piecewise linear finite elements for both the velocities and the pressure (P1-P1) or piecewise linear finite elements for the velocities and piecewise constants (P1-P0) for the pressure results in an ill posed discretizations \citep{burman2007unified}. Intuitively, this is because the velocity space is not rich enough to constrain the pressures, thus resulting in spurious pressure oscillations. A detailed explanation of this along with some worked examples can be found in \citet[section 5.3]{elman2005finite}. The Taylor-Hood element (P2-P1) is a commonly used element for the Stokes equations. However for the Dracy equations this element does not convergence at the right order and fails to converge for the divergence of the velocities
+\citep{burman2007unified}. The Raviart-Thomas element (RT-P0), first proposed in \citet{raviart1977mixed} is a divergence free element, often used to solve the Darcy equations. Velocities are required to have continuous normal components
+across element interfaces, whereas tangential components are discontinuous. Pressure fields are discontinuous and must not be of too high order, otherwise the inf–sup condition is violated \citep{masud2002stabilized}. More details on how to construct this element are given in \citet{quarteroni2008numerical}. However this element is not able to control $H^{1}$ velocities, and therefore can not be used to solve the Stokes equations.  
+%
+%Only normal
+%velocity degrees of freedom are present on element interfaces while all velocity degrees of freedom are
+%present in element interiors.Within the classical mixed variational framework, this is the price one pays for
+%success. \citep{masud2002stabilized}
+%
+%
+When the finite element discretisation is based on a discrete subspace that does not satisfy the discrete inf-sup condition (\ref{eqn:mixed_infsup}), a procedure aiming at stabilizing the discrete system may be accomplished. The philosophy of stabilized methods is to
+strengthen formulations by adding an extra term, often to the mass conservation equation, so that discrete approximations, which would otherwise be
+unstable, become stable and convergent \citep{masud2002stabilized}. 
+%
+Numerous stabilization techniques exist. To stabilize the equal order piecewise linear pair, a  polynomial pressure projection has been proposed that results in a stable element for both the Stokes and Darcy equations (P1-P1+stab) \citet{bochev2006computational}. Also, a pressure jump stabilization that uses a  piecewise constant pressure approximation and is stable and optimally converging for both the Stokes and Darcy equation has been analysed by \citet{burman2007unified}.
+
+ 
+
+
+%\subsection{Stability of Darcy-Stokes formulation}
+%Numerous stabilization techniques for finite element methods have already been proposed in order to satisfy the LBB condition, most extensively for the model equations of Stokes and Darcy flow, which despite their simplicity retain all the difficulties of a saddle point problem. This will be discussed again in more detail in section \ref{sec:mixed}. Another good introduction on stabilization techniques for the Stokes problem can be found in chapter 5 of \citet{elman2005finite}. For a comparison of low-order stabilization techniques for the Darcy problem we refer to \citet{bochev2006computational}. Most stabilized methods lead to a modified variational formulation in which an additional term is added to the mass balance equation, modifying the incompressibility constraint
+%in such a way that stability of the mixed formulation is increased,
+%while still maintaining optimal convergence of the method. These stabilization techniques are of great interest to us since solving the three-field poroelasticity problem is essentially equivalent to coupling the Stokes equations (elasticity of the porous mixture) with the Darcy equations (fluid flow through pores), with a modified incompressibility constraint that combines the divergence of the displacement velocity and the fluid flux. 
+
+
+
+%Success has been achieved on a wide variety of problems, and this is the approach we have adopted herein
+%The discontinuous pressure elements satisfy mass conservation locally and globally. 
+
+
+%devoted to proving this condition for the mixed problem (\ref{eqn:mixed_stokes_darcy}) using various finite element conditions. Discretising (\ref{eqn:mixed_stokes_darcy}) using the finite element method is not trivial, and only certain combinations of elements yield a stable and optimally converging approximation. 
