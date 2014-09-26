@@ -1,0 +1,95 @@
+In this chapter we conclude the thesis by briefly reviewing the work undertaken and discuss how we achieved the goals outlined in section \ref{sec:goals}. %We then recall the key findings and end with some directions for future work.
+We end with some directions for future work.
+
+
+\section{Review and remarks}
+In this Thesis, we presented a novel finite element methods for solving the poroelastic equations valid in small and large deformations. We also a mathematical (poroelastic) model of lung parenchyma which is coupled to a fluid network, modelling the airway tree. 
+ %We also outlined a computational lung model that tightly couples deformation and ventilation by approximating the lung parenchyma as a poroelastic medium and coupling this to a fluid network, representing the airways. 
+To the best of our knowledge, this is the first computational lung model built from patient specific imaging data that is able to capture the tight coupling between the tissue deformation and ventilation, seen in Chronic Obstructive Pulmonary Diseases (COPD), such as emphysema. Numerical software to simulate the lung model on patient specific lung geometries, extracted from imaging data has been implemented, and preliminary simulation results show physiologically realistic phenomena. A detailed summary of the main contributions of each chapter has already been given in section \ref{sec:contributions}.
+
+%has developed a novel numerical method for solving the partial differential equations of poroelasticity. Theoretical results about the stability and convergence of the method have been proven, and extensive numerical experiments have been performed to test the robustness of the method for solving problems in real world applications.
+
+
+It was not straightforward to arrive at the final formulation of the proposed stabilized finite element method. Only by performing detailed analysis of the error and stability of the discretised formulation were we able to determine the correct form of the stabilization term that led to a stable and optimally converging method. This highlights the importance of rigorous analysis and testing when developing new numerical schemes. The stabilisation performs well under various conditions, for small and large deformations. A particular nice feature is that in three dimensions only a very small values for $\delta$, the stabilisation parameter, is required to yield a stable solution, thus rendering the added mass effect of the stabilisation term negligible. This along with the method's simplicity compared to discontinuous and nonconforming finite element methods makes the proposed implementation very appealing.
+
+%Developing the coupled lung model posed not only modelling but also software implementation challenges. To efficiently assemble We found the finite element library libmesh \citep{kirk2007libmesh} to be particularly helpful with this, features allowing the organistaion of parameters dat structures and extension of petsc matrix for the coupling.
+
+
+
+
+
+The computational lung model outlined in this thesis appears to be a valid tool for solving the mechanical problem of tightly coupling lung deformation and ventilation during normal breathing and breathing with disease. 
+%To the best of our knowledge, this is the first computational lung model built from patient specific imaging data that is able to capture the tight coupling between the tissue deformation and ventilation, seen in Chronic Obstructive Pulmonary Diseases (COPD), such as emphysema. 
+%
+%The numerical simulations are shown to be able to reproduce global physiological realistic measurements. A fully nonlinear formulation permits the inclusion of various constitutive models, allowing investigation into different diseased states during various breathing conditions. A finite element method has been used to discretise the equations in a monolithic way to ensure convergence of the nonlinear problem, even under strong fluid-network-poroelastic-medium coupling conditions. 
+%
+We hope that due to the flexibility of the model, further improvements in its physiological accuracy as outlined in section \ref{sec:future_work}, will be made to yield the most accurate whole organ lung model to date.
+
+\begin{comment}
+\section{Key findings}
+The first part of our work developed a novel method to
+
+Hdiv error
+
+Reliable/stable
+
+The second part of this thesis provided an invaluable stepping stone
+
+Discontiinous pressure elements are good.
+
+
+
+
+
+Finally, the third part of our thesis shows
+
+Coupling effects are important
+
+Parameters in Lung model are very important, at the moment unkown.
+\end{comment}
+
+
+
+
+\section{Future work}
+%This section presents open problems related to the advances presented in this Thesis.
+There are also several areas which might pose interesting future research problems. These areas fall outside the range of coverage here, but provide interesting challenges nonetheless.
+
+\subsection{Numerics}
+
+
+By moving towards solving the poroelastic equations on more detailed 3D geometries the resulting linear system can grow to have several million degrees of freedom. For such problems direct solvers become impractical. To ensure robust and fast convergence of iterative methods such as MINRES, we need to precondition the linear system. An effective preconditioner for solving the Stokes problem using stabilized P1-P0 elements has already been proposed in \cite{wathen1993fast} and \cite{silvester1994fast}. This block preconditioning approach could be extended to the three-field poroelasticity case. 
+
+A-priori error estimates could be derived for the finite element formulation of the linear porelasticity problem, which could be used for adaptive mesh refinement in space and time. 
+
+
+%Block preconditioing 
+%techniques, similar to the ones already employed to solve the Stokes problem \citep{silvester1993fast,silvester1994fast} could also be applied to allow for the effective use of GMRES solvers when solving problems beyond the capability of direct solvers. 
+%Furthermore, when solving the fully coupled poroelastic-fluid-network system of equations, new preconditioners, taking into consideration the structure of the matrix iterative solution methods need to be developed.
+
+There is a growing need for finite element methods of elasticity to capture steep pressure gradients due to material changes. For example changes in tissue types (fat, muscle and skin) when modelling the breast. To our knowledge there are currently no available finite element methods that use a simple to implement, low-order (discontinuous pressure) approximation to solve the incompressible nonlinear  elasticity equations. It would be straightforward to extend the low-order method of nonlinear poroelastcicty to incompressible nonlinear elasticity. 
+
+
+
+
+%Another simple extension of the stabilized nonlinear finite element method for the poroelastic equation valid in large deformations is the application to solving just the nonlinear incompressible elasticity equations valid in large deformations. To our knowledge there currently exists no low-order mixed method taking advantage of a piecewise constant pressure approximation to deal with steep solution gradients caused by varying material coefficients or boundary layer solutions. 
+
+%\subsection{Implementation}
+
+%The practical use of the methods presented here relies heavily on their efficient implementation for large-scale problems. Since the focus of this work was in method development, the flexibility of the code and fast implementation were deemed more important than producing ready-to-use software.  However the software has been developed using the popular finite element library libmesh \citep{kirk2007libmesh}. Simple steps could be taken to fully parallelize the code and run it on a super computer.
+
+%Super-computer libmesh easily extendable to paralell  computers \citep{kirk2007libmesh}, however to develop a truely scalable method is not straightforward, and much care must be taken to reduce overheads during the assembly of the stiffness matrices during each Newton iteration.
+
+
+\subsection{Lung modelling}
+For this model to be of practical use it is crucial that it is properly validated, this can be achieved by making use of different imaging modalities and phantom studies where model predictions can be tested. Computed tomography and 4D (dynamic) MRI images can be used to extract meshes and track displacements of lung structures, MR imaging of gases such as Hyperpolarized Xenon \citep{kaushikdiffusion} and Helium 3 are able to visualize the flow and diffusion of gases and with the use of elastography we are able to image stiffness and strain of lung tissue. Recently there has also been development in using Hyperpolarized Helium 3 MRI to estimate flow velocities and thus calculate pressure gradients \citep{patz2007hyperpolarized}.   
+
+
+For patients with severe emphysema invasive surgical procedures such as lung volume reduction surgery (LVRS) and endobronchial valve placement are possible treatments. During LVRS part of the lung is excised in order to improve the configuration of the thoracic cavity, improve elastic recoil, and allow for improved lung inflation of the remaining and presumably better preserved tissue \cite{criner2011national}. Due to the high post-surgery mortality rate of around $5-10$ percent for LVRS and the fact that only some patients show and improvement with this therapy it is currently extremely challenging for doctors to select patients that will benefit from this invasive surgery. Boundary conditions allowing the lung surface to slide along the pleural cavity would have to be implemented, to allow for the removal of whole lobes in the model. A successful computational lung model would predict how much a particular patient will benefit from this high risk treatment, and help clinicians decide whether or not to perform surgery.
+
+Finally, the proposed methodology could also be adapted to model other biological tissues where blood vessels flow through and interact with a deforming tissue. For example, when modelling perfusion of blood flow in the beating myocardium \citep{chapelle2010poroelastic,cookson2011novel}, modelling brain oedema \citep{li2010three} or hydrocephalus \citep{wirth2006axisymmetric}, or microcirculation of blood and interstitial fluid in the liver lobule \citep{leungchavaphongse2013mathematical}.
+
+
+%Furthermore, it would be interesting to investigate the
+
+

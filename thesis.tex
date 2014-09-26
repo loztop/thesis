@@ -50,7 +50,7 @@
 \def\green{\textcolor[rgb]{0,0,0}}
 
 % Title is overwritten in title.tex
-\def\xtitle{A finite element method for linear and non-linear poroelasticity: theory and application to lung modelling}
+\def\xtitle{A Finite Element Method for Poroelasticity: Theory and Application to Lung Modelling}
 %A Computational Investigation of Acute Ischaemia-induced Changes in Cardiac Electrophysiology: From Rabbit Experiments to Drug Safety in Human
 \def\xauthor{Lorenz Berger}
 \def\xcollege{Keble College}
@@ -81,6 +81,7 @@
 
 
 \def\localpath{contents/frontmatter}
+
 \input{contents/frontmatter/title}
 \input{contents/frontmatter/abstract}
 \tableofcontents
@@ -123,13 +124,14 @@
 \input{contents/poroelasticity_chapter}
 
 
+\begin{comment}
+
 
 %% FEM intro
 \chapter{Finite element method}
 \input{contents/fem_chapter}
 
 
-%\begin{comment}
 
 
 %%Stabilized poroelasticity 
@@ -154,7 +156,7 @@
 
 %%Large deformation poroelasticity 
 \chapter{A stabilized nonlinear finite element method for three-field incompressible poroelasticity valid in large deformations}
-
+\label{chap:linear_fem}
 %\begin{abstractchap}
 % \input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/abstract}
 %\end{abstractchap}
@@ -195,10 +197,11 @@ in lung modelling}
 \input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion}
 \input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
 
-%\end{comment}
+\end{comment}
 
 %% Conclusion
 \chapter{Conclusion}
+\input{contents/conclusion_chapter}
 
 
 
@@ -207,7 +210,7 @@ in lung modelling}
 
 
 \appendix
-\chapter{}
+\chapter{Appendix}
 
 %%coupling paper appendix
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}

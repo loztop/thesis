@@ -1,3 +1,5 @@
+\begin{comment}
+
 {
 \Large
 \noindent\makebox[0in][l]{\xauthor}\hfill\makebox[6in][r]{Doctor of
@@ -15,6 +17,7 @@ Philosophy} \vskip 2pt
 {\xtitle}
 \end{center}
 }
+\end{comment}
 
 {
 \large\bf
@@ -22,12 +25,20 @@ Philosophy} \vskip 2pt
 Abstract
 \end{center}
 }
+%
+\noindent Modelling ventilation or tissue deformation separately does not give accurate ventilation predictions or provide a good indication of how the integrated organ works, this is because both components are interdependent. To gain a better understanding of the biomechanics in the lung it is therefore necessary to fully couple the tissue deformation with the ventilation. To achieve this tight coupling between the tissue deformation and the ventilation we propose a novel multiscale model that approximates the lung parenchyma by a biphasic (tissue and air) poroelastic model, that is coupled to a fluid network model of the airways. 
 
-%\setlength{\baselineskip}{16truept}
+In this thesis we develop a stabilized finite element method for solving the equations of poroelasticity to enable such a computational lung model. For the proposed scheme, we use the lowest possible approximation order: piecewise constant approximation for the pressure, and piecewise linear continuous elements for the displacements and fluid flux. Due to the discontinuous pressure approximation, sharp pressure gradients due to changes in material coefficients or boundary layer solutions can be captured reliably. We begin by developing theoretical results for approximating the linear poroelastic equations, valid in small deformations. In particular, we prove existence and uniqueness, an energy estimate and an optimal a-priori error estimate for the discretized problem. 
+%
+%Numerical experiments in 2D and 3D illustrate the convergence of the method, show the effectiveness of the method to overcome spurious pressure oscillations, and evaluate the added mass effect of the stabilization term.
+%
+%
+We then extend this work and construct a stabilized finite element method to solve the poroelastic equations valid in large deformations. We present the linearization and discretisation for this nonlinear problem, and give a detailed account of the implementation. We rigorously test both the linear and nonlinear finite element method using numerous test problems to verify theoretical stability and convergence results, and the method's ability to reliably capture steep pressure gradients. 
 
-%A stabilized nonlinear finite element method for the three-field (displacement, fluid flux and pressure) nonlinear quasi-static incompressible poroelasticity problem valid in large deformations is presented. We use the lowest possible approximation order: piecewise constant approximation for the pressure, and piecewise linear continuous elements for the displacements and fluid flux. Due to the discontinuous pressure approximation, sharp pressure gradients due to changes in material coefficients or boundary layer solutions can be captured reliably. For modelling purposes, we first derive the general model of poroelasticity, to highlight any modelling assumptions required to arrive at the standard quasi-static incompressible model of poroelasticity. We then present the linearization and discretisation of the equations, and give a detailed account of the implementation. 
-%To remove spurious pressure oscillations, associated with the saddle point structure in the coupled equations, we introduce a stabilization term. 
-%Numerical experiments in 3D verify the method and illustrate its ability to reliably capture steep pressure gradients.
+Finally, we derive a poroelastic model for lung parenchyma coupled to an airway fluid network model, and develop a stable method to solve the coupled model.
+ % 
+%We solve the computational lung model on a realistic geometry, with realistic boundary conditions extracted from imaging data, to simulate breathing. Evaluate the effect of tissue weakening and airway narrowing on lung function. 
+%
+Numerical simulations, on a realistic lung geometry, that illustrate the coupling between the poroelastic medium and the network flow model are presented, and simulations of tidal breathing are shown to reproduce global physiological realistic measurements. We also investigate the effect of airway constriction and tissue weakening on the ventilation, tissue stress and alveolar pressure distribution.
 
-
-
+%We present the model assumptions required for the proposed poroelastic lung model and outline its mathematical formulation and coupling to the airway fluid newtork. A finite element method is presented to discretize the equations in a monolithic way to ensure convergence of the nonlinear problem. Finally, numerical simulations on a realistic lung geometry that illustrate the coupling between the poroelastic medium and the network flow model are presented. Numerical simulations of tidal breathing are shown to reproduce global physiological realistic measurements. We also investigate the effect of airway constriction and tissue weakening on the ventilation, stress and alveolar pressure distribution.

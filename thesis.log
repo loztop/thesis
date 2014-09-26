@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.9.4)  21 SEP 2014 21:52
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.9.4)  26 SEP 2014 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,156 +706,6 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 
 LaTeX Warning: Label `fig:acinar_units' multiply defined.
 
-
-LaTeX Warning: Label `eqn:heat_weak' multiply defined.
-
-
-LaTeX Warning: Label `eqn:int_def' multiply defined.
-
-
-LaTeX Warning: Label `error' multiply defined.
-
-
-LaTeX Warning: Label `error' multiply defined.
-
-
-LaTeX Warning: Label `fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `fig:unconfined_diag' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:unconfined_diag' multiply defined.
-
-
-LaTeX Warning: Label `fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `sec:weak_forms' multiply defined.
-
-
-LaTeX Warning: Label `eqn:weak_cont_elast_mom' multiply defined.
-
-
-LaTeX Warning: Label `eqn:weak_cont_flux_mom' multiply defined.
-
-
-LaTeX Warning: Label `eqn:weak_cont_mass' multiply defined.
-
-
-LaTeX Warning: Label `eqns:weak_cont_system' multiply defined.
-
-
-LaTeX Warning: Label `sec:fully_discrete' multiply defined.
-
-
-LaTeX Warning: Label `eqn:weak_cont_flux_mom' multiply defined.
-
-
-LaTeX Warning: Label `sec:numerical_simulations' multiply defined.
-
-
-LaTeX Warning: Label `sec:unconfined' multiply defined.
-
-
-LaTeX Warning: Label `fig:unconfined_diag' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:unconfined_diag' multiply defined.
-
-
-LaTeX Warning: Label `fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:unconfined_sim' multiply defined.
-
-
-LaTeX Warning: Label `fig:animals' multiply defined.
-
-
-LaTeX Warning: Label `fig:anal_unconfined_plot' multiply defined.
-
-
-LaTeX Warning: Label `tab:parameters' multiply defined.
-
-
-LaTeX Warning: Label `fig:animals' multiply defined.
-
-
-LaTeX Warning: Label `eqn:displacement' multiply defined.
-
-
-LaTeX Warning: Label `eqn:deformation_gradient' multiply defined.
-
-
-LaTeX Warning: Label `rho_mixture' multiply defined.
-
-
-LaTeX Warning: Label `incomp_mixture' multiply defined.
-
-
-LaTeX Warning: Label `eqn:mixture_momentum_reform' multiply defined.
-
-
-LaTeX Warning: Label `eqn:fluid_momentum_reform' multiply defined.
-
-
-LaTeX Warning: Label `eqn:mixture_mass_reform' multiply defined.
-
-
-LaTeX Warning: Label `eqn:simple_mixture_model' multiply defined.
-
-
-LaTeX Warning: Label `sec:constitutive' multiply defined.
-
-
-LaTeX Warning: Label `eqn:permeability_const' multiply defined.
-
-
-LaTeX Warning: Label `eqn:sigma_e' multiply defined.
-
-
-LaTeX Warning: Label `algo:newton' multiply defined.
-
-
-LaTeX Warning: Label `fig:CT' multiply defined.
-
-
-LaTeX Warning: Label `fig:CT' multiply defined.
-
-
-LaTeX Warning: Label `fig:acinar_units' multiply defined.
-
-
-LaTeX Warning: Label `fig:acinar_units' multiply defined.
-
-
-LaTeX Warning: Label `fig:acinar_units' multiply defined.
-
-
-LaTeX Warning: Label `sec:constriction' multiply defined.
-
-
-LaTeX Warning: Label `appendix' multiply defined.
-
-
-LaTeX Warning: Label `incremental_spatial' multiply defined.
-
-
-LaTeX Warning: Label `matrixvoigt' multiply defined.
-
-
-LaTeX Warning: Label `eqn:sym_matrix' multiply defined.
-
-
-LaTeX Warning: Label `sec:neo_example' multiply defined.
-
 )
 \openout1 = `thesis.aux'.
 
@@ -933,24 +783,31 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros (./contents/frontmatter/title.tex
-<contents/frontmatter/ps/crest.pdf, id=4, 178.7478pt x 213.4374pt>
-File: contents/frontmatter/ps/crest.pdf Graphic file (type pdf)
+Package epstopdf Info: Source file: <contents/frontmatter/ps/ox_logo_special_bl
+ue_pos.eps>
+(epstopdf)                    date: 2008-04-08 11:09:22
+(epstopdf)                    size: 449717 bytes
+(epstopdf)             Output file: <contents/frontmatter/ps/ox_logo_special_bl
+ue_pos-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 10:43:55
+(epstopdf)                    size: 41452 bytes
+(epstopdf)             Command: <repstopdf --outfile=contents/frontmatter/ps/ox
+_logo_special_blue_pos-eps-converted-to.pdf contents/frontmatter/ps/ox_logo_spe
+cial_blue_pos.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
 
-<use contents/frontmatter/ps/crest.pdf>
-Package pdftex.def Info: contents/frontmatter/ps/crest.pdf used on input line 2
-8.
-(pdftex.def)             Requested size: 95.31409pt x 113.81102pt.
+<contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-to.pdf, id=4, 1
+16.435pt x 139.52126pt>
+File: contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-to.pdf Gra
+phic file (type pdf)
 
-<contents/frontmatter/ps/keble_logo.jpg, id=5, 420.772pt x 529.177pt>
-File: contents/frontmatter/ps/keble_logo.jpg Graphic file (type jpg)
+<use contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-to.pdf>
+Package pdftex.def Info: contents/frontmatter/ps/ox_logo_special_blue_pos-eps-c
+onverted-to.pdf used on input line 19.
+(pdftex.def)             Requested size: 94.98161pt x 113.81102pt.
 
-<use contents/frontmatter/ps/keble_logo.jpg>
-Package pdftex.def Info: contents/frontmatter/ps/keble_logo.jpg used on input l
-ine 30.
-(pdftex.def)             Requested size: 90.4963pt x 113.81102pt.
-
-(./contents/frontmatter/affiliation.tex)
-(./contents/frontmatter/declaration.tex) [1
+[1
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -960,39 +817,25 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/
-pdftex.map} <./contents/frontmatter/ps/crest.pdf> <./contents/frontmatter/ps/ke
-ble_logo.jpg>] [2]) (./contents/frontmatter/abstract.tex
-Overfull \hbox (43.62pt too wide) in paragraph at lines 3--4
-[] [] 
- []
-
-
-Overfull \hbox (57.20909pt too wide) in paragraph at lines 5--7
-\OT1/cmr/m/n/17.28 Keble Col-lege []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--7
-
- []
-
-) [1] (./thesis.toc
+pdftex.map} <./contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-t
+o.pdf>]) (./contents/frontmatter/abstract.tex [1]) [2] (./thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+) [3
 
-] [3] [4] [5])
+])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-
-[6] (./contents/frontmatter/acknowledgements.tex [7])
+ [4]
+(./contents/frontmatter/acknowledgements.tex [5])
 Chapter 1.
 (./contents/introduction_chapter.tex
 (./contents/introduction/introduction_motivation.tex [1
@@ -1015,7 +858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 7--11
 
  []
@@ -1025,17 +868,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
@@ -1050,7 +893,7 @@ Missing character: There is no ™ in font cmr12!
 
 ]
 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/upper
-lobe_haefeli1988.png, id=67, 680.5425pt x 810.02625pt>
+lobe_haefeli1988.png, id=59, 680.5425pt x 810.02625pt>
 File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
 upperlobe_haefeli1988.png Graphic file (type png)
 
@@ -1061,7 +904,7 @@ per/figures/images/upperlobe_haefeli1988.png used on input line 17.
 (pdftex.def)             Requested size: 136.50069pt x 144.5377pt.
 
 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/TB_to
-_aveolarduct_BerkeleyLungLabtour.png, id=68, 642.4pt x 495.8525pt>
+_aveolarduct_BerkeleyLungLabtour.png, id=60, 642.4pt x 495.8525pt>
 File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
 TB_to_aveolarduct_BerkeleyLungLabtour.png Graphic file (type png)
 
@@ -1073,7 +916,7 @@ per/figures/images/TB_to_aveolarduct_BerkeleyLungLabtour.png used on input line
 (pdftex.def)             Requested size: 136.49594pt x 144.53502pt.
 
 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/aveol
-arPores_BerkeleyLungLabLungtour.png, id=69, 642.4pt x 787.94376pt>
+arPores_BerkeleyLungLabLungtour.png, id=61, 642.4pt x 787.94376pt>
 File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
 aveolarPores_BerkeleyLungLabLungtour.png Graphic file (type png)
 
@@ -1085,7 +928,7 @@ per/figures/images/aveolarPores_BerkeleyLungLabLungtour.png used on input line
 (pdftex.def)             Requested size: 136.49594pt x 144.52893pt.
 
 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/acinu
-s_HAEFELI-BLEUER1988.png, id=70, 648.4225pt x 654.445pt>
+s_HAEFELI-BLEUER1988.png, id=62, 648.4225pt x 654.445pt>
 File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
 acinus_HAEFELI-BLEUER1988.png Graphic file (type png)
 
@@ -1105,7 +948,7 @@ paper/figures/images/TB_to_aveolarduct_BerkeleyLungLabtour.png> </users/lorenzb
 yLungLabLungtour.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pape
 r/figures/images/acinus_HAEFELI-BLEUER1988.png>]
 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/lung_
-west.pdf, id=84, 305.26846pt x 329.91254pt>
+west.pdf, id=75, 305.26846pt x 329.91254pt>
 File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
 lung_west.pdf Graphic file (type pdf)
 
@@ -1114,19 +957,29 @@ ung_west.pdf>
 Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
 per/figures/images/lung_west.pdf used on input line 57.
 (pdftex.def)             Requested size: 195.0pt x 210.74057pt.
-) [11 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images
-/lung_west.pdf>]
-(./contents/background/model_literature_thesis.tex [12] [13])
-(./contents/background/numerical_review_thesis.tex [14] [15] [16] [17] [18]))
-[19]
+ [11 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
+lung_west.pdf>] [12]
+</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/emphy
+sema.jpg, id=90, 144.54pt x 53.2389pt>
+File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
+emphysema.jpg Graphic file (type jpg)
+
+<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/e
+mphysema.jpg>
+Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
+per/figures/images/emphysema.jpg used on input line 91.
+(pdftex.def)             Requested size: 351.0163pt x 159.0063pt.
+) (./contents/background/model_literature_thesis.tex [13 </users/lorenzb/Dphil/
+poroelasticity_papers/coupling_paper/figures/images/emphysema.jpg>] [14] [15]) 
+(./contents/background/numerical_review_thesis.tex [16] [17]
+[18] [19])) [20]
 Chapter 3.
 (./contents/poroelasticity_chapter.tex
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_th
-eory.tex)
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/continuu
-m_mechanics_theory.tex [20
+(./contents/poroelasticity/intro_theory_thesis.tex)
+(./contents/poroelasticity/continuum_mechanics_theory_thesis.tex [21
 
-] [21] [22] [23] [24]
+] [22]
+[23] [24] [25]
 Overfull \hbox (50.89793pt too wide) detected at line 170
 [] [][] \OMS/cmsy/m/n/12 G\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
 [] = [][] [](\OMS/cmsy/m/n/12 G\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
@@ -1135,14 +988,13 @@ Overfull \hbox (50.89793pt too wide) detected at line 170
 []\OML/cmm/m/it/12 :
  []
 
-)
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/mixture_
-theory.tex [25] [26] [27] [28] [29]
+) (./contents/poroelasticity/mixture_theory_thesis.tex [26] [27] [28] [29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
-[30]
+[31]
 Overfull \hbox (74.88013pt too wide) detected at line 141
 [][][] \OT1/cmr/m/n/12 + [][][] + [][] [] + [][] [] = \OMS/cmsy/m/n/12 r ^^A \O
 T1/cmr/m/n/12 ([][] + [][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/
@@ -1160,2026 +1012,53 @@ m/m/it/12 p\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 ^^^ \OMS/cmsy/m/n/12 ^^@ \OML/cmm
 []\OML/cmm/m/it/12 :
  []
 
-[31]
+[32]
 Overfull \hbox (34.40314pt too wide) in paragraph at lines 241--242
  [] 
  []
 
-[32] [33]) (./contents/poroelasticity/linearmodel_thesis.tex [34] [35] [36]))
-[37]
+[33] [34]) (./contents/poroelasticity/linearmodel_thesis.tex
+
+LaTeX Warning: Reference `section:overcoming' on page 35 undefined on input lin
+e 1.
+
+[35] [36] [37]
+
+LaTeX Warning: Reference `chap:linear_poro' on page 38 undefined on input line 
+63.
+
+)) [38]
 Chapter 4.
-(./contents/fem_chapter.tex (./contents/fem/fem_intro.tex)
-(./contents/fem/functional_analysis.tex [38
-
-] [39]
-Overfull \hbox (42.31903pt too wide) detected at line 22
-\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (
-) = []
- []
-
-[40]) (./contents/fem/fem_laplace.tex [41] [42]
-Overfull \hbox (28.79971pt too wide) in paragraph at lines 34--36
-\OT1/cmr/m/n/12 di-tions. For con-ve-nience we will use the no-ta-tion $\OML/cm
-m/m/it/12 X[] \OT1/cmr/m/n/12 = []$
- []
-
-[43] [44] [45]) (./contents/fem/fem_mixed.tex [46]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
- [47] [48]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-[49] [50])) [51]
-Chapter 5.
-
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/bilinearforms_jcam.t
-ex [52
+(./contents/conclusion_chapter.tex [39
 
 ]
 
-Package natbib Warning: Citation `ciarlet2002' on page 53 undefined on input li
-ne 20.
+LaTeX Warning: Reference `sec:future_work' on page 40 undefined on input line 2
+6.
 
-)
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cont_formulations_jc
-am.tex [53] [54])
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/full_discrete_model_
-jcam.tex [55] [56]
-Overfull \hbox (8.64615pt too wide) in paragraph at lines 58--59
-\OT1/cmr/m/n/12 The sta-bi-liza-tion term gives rise to the semi-norm $\OMS/cms
-y/m/n/12 j\OML/cmm/m/it/12 q\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 := \OML/cmm/m/
-it/12 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q; q\OT1/cmr/m/n/12 )[]$. Through-
- []
-
-[57]
-
-Package natbib Warning: Citation `ciarlet2002' on page 58 undefined on input li
-ne 71.
-
-[58]
-Overfull \hbox (20.3857pt too wide) detected at line 101
-[][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/
-12 h[][][] \OT1/cmr/m/n/12 + [][])\OML/cmm/m/it/12 ;
- []
-
-[59]
-Overfull \hbox (19.92279pt too wide) in paragraph at lines 134--136
-\OT1/cmr/m/n/12 For all $[\OT1/cmr/bx/n/12 v\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12
- w\OML/cmm/m/it/12 ; q\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 2 []$
- []
-
-)
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/stability_fully_disc
-rete_jcam.tex [60] [61]
-Overfull \hbox (107.86479pt too wide) in alignment at lines 6--11
- [] [] [] [][]
- []
-
-
-Overfull \hbox (44.3522pt too wide) detected at line 16
- []$[]  \OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it
-/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/
-12 ; \OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w
-[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/12 )] = \OML/cmm/m/it/12 a\OT1/cmr/m/n/12 
-(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 v[]\OT1/cmr/m/n/12 ) +
- ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ([]\OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ;
- \OT1/cmr/bx/n/12 w[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (\O
-ML/cmm/m/it/12 p[]; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 v[]\OT1/cmr/m/n/12 
-) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 (\O
-ML/cmm/m/it/12 p[]; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 w[]\OT1/cmr/m/n/12 
-)$ 
- []
-
-
-Overfull \hbox (25.03993pt too wide) detected at line 37
-\OML/cmm/m/it/12 ^^M [][] \OMS/cmsy/m/n/12 ^^T [] []  8\OT1/cmr/m/n/12 (\OT1/cm
-r/bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/
-cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 W[]\OML/cmm/m/it/12 :
- []
-
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-[63]
-Overfull \hbox (49.79521pt too wide) detected at line 71
-\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/m/n/12 (
-[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/12 )) = [] [][] \O
-ML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y
-[][]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/bx/n/12 n \OML/cmm/m/it/12 
-ds \OT1/cmr/m/n/12 = [] [] [][][\OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 ]([] \OMS/c
-msy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \
-OT1/cmr/bx/n/12 n \OML/cmm/m/it/12 ds:
- []
-
-
-Overfull \hbox (46.38237pt too wide) detected at line 75
-\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y[][]; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 0)] = [][] + \OML/cmm/m/it/12 a\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 u
-[]\OML/cmm/m/it/12 ; ^^Y[][]\OT1/cmr/m/n/12 ) + [] [] [][][\OML/cmm/m/it/12 p[]
-\OT1/cmr/m/n/12 ]([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/
-12 ) \OMS/cmsy/m/n/12 ^^A \OT1/cmr/bx/n/12 n \OML/cmm/m/it/12 ds:
- []
-
-
-Overfull \hbox (43.72958pt too wide) detected at line 101
- []$[]  \OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it
-/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/
-12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y[][]; \OT1/cmr/m/n/12 0\OML/cmm/m/it/
-12 ; \OT1/cmr/m/n/12 0)] \OMS/cmsy/m/n/12 ^^U ^^@[][][] \OT1/cmr/m/n/12 + [] []
-[] \OMS/cmsy/m/n/12 ^^@ []j[]j[]\OML/cmm/m/it/12 :$ []  
- []
-
-[64]
-Overfull \hbox (25.64372pt too wide) detected at line 105
-\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/
-m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr
-/m/n/12 )] = (\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\O
-T1/cmr/m/n/12 ) + ^^A\OML/cmm/m/it/12 t[][][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/1
-2 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t
-\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
- []
-
-
-Overfull \hbox (100.6251pt too wide) detected at line 114
- []$[]  \OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]; \OT1/cmr/m/n/1
-2 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/
-12 ) \OMS/cmsy/m/n/12 ^^T []\OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
- p[]; p[]\OT1/cmr/m/n/12 ) + []\OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OMS/cmsy/m/n
-/12 r ^^A \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 r ^^A \OT1/cm
-r/bx/n/12 z[]\OT1/cmr/m/n/12 ) = []\OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 p[]; p[]\OT1/cmr/m/n/12 ) + [] [] [][] \OMS/cmsy/m/n/12 j\OML/cmm/m/it/
-12 h[]\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OMS/cmsy/m/n/12 j[] \OML/cmm/
-m/it/12 ds$ 
- []
-
-
-Overfull \hbox (33.3565pt too wide) detected at line 119
-\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/
-m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr
-/m/n/12 )] \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ [] ^^@ 
-[]\OT1/cmr/m/n/12 )^^A\OML/cmm/m/it/12 t[][][] \OMS/cmsy/m/n/12 ^^@ []j[]j[] ^^
-@ [][][]\OML/cmm/m/it/12 :
- []
-
-[65]
-Overfull \hbox (100.20042pt too wide) in alignment at lines 135--139
- [] [] [] [][]
- []
-
-[66])
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/energy_fully_discret
-e_jcam.tex
-Overfull \hbox (27.0968pt too wide) detected at line 22
-\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
-1/cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/c
-mm/m/it/12 ; q[]\OT1/cmr/m/n/12 )] = (\OT1/cmr/bx/n/12 f[]\OML/cmm/m/it/12 ; \O
-T1/cmr/bx/n/12 v[]\OT1/cmr/m/n/12 ) + (\OT1/cmr/bx/n/12 b[]\OML/cmm/m/it/12 ; \
-OT1/cmr/bx/n/12 w[]\OT1/cmr/m/n/12 ) + (\OML/cmm/m/it/12 g[]; q[]\OT1/cmr/m/n/1
-2 )    \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 
-; \OT1/cmr/bx/n/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
-2 W[]\OML/cmm/m/it/12 ;
- []
-
-[67]
-Overfull \hbox (41.57628pt too wide) in alignment at lines 24--28
- [] [] [] [][]
- []
-
-
-Overfull \hbox (66.89609pt too wide) detected at line 38
- []$[]   [] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 tB[]\OT1/cmr/m/n/12 [(\OT1/cmr/
-bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cm
-r/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ([] + \OML/cmm/m/it/12 ^^Y[][]; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )] + [][] + \OMS/cmsy/m
-/n/12 j[]j[] \OT1/cmr/m/n/12 + [][] + [][] \OMS/cmsy/m/n/12 ^^U$ 
- []
-
-(./lemma_BF_jcam.tex
-Overfull \hbox (150.8739pt too wide) detected at line 6
- []$[]   [] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 tB[]\OT1/cmr/m/n/12 [(\OT1/cmr/
-bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cm
-r/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ([] + \OML/cmm/m/it/12 ^^Y[][]; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )] = [] ^^A\OML/cmm/m/i
-t/12 ta\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/1
-2 ) + [] ^^A\OML/cmm/m/it/12 tJ\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; p[]\OT1/cm
-r/m/n/12 ) + [] ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 z[]\OM
-L/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 )$ 
- []
-
-
-Overfull \hbox (105.49966pt too wide) detected at line 36
- []$[]   [] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 tB[]\OT1/cmr/m/n/12 [(\OT1/cmr/
-bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cm
-r/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ([] + \OML/cmm/m/it/12 ^^Y[][]; \O
-T1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )] + [][][] + [][][] + 
-[][][] + []\OMS/cmsy/m/n/12 j[]j[]$ 
- []
-
-[68]) (./corollary_BF_jcam.tex
-Overfull \hbox (32.14264pt too wide) in alignment at lines 2--4
- [] [] [] [][]
- []
-
-
-Overfull \hbox (122.51778pt too wide) detected at line 9
-[] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 f[]\O
-ML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C []
- :
- []
-
-
-Overfull \hbox (23.66885pt too wide) detected at line 14
- []$[]  [][] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j[]j[] \OT1/cmr/m/n/12 + [][] +
- [][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C []$ 
- []
-
-
-Overfull \hbox (28.73413pt too wide) detected at line 14
- []$[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 :  $ 
- []
-
-[69]) [70]
-Overfull \hbox (112.74927pt too wide) detected at line 75
- []$[]   [] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 (\OMS/cmsy/m/n
-/12 r ^^A []\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/12 ) + [] ^^A\OML/cmm/m/it/12 t\
-OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; q
-[]\OT1/cmr/m/n/12 ) + [] ^^A\OML/cmm/m/it/12 tJ\OT1/cmr/m/n/12 ([]\OML/cmm/m/it
-/12 ; q[]\OT1/cmr/m/n/12 ) = [] ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 g[]; q[]\OT1/cmr/m/n/12 )    \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OT1/cm
-r/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/
-cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 V[]\OML/cmm/m/it/12 :$ []  
- []
-
-
-Overfull \hbox (51.92796pt too wide) detected at line 86
- []$[]  \OMS/cmsy/m/n/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it
-/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/
-12 ; \OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w
-[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/12 )] = \OML/cmm/m/it/12 a\OT1/cmr/m/n/12 
-([]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 v[]\OT1/cmr/m/n/12 ) + ([][]\OML/cmm/m/i
-t/12 ; \OT1/cmr/bx/n/12 w[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/
-12 ([]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 v[]\OT1/cmr/m/
-n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n
-/12 r ^^A \OT1/cmr/bx/n/12 w[]\OT1/cmr/m/n/12 )$ 
- []
-
-[71] (./lemma_Bstar_jcam.tex
-Overfull \hbox (25.52847pt too wide) in paragraph at lines 1--2
-[]\OT1/cmr/m/it/12 For $\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 
-; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; N$ \OT1/cmr/m/it/12 we choose $\OT1/
-cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm
-/m/it/12 ; q[]\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 ^^L[] \OT1/cmr/m/n/12 + \OM
-L/cmm/m/it/12 ^^Y[]\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; ^^L\OT1/cmr/bx/n/12 z
-[]\OML/cmm/m/it/12 ; ^^L[] \OT1/cmr/m/n/12 +
- []
-
-
-Overfull \hbox (58.53403pt too wide) detected at line 5
- []$[] \OT1/cmr/m/n/12 = [] ^^A\OML/cmm/m/it/12 ta\OT1/cmr/m/n/12 ([]\OML/cmm/m
-/it/12 ; ^^L[]\OT1/cmr/m/n/12 ) + [] ^^A\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ([]
-\OML/cmm/m/it/12 ; ^^L\OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 ) + [] ^^A\OML/cmm/m/
-it/12 t\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OML/cmm/m/i
-t/12 ; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 ) + [] ^^A\OM
-L/cmm/m/it/12 t\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 r ^^A \OT
-1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 )$ 
- []
-
-
-Overfull \hbox (71.57062pt too wide) detected at line 5
- []$[] \OT1/cmr/m/n/12 + [] ^^A\OML/cmm/m/it/12 tJ\OT1/cmr/m/n/12 ([]\OML/cmm/m
-/it/12 ; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 ) + [] ^^A\
-OML/cmm/m/it/12 tJ\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; ^^L[]\OT1/cmr/m/n/12 ) 
-+ [] ^^A\OML/cmm/m/it/12 ta\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; ^^Y[]\OT1/cmr/
-bx/n/12 v[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 ^^A\OML/cm
-m/m/it/12 t\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 r ^^A \OML/cm
-m/m/it/12 ^^Y[]\OT1/cmr/bx/n/12 v[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :$ []  
- []
-
-
-Overfull \hbox (75.74036pt too wide) detected at line 44
- []$[]   [] \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 B[]\OT1/cmr/m
-/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/i
-t/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12
- ^^L[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^Y[][]; ^^L\OT1/cmr/bx/n/12 z[]\OML/
-cmm/m/it/12 ; ^^L[] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/bx/n/12 z
-[]\OT1/cmr/m/n/12 )] \OMS/cmsy/m/n/12 ^^U [] [][]$ 
- []
-
-) [72] (./corollary_Bstar_jcam.tex
-Overfull \hbox (25.52847pt too wide) in paragraph at lines 1--2
-[]\OT1/cmr/m/it/12 For $\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 
-; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; N$ \OT1/cmr/m/it/12 we choose $\OT1/
-cmr/m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm
-/m/it/12 ; q[]\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 ^^L[] \OT1/cmr/m/n/12 + \OM
-L/cmm/m/it/12 ^^Y[]\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; ^^L\OT1/cmr/bx/n/12 z
-[]\OML/cmm/m/it/12 ; ^^L[] \OT1/cmr/m/n/12 +
- []
-
-
-Overfull \hbox (147.45776pt too wide) in alignment at lines 2--4
- [] [] [] [][]
- []
-
-) [73])
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/apriori_jcam.tex
-
-LaTeX Warning: Reference `fully_discrete_error' on page 74 undefined on input l
-ine 3.
-
-[74] (./apriori_definitions_jcam.tex
-Overfull \hbox (3.07674pt too wide) detected at line 18
-\OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) :=
- \OML/cmm/m/it/12 ^^Y[]\OT1/cmr/bx/n/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[];
- \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/bx/n/12 u[
-]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  ^^R[
-]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) := \OML/cmm/m/it/12 ^^Y
-[]\OT1/cmr/bx/n/12 z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 ^^A
-\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/bx/n/12 z[]\OT1/cmr/m/n/12 (\OM
-S/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  ^^R[]\OT1/cmr/m/n/12 (\OM
-S/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) := \OML/cmm/m/it/12 ^^Y[]p\OT1/cmr/m/n/12 (\
-OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@
- \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML
-/cmm/m/it/12 ; 
- []
-
-[75])
-Overfull \hbox (19.61424pt too wide) in alignment at lines 9--13
- [] [] [] [][]
- []
-
-
-Overfull \hbox (2.2495pt too wide) in alignment at lines 16--19
- [] [] [] [][]
- []
-
-
-Overfull \hbox (24.74435pt too wide) detected at line 32
-\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OT1/cmr/bx/n/12 u\OML/cmm/m/it/12 ; \OT1
-/cmr/bx/n/12 z\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/
-m/n/12 (\OT1/cmr/bx/n/12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm/m/i
-t/12 ; q[]\OT1/cmr/m/n/12 )] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 B[]\OT1/cmr/
-m/n/12 [(\OT1/cmr/bx/n/12 u[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 z[]\OML/cmm/m/
-it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OT1/cmr/bx/n/1
-2 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/
-12 )] = 0\OML/cmm/m/it/12 ;   \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/
-12 v[]\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n
-/12 ) \OMS/cmsy/m/n/12 2 V[]\OML/cmm/m/it/12 :
- []
-
-[76]
-Missing character: There is no Ê in font cmr12!
- (./apriori_proof_jcam.tex
-Overfull \hbox (17.77551pt too wide) in alignment at lines 3--5
- [] [] [] [][]
- []
-
-
-Overfull \hbox (29.8305pt too wide) in alignment at lines 7--10
- [] [] [] [][]
- []
-
-[77]
-Overfull \hbox (38.62933pt too wide) in alignment at lines 12--15
- [] [] [] [][]
- []
-
-
-Overfull \hbox (75.36089pt too wide) in alignment at lines 17--19
- [] [] [] [][]
- []
-
-(./apriori_individual_bounds_jcam.tex
-Overfull \hbox (43.4136pt too wide) in alignment at lines 4--11
- [] [] [] [][]
- []
-
-[78] [79]
-Missing character: There is no Ê in font cmr12!
-)
-Overfull \hbox (43.13002pt too wide) detected at line 27
- []$[]  [][] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j[]j[] \OT1/cmr/m/n/12 + [][] +
- [][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C [] :$ []  
- []
-
-) [80]
-Missing character: There is no Ê in font cmr12!
- (./apriori_proof_div_jcam.tex
-Overfull \hbox (87.3732pt too wide) in alignment at lines 45--49
- [] [] [] [][]
- []
-
-
-Overfull \hbox (107.99815pt too wide) in alignment at lines 51--53
- [] [] [] [] [] [][]
- []
-
-[81]
-Overfull \hbox (56.03455pt too wide) in alignment at lines 67--71
- [] [] [] [][]
- []
-
-[82])
-Overfull \hbox (21.1453pt too wide) in paragraph at lines 71--73
-\OT1/cmr/m/it/12 Assuming $\OT1/cmr/bx/n/12 u \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/
-12 H[] [] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 H[] []$\OT1/cmr/m/it/12 , $\OT1/c
-mr/bx/n/12 z \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[] []$
- []
-
-) (/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/implementation.tex
-[83] [84])
-(/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/simulations.tex
-[85] [86]
-Overfull \hbox (12.77782pt too wide) in paragraph at lines 41--41
-[]\OT1/cmr/m/n/10 (a)|| 
- []
-
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_disc_NE16_0_01_STAB_025t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 143935 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_disc_NE16_0_01_STAB_025t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 23206 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/pressure_disc_NE16_0_01_STAB_025t-eps-converted
--to.pdf /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc
-_NE16_0_01_STAB_025t.eps>
-(epstopdf)             \includegraphics on input line 41.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE16_0
-_01_STAB_025t-eps-converted-to.pdf, id=348, 1204.5pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_N
-E16_0_01_STAB_025t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE
-16_0_01_STAB_025t-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/pressure_disc_NE16_0_01_STAB_025t-eps-converted-to.pdf used on input line 4
-1.
-(pdftex.def)             Requested size: 155.99762pt x 108.40886pt.
-
-Overfull \hbox (13.33337pt too wide) in paragraph at lines 43--43
-[]\OT1/cmr/m/n/10 (b)|| 
- []
-
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_disc_NE16_10STAB_025t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 144356 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 23277 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/pressure_disc_NE16_10STAB_025t-eps-converted-to
-.pdf /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE
-16_10STAB_025t.eps>
-(epstopdf)             \includegraphics on input line 43.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE16_1
-0STAB_025t-eps-converted-to.pdf, id=349, 1204.5pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_N
-E16_10STAB_025t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE
-16_10STAB_025t-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf used on input line 43.
-(pdftex.def)             Requested size: 155.99762pt x 108.40886pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_h1_disp.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 58526 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_h1_disp-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 16026 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/linf_h1_disp-eps-converted-to.pdf /users/lorenz
-b/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp.eps>
-(epstopdf)             \includegraphics on input line 50.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp-eps-con
-verted-to.pdf, id=350, 385.44pt x 334.24875pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp-ep
-s-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp-eps
--converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/linf_h1_disp-eps-converted-to.pdf used on input line 50.
-(pdftex.def)             Requested size: 128.70071pt x 111.60808pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_hdiv_flux.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 57996 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_hdiv_flux-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 16083 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_hdiv_flux-eps-converted-to.pdf /users/lorenz
-b/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux.eps>
-(epstopdf)             \includegraphics on input line 52.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux-eps-con
-verted-to.pdf, id=351, 385.44pt x 334.24875pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux-ep
-s-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux-eps
--converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_hdiv_flux-eps-converted-to.pdf used on input line 52.
-(pdftex.def)             Requested size: 128.70071pt x 111.60808pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_l2_p.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 54072 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_l2_p-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15308 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/linf_l2_p-eps-converted-to.pdf /users/lorenzb/D
-phil/poroelasticity_papers/ima_submission/linf_l2_p.eps>
-(epstopdf)             \includegraphics on input line 53.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p-eps-conver
-ted-to.pdf, id=352, 385.44pt x 334.24875pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p-eps-c
-onverted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p-eps-co
-nverted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/linf_l2_p-eps-converted-to.pdf used on input line 53.
-(pdftex.def)             Requested size: 128.70071pt x 111.60808pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_disp.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 58436 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_disp-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15589 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_l2_disp-eps-converted-to.pdf /users/lorenzb/
-Dphil/poroelasticity_papers/ima_submission/l2_l2_disp.eps>
-(epstopdf)             \includegraphics on input line 55.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp-eps-conve
-rted-to.pdf, id=353, 386.44376pt x 333.245pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp-eps-
-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp-eps-c
-onverted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_l2_disp-eps-converted-to.pdf used on input line 55.
-(pdftex.def)             Requested size: 128.70071pt x 110.98308pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_flux.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 58562 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_flux-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15638 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_l2_flux-eps-converted-to.pdf /users/lorenzb/
-Dphil/poroelasticity_papers/ima_submission/l2_l2_flux.eps>
-(epstopdf)             \includegraphics on input line 57.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux-eps-conve
-rted-to.pdf, id=354, 385.44pt x 333.245pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux-eps-
-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux-eps-c
-onverted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_l2_flux-eps-converted-to.pdf used on input line 57.
-(pdftex.def)             Requested size: 128.70071pt x 111.27292pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/press_nomesh_0125t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 1417475 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/press_nomesh_0125t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 81644 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/press_nomesh_0125t-eps-converted-to.pdf /users/
-lorenzb/Dphil/poroelasticity_papers/ima_submission/press_nomesh_0125t.eps>
-(epstopdf)             \includegraphics on input line 65.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/press_nomesh_0125t-e
-ps-converted-to.pdf, id=355, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/press_nomesh_01
-25t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/press_nomesh_012
-5t-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/press_nomesh_0125t-eps-converted-to.pdf used on input line 65.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/xvel_nomesh_0125t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 1418092 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/xvel_nomesh_0125t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 83094 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/xvel_nomesh_0125t-eps-converted-to.pdf /users/l
-orenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_0125t.eps>
-(epstopdf)             \includegraphics on input line 66.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_0125t-ep
-s-converted-to.pdf, id=356, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_012
-5t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_0125
-t-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/xvel_nomesh_0125t-eps-converted-to.pdf used on input line 66.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/yvel_nomesh_0125t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 78770 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/yvel_nomesh_0125t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 83452 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/yvel_nomesh_0125t-eps-converted-to.pdf /users/l
-orenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_0125t.eps>
-(epstopdf)             \includegraphics on input line 67.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_0125t-ep
-s-converted-to.pdf, id=357, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_012
-5t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_0125
-t-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/yvel_nomesh_0125t-eps-converted-to.pdf used on input line 67.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_2d_t025_nomesh.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 1419856 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/pressure_2d_t025_nomesh-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 94002 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/pressure_2d_t025_nomesh-eps-converted-to.pdf /u
-sers/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_2d_t025_nomesh
-.eps>
-(epstopdf)             \includegraphics on input line 74.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_2d_t025_nom
-esh-eps-converted-to.pdf, id=358, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_2d_t02
-5_nomesh-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_2d_t025
-_nomesh-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/pressure_2d_t025_nomesh-eps-converted-to.pdf used on input line 74.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/xvel_nomesh_025t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 1419219 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/xvel_nomesh_025t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 99943 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/xvel_nomesh_025t-eps-converted-to.pdf /users/lo
-renzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_025t.eps>
-(epstopdf)             \includegraphics on input line 75.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_025t-eps
--converted-to.pdf, id=359, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_025
-t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nomesh_025t
--eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/xvel_nomesh_025t-eps-converted-to.pdf used on input line 75.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/yvel_nomesh_025t.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 82626 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/yvel_nomesh_025t-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 94101 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/yvel_nomesh_025t-eps-converted-to.pdf /users/lo
-renzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_025t.eps>
-(epstopdf)             \includegraphics on input line 76.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_025t-eps
--converted-to.pdf, id=360, 1335.99126pt x 837.1275pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_025
-t-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/yvel_nomesh_025t
--eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/yvel_nomesh_025t-eps-converted-to.pdf used on input line 76.
-(pdftex.def)             Requested size: 128.70071pt x 80.63924pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/p_linf_l2_break_full
-.pdf, id=361, 597.23125pt x 845.1575pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/p_linf_l2_break
-_full.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/p_linf_l2_break_
-full.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/p_linf_l2_break_full.pdf used on input line 83.
-(pdftex.def)             Requested size: 195.0pt x 275.94965pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[87]
-Overfull \hbox (36.73468pt too wide) detected at line 107
-\OML/cmm/m/it/12 g \OT1/cmr/m/n/12 = 2\OML/cmm/m/it/12 ^^Y []\OT1/cmr/m/n/12 (2
-\OML/cmm/m/it/12 ^^Yx\OT1/cmr/m/n/12 ) [](2\OML/cmm/m/it/12 ^^Yy\OT1/cmr/m/n/12
- ) [](2\OML/cmm/m/it/12 ^^Yz\OT1/cmr/m/n/12 ) [](2\OML/cmm/m/it/12 ^^Yt\OT1/cmr
-/m/n/12 ) + 12\OML/cmm/m/it/12 ^^Y[] []\OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ^^Yx\
-OT1/cmr/m/n/12 ) [](2\OML/cmm/m/it/12 ^^Yy\OT1/cmr/m/n/12 ) [](2\OML/cmm/m/it/1
-2 ^^Yy\OT1/cmr/m/n/12 ) [](2\OML/cmm/m/it/12 ^^Yt\OT1/cmr/m/n/12 )\OML/cmm/m/it
-/12 :
- []
-
-[88 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/pressure_disc_NE
-16_0_01_STAB_025t-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_pa
-pers/ima_submission/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf>]
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 111.
-
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_h1_disp_3D.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 57406 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_h1_disp_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15910 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/linf_h1_disp_3D-eps-converted-to.pdf /users/lor
-enzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp_3D.eps>
-(epstopdf)             \includegraphics on input line 112.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp_3D-eps-
-converted-to.pdf, id=382, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp_3D
--eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp_3D-
-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/linf_h1_disp_3D-eps-converted-to.pdf used on input line 112.
-(pdftex.def)             Requested size: 128.70071pt x 96.52664pt.
-LaTeX Font Info:    Calculating math sizes for size <4> on input line 112.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <4> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <4> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 112.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <2> not available
-(Font)              size <5> substituted on input line 112.
-
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_hdiv_flux_3D.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 56740 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_hdiv_flux_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15938 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_hdiv_flux_3D-eps-converted-to.pdf /users/lor
-enzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux_3D.eps>
-(epstopdf)             \includegraphics on input line 113.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux_3D-eps-
-converted-to.pdf, id=383, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux_3D
--eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_hdiv_flux_3D-
-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_hdiv_flux_3D-eps-converted-to.pdf used on input line 113.
-(pdftex.def)             Requested size: 128.70071pt x 96.52664pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_l2_p_3D.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 53010 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/linf_l2_p_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15177 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/linf_l2_p_3D-eps-converted-to.pdf /users/lorenz
-b/Dphil/poroelasticity_papers/ima_submission/linf_l2_p_3D.eps>
-(epstopdf)             \includegraphics on input line 114.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p_3D-eps-con
-verted-to.pdf, id=384, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p_3D-ep
-s-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_l2_p_3D-eps
--converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/linf_l2_p_3D-eps-converted-to.pdf used on input line 114.
-(pdftex.def)             Requested size: 128.70071pt x 96.52664pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_disp_3D.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 56928 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_disp_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15806 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_l2_disp_3D-eps-converted-to.pdf /users/loren
-zb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp_3D.eps>
-(epstopdf)             \includegraphics on input line 115.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp_3D-eps-co
-nverted-to.pdf, id=385, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp_3D-e
-ps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp_3D-ep
-s-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_l2_disp_3D-eps-converted-to.pdf used on input line 115.
-(pdftex.def)             Requested size: 128.70071pt x 96.52664pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_flux_3D.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 56845 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/l2_l2_flux_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 15517 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/l2_l2_flux_3D-eps-converted-to.pdf /users/loren
-zb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux_3D.eps>
-(epstopdf)             \includegraphics on input line 116.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux_3D-eps-co
-nverted-to.pdf, id=386, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux_3D-e
-ps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux_3D-ep
-s-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/l2_l2_flux_3D-eps-converted-to.pdf used on input line 116.
-(pdftex.def)             Requested size: 128.70071pt x 96.52664pt.
- [89 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf_h1_disp-ep
-s-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/
-l2_hdiv_flux-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/
-ima_submission/linf_l2_p-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasti
-city_papers/ima_submission/l2_l2_disp-eps-converted-to.pdf> </users/lorenzb/Dph
-il/poroelasticity_papers/ima_submission/l2_l2_flux-eps-converted-to.pdf>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[90 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/press_nomesh_012
-5t-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/ima_submis
-sion/xvel_nomesh_0125t-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelastici
-ty_papers/ima_submission/yvel_nomesh_0125t-eps-converted-to.pdf> </users/lorenz
-b/Dphil/poroelasticity_papers/ima_submission/pressure_2d_t025_nomesh-eps-conver
-ted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/xvel_nom
-esh_025t-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/ima_
-submission/yvel_nomesh_025t-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/canteliver_diag_crop.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 99539 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/canteliver_diag_crop-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 9029 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/canteliver_diag_crop-eps-converted-to.pdf /user
-s/lorenzb/Dphil/poroelasticity_papers/ima_submission/canteliver_diag_crop.eps>
-(epstopdf)             \includegraphics on input line 129.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/canteliver_diag_crop
--eps-converted-to.pdf, id=596, 236.885pt x 158.5925pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/canteliver_diag
-_crop-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/canteliver_diag_
-crop-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/canteliver_diag_crop-eps-converted-to.pdf used on input line 129.
-(pdftex.def)             Requested size: 195.0pt x 130.55486pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/cantilever_plot.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 37042 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/cantilever_plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 10691 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/cantilever_plot-eps-converted-to.pdf /users/lor
-enzb/Dphil/poroelasticity_papers/ima_submission/cantilever_plot.eps>
-(epstopdf)             \includegraphics on input line 130.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cantilever_plot-eps-
-converted-to.pdf, id=597, 449.68pt x 337.26pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cantilever_plot
--eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cantilever_plot-
-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/cantilever_plot-eps-converted-to.pdf used on input line 130.
-(pdftex.def)             Requested size: 195.0pt x 146.2489pt.
- [91 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/p_linf_l2_break
-_full.pdf>] [92 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/linf
-_h1_disp_3D-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/i
-ma_submission/l2_hdiv_flux_3D-eps-converted-to.pdf> </users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/linf_l2_p_3D-eps-converted-to.pdf> </users/lore
-nzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_disp_3D-eps-converted-to.p
-df> </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/l2_l2_flux_3D-ep
-s-converted-to.pdf>] [93 </users/lorenzb/Dphil/poroelasticity_papers/ima_submis
-sion/canteliver_diag_crop-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelast
-icity_papers/ima_submission/cantilever_plot-eps-converted-to.pdf>] [94]
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined_diag.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 44116 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined_diag-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 7006 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/unconfined_diag-eps-converted-to.pdf /users/lor
-enzb/Dphil/poroelasticity_papers/ima_submission/unconfined_diag.eps>
-(epstopdf)             \includegraphics on input line 165.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_diag-eps-
-converted-to.pdf, id=832, 162.6075pt x 128.48pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_diag
--eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_diag-
-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/unconfined_diag-eps-converted-to.pdf used on input line 165.
-(pdftex.def)             Requested size: 175.49881pt x 138.67593pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 2330790 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 412829 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/unconfined-eps-converted-to.pdf /users/lorenzb/
-Dphil/poroelasticity_papers/ima_submission/unconfined.eps>
-(epstopdf)             \includegraphics on input line 166.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined-eps-conve
-rted-to.pdf, id=833, 747.79375pt x 522.95375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined-eps-
-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined-eps-c
-onverted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/unconfined-eps-converted-to.pdf used on input line 166.
-(pdftex.def)             Requested size: 214.50119pt x 150.0089pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined_results_delta.eps>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 99006 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/ima_submission/unconfined_results_delta-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-02-17 10:51:16
-(epstopdf)                    size: 26838 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/ima_submission/unconfined_results_delta-eps-converted-to.pdf /
-users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_results_del
-ta.eps>
-(epstopdf)             \includegraphics on input line 173.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_results_d
-elta-eps-converted-to.pdf, id=834, 559.08875pt x 522.95375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_resu
-lts_delta-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_resul
-ts_delta-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/ima_submiss
-ion/unconfined_results_delta-eps-converted-to.pdf used on input line 173.
-(pdftex.def)             Requested size: 234.00238pt x 218.88101pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/conclusion.tex)
-[95 </users/lorenzb/Dphil/poroelasticity_papers/ima_submission/unconfined_diag-
-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/ima_submissio
-n/unconfined-eps-converted-to.pdf>] [96 </users/lorenzb/Dphil/poroelasticity_pa
-pers/ima_submission/unconfined_results_delta-eps-converted-to.pdf>] [97]
-Chapter 6.
-
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/overview
-.tex [98
-
-] [99]
-
-LaTeX Warning: Reference `sec:poro_theory' on page 100 undefined on input line 
-12.
-
-)
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_fe
-m.tex
-Overfull \hbox (42.1877pt too wide) in paragraph at lines 1--1
-[]\OT1/cmr/bx/n/17.28 The sta-bi-lized non-lin-ear fi-nite el-e-ment method 
- []
-
-)
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/cont_wea
-k_fem.tex [100]
-Overfull \hbox (8.13986pt too wide) in paragraph at lines 10--13
-\OT1/cmr/m/n/12 We let $\OT1/cmr/bx/n/12 W[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12
- f\OT1/cmr/bx/n/12 u \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ([0
-\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]; 
-) : \OT1/cmr/bx/n/12 u \OT1/cmr/m/n/12 = \OT1/cmr/bx/n/12 u[] [] \OT1/cmr/m/n/1
-2 ^^@[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 , $\OT1/cmr/bx/n/12 W[] \OT1/cmr/m/n/
-12 = \OMS/cmsy/m/n/12 f\OT1/cmr/bx/n/12 z \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 H
-[]\OT1/cmr/m/n/12 ([0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]; 
-) :
- []
-
-
-Overfull \hbox (53.5088pt too wide) in paragraph at lines 10--13
-\OT1/cmr/bx/n/12 z \OMS/cmsy/m/n/12 ^^A \OT1/cmr/bx/n/12 n \OT1/cmr/m/n/12 = \O
-ML/cmm/m/it/12 q[] [] \OT1/cmr/m/n/12 ^^@[]\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 .
- We also de-fine the mixed so-lu-tion space $\OMS/cmsy/m/n/12 W[] \OT1/cmr/m/n/
-12 = []$.
- []
-
-
-Overfull \hbox (18.21904pt too wide) in paragraph at lines 20--20
-[] 
- []
-
-[101])
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/discreti
-zed_fem.tex
-LaTeX Font Info:    Try loading font information for U+euf on input line 5.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [102]
-[103] [104]
-Overfull \hbox (13.90665pt too wide) in paragraph at lines 59--60
-\OT1/cmr/m/n/12 We be-gin with some stan-dard fi-nite el-e-ment no-ta-tion. Let
- $\OML/cmm/m/it/12 ^^X[] \OT1/cmr/m/n/12 = []$
- []
-
-[105]
-Overfull \hbox (24.37262pt too wide) detected at line 80
- []$[] \OT1/cmr/m/n/12 = [][] [][][] \OMS/cmsy/m/n/12 ^^A \OT1/cmr/bx/n/12 w[] 
-\OML/cmm/m/it/12 dv \OMS/cmsy/m/n/12 ^^@ [][] [] ^^A r\OT1/cmr/bx/n/12 w[] \OML
-/cmm/m/it/12 dv \OMS/cmsy/m/n/12 ^^@ [][] [][] ^^A \OT1/cmr/bx/n/12 w \OML/cmm/
-m/it/12 dv \OT1/cmr/m/n/12 + [][] \OML/cmm/m/it/12 p[]\OT1/cmr/bx/n/12 w[] \OMS
-/cmsy/m/n/12 ^^A []    8\OT1/cmr/bx/n/12 w[] \OMS/cmsy/m/n/12 2 \OT1/cmr/bx/n/1
-2 W[]\OML/cmm/m/it/12 ;$ []  
- []
-
-[106])
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/implemen
-tation_fem.tex [107]
-Underfull \hbox (badness 5331) in paragraph at lines 13--14
-[] []\OT1/cmr/m/n/12 Compute the so-lu-tion in-cre-ment from the lin-ear sys-te
-m:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-[]\OMS/cmsy/m/n/12 jj[]\OT1/cmr/m/n/12 (\U/euf/m/n/12 u[]\OML/cmm/m/it/12 ; \U/
-euf/m/n/12 u[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 jj ^^T [] !
- []
-
-[108]
-Overfull \hbox (115.84555pt too wide) detected at line 65
-[][] \OT1/cmr/m/n/12 = [[][]]\OML/cmm/m/it/12 ;   [][] \OT1/cmr/m/n/12 = [][] \
-OML/cmm/m/it/12  []\OMS/cmsy/m/n/12 r ^^A [] \OT1/cmr/m/n/12 + ^^A\OML/cmm/m/it
-/12 t []\OMS/cmsy/m/n/12 r ^^A [][] ^^@ \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t [
-]g dv \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^N [] [][] h[]\OT1/cmr/m/n/12 [\OML/c
-mm/m/it/12  []\OT1/cmr/m/n/12 ] []  \OML/cmm/m/it/12 ds:
- []
-
-[109]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-
-Overfull \hbox (80.10217pt too wide) in paragraph at lines 71--73
-\OT1/cmr/m/it/12 Algorithm to as-sem-ble sta-bi-liza-tion ma-trix $[]$\OT1/cmr/
-m/n/12 :                                                      
- []
-
-[110]
-Overfull \hbox (6.55838pt too wide) in paragraph at lines 100--104
-[] \OT1/cmr/m/n/12 The dis-cretiza-tion and im-ple-men-ta-tion of this ad-di-ti
-onal con-straint is straight-
- []
-
-[111])
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/simulati
-ons.tex [112]
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/unconfined_diag.eps>
-(epstopdf)                    date: 2013-12-07 00:26:31
-(epstopdf)                    size: 44116 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/unconfined_diag-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-01-03 20:22:21
-(epstopdf)                    size: 6959 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/large_deformation/figures/unconfined_diag-eps-converted-to.pdf
- /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unconfine
-d_diag.eps>
-(epstopdf)             \includegraphics on input line 40.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unconfine
-d_diag-eps-converted-to.pdf, id=932, 162.6075pt x 128.48pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unco
-nfined_diag-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/uncon
-fined_diag-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/unconfined_diag-eps-converted-to.pdf used on input line 40.
-(pdftex.def)             Requested size: 175.49881pt x 138.67593pt.
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/unconfined_large.eps>
-(epstopdf)                    date: 2014-04-03 12:45:25
-(epstopdf)                    size: 5559047 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/unconfined_large-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-03 13:35:22
-(epstopdf)                    size: 194197 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/large_deformation/figures/unconfined_large-eps-converted-to.pd
-f /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unconfin
-ed_large.eps>
-(epstopdf)             \includegraphics on input line 41.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unconfine
-d_large-eps-converted-to.pdf, id=933, 1152.305pt x 805.0075pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unco
-nfined_large-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/uncon
-fined_large-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/unconfined_large-eps-converted-to.pdf used on input line 41.
-(pdftex.def)             Requested size: 214.50119pt x 149.8453pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unconfine
-d_large.pdf, id=934, 562.1pt x 321.2pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unco
-nfined_large.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/uncon
-fined_large.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/unconfined_large.pdf used on input line 47.
-(pdftex.def)             Requested size: 234.00238pt x 133.71211pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[113] [114] [115 </users/lorenzb/Dphil/poroelasticity_papers/large_deformation/
-figures/unconfined_diag-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelastic
-ity_papers/large_deformation/figures/unconfined_large-eps-converted-to.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone001.p
-df, id=955, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone
-001.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone0
-01.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/pone001.pdf used on input line 101.
-(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzero001.
-pdf, id=956, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzer
-o001.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzero
-001.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/pzero001.pdf used on input line 102.
-(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone1.pdf
-, id=957, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone
-1.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pone1
-.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/pone1.pdf used on input line 103.
-(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzero1.pd
-f, id=958, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzer
-o1.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/pzero
-1.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/pzero1.pdf used on input line 104.
-(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
- [116 </users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/unc
-onfined_large.pdf>] [117] [118 </users/lorenzb/Dphil/poroelasticity_papers/larg
-e_deformation/figures/pone001.pdf> </users/lorenzb/Dphil/poroelasticity_papers/
-large_deformation/figures/pzero001.pdf> </users/lorenzb/Dphil/poroelasticity_pa
-pers/large_deformation/figures/pone1.pdf> </users/lorenzb/Dphil/poroelasticity_
-papers/large_deformation/figures/pzero1.pdf>] [119]
-Package epstopdf Info: Source file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/setup_balls.eps>
-(epstopdf)                    date: 2014-06-13 15:13:09
-(epstopdf)                    size: 4061979 bytes
-(epstopdf)             Output file: </users/lorenzb/Dphil/poroelasticity_papers
-/large_deformation/figures/setup_balls-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-06-13 15:14:03
-(epstopdf)                    size: 47180 bytes
-(epstopdf)             Command: <repstopdf --outfile=/users/lorenzb/Dphil/poroe
-lasticity_papers/large_deformation/figures/setup_balls-eps-converted-to.pdf /us
-ers/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/setup_balls.e
-ps>
-(epstopdf)             \includegraphics on input line 124.
-Package epstopdf Info: Output file is already uptodate.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/setup_bal
-ls-eps-converted-to.pdf, id=1015, 885.3075pt x 747.79375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/setu
-p_balls-eps-converted-to.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/setup
-_balls-eps-converted-to.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/setup_balls-eps-converted-to.pdf used on input line 124.
-(pdftex.def)             Requested size: 175.49881pt x 148.23248pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/bigswell_
-1s.pdf, id=1016, 866.23625pt x 603.25375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/bigs
-well_1s.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/bigsw
-ell_1s.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/bigswell_1s.pdf used on input line 125.
-(pdftex.def)             Requested size: 234.00238pt x 162.96353pt.
-
-Overfull \hbox (19.50119pt too wide) in paragraph at lines 124--127
- [][][][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swell_plo
-ng.pdf, id=1017, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swel
-l_plong.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swell
-_plong.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/swell_plong.pdf used on input line 157.
-(pdftex.def)             Requested size: 175.49881pt x 146.24915pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swell_jlo
-ng.pdf, id=1018, 481.8pt x 401.5pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swel
-l_jlong.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/swell
-_jlong.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/large_defor
-mation/figures/swell_jlong.pdf used on input line 158.
-(pdftex.def)             Requested size: 175.49881pt x 146.24915pt.
- [120]
-Overfull \vbox (16.07262pt too high) has occurred while \output is active []
-
-
-[121 </users/lorenzb/Dphil/poroelasticity_papers/large_deformation/figures/setu
-p_balls-eps-converted-to.pdf> </users/lorenzb/Dphil/poroelasticity_papers/large
-_deformation/figures/bigswell_1s.pdf> </users/lorenzb/Dphil/poroelasticity_pape
-rs/large_deformation/figures/swell_plong.pdf> </users/lorenzb/Dphil/poroelastic
-ity_papers/large_deformation/figures/swell_jlong.pdf>])
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/conclusi
-on.tex [122]) [123]
-Chapter 7.
-
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/breathing_m
-echanics.tex)
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_assum
-ptions_united.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
-
- []
-
-[124
-
-] [125]
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
-
- []
-
-[126]
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-
- []
-
-[127]
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
-
- []
-
-[128]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/emphy
-sema.jpg, id=1071, 144.54pt x 53.2389pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-emphysema.jpg Graphic file (type jpg)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/e
-mphysema.jpg>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/emphysema.jpg used on input line 76.
-(pdftex.def)             Requested size: 351.0163pt x 159.0063pt.
- [129 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images
-/emphysema.jpg>])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/proposed_lu
-ng_model.tex [130] [131] [132] [133] [134] [135] [136]
-Overfull \hbox (3.90854pt too wide) in paragraph at lines 203--287
-\OT1/cmr/m/n/12 For no-ta-tional pur-poses we have added sub-script $\OML/cmm/m
-/it/12 di$ \OT1/cmr/m/n/12 to the most dis-tal branches
- []
-
-[137])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/summary_mod
-el_equations.tex [138])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/implementat
-ion.tex
-Underfull \hbox (badness 5331) in paragraph at lines 13--14
-[] []\OT1/cmr/m/n/12 Compute the so-lu-tion in-cre-ment from the lin-ear sys-te
-m:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-[]\OMS/cmsy/m/n/12 jj[]\OT1/cmr/m/n/12 (\U/euf/m/n/12 u[]\OML/cmm/m/it/12 ; \U/
-euf/m/n/12 u[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 jj ^^T [] !
- []
-
-[139] [140])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_gener
-ation.tex
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/i
-nsp_CT.pdf, id=1111, 144.54pt x 128.48pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/insp_CT.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/insp_CT.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/insp_CT.pdf used on input line 12.
-(pdftex.def)             Requested size: 148.35663pt x 131.87907pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/e
-xp_CT_out.pdf, id=1112, 349.305pt x 276.03125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/exp_CT_out.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/exp_CT_out.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/exp_CT_out.pdf used on input line 13.
-(pdftex.def)             Requested size: 167.69714pt x 132.51875pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/i
-nsp_seg_out_shrink.pdf, id=1113, 390.45876pt x 344.28625pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/insp_seg_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/insp_seg_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/insp_seg_out_shrink.pdf used on input line 20.
-(pdftex.def)             Requested size: 185.25238pt x 163.34328pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/l
-obe_mesh_out_shrink.pdf, id=1114, 310.15875pt x 506.89375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/lobe_mesh_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/lobe_mesh_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/lobe_mesh_out_shrink.pdf used on input line 21.
-(pdftex.def)             Requested size: 97.5pt x 159.33978pt.
- [141]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/a
-ir_out_shrink.pdf, id=1118, 340.27126pt x 425.59pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/air_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/air_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/air_out_shrink.pdf used on input line 27.
-(pdftex.def)             Requested size: 107.24762pt x 134.13948pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/c
-enter_out_shrink.pdf, id=1119, 290.08376pt x 566.115pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/center_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/center_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/center_out_shrink.pdf used on input line 28.
-(pdftex.def)             Requested size: 68.25119pt x 133.19252pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/t
-ree_mesh_out_shrink.pdf, id=1120, 380.42125pt x 587.19376pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/tree_mesh_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/tree_mesh_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/tree_mesh_out_shrink.pdf used on input line 29.
-(pdftex.def)             Requested size: 97.5pt x 150.48953pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/l
-ung_mesh_out_shrink.pdf, id=1121, 280.04625pt x 516.93124pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/lung_mesh_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/lung_mesh_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/lung_mesh_out_shrink.pdf used on input line 30.
-(pdftex.def)             Requested size: 85.80048pt x 158.37764pt.
- [142] [143 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/
-lung_model/insp_CT.pdf> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/exp_CT_out.pdf> </users/lorenzb/Dphil/poroelasticity_pap
-ers/coupling_paper/figures/lung_model/insp_seg_out_shrink.pdf> </users/lorenzb/
-Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/lobe_mesh_out_shr
-ink.pdf>] [144 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figur
-es/lung_model/air_out_shrink.pdf> </users/lorenzb/Dphil/poroelasticity_papers/c
-oupling_paper/figures/lung_model/center_out_shrink.pdf> </users/lorenzb/Dphil/p
-oroelasticity_papers/coupling_paper/figures/lung_model/tree_mesh_out_shrink.pdf
-> </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model
-/lung_mesh_out_shrink.pdf>] [145])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/simulation_
-lung.tex [146]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/s
-lice_out_shrink.pdf, id=1168, 551.05875pt x 550.055pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/slice_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/slice_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/slice_out_shrink.pdf used on input line 17.
-(pdftex.def)             Requested size: 155.99762pt x 155.70976pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_model/d
-isease_out_shrink.pdf, id=1169, 551.05875pt x 550.055pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mo
-del/disease_out_shrink.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_mod
-el/disease_out_shrink.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_model/disease_out_shrink.pdf used on input line 18.
-(pdftex.def)             Requested size: 155.99762pt x 155.70976pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[147]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/vo
-lume_tracheaz.pdf, id=1173, 455.7025pt x 426.59375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/volume_tracheaz.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/volume_tracheaz.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/volume_tracheaz.pdf used on input line 38.
-(pdftex.def)             Requested size: 128.70071pt x 120.48041pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/fl
-owrate_tracheaz.pdf, id=1174, 455.7025pt x 426.59375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/flowrate_tracheaz.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/flowrate_tracheaz.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/flowrate_tracheaz.pdf used on input line 39.
-(pdftex.def)             Requested size: 124.80286pt x 116.82869pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/pr
-essure_tracheaz.pdf, id=1175, 455.7025pt x 426.59375pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/pressure_tracheaz.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/pressure_tracheaz.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/pressure_tracheaz.pdf used on input line 40.
-(pdftex.def)             Requested size: 128.70071pt x 120.48041pt.
- [148 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_m
-odel/slice_out_shrink.pdf> </users/lorenzb/Dphil/poroelasticity_papers/coupling
-_paper/figures/lung_model/disease_out_shrink.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/re
-coil_tracheaz.pdf, id=1186, 566.115pt x 525.965pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/recoil_tracheaz.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/recoil_tracheaz.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/recoil_tracheaz.pdf used on input line 52.
-(pdftex.def)             Requested size: 234.00238pt x 217.40463pt.
- [149 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/volume_tracheaz.pdf> </users/lorenzb/Dphil/poroelasticity_papers/coupling_p
-aper/figures/lung_sims/flowrate_tracheaz.pdf> </users/lorenzb/Dphil/poroelastic
-ity_papers/coupling_paper/figures/lung_sims/pressure_tracheaz.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/pa
-thway_res_HD.png, id=1210, 925.4575pt x 682.55pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/pathway_res_HD.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/pathway_res_HD.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/pathway_res_HD.png used on input line 68.
-(pdftex.def)             Requested size: 195.0pt x 143.8084pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/pa
-thway_res_tissue.png, id=1211, 812.03375pt x 480.79625pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/pathway_res_tissue.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/pathway_res_tissue.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/pathway_res_tissue.png used on input line 69.
-(pdftex.def)             Requested size: 195.0pt x 115.45213pt.
- [150 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/recoil_tracheaz.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/ve
-nt_res_scatter.pdf, id=1221, 541.02126pt x 438.63875pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/vent_res_scatter.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/vent_res_scatter.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/vent_res_scatter.pdf used on input line 76.
-(pdftex.def)             Requested size: 195.0pt x 158.09723pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/pr
-essure_res_scatter.pdf, id=1222, 541.02126pt x 438.63875pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/pressure_res_scatter.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/pressure_res_scatter.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/pressure_res_scatter.pdf used on input line 77.
-(pdftex.def)             Requested size: 195.0pt x 158.09723pt.
- [151 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/pathway_res_HD.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/pathway_res_tissue.png>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/H_
-TP_5036_9NT.png, id=1226, 1021.8175pt x 669.50125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/H_TP_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/H_TP_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/H_TP_5036_9NT.png used on input line 90.
-(pdftex.def)             Requested size: 195.0pt x 127.75821pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/H_
-P_5036_9NT_surf.png, id=1227, 1023.825pt x 624.3325pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/H_P_5036_9NT_surf.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/H_P_5036_9NT_surf.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/H_P_5036_9NT_surf.png used on input line 91.
-(pdftex.def)             Requested size: 195.0pt x 118.9102pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/H_
-P_5036_9NT.png, id=1228, 1031.855pt x 586.19pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/H_P_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/H_P_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/H_P_5036_9NT.png used on input line 93.
-(pdftex.def)             Requested size: 195.0pt x 110.77797pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/H_
-J_5036_9NT.png, id=1229, 904.37875pt x 589.20125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/H_J_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/H_J_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/H_J_5036_9NT.png used on input line 94.
-(pdftex.def)             Requested size: 167.69714pt x 109.25224pt.
- [152 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/vent_res_scatter.pdf> </users/lorenzb/Dphil/poroelasticity_papers/coupling_
-paper/figures/lung_sims/pressure_res_scatter.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/j_
-Air_ball.pdf, id=1257, 457.71pt x 440.64626pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/j_Air_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/j_Air_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/j_Air_ball.pdf used on input line 123.
-(pdftex.def)             Requested size: 128.70071pt x 123.89783pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/p_
-Air_ball.pdf, id=1258, 457.71pt x 440.64626pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/p_Air_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/p_Air_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/p_Air_ball.pdf used on input line 124.
-(pdftex.def)             Requested size: 128.70071pt x 123.89783pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/si
-ge_Air_ball.pdf, id=1259, 457.71pt x 440.64626pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/sige_Air_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/sige_Air_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/sige_Air_ball.pdf used on input line 126.
-(pdftex.def)             Requested size: 128.70071pt x 123.89783pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/j_
-C_ball.pdf, id=1260, 435.6275pt x 455.7025pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/j_C_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/j_C_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/j_C_ball.pdf used on input line 127.
-(pdftex.def)             Requested size: 128.70071pt x 134.62576pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/p_
-C_ball.pdf, id=1261, 426.59375pt x 455.7025pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/p_C_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/p_C_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/p_C_ball.pdf used on input line 128.
-(pdftex.def)             Requested size: 128.70071pt x 137.48363pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/si
-ge_C_ball.pdf, id=1262, 426.59375pt x 455.7025pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/sige_C_ball.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/sige_C_ball.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/sige_C_ball.pdf used on input line 130.
-(pdftex.def)             Requested size: 128.70071pt x 137.48363pt.
- [153 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/H_TP_5036_9NT.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pap
-er/figures/lung_sims/H_P_5036_9NT_surf.png> </users/lorenzb/Dphil/poroelasticit
-y_papers/coupling_paper/figures/lung_sims/H_P_5036_9NT.png> </users/lorenzb/Dph
-il/poroelasticity_papers/coupling_paper/figures/lung_sims/H_J_5036_9NT.png>] [1
-54]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/C_
-P_5036_9NT.png, id=1270, 1015.795pt x 573.14125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/C_P_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/C_P_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/C_P_5036_9NT.png used on input line 142.
-(pdftex.def)             Requested size: 195.0pt x 110.01738pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/C_
-J_5036_9NT.png, id=1271, 906.38625pt x 573.14125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/C_J_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/C_J_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/C_J_5036_9NT.png used on input line 143.
-(pdftex.def)             Requested size: 167.69714pt x 106.03821pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/C_
-Se_5036_9NT.png, id=1272, 1016.79875pt x 586.19pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/C_Se_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/C_Se_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/C_Se_5036_9NT.png used on input line 144.
-(pdftex.def)             Requested size: 195.0pt x 112.41481pt.
-
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/C_
-Fz_5036_9NT.png, id=1273, 1322.9425pt x 889.3225pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/C_Fz_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/C_Fz_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/C_Fz_5036_9NT.png used on input line 145.
-(pdftex.def)             Requested size: 155.99762pt x 104.85501pt.
- [155 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/j_Air_ball.pdf> </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/
-figures/lung_sims/p_Air_ball.pdf> </users/lorenzb/Dphil/poroelasticity_papers/c
-oupling_paper/figures/lung_sims/sige_Air_ball.pdf> </users/lorenzb/Dphil/poroel
-asticity_papers/coupling_paper/figures/lung_sims/j_C_ball.pdf> </users/lorenzb/
-Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/p_C_ball.pdf> </us
-ers/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/sige_C
-_ball.pdf>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sims/W_
-J_5036_9NT.png, id=1334, 879.285pt x 573.14125pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_si
-ms/W_J_5036_9NT.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_sim
-s/W_J_5036_9NT.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/lung_sims/W_J_5036_9NT.png used on input line 186.
-(pdftex.def)             Requested size: 187.19833pt x 122.0161pt.
- [156 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/lung_s
-ims/C_P_5036_9NT.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pape
-r/figures/lung_sims/C_J_5036_9NT.png> </users/lorenzb/Dphil/poroelasticity_pape
-rs/coupling_paper/figures/lung_sims/C_Se_5036_9NT.png> </users/lorenzb/Dphil/po
-roelasticity_papers/coupling_paper/figures/lung_sims/C_Fz_5036_9NT.png>])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion.
-tex [157] [158] [159 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper
-/figures/lung_sims/W_J_5036_9NT.png>] [160] [161])
-(/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_pa
-per.tex
-Overfull \hbox (34.51404pt too wide) detected at line 38
-[] [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 ;
- []
-
-[162]
-Overfull \hbox (115.84555pt too wide) detected at line 60
-[][] \OT1/cmr/m/n/12 = [[][]]\OML/cmm/m/it/12 ;   [][] \OT1/cmr/m/n/12 = [][] \
-OML/cmm/m/it/12  []\OMS/cmsy/m/n/12 r ^^A [] \OT1/cmr/m/n/12 + ^^A\OML/cmm/m/it
-/12 t []\OMS/cmsy/m/n/12 r ^^A [][] ^^@ \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t [
-]g dv \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^N [] [][] h[]\OT1/cmr/m/n/12 [\OML/c
-mm/m/it/12  []\OT1/cmr/m/n/12 ] []  \OML/cmm/m/it/12 ds:
- []
-
-
-Overfull \hbox (69.05894pt too wide) detected at line 70
-\OT1/cmr/bx/n/12 X \OT1/cmr/m/n/12 = [\OT1/cmr/bx/n/12 x[]\OT1/cmr/m/n/12 ]\OML
-/cmm/m/it/12 ;   \OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 := []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
-
- []
-
-[163] [164] [165]) [166]
-Chapter 8.
-[167
-
-]
+[40] [41] [42]) [43]
 Appendix A.
 
 (/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/appendix
-_paper.tex [168
+_paper.tex
+LaTeX Font Info:    Try loading font information for U+euf on input line 5.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [44
 
-] [169]) (./thesis.bbl [170] [171
+]
 
-] [172] [173] [174]
+LaTeX Warning: Reference `sec:numerical_simulations' on page 45 undefined on in
+put line 43.
+
+[45]) (./thesis.bbl [46] [47
+
+]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [175]
-[176] [177] [178] [179] [180] [181] [182] [183])
-
-Package natbib Warning: There were undefined citations.
-
-[184] (./thesis.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 3.0pt have occurred.
-
+ [48] [49] [50] [51] [52] [53] [54] [55]) [56]
+(./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3188,42 +1067,35 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17788 strings out of 494245
- 354365 string characters out of 6158904
- 393059 words of memory out of 5000000
- 20409 multiletter control sequences out of 15000+600000
- 22243 words of font info for 84 fonts, out of 8000000 for 9000
+ 16798 strings out of 494245
+ 310622 string characters out of 6158904
+ 388101 words of memory out of 5000000
+ 19624 multiletter control sequences out of 15000+600000
+ 15132 words of font info for 55 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 56i,19n,85p,1861b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,85p,1546b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-mextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (193 pages, 9947315 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (62 pages, 3304212 bytes).
 PDF statistics:
- 1513 PDF objects out of 1728 (max. 8388607)
- 1026 compressed objects within 11 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
