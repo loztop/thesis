@@ -1,0 +1,96 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Implementation details
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Implementation details}
+\label{sec:implementation}
+
+
+\subsection{Newton algorithm}
+\label{sec:newton}
+We will now let $\mathfrak{u}_{i}^{n}:=\{ \dispcont_{i}^{n}, \fluxcont_{i}^{n}, \pcont_{i}^{n} \} $ denote the fully discrete solution at the $i$th step within the Newton method at time $t^{n}$. To ease the notation, we have suppressed the lower case $h$, previously used to denote the spatial discretization. To solve the nonlinear poroelastic problem using Newton's method at a particular time step, we perform the following steps:
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+  \caption{Fully discrete Newton's algorithm}
+    \label{algo:newton}
+  \STATE $i=0$
+  \STATE $\mathfrak{u}_{0}^{n}=\{ \dispcont^{n-1}, \fluxcont^{n-1}, \pcont^{n-1} \} $
+  \WHILE { $||\boldsymbol{R}(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1})|| > \mbox{TOL} \; \& \; i < \mbox{ITEMAX}$  }
+    \STATE Assemble  $\boldsymbol{R}(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1})$ and $\boldsymbol{K}(\mathfrak{u}_{i}^{n})$
+    \STATE Solve $\boldsymbol{K}(\mathfrak{u}_{i}^{n}) \xi\mathfrak{u}_{i+1}^{n} = -\boldsymbol{R}(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1})$
+    \STATE Compute $\mathfrak{u}_{i+1}^{n}=\mathfrak{u}_{i}^{n}+ \xi \mathfrak{u}_{i+1}^{n}$
+    \STATE Update the mesh, $ \Omega_{t}= \boldsymbol{X} +\boldsymbol{u}_{i}^{n}$
+    \STATE $i=i+1$
+  \ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+%\footnotetext{%The deformation state is obtained within the nonlinear solution process by an update of the deformation state during the Newton iteration. This allows us to define to solve the equations in $\Omega_{t}$, or more precisely ${\Omega_{t}}_{i}$. Also note that all the basis functions (and their spatial derivatives) will change with every iteration.
+%This method is known in the literature as an updated Lagrange formulation, see e.g. \cite{bathe1975finite} or \cite[chapter 3]{wriggers2008nonlinear}, however it should really be called an updated Eulerian formulation, since the current configuration is being updated during each Newton iteration. This method is also used by \cite{ateshian2010finite,white2008stabilized} to solve the large deformation poroelasticty problem.}
+where $\boldsymbol{K}(\mathfrak{u}_{i}^{n})$ and $\boldsymbol{R}(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1})$ are the matrix and vector representations of $DG(\mathfrak{u}_{i}^{n})$ and $G(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1})$, respectively.
+%\begin{equation}
+%DG(\mathfrak{u}_{i}^{n}) \change \mathfrak{u}_{i+1}^{n} = - G(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1}),
+%\end{equation}
+At each Newton iteration we solve the linear system
+\begin{equation}
+\boldsymbol{K}(\mathfrak{u}_{i}^{n}) \change \mathfrak{u}_{i+1}^{n} = - \boldsymbol{R}(\mathfrak{u}_{i}^{n},\mathfrak{u}^{n-1}),
+\end{equation}
+which can be expanded, and written as
+ \begin{equation*}
+ \begin{bmatrix}
+  \boldsymbol{K}^{e} & 0 & \boldsymbol{B}^{T} \\
+  0 & \boldsymbol{M} & \boldsymbol{B}^{T} \\
+  -\boldsymbol{B} & -\Delta t \boldsymbol{B} &\boldsymbol{J}
+ \end{bmatrix}
+ \begin{bmatrix}
+  \change \boldsymbol{u}^{n}_{i+1} \\
+  \change{z}^{n}_{i+1} \\
+ \change \boldsymbol{p}^{n}_{i+1}
+ \end{bmatrix}= -
+ \begin{bmatrix}
+  \boldsymbol{r}_{1}(\boldsymbol{u}^{n}_{i},{p}^{n}_{i}) \\
+  \boldsymbol{r}_{2}(\boldsymbol{u}^{n}_{i},\boldsymbol{z}^{n}_{i},{p}^{n}_{i})  \\
+  \boldsymbol{r}_{3}(\boldsymbol{u}^{n}_{i},\boldsymbol{u}^{n-1},\boldsymbol{z}^{n}_{i},{p}^{n}_{i})
+ \end{bmatrix},
+ \end{equation*}
+ where we have defined the following matrices:
+ \begin{eqnarray*}
+&&\boldsymbol{K}^{e}=[\boldsymbol{a}_{kl}], \;\; \boldsymbol{k}^{e}_{kl}=\int_{{\Omega_{t} }} \boldsymbol{E}^{T}_{k}\boldsymbol{D}(\boldsymbol{u}^{n}_{i})\boldsymbol{E}_{l}+  (\nabla \boldsymbol{\phi}_{k})^{T}\boldsymbol{\sigma}_{e}(\boldsymbol{u}^{n}_{i})\nabla \boldsymbol{\phi}_{l}  \; dv, \\
+&&\boldsymbol{M}=[\boldsymbol{m}_{kl}], \;\; \boldsymbol{m}_{kl}
+ =  \int_{{\Omega_{t} }} \perminv(\boldsymbol{u}^{n}_{i})  \boldsymbol{\phi}_{k} \cdot  \boldsymbol{\phi}_{l} \; dv, \\
+&&\boldsymbol{B}=[\boldsymbol{b}_{kl}], \;\; \boldsymbol{b}_{kl}
+ = -\int_{{\Omega_{t} }}  {\psi}_{k} \nabla \cdot \boldsymbol{\phi}_{l} \; dv, \\
+&& \boldsymbol{J}=[\boldsymbol{j}_{kl}], \;\; \boldsymbol{j}_{kl}
+= \delta \sum_{K} \int_{\partial k \backslash \partial {\Omega_{t} }} h_{\partial K} [{\psi}_{k}][{\psi}_{k}] \;ds. \\
+&& \boldsymbol{r}_{1} = [\boldsymbol{r}_{1i}], \;\; \boldsymbol{r}_{1i}
+=  \int_{{\Omega_{t}}} \left(\boldsymbol{\sigma}_{e}(\boldsymbol{u}^{n}_{i})-p^{n}_{i} \boldsymbol{I} \right) : \nabla \boldsymbol{\phi}_{i}
+- {\rho}(\boldsymbol{u}^{n}_{i})  \boldsymbol{\phi}_{i}\cdot \boldsymbol{f}  \; dv - \int_{\Gamma_{t}}    \boldsymbol{\phi}_{i} \cdot \boldsymbol{t}_{N}    \; ds, \\
+&& \boldsymbol{r}_{2} = [\boldsymbol{r}_{2i}], \;\; \boldsymbol{r}_{2i}= \int_{{\Omega_{t}}}  \perminv(\boldsymbol{u}^{n}_{i}) \boldsymbol{\phi}_{i} \cdot \boldsymbol{z}^{n}_{i}  -{p}^{n}_{i} \nabla \cdot \boldsymbol{\phi}_{i} -{\rho^{f}}(\boldsymbol{u}^{n}_{i}) \boldsymbol{\phi}_{i}\cdot \boldsymbol{f}  \; dv , \\
+&& \boldsymbol{r}_{3} = [\boldsymbol{r}_{3i}], \;\; \boldsymbol{r}_{3i}= \int_{{\Omega_{t}}}  {\psi}_{i}   \nabla \cdot  \left( {\boldsymbol{u}^{n}_{i}-\boldsymbol{u}^{n-1}} \right)
++  \Delta t {\psi}_{i}  \nabla \cdot \boldsymbol{z}^{n}_{i}   - \Delta t{\psi}_{i} g  \; dv  \\
+&& \hskip 5cm + \delta \sum_{K} \int_{\partial k \backslash \partial {\Omega_{t} }} h_{\partial K} [{\psi}_{i}]\left[{{p}^{n}_{i}-{p}^{n-1}}\right] \;ds.
+ \end{eqnarray*}
+Here $\boldsymbol{\phi}_{k}$ are vector valued linear basis functions such that the displacement vector at the $i$th iteration can be written as $\boldsymbol{u}^{n}_{i}= \sum_{k=1}^{n_{u}}\boldsymbol{u}^{n}_{i,k}\boldsymbol{\phi}_{k}$, with $\sum_{k=1}^{n_{u}}\boldsymbol{u}^{n}_{i,k}\boldsymbol{\phi}_{k} \in \dispspacedisc$. Similarly for the fluid flux vector we have $\boldsymbol{z}^{n}_{i}= \sum_{k=1}^{n_{z}}\boldsymbol{z}^{n}_{i,k}\boldsymbol{\phi}_{k}$, with $\sum_{k=1}^{n_{z}}\boldsymbol{z}^{n}_{i,k}\boldsymbol{\phi}_{k} \in \fluxspacedisc$. The scalar valued constant basis functions ${\psi}_{i}$ are used to approximate the pressure, such that $\boldsymbol{p}^{n}_{i}= \sum_{k=1}^{n_{p}}{p}^{n}_{i,k}{\psi}_{k}$, with $\sum_{k=1}^{n_{p}}{p}^{n}_{i,k}{\psi}_{k} \in \pspacedisc$. Also to aid the assembly of the fourth order tensor we have adopted the matrix voigt notation. In particular $\boldsymbol{D}$ is the matrix form of ${\spatialincremental}$, and $\boldsymbol{E}_{k}$ is the matrix version of $\nabla^{S}\boldsymbol{\phi}_{k}$, see (\ref{matrixvoigt}) and (\ref{eqn:sym_matrix}) for details.
+
+
+
+\subsection{No-flux boundary condition}
+\label{sec:no-flux}
+
+We introduce a Lagrange multiplier $\Lambda$, to enforce the no-flux boundary condition $\boldsymbol{z}\cdot \normal = 0 $ along the boundary $\Gamma_{f}$. Let ${W}^{f}=\{ \Lambda \in H_{div}(\Gamma_{f},\mathbb{R}) \}$. The resulting modified continuous weak-form is now:
+\begin{equation}
+\begin{gathered}\begin{aligned}
+G((\dispcont,\fluxcont,\pcont) ) , (\dispconttest,\fluxconttest,\pconttest) )
++ (\Lambda,\fluxconttest \cdot \normal )_{\Gamma_{f}}
+& =0 \; \forall (\dispconttest,\fluxconttest,\pconttest) \in \dispspace, \fluxspace, \pspace,\\
+(\fluxcont \cdot \normal,\lambdaconttest  )_{\Gamma_{f}} & =0, \; \forall \lambdaconttest \in {W}^{f}.
+\end{aligned}\end{gathered}
+\label{eqns:weak_cont_system_integrated}
+\end{equation}
+The discretization and implementation of this additional constraint is straightforward and results in a linear system with additional degrees of freedom for every node on $\Gamma_{f}$. The terms $(\Lambda,\fluxconttest \cdot \normal )_{\Gamma_{f}}$ and $(\fluxcont \cdot \normal,\lambdaconttest  )_{\Gamma_{f}}$ are nonlinear since the normal is a function of the displacement. However we have found that treating these terms as linear terms does not affect the convergence of the Newton algorithm. Alternatively these terms could be linearized as has been described in detail for the traction boundary condition, see \cite[section 4.2.5]{wriggers2008nonlinear}.
+
+
+
+
+
+

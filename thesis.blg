@@ -1,25 +1,53 @@
-This is BibTeX, Version 0.99d (TeX Live 2014/dev)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-The style file: plainnat.bst
-Database file #1: /home/scratch/Dropbox/Dphil/bibliography/lung.bib
-Repeated entry---line 2999 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+The style file: abbrv.bst
+Database file #1: /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 2303 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{tawhai2009supine
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2847 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{markert2007constitutive
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3209 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
  : @article{mow1980biphasic
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3061 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 3271 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
  : @article{cookson2011novel
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3895 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 3303 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{lande2006analysis
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3737 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{barucq2005some
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3781 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{babuvska1971error
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4129 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
  : @article{khaled2003role
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3965 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 4175 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{lee1983finite
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4251 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
  : @article{yin2013multiscale
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4377 of file /home/scratch/Dropbox/Dphil/bibliography/lung.bib
+Repeated entry---line 4421 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
+ : @article{sauter2010robust
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4663 of file /home/lorenz/Dropbox/Dphil/bibliography/lung.bib
  : @article{white2008stabilized
  :                             ,
 I'm skipping whatever remains of this entry
@@ -27,46 +55,45 @@ Warning--to sort, need author or key in bowenporouslectures
 Warning--empty author in bowenporouslectures
 Warning--empty journal in bowenporouslectures
 Warning--empty year in bowenporouslectures
-Warning--empty year in bowenporouslectures
-You've used 61 entries,
-            2773 wiz_defined-function locations,
-            950 strings with 16379 characters,
-and the built_in function-call counts, 29368 in all, are:
-= -- 2614
-> -- 1754
-< -- 39
-+ -- 596
-- -- 534
-* -- 2510
-:= -- 4526
-add.period$ -- 182
-call.type$ -- 61
-change.case$ -- 350
-chr.to.int$ -- 60
-cite$ -- 128
-duplicate$ -- 1250
-empty$ -- 2360
-format.name$ -- 638
-if$ -- 6075
-int.to.chr$ -- 2
-int.to.str$ -- 1
-missing$ -- 65
-newline$ -- 311
-num.names$ -- 240
-pop$ -- 673
+You've used 111 entries,
+            2118 wiz_defined-function locations,
+            1107 strings with 23389 characters,
+and the built_in function-call counts, 37758 in all, are:
+= -- 3740
+> -- 1870
+< -- 9
++ -- 769
+- -- 626
+* -- 2897
+:= -- 6398
+add.period$ -- 334
+call.type$ -- 111
+change.case$ -- 623
+chr.to.int$ -- 0
+cite$ -- 115
+duplicate$ -- 1264
+empty$ -- 2829
+format.name$ -- 626
+if$ -- 7636
+int.to.chr$ -- 0
+int.to.str$ -- 111
+missing$ -- 118
+newline$ -- 556
+num.names$ -- 220
+pop$ -- 559
 preamble$ -- 1
-purify$ -- 298
+purify$ -- 533
 quote$ -- 0
-skip$ -- 969
+skip$ -- 847
 stack$ -- 0
-substring$ -- 1352
-swap$ -- 87
-text.length$ -- 4
+substring$ -- 2687
+swap$ -- 159
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 631
-warning$ -- 5
-while$ -- 266
-width$ -- 0
-write$ -- 786
-(There were 5 error messages)
+type$ -- 412
+warning$ -- 4
+while$ -- 376
+width$ -- 114
+write$ -- 1205
+(There were 12 error messages)

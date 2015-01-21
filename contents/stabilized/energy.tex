@@ -1,0 +1,230 @@
+\section{Energy estimate for the fully-discrete model}
+\label{sec:energy}
+
+In this section we construct two new combined bilinear forms, $B^n_{\Delta t,h}$ (lemmas \ref{lemma_bf} and \ref{corollary_BF}) and $\mathcal{B}_{h}^{n}$ (lemmas \ref{lemma_bstar} and \ref{corollary_Bstar}). These bilinear forms are bounded below by Lemmas \ref{lemma_bf} and \ref{lemma_bstar} respectively. Lemma \ref{corollary_BF} uses lemma \ref{lemma_bf} to provide a bound on $\dispdisc, \fluxdisc$ and $\pdisc$. Lemma \ref{corollary_Bstar} uses lemma \ref{lemma_bstar} to provide a bound on $\nabla \cdot \fluxdisc$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            Bounds on the displacement, fluid flux and pressure                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bound on the displacement, fluid flux and pressure}
+\label{sec:linear_form_one}
+Adding (\ref{eqn:weak_fulldisc_elast_mom}), (\ref{eqn:weak_fulldisc_flux_mom}) and (\ref{eqn:weak_fulldisc_mass}), and assuming
+%$p_{D}=0$ on $\Gamma_{p}$ and
+$\mathbf{t}_{N}=0$ on $\Gamma_{t}$, we get the following
+\begin{equation}
+\label{eqn:B_weakform}
+B_{\Delta t,h}^{n}[\disctriple,\disctripletest] =  (\mathbf{f}^{n},\dispdisctest) +  (\mathbf{b}^{n},\fluxdisctest)    +(g^{n},\pdisctest) \;\;\;\; \forall \disctripletest \in \mixedspacedisc,
+\end{equation}
+where
+\begin{eqnarray*}
+\label{eqn:BF}
+B_{\Delta t,h}^{n}[\disctriple,\disctripletest] &=&  a(\dispdisc^{n},\dispdisctest)+   (\perminv \fluxdisc^{n}, \fluxdisctest) -   (\pdisc^{n}, \nabla \cdot \dispdisctest)  -  (\pdisc^{n}, \nabla \cdot \fluxdisctest) \\
+&& + (\nabla \cdot\dispdisctimediscn,\pdisctest) +  ( \nabla \cdot \fluxdisc^{n}, \pdisctest) + J(\pdisctimediscn,\pdisctest).
+\end{eqnarray*}
+
+\begin{lemma}
+\label{lemma_bf}
+$\disctriple$ satisfies
+\begin{multline*}
+  \left( \sum_{n=1}^{N} \Delta t B_{\Delta t,h}^{n}[\disctriple, ( \dispdisctimediscn + \projscott{\vphn},  \fluxdisc^{n}, \pdisc^{n}     )] \right .\\
+  \left . + \honenorm{\dispdisc^{0}}^{2} + \jnorm{\pdisc^{0}}^{2} + \honetimenorm{\dispdisc}^{2} + \jtimenorm{\pdisc}^{2} \right )  \\
+  \geq \left( \honenorm{\dispdisc^{N}}^{2}+ \jnorm{\pdisc^{N}}^{2}+ \ltwotimenorm{\fluxdisc}^{2} +\ltwotimenorm{\pdisc}^{2}  \right).
+\end{multline*}
+\end{lemma}
+\begin{proof}
+
+%%%\input{energy_BF}
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = ( \dispdisctimediscn + \projscott \vphn, \fluxdisc^{n},  \pdisc^{n}$) in (\ref{eqn:BF}), multiplying by $\Delta t$, and summing over all time steps, we get
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  B_{\Delta t,h}^{n}[\disctriple, ( \dispdisctimediscn + \projscott {\vphn},  \fluxdisc^{n}, \pdisc^{n}     )]  \\
+= \sum^{N}_{n=1} \Delta t a(\dispdisc^{n},\dispdisctimediscn)  + \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn ,\pdisc^{n})+ \sum^{N}_{n=1} \Delta t \perminv(\fluxdisc^{n}, \fluxdisc^{n}) \\
++\sum^{N}_{n=1} \Delta t a(\dispdisc^{n},\projscott \vphn) -\sum^{N}_{n=1} \Delta t (\pdisc^{n},\nabla \cdot \projscott \vphn)  .
+\label{eqn:sum_BF}
+\end{multline}
+
+By telescoping out the first two terms on the righthand side, using  (\ref{eqn:m_coercive}) on the third, and applying  (\ref{eqn:sum_BF}) to the final two terms we obtain the inequality
+\begin{multline}
+\left( \sum_{n=0}^{N} \Delta t  B_{\Delta t,h}^{n}[\disctriple, ( \dispdisctimediscn + \projscott {\vphn},  \fluxdisc^{n}, \pdisc^{n}     )] \right . \\
+\left . + \frac{C_{c}}{2}\honenorm{\dispdisc^{0}}^{2} + \frac{C_{c}}{2\epsilon}\honetimenorm{\dispdisc}^{2} + \frac{1}{4 \epsilon} \jtimenorm{\pdisc}^{2} + \frac{1}{2} \jnorm{\pdisc^{0}}^{2} \right ) \\
+ \geq  \frac{ C_{k} }{2}\honenorm{\dispdisc^{N}}^{2} + \frac{1}{2}\jnorm{\pdisc^{N}}^{2}  + \lambda_{max}^{-1} \ltwotimenorm{\fluxdisc}^{2}
++\left(1-C{\epsilon}\right) \ltwotimenorm{\pdisc}^{2} .
+\label{eqn:lemmabf_finalworking}
+\end{multline}
+Finally, choosing $\epsilon$ sufficiently small completes the proof.
+
+\end{proof}
+
+\begin{lemma}
+\label{corollary_BF}
+$\disctriple$ satisfies
+\begin{equation*}
+  \honenorm{\dispdisc^{N}}^{2}+ \jnorm{\pdisc^{N}}^{2}+ \ltwotimenorm{\fluxdisc}^{2} +\ltwotimenorm{\pdisc}^{2} \leq C(T).
+\end{equation*}
+\end{lemma}
+\begin{proof}
+
+%%%\input{energy_BF_corollary}
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = ( \dispdisctimediscn + \projscott \vphn, \fluxdisc^{n},  \pdisc^{n}$) in (\ref{eqn:B_star}),  multiplying by $\Delta t$, and summing yields
+\begin{eqnarray*}
+\sum^{N}_{n=1} \Delta t B^n_{\Delta t, h} [\disctriplen,(\dispdisctimediscn + \projscott \vphn, \fluxdisc^{n} ,\pdisc^{n} )]
+&=&  \sum^{N}_{n=1} \Delta t (\mathbf{f}^{n},\dispdisctimediscn + \projscott \vphn) \\
+&& + \sum^{N}_{n=1} \Delta t (\mathbf{b}^{n},\fluxdisc^{n})  +\sum^{N}_{n=1} \Delta t(g^{n},\pdisc^{n}).
+\end{eqnarray*}
+Let us note that the standard result, for any $\epsilon > 0$
+\begin{multline}
+\label{eq:time_derive_switch}
+\sum^{N}_{n=1} \Delta t (\mathbf{f}^{n},\dispdisctimediscn )
+\leq C \left[ \frac{1}{2 \epsilon} \left( \ltwonorm{\mathbf{f}^{0}}^{2}+ \ltwonorm{\mathbf{f}^{N}}^{2} + \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} \right) \right . \\
+\left . + \frac{\epsilon}{2} \left(  \ltwonorm{\dispdisc^{0}}^{2} +  \ltwonorm{\dispdisc^{N}}^{2} + \ltwotimenorm{\dispdisc}^{2} \right) \right].
+\end{multline}
+Now using the above, lemma \ref{lemma_bf},  the Cauchy-Schwarz and  Young's inequalities, choosing $\epsilon$ sufficiently small, and noting (\ref{clem_bound}), we arrive at
+\begin{multline*}
+\honenorm{\dispdisc^{N}}^{2} + \jnorm{\pdisc^{N}}^{2}  +  \ltwotimenorm{\fluxdisc}^{2} + \ltwotimenorm{\pdisc}^{2}  \leq   C \left( \honetimenorm{\dispdisc}^{2} +  \jtimenorm{\pdisc}^{2} +   \ltwonorm{\mathbf{f}^{N}}^{2}  \right. \\
+   + \left. \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} + \ltwonorm{\dispdisc^{0}}^{2} + \jnorm{\pdisc^{0}}^{2}  + \ltwotimenorm{{\mathbf{f}^{0}}}^{2}  +\ltwotimenorm{{\mathbf{f}}}^{2} +  \ltwotimenorm{{\mathbf{b}}}^{2}   + \ltwotimenorm{g}^{2} \right) .
+\end{multline*}
+Using Lemma \ref{corollary_BF} and regularity to bound the third term and upwards on the righthand side we obtain \
+\begin{equation*}
+\honenorm{\dispdisc^{N}}^{2} + \jnorm{\pdisc^{N}}^{2}  +  \ltwotimenorm{\fluxdisc}^{2} + \ltwotimenorm{\pdisc}^{2}  \leq   C \left( 1 + \honetimenorm{\dispdisc}^{2} +  \jtimenorm{\pdisc}^2 \right) .
+\end{equation*}
+Upon applying the Gronwall lemma to the above inequality we obtain the desired result.
+
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                Bound on the fluid flux in $H_{div}$                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Bound on the divergence of the fluid flux}
+\label{sec:linear_form_two}
+
+In order to bound the divergence of the fluid flux we now define the bilinear form $\mathcal{B}_{h}^{n}$. We first show how we derive $\mathcal{B}_{h}^{n}$ from the fully-discrete weak form (\ref{eqns:weak_fulldisc_system}), for which we know that a solution $\disctriple$ exists for test functions $\disctripletest \in \mixedspacedisctest$.
+Adding (\ref{eqn:weak_fulldisc_elast_mom}) and (\ref{eqn:weak_fulldisc_flux_mom}), assuming
+%$p_{D}=0$ on $\Gamma_{p}$ and
+$\mathbf{t}_{N}=0$ on $\Gamma_{t}$, and summing we have
+\begin{multline}
+ \sum_{n=1}^{N}    a(\dispdisc^{n},\dispdisctest)+ \sum_{n=1}^{N}   (\perminv \fluxdisc^{n}, \fluxdisctest)    - \sum_{n=1}^{N}   (\pdisc^{n}, \nabla \cdot \dispdisctest)    - \sum_{n=1}^{N}   (\pdisc^{n}, \nabla \cdot \fluxdisctest)    \\ =
+\sum_{n=1}^{N}   (\mathbf{f}^{n},\dispdisctest)  + \sum_{n=1}^{N}   (\mathbf{b}^{n},\fluxdisctest) \;\;    \;\; \forall \disctripletest \in \mixedspacedisctest.
+\label{eqn:Bstar1}
+\end{multline}
+For the purposes of this proof we now introduce initial conditions for the fluid flux and the pressure, $\mathbf{z}^{0}  \in  H_{div}(\Omega)$ and $p^0 \in \pspace$ respectively. We also define their projections into their respective finite element spaces by  $\mathbf{z}^{0}_h := \projconst \mathbf{z}^{0}$ and $p^0_h := \projconst p^0$.
+
+Adding (\ref{eqn:weak_fulldisc_elast_mom}) and (\ref{eqn:weak_fulldisc_flux_mom}), and  summing from $0$ to $N-1$,
+we have
+\begin{multline}
+\sum_{n=1}^{N}    a(\dispdisc^{n-1},\dispdisctest)+ \sum_{n=1}^{N}   (\perminv \fluxdisc^{n-1}, \fluxdisctest)   - \sum_{n=1}^{N}   (\pdisc^{n-1}, \nabla \cdot \dispdisctest)   - \sum_{n=1}^{N}   (\pdisc^{n-1}, \nabla \cdot \fluxdisctest)    \\ =
+\sum_{n=1}^{N}   (\mathbf{f}^{n-1},\dispdisctest)  + \sum_{n=1}^{N}   (\mathbf{b}^{n-1},\fluxdisctest) \;\;  \;\; \forall \disctripletest \in \mixedspacedisctest.
+\label{eqn:Bstar2}
+\end{multline}
+Taking (\ref{eqn:weak_fulldisc_mass}), multiplying by $\Delta t$, and summing we have
+\begin{multline}
+ \sum_{n=1}^{N} \Delta t (\nabla \cdot \dispdisctimediscn,\pdisctest)  +  \sum_{n=1}^{N} \Delta t ( \nabla \cdot \fluxdisc^{n}, \pdisctest) + \sum_{n=1}^{N} \Delta t J(\pdisctimediscn,\pdisctest) \\
+=  \sum_{n=1}^{N} \Delta t(g^{n},\pdisctest) \;\; \;\;\forall \disctripletest \in \mixedspacedisctest.
+\label{eqn:Bstar3}
+\end{multline}
+Now adding (\ref{eqn:Bstar1}) and (\ref{eqn:Bstar3}), and subtracting (\ref{eqn:Bstar2}) we get
+\begin{eqnarray*}
+\label{eqn:Bstar_weakform}
+&&\sum_{n=1}^{N} \Delta t \mathcal{B}_{h}^{n}[\disctriple,\disctripletest] \\
+&& \quad = \sum_{n=1}^{N} \Delta t (\mathbf{f}^{n}_{\Delta t},\dispdisctest)
+         + \sum_{n=1}^{N} \Delta t (\mathbf{b}^{n}_{\Delta t },\fluxdisctest) + \sum_{n=1}^{N} \Delta t (g^{n},\pdisctest)
+           \; \forall \disctripletest \in \mixedspacedisctest,
+\end{eqnarray*}
+where
+\begin{multline}
+\mathcal{B}_{h}^{n}[\disctriple,\disctripletest]
+=a(\dispdisctimediscn,\dispdisctest)+(\perminv \fluxdisctimediscn, \fluxdisctest) \\
+ - (\pdisctimediscn, \nabla \cdot \dispdisctest)  - (\pdisctimediscn, \nabla \cdot \fluxdisctest) + (\nabla \cdot \dispdisctimediscn,\pdisctest)  +   ( \nabla \cdot \fluxdisc^n,\pdisctest) + J(\pdisctimediscn,\pdisctest).
+\label{eqn:B_star}
+\end{multline}
+
+
+With these preliminaries, we may now bound $\mathcal{B}_{h}^{n}$ from below.
+\begin{lemma}
+\label{lemma_bstar}
+For all  $\beta > \beta^{\star} > 0$,   $\disctriple$ satisfies
+\begin{multline*}
+  \sum_{n=1}^{N} \Delta t \; \mathcal{B}_{h}^{n}[\disctriple, ( \beta \dispdisctimediscn + \projscott v_{p} ,  \beta \fluxdisc^{n}, \beta\pdisctimediscn    + \nabla \cdot \fluxdisc^{n} )] + \ltwonorm{\fluxdisc^{0}}^{2} \geq \\ C\left( \honetimenorm{\dispdisctimedisc}^{2}+ \ltwonorm{\fluxdisc^{N}}^{2}+ \ltwotimenorm{ \pdisctimedisc}^{2}+ \jtimenorm{ \pdisctimedisc}^{2} +\ltwotimenorm{\nabla \cdot \fluxdisc}^{2}  \right).
+\end{multline*}
+\end{lemma}
+\begin{proof}
+
+%%%\input{energy_Bstar}
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = (\beta \dispdisctimediscn + \projscott \vphn,   \beta \fluxdisc^{n},   \beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n} $) in (\ref{eqn:Bstar_weakform})
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[\disctriple, ( \beta \dispdisctimediscn + \projscott \vp  ,  \beta \fluxdisc^{n}, \beta\pdisctimediscn   + \nabla \cdot \fluxdisc^{n}  )] \\
+=\sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\beta \dispdisctimediscn)
++ \sum^{N}_{n=1} \Delta t \perminv(\fluxdisctimediscn,  \beta\fluxdisc^{n})
++ \sum^{N}_{n=1} \Delta t (\nabla \cdot \fluxdisc^{n}, \nabla \cdot \fluxdisc^{n}) \\
++ \sum^{N}_{n=1} \Delta t( \dispdisctimediscn , \nabla \cdot \fluxdisc^{n})
++ \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn ,\nabla \cdot \fluxdisc^{n} )
++ \sum^{N}_{n=1} \Delta tJ( \pdisctimediscn , \beta\pdisctimediscn) \\
++ \sum^{N}_{n=1} \Delta t a(\dispdisctimediscn,\projscott \vp)
+- \sum^{N}_{n=1} \Delta t (\pdisctimediscn,\nabla \cdot \projscott \vp).
+\label{eqn:sum_Bstar}
+\end{multline}
+For all $\epsilon > 0$ using  (\ref{eqn:a_coercive}), (\ref{eqn:m_coercive}), the Cauchy-Schwarz, Young's and  Poincar\'{e} inequalities, (\ref{J_bound}) on $ \nabla \cdot \fluxdisc^{n}$, and an approach similar to step 2 in the proof of Theorem \ref{discrete_infsup} for the final two terms on the righthand side, we obtain
+
+\begin{multline}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[\disctriple, ( \beta \dispdisctimediscn + \projscott {\vp},  \beta \fluxdisc^{n}, \beta\pdisctimediscn   + \nabla \cdot \fluxdisc^{n}  )]  \\
+\geq \left( \beta C_{k}  - \frac{C_{p}+C_{c}}{2 \epsilon } \right) \honetimenorm{\dispdisctimedisc}^{2}    + \frac{\beta\lambda_{max}^{-1}}{2} \ltwonorm{\fluxdisc^{N}}^{2}  +\left(\beta -   \frac{3}{4 \epsilon}\right) \jtimenorm{\pdisctimedisc}^{2} \\
++ \left(1 -  {\epsilon}(1+c_{z})\right) \ltwotimenorm{\nabla \cdot \fluxdisc }^{2} -\frac{ \beta \lambda_{min}^{-1} }{2}\ltwonorm{\fluxdisc^{0}}^{2}  + \left(1-C{\epsilon}\right) \ltwotimenorm{\pdisctimedisc}^{2}.
+\label{eqn:lemmabstar_final}
+\end{multline}
+Finally choosing $\epsilon$ sufficiently small and $\beta \geq \max \left[ \frac{C_{p}}{2 C_{k} \epsilon }, \frac{3}{4 \epsilon }\right] $ completes the proof.
+
+\end{proof}
+
+The following Lemma shows the divergence control of the fluid flow.
+\begin{lemma}
+\label{corollary_Bstar}
+$ \fluxdisc$ obtained from (\ref{eqn:Bstar_weakform}) satisfies
+\begin{equation*}
+ \ltwotimenorm{\nabla \cdot \fluxdisc}^{2} \leq C.
+\end{equation*}
+\end{lemma}
+\begin{proof}
+
+%%%\input{energy_Bstar_corollary}
+For $n = 1,2, \ldots , N$ we choose $\disctripletest = (\beta \dispdisctimediscn + \projscott \vphn,   \beta \fluxdisc^{n},   \beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n} $) in (\ref{eqn:Bstar_weakform})  yielding
+\begin{eqnarray*}
+&&\sum^{N}_{n=1} \Delta t \mathcal{B}_{h}^{n}[\disctriplen,(\beta \dispdisctimediscn + \projlinear \vphn, \fluxdisc^{n} ,\beta \pdisctimediscn + \nabla \cdot \fluxdisc^{n})]  \\
+&& \quad =  \sum^{N}_{n=1} \Delta t (\mathbf{f}^{n}_{\Delta t},\beta \dispdisctimediscn + \projlinear \vphn) + \sum^{N}_{n=1} \Delta t (\mathbf{b}^{n}_{\Delta t},\beta\fluxdisc^{n}) +\sum^{N}_{n=1} \Delta t(g^{n},\beta\pdisctimediscn+ \nabla \cdot \fluxdisc^{n}).
+\end{eqnarray*}
+
+Using lemma \ref{lemma_bstar}, the Cauchy-Schwarz and Young's inequalities, and (\ref{clem_bound}), along with ideas already presented in the proof of lemma \ref{corollary_BF}
+\begin{multline*}\honetimenorm{\dispdisctimedisc}^{2} +  \ltwotimenorm{\pdisctimedisc}^{2} +   \jtimenorm{\pdisctimedisc}^{2}  +  \ltwonorm{\fluxdisc^{N}}^{2}
++ \ltwotimenorm{\nabla \cdot \fluxdisc}^{2} \\
+\leq  C \left(  \ltwotimecontnorm{{\mathbf{f}}_{t}}^{2} +   \ltwotimecontnorm{{\mathbf{b}}_{t}}^{2}  +  \ltwotimenorm{\pdisc}^{2}  +\ltwotimenorm{\fluxdisc}^{2} \right.  \left. +   \ltwotimecontnorm{{g}}^{2}  \right) .
+\end{multline*}
+Finally, using Lemma \ref{corollary_BF} to bound $\ltwotimenorm{\pdisc}$, applying a Gronwall lemma, and using Lemma \ref{corollary_BF} and regularity, we obtain the desired result.
+
+\end{proof}
+%\begin{graybox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                        The energy estimate                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The energy estimate}
+\label{sec:energy_estimate}
+
+\begin{theorem}
+\label{theorem_energy}
+The solution to the fully-discrete problem (\ref{eqns:weak_fulldisc_system}) satisfies the energy estimate
+\begin{equation*}
+  \honetimeinftynorm{\dispdisc}^{2}+ \jtimeinftynorm{\pdisc}^{2}+ \ltwotimenorm{\fluxdisc}^{2} +\ltwotimenorm{\pdisc}^{2} +\ltwotimenorm{\nabla \cdot \fluxdisc}^{2} \leq C.
+\end{equation*}
+\end{theorem}
+%\end{graybox}
+\begin{proof}
+The proof follows from combining lemma \ref{corollary_BF} and lemma \ref{corollary_Bstar}, and noting that these lemmas hold for all time steps $n=0, 1,..., N$. This then gives the desired discrete in time $l^{\infty}$ bounds.
+\end{proof}
+\begin{rem}
+\label{remark:wellposedness}
+Having proven Theorem \ref{theorem_energy}, it is now a standard calculation to show that the discrete Galerkin approximation converges weakly, as $\Delta t, h \rightarrow 0$, to the continuous problem with respect to continuous versions of the norms of the energy estimate in Theorem \ref{theorem_energy}. This in turn shows that the continuous variational problem is well-posed. Due to the linearity of the variational form and noting that $\jnorm{\mathbf{v}} \rightarrow  0$ as $h \rightarrow 0$, these calculations are straight forward and closely follow the existence and uniqueness proofs presented in \cite{vzenivsek1984existence} and \cite{barucq2005some} for the linear two-field Biot problem and a nonlinear Biot problem, respectively.
+\end{rem}

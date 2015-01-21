@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.9.4)  26 SEP 2014 18:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.20)  20 JAN 2015 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis
+**thesis.tex
 (./thesis.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 41 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -34,31 +34,88 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count88
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks14
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
-LaTeX Info: Redefining \bm on input line 204.
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks19
+\float@box=\box28
+\@float@everytoks=\toks20
+\@floatcapt=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -80,90 +137,13 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count89
+\Gread@gobject=\count102
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count90
-\float@exts=\toks16
-\float@box=\box26
-\@float@everytoks=\toks17
-\@floatcapt=\box27
-) (./wrapfig.sty
-\wrapoverhang=\dimen105
-\WF@size=\dimen106
-\c@WF@wrappedlines=\count91
-\WF@box=\box28
-\WF@everypar=\toks18
-Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip45
-
-For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks19
-\ex@=\dimen107
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
-LaTeX Info: Redefining \boldsymbol on input line 39.
-\pmbraise@=\dimen108
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count92
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count93
-\leftroot@=\count94
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count95
-\DOTSCASE@=\count96
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box29
-\strutbox@=\box30
-\big@size=\dimen109
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count97
-\c@MaxMatrixCols=\count98
-\dotsspace@=\muskip10
-\c@parentequation=\count99
-\dspbrk@lvl=\count100
-\tag@help=\toks20
-\row@=\count101
-\column@=\count102
-\maxfields@=\count103
-\andhelp@=\toks21
-\eqnshift@=\dimen110
-\alignsep@=\dimen111
-\tagshift@=\dimen112
-\tagwidth@=\dimen113
-\totwidth@=\dimen114
-\lineht@=\dimen115
-\@envbody=\toks22
-\multlinegap=\skip46
-\multlinetaggap=\skip47
-\mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks24
-\verbatim@line=\toks25
-\verbatim@in@stream=\read1
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen114
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -174,103 +154,350 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen116
-\captionmargin@=\dimen117
-\captionwidth=\dimen118
-\caption@tempdima=\dimen119
-\caption@indent=\dimen120
-\caption@parindent=\dimen121
-\caption@hangindent=\dimen122
+\captionmargin=\dimen115
+\captionmargin@=\dimen116
+\captionwidth=\dimen117
+\caption@tempdima=\dimen118
+\caption@indent=\dimen119
+\caption@parindent=\dimen120
+\caption@hangindent=\dimen121
 )
-\c@ContinuedFloat=\count104
+\c@ContinuedFloat=\count103
 Package caption Info: float package is loaded.
-Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count105
+\c@KVtest=\count104
 \sf@farskip=\skip48
-\sf@captopadj=\dimen123
+\sf@captopadj=\dimen122
 \sf@capskip=\skip49
 \sf@nearskip=\skip50
-\c@subfigure=\count106
-\c@subfigure@save=\count107
-\c@lofdepth=\count108
-\c@subtable=\count109
-\c@subtable@save=\count110
-\c@lotdepth=\count111
+\c@subfigure=\count105
+\c@subfigure@save=\count106
+\c@lofdepth=\count107
+\c@subtable=\count108
+\c@subtable@save=\count109
+\c@lotdepth=\count110
 \sf@top=\skip51
 \sf@bottom=\skip52
 )
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+) (./wrapfig.sty
+\wrapoverhang=\dimen123
+\WF@size=\dimen124
+\c@WF@wrappedlines=\count111
+\WF@box=\box30
+\WF@everypar=\toks30
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks31
+\verbatim@line=\toks32
+\verbatim@in@stream=\read1
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen124
-\epsfysize=\dimen125
+\epsfxsize=\dimen125
+\epsfysize=\dimen126
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks26
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks33
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box31
 
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
 Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
-ex
-\pgfkeys@tmptoks=\toks29
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen126
-\pgf@y=\dimen127
-\pgf@xa=\dimen128
-\pgf@ya=\dimen129
-\pgf@xb=\dimen130
-\pgf@yb=\dimen131
-\pgf@xc=\dimen132
-\pgf@yc=\dimen133
+\pgf@x=\dimen127
+\pgf@y=\dimen128
+\pgf@xa=\dimen129
+\pgf@ya=\dimen130
+\pgf@xb=\dimen131
+\pgf@yb=\dimen132
+\pgf@xc=\dimen133
+\pgf@yc=\dimen134
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
 \c@pgf@counta=\count112
 \c@pgf@countb=\count113
 \c@pgf@countc=\count114
 \c@pgf@countd=\count115
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
-f
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
-tex
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count116
 \pgfsyssoftpath@bigbuffer@items=\count117
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
-tex
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -287,168 +514,147 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen134
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen135
 \pgfmath@count=\count118
 \pgfmath@box=\box32
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
-ric.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
-tex)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count119
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
-x
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen135
-\pgf@picmaxx=\dimen136
-\pgf@picminy=\dimen137
-\pgf@picmaxy=\dimen138
-\pgf@pathminx=\dimen139
-\pgf@pathmaxx=\dimen140
-\pgf@pathminy=\dimen141
-\pgf@pathmaxy=\dimen142
-\pgf@xx=\dimen143
-\pgf@xy=\dimen144
-\pgf@yx=\dimen145
-\pgf@yy=\dimen146
-\pgf@zx=\dimen147
-\pgf@zy=\dimen148
+\pgf@picminx=\dimen136
+\pgf@picmaxx=\dimen137
+\pgf@picminy=\dimen138
+\pgf@picmaxy=\dimen139
+\pgf@pathminx=\dimen140
+\pgf@pathmaxx=\dimen141
+\pgf@pathminy=\dimen142
+\pgf@pathmaxy=\dimen143
+\pgf@xx=\dimen144
+\pgf@xy=\dimen145
+\pgf@yx=\dimen146
+\pgf@yy=\dimen147
+\pgf@zx=\dimen148
+\pgf@zy=\dimen149
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
-code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen149
-\pgf@path@lasty=\dimen150
+\pgf@path@lastx=\dimen150
+\pgf@path@lasty=\dimen151
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
-.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen151
-\pgf@shorten@start@additional=\dimen152
+\pgf@shorten@end@additional=\dimen152
+\pgf@shorten@start@additional=\dimen153
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
-x
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box33
 \pgf@hbox=\box34
 \pgf@layerbox@main=\box35
 \pgf@picture@serial@count=\count120
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
-ode.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen153
+\pgflinewidth=\dimen154
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
-s.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen154
-\pgf@pt@y=\dimen155
-\pgf@pt@temp=\dimen156
+\pgf@pt@x=\dimen155
+\pgf@pt@y=\dimen156
+\pgf@pt@temp=\dimen157
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
-ex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
-.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
-x
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen157
+\pgf@max=\dimen158
 \pgf@sys@shading@range@num=\count121
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
-tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box36
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
-x
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
-ode.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
-tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box37
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen158
-\pgf@nodesepend=\dimen159
+\pgf@nodesepstart=\dimen159
+\pgf@nodesepend=\dimen160
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen160
-\pgffor@skip=\dimen161
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen161
+\pgffor@skip=\dimen162
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count122
-\pgfplotmarksize=\dimen162
+\pgfplotmarksize=\dimen163
 )
-\tikz@lastx=\dimen163
-\tikz@lasty=\dimen164
-\tikz@lastxsaved=\dimen165
-\tikz@lastysaved=\dimen166
-\tikzleveldistance=\dimen167
-\tikzsiblingdistance=\dimen168
+\tikz@lastx=\dimen164
+\tikz@lasty=\dimen165
+\tikz@lastxsaved=\dimen166
+\tikz@lastysaved=\dimen167
+\tikzleveldistance=\dimen168
+\tikzsiblingdistance=\dimen169
 \tikz@figbox=\box38
 \tikz@tempbox=\box39
 \tikztreelevel=\count123
@@ -456,7 +662,7 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikznumberofcurrentchild=\count125
 \tikz@fig@count=\count126
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count127
 \pgfmatrixcurrentcolumn=\count128
@@ -464,12 +670,12 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 )
 \tikz@expandcount=\count130
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarysnakes.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarysnake
+s.code.tex
 File: tikzlibrarysnakes.code.tex 2008/02/05 v2.10 (rcs-revision 1.6)
 
 
@@ -477,33 +683,32 @@ Package tikz Warning: Snakes have been superseded by decorations. Please use th
 e decoration libraries instead of the snakes library on input line 14.
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.pathmorphing.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
-e.tex
-\pgfdecoratedcompleteddistance=\dimen169
-\pgfdecoratedremainingdistance=\dimen170
-\pgfdecoratedinputsegmentcompleteddistance=\dimen171
-\pgfdecoratedinputsegmentremainingdistance=\dimen172
-\pgf@decorate@distancetomove=\dimen173
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathmorphing.code.tex
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen170
+\pgfdecoratedremainingdistance=\dimen171
+\pgfdecoratedinputsegmentcompleteddistance=\dimen172
+\pgfdecoratedinputsegmentremainingdistance=\dimen173
+\pgf@decorate@distancetomove=\dimen174
 \pgf@decorate@repeatstate=\count131
-\pgfdecorationsegmentamplitude=\dimen174
-\pgfdecorationsegmentlength=\dimen175
+\pgfdecorationsegmentamplitude=\dimen175
+\pgfdecorationsegmentlength=\dimen176
 )
 \tikz@lib@dec@box=\box40
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.pathmorphing.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.pathreplacing.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.pathreplacing.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarydecorations.shapes.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.shapes.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.p
+athmorphing.code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathreplacing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.p
+athreplacing.code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.shapes.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.s
+hapes.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/pstricks/pstricks.sty
 Package: pstricks 2013/12/12 v0.60 LaTeX wrapper for `PSTricks' (RN,HV)
 
@@ -519,8 +724,8 @@ File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks35
-\XKV@tempa@toks=\toks36
+\XKV@toks=\toks42
+\XKV@tempa@toks=\toks43
 \XKV@depth=\count132
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 )))
@@ -536,29 +741,29 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 \pstFP@regs=\count140
 \pstFP@times=\count141
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks37
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks44
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-\pgffor@iter=\dimen176
-\pgffor@skip=\dimen177
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+\pgffor@iter=\dimen177
+\pgffor@skip=\dimen178
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 )
 \psLoopIndex=\count142
 
-`PSTricks' v2.49b  <2013/12/21> (tvz)
-\pst@dima=\dimen178
-\pst@dimb=\dimen179
-\pst@dimc=\dimen180
-\pst@dimd=\dimen181
-\pst@dimg=\dimen182
-\pst@dimh=\dimen183
-\pst@dimm=\dimen184
-\pst@dimn=\dimen185
-\pst@dimo=\dimen186
-\pst@dimp=\dimen187
+`PSTricks' v2.51  <2014/02/03> (tvz)
+\pst@dima=\dimen179
+\pst@dimb=\dimen180
+\pst@dimc=\dimen181
+\pst@dimd=\dimen182
+\pst@dimg=\dimen183
+\pst@dimh=\dimen184
+\pst@dimm=\dimen185
+\pst@dimn=\dimen186
+\pst@dimo=\dimen187
+\pst@dimp=\dimen188
 \pst@hbox=\box41
 \pst@ibox=\box42
 \pst@boxg=\box43
@@ -573,35 +778,35 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 \pst@cnto=\count151
 \pst@cntp=\count152
 \@zero=\count153
-\pst@toks=\toks40
+\pst@toks=\toks47
 (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pstricks.con)
-\psunit=\dimen188
-\psxunit=\dimen189
-\psyunit=\dimen190
+\psunit=\dimen189
+\psxunit=\dimen190
+\psyunit=\dimen191
 \pst@C@@rType=\count154
-\pslinewidth=\dimen191
-\psk@startLW=\dimen192
-\psk@endLW=\dimen193
-\pst@customdefs=\toks41
-\pslinearc=\dimen194
-\pst@symbolStep=\dimen195
-\pst@symbolWidth=\dimen196
-\pst@symbolLinewidth=\dimen197
-\everypsbox=\toks42
-\psframesep=\dimen198
-\pslabelsep=\dimen199
-\sh@wgridXunit=\dimen200
-\sh@wgridYunit=\dimen201
-\pst@shift=\dimen202
+\pslinewidth=\dimen192
+\psk@startLW=\dimen193
+\psk@endLW=\dimen194
+\pst@customdefs=\toks48
+\pslinearc=\dimen195
+\pst@symbolStep=\dimen196
+\pst@symbolWidth=\dimen197
+\pst@symbolLinewidth=\dimen198
+\everypsbox=\toks49
+\psframesep=\dimen199
+\pslabelsep=\dimen200
+\sh@wgridXunit=\dimen201
+\sh@wgridYunit=\dimen202
+\pst@shift=\dimen203
 )
-File: pstricks.tex 2013/12/21 v2.49b `PSTricks' (tvz,hv)
+File: pstricks.tex 2014/02/03 v2.51 `PSTricks' (tvz,hv)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pst-fp.tex)
-File: pst-fp.tex 2013/12/21 v2.49b `PST-fp' (hv)
+File: pst-fp.tex 2014/02/03 v2.51 `PST-fp' (hv)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
 Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
@@ -610,14 +815,14 @@ Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count155
 \calc@Bcount=\count156
-\calc@Adimen=\dimen203
-\calc@Bdimen=\dimen204
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
+\calc@Adimen=\dimen204
+\calc@Bdimen=\dimen205
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count157
-\calc@Cskip=\skip55
+\calc@Cskip=\skip58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
@@ -625,14 +830,14 @@ Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count158
-\l_MT_multwidth_dim=\dimen205
-\origjot=\skip56
-\l_MT_shortvdotswithinadjustabove_dim=\dimen206
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen207
-\l_MT_above_intertext_sep=\dimen208
-\l_MT_below_intertext_sep=\dimen209
-\l_MT_above_shortintertext_sep=\dimen210
-\l_MT_below_shortintertext_sep=\dimen211
+\l_MT_multwidth_dim=\dimen206
+\origjot=\skip59
+\l_MT_shortvdotswithinadjustabove_dim=\dimen207
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen208
+\l_MT_above_intertext_sep=\dimen209
+\l_MT_below_intertext_sep=\dimen210
+\l_MT_above_shortintertext_sep=\dimen211
+\l_MT_below_shortintertext_sep=\dimen212
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -641,7 +846,7 @@ nment
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks43
+\@float@every@algorithm=\toks50
 \c@algorithm=\count159
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
@@ -650,14 +855,14 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@line=\count161
 \c@ALC@rem=\count162
 \c@ALC@depth=\count163
-\ALC@tlm=\skip57
-\algorithmicindent=\skip58
+\ALC@tlm=\skip60
+\algorithmicindent=\skip61
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip59
-\enit@outerparindent=\dimen212
-\enit@toks=\toks44
+\labelindent=\skip62
+\enit@outerparindent=\dimen213
+\enit@toks=\toks51
 \enit@inbox=\box44
 \enitdp@description=\count164
 )
@@ -666,26 +871,26 @@ Package: IEEEtrantools 2012/12/27 V1.3 by Michael Shell
 
 -- See the "IEEEtrantools_doc.txt" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/tools/
-\@IEEEtrantmpdimenA=\dimen213
-\@IEEEtrantmpdimenB=\dimen214
+\@IEEEtrantmpdimenA=\dimen214
+\@IEEEtrantmpdimenB=\dimen215
 \@IEEEtrantmpcountA=\count165
 \@IEEEtrantmpcountB=\count166
-\@IEEEtrantmptoksA=\toks45
-\IEEEnormaljot=\dimen215
-\IEEEilabelindentA=\dimen216
-\IEEEilabelindentB=\dimen217
-\IEEEilabelindent=\dimen218
-\IEEEelabelindent=\dimen219
-\IEEEdlabelindent=\dimen220
-\IEEElabelindent=\dimen221
-\IEEEiednormlabelsep=\dimen222
-\IEEEiedmathlabelsep=\dimen223
-\IEEEiedtopsep=\skip60
+\@IEEEtrantmptoksA=\toks52
+\IEEEnormaljot=\dimen216
+\IEEEilabelindentA=\dimen217
+\IEEEilabelindentB=\dimen218
+\IEEEilabelindent=\dimen219
+\IEEEelabelindent=\dimen220
+\IEEEdlabelindent=\dimen221
+\IEEElabelindent=\dimen222
+\IEEEiednormlabelsep=\dimen223
+\IEEEiedmathlabelsep=\dimen224
+\IEEEiedtopsep=\skip63
 \c@IEEEsubequation=\count167
 \@IEEEeqnnumcols=\count168
 \@IEEEeqncolcnt=\count169
 \@IEEEsubeqnnumrollback=\count170
-\IEEEPARstartletwidth=\dimen224
+\IEEEPARstartletwidth=\dimen225
 ) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
@@ -701,39 +906,102 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (./contents/defines_thesis.tex
 \c@theorem=\count171
 \c@remark=\count172
-\c@proof=\count173
+\c@rem=\count173
 ) (./thesis.aux
 
 LaTeX Warning: Label `fig:acinar_units' multiply defined.
 
+
+LaTeX Warning: Label `fig:domains_cont' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:domains_cont' multiply defined.
+
+
+LaTeX Warning: Label `eqn:heat_weak' multiply defined.
+
+
+LaTeX Warning: Label `eqn:mixture_momentum_reform' multiply defined.
+
+
+LaTeX Warning: Label `eqns:weak_cont_system' multiply defined.
+
+
+LaTeX Warning: Label `sec:fully_discrete' multiply defined.
+
+
+LaTeX Warning: Label `sec:results' multiply defined.
+
+
+LaTeX Warning: Label `sec:unconfined' multiply defined.
+
+
+LaTeX Warning: Label `fig:unconfined_diag' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:unconfined_diag' multiply defined.
+
+
+LaTeX Warning: Label `fig:unconfined_sim' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:unconfined_sim' multiply defined.
+
+
+LaTeX Warning: Label `fig:animals' multiply defined.
+
+
+LaTeX Warning: Label `fig:anal_unconfined_plot' multiply defined.
+
+
+LaTeX Warning: Label `tab:parameters' multiply defined.
+
+
+LaTeX Warning: Label `sec:constitutive' multiply defined.
+
+
+LaTeX Warning: Label `fig:domains_cont' multiply defined.
+
+
+LaTeX Warning: Label `fig:acinar_units' multiply defined.
+
+
+LaTeX Warning: Label `fig:acinar_units' multiply defined.
+
+
+LaTeX Warning: Label `sec:constriction' multiply defined.
+
+
+LaTeX Warning: Label `fig:constrict_errorbars' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
-\scratchdimen=\dimen225
+\scratchdimen=\dimen226
 \scratchbox=\box45
 \nofMPsegments=\count175
 \nofMParguments=\count176
-\everyMPshowfont=\toks46
+\everyMPshowfont=\toks53
 \MPscratchCnt=\count177
-\MPscratchDim=\dimen226
+\MPscratchDim=\dimen227
 \MPnumerator=\count178
 \makeMPintoPDFobject=\count179
-\everyMPtoPDFconversion=\toks47
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -780,16 +1048,17 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros (./contents/frontmatter/title.tex
 Package epstopdf Info: Source file: <contents/frontmatter/ps/ox_logo_special_bl
 ue_pos.eps>
-(epstopdf)                    date: 2008-04-08 11:09:22
+(epstopdf)                    date: 2008-04-08 03:09:22
 (epstopdf)                    size: 449717 bytes
 (epstopdf)             Output file: <contents/frontmatter/ps/ox_logo_special_bl
 ue_pos-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-24 10:43:55
+(epstopdf)                    date: 2014-09-24 02:43:55
 (epstopdf)                    size: 41452 bytes
 (epstopdf)             Command: <repstopdf --outfile=contents/frontmatter/ps/ox
 _logo_special_blue_pos-eps-converted-to.pdf contents/frontmatter/ps/ox_logo_spe
@@ -816,11 +1085,23 @@ Non-PDF special ignored!
 
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/
-pdftex.map} <./contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-t
-o.pdf>]) (./contents/frontmatter/abstract.tex [1]) [2] (./thesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./
+contents/frontmatter/ps/ox_logo_special_blue_pos-eps-converted-to.pdf>])
+(./contents/frontmatter/abstract.tex [1] [2])
+(./contents/frontmatter/publications.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+ [3
+
+]) [4
+
+] (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -828,22 +1109,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
+) [5
 
-])
+] [6] [7] [8]
+[9])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [4]
-(./contents/frontmatter/acknowledgements.tex [5])
+ [10]
 Chapter 1.
 (./contents/introduction_chapter.tex
 (./contents/introduction/introduction_motivation.tex [1
 
-
 ] [2] [3])
-(./contents/introduction/introduction_goals.tex [4])
-(./contents/introduction/introduction_structure.tex
+(./contents/introduction/introduction_goals.tex [4]
+Overfull \hbox (2.64175pt too wide) in paragraph at lines 7--9
+[]\OT1/cmr/m/n/12 Solve the com-pu-ta-tional lung model on a re-al-is-tic ge-om
+-e-try, with bound-
+ []
+
+) (./contents/introduction/introduction_structure.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -873,12 +1158,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
@@ -886,216 +1171,1709 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 )) [7]
 Chapter 2.
 (./contents/background_chapter.tex (./contents/background/physiology_thesis.tex
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
 [8
 
 ]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/upper
-lobe_haefeli1988.png, id=59, 680.5425pt x 810.02625pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-upperlobe_haefeli1988.png Graphic file (type png)
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/TB_to_ave
+olarduct_BerkeleyLungLabtour.png, id=76, 642.4pt x 495.8525pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/TB_t
+o_aveolarduct_BerkeleyLungLabtour.png Graphic file (type png)
 
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/u
-pperlobe_haefeli1988.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/upperlobe_haefeli1988.png used on input line 17.
-(pdftex.def)             Requested size: 136.50069pt x 144.5377pt.
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/TB_to
+_aveolarduct_BerkeleyLungLabtour.png>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/TB_to_aveolarduct_BerkeleyLungLabtour.png used on input line 16.
 
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/TB_to
-_aveolarduct_BerkeleyLungLabtour.png, id=60, 642.4pt x 495.8525pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-TB_to_aveolarduct_BerkeleyLungLabtour.png Graphic file (type png)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/T
-B_to_aveolarduct_BerkeleyLungLabtour.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/TB_to_aveolarduct_BerkeleyLungLabtour.png used on input line
- 18.
 (pdftex.def)             Requested size: 136.49594pt x 144.53502pt.
 
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/aveol
-arPores_BerkeleyLungLabLungtour.png, id=61, 642.4pt x 787.94376pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-aveolarPores_BerkeleyLungLabLungtour.png Graphic file (type png)
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/aveolarPo
+res_BerkeleyLungLabLungtour.png, id=77, 642.4pt x 787.94376pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/aveo
+larPores_BerkeleyLungLabLungtour.png Graphic file (type png)
 
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/a
-veolarPores_BerkeleyLungLabLungtour.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/aveolarPores_BerkeleyLungLabLungtour.png used on input line 
-19.
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/aveol
+arPores_BerkeleyLungLabLungtour.png>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/aveolarPores_BerkeleyLungLabLungtour.png used on input line 17.
 (pdftex.def)             Requested size: 136.49594pt x 144.52893pt.
 
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/acinu
-s_HAEFELI-BLEUER1988.png, id=62, 648.4225pt x 654.445pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-acinus_HAEFELI-BLEUER1988.png Graphic file (type png)
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/upperlobe
+_haefeli1988.png, id=78, 680.5425pt x 810.02625pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/uppe
+rlobe_haefeli1988.png Graphic file (type png)
 
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/a
-cinus_HAEFELI-BLEUER1988.png>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/acinus_HAEFELI-BLEUER1988.png used on input line 20.
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/upper
+lobe_haefeli1988.png>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/upperlobe_haefeli1988.png used on input line 18.
+(pdftex.def)             Requested size: 136.50069pt x 144.5377pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/acinus_HA
+EFELI-BLEUER1988.png, id=79, 648.4225pt x 654.445pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/acin
+us_HAEFELI-BLEUER1988.png Graphic file (type png)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/acinu
+s_HAEFELI-BLEUER1988.png>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/acinus_HAEFELI-BLEUER1988.png used on input line 19.
 (pdftex.def)             Requested size: 136.49924pt x 144.53755pt.
- [9]
-Overfull \vbox (6.2925pt too high) has occurred while \output is active []
+ [9] [10 </home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/
+TB_to_aveolarduct_BerkeleyLungLabtour.png> </home/lorenz/Dropbox/Dphil/thesis/c
+ontents/background/figures/images/aveolarPores_BerkeleyLungLabLungtour.png> </h
+ome/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/upperlobe_ha
+efeli1988.png> </home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/i
+mages/acinus_HAEFELI-BLEUER1988.png>]
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/lung_west
+.pdf, id=92, 305.26846pt x 329.91254pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/lung
+_west.pdf Graphic file (type pdf)
 
-
-[10 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/u
-pperlobe_haefeli1988.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_
-paper/figures/images/TB_to_aveolarduct_BerkeleyLungLabtour.png> </users/lorenzb
-/Dphil/poroelasticity_papers/coupling_paper/figures/images/aveolarPores_Berkele
-yLungLabLungtour.png> </users/lorenzb/Dphil/poroelasticity_papers/coupling_pape
-r/figures/images/acinus_HAEFELI-BLEUER1988.png>]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/lung_
-west.pdf, id=75, 305.26846pt x 329.91254pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-lung_west.pdf Graphic file (type pdf)
-
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/l
-ung_west.pdf>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/lung_west.pdf used on input line 57.
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/lung_
+west.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/lung_west.pdf used on input line 56.
 (pdftex.def)             Requested size: 195.0pt x 210.74057pt.
- [11 </users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-lung_west.pdf>] [12]
-</users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/emphy
-sema.jpg, id=90, 144.54pt x 53.2389pt>
-File: /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/
-emphysema.jpg Graphic file (type jpg)
+ [11 </home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/lung
+_west.pdf>] [12]
+</home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/emphysema
+.jpg, id=106, 144.54pt x 53.2389pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/emph
+ysema.jpg Graphic file (type jpg)
 
-<use /users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/figures/images/e
-mphysema.jpg>
-Package pdftex.def Info: /users/lorenzb/Dphil/poroelasticity_papers/coupling_pa
-per/figures/images/emphysema.jpg used on input line 91.
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/background/figures/images/emphy
+sema.jpg>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/background/
+figures/images/emphysema.jpg used on input line 90.
 (pdftex.def)             Requested size: 351.0163pt x 159.0063pt.
-) (./contents/background/model_literature_thesis.tex [13 </users/lorenzb/Dphil/
-poroelasticity_papers/coupling_paper/figures/images/emphysema.jpg>] [14] [15]) 
-(./contents/background/numerical_review_thesis.tex [16] [17]
-[18] [19])) [20]
+) (./contents/background/model_literature_thesis.tex [13 </home/lorenz/Dropbox/
+Dphil/thesis/contents/background/figures/images/emphysema.jpg>]
+[14]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15]) (./contents/background/numerical_review_thesis.tex [16] [17] [18]
+[19])) [20]
 Chapter 3.
 (./contents/poroelasticity_chapter.tex
 (./contents/poroelasticity/intro_theory_thesis.tex)
 (./contents/poroelasticity/continuum_mechanics_theory_thesis.tex [21
 
 ] [22]
-[23] [24] [25]
-Overfull \hbox (50.89793pt too wide) detected at line 170
-[] [][] \OMS/cmsy/m/n/12 G\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
-[] = [][] [](\OMS/cmsy/m/n/12 G\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
-[]) = [][] [] \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
-[] = [][] [] \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 
-[]\OML/cmm/m/it/12 :
- []
-
-) (./contents/poroelasticity/mixture_theory_thesis.tex [26] [27] [28] [29]
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+[23] [24] [25]) (./contents/poroelasticity/mixture_theory_thesis.tex [26]
+[27] [28] [29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 120--122
 
  []
 
 [31]
-Overfull \hbox (74.88013pt too wide) detected at line 141
-[][][] \OT1/cmr/m/n/12 + [][][] + [][] [] + [][] [] = \OMS/cmsy/m/n/12 r ^^A \O
-T1/cmr/m/n/12 ([][] + [][] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/
-n/12 ) + \OML/cmm/m/it/12 ^^Z[]   [] \OT1/cmr/m/n/12 
-[]\OML/cmm/m/it/12 :
- []
-
-
-Overfull \hbox (22.76587pt too wide) detected at line 153
-[][][] \OT1/cmr/m/n/12 + [][] [] = \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/m/n/12 ([][]
- \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^^p[]\OT1/cmr/m/n/12 ) + [][] + \OML/cm
-m/m/it/12 p\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 ^^^ \OMS/cmsy/m/n/12 ^^@ \OML/cmm
-/m/it/12 ^^^[][][]\OT1/cmr/m/n/12 ([][] \OMS/cmsy/m/n/12 ^^@ [][]\OT1/cmr/m/n/1
-2 ) [] 
-[]\OML/cmm/m/it/12 :
+Overfull \hbox (27.92773pt too wide) in paragraph at lines 168--168
+[]\OT1/cmr/bx/n/17.28 Summary of the gen-eral poroe-las-tic-ity model 
  []
 
 [32]
-Overfull \hbox (34.40314pt too wide) in paragraph at lines 241--242
+
+LaTeX Warning: Reference `eqn:spatial_solid_acceleration' on page 33 undefined 
+on input line 249.
+
+
+Overfull \hbox (76.22327pt too wide) in paragraph at lines 249--250
  [] 
  []
 
-[33] [34]) (./contents/poroelasticity/linearmodel_thesis.tex
-
-LaTeX Warning: Reference `section:overcoming' on page 35 undefined on input lin
-e 1.
-
-[35] [36] [37]
-
-LaTeX Warning: Reference `chap:linear_poro' on page 38 undefined on input line 
-63.
-
-)) [38]
+[33] [34]) [35] (./contents/poroelasticity/linearmodel_thesis.tex [36] [37]))
+[38]
 Chapter 4.
-(./contents/conclusion_chapter.tex [39
+(./contents/fem_chapter.tex (./contents/fem/fem_intro.tex [39
 
-]
+])
+(./contents/fem/functional_analysis.tex [40]
+Overfull \hbox (47.58286pt too wide) detected at line 22
+\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (
+) = [] \OML/cmm/m/it/12 :
+ []
 
-LaTeX Warning: Reference `sec:future_work' on page 40 undefined on input line 2
-6.
+[41]) (./contents/fem/fem_laplace.tex [42] [43]
+Overfull \hbox (28.79971pt too wide) in paragraph at lines 34--36
+\OT1/cmr/m/n/12 di-tions. For con-ve-nience we will use the no-ta-tion $\OML/cm
+m/m/it/12 X[] \OT1/cmr/m/n/12 = []$
+ []
 
-[40] [41] [42]) [43]
-Appendix A.
+[44] [45] [46]
+Overfull \hbox (6.81895pt too wide) in paragraph at lines 91--93
+\OT1/cmr/m/n/12 with $\OML/cmm/m/it/12 u[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 u
+[]\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 x[]\OT1/cmr/m/n/12 )$. We de-fine the vec-t
+or of nodal val-ues to be $\OML/cmm/b/it/12 u[] \OT1/cmr/m/n/12 = [][]$.
+ []
 
-(/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/appendix
-_paper.tex
-LaTeX Font Info:    Try loading font information for U+euf on input line 5.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+) (./contents/fem/fem_mixed.tex [47] [48]
+Overfull \hbox (20.93948pt too wide) in alignment at lines 43--49
+ [][][] []
+ []
+
+[49] [50] [51])) [52]
+Chapter 5.
+(./contents/linearfem_chapter.tex
+(./contents/stabilized/introduction_thesis.tex [53
+
+])
+(./contents/stabilized/model_thesis.tex [54] [55] [56] [57] [58])
+(./contents/stabilized/norms_inequalities_thesis.tex [59] [60] [61] [62]
+Overfull \hbox (18.84088pt too wide) detected at line 91
+[][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/
+12 h[][][] \OT1/cmr/m/n/12 + [][])\OML/cmm/m/it/12 ;
+ []
+
+[63]
+Overfull \hbox (15.54764pt too wide) in paragraph at lines 121--122
+[]\OT1/cmr/m/n/12 For all $[\OML/cmm/m/it/12 v; w; q\OT1/cmr/m/n/12 ] \OMS/cmsy
+/m/n/12 2 []$
+ []
+
+) (./contents/stabilized/stability_thesis.tex [64] [65]
+Overfull \hbox (29.1555pt too wide) detected at line 46
+\OML/cmm/m/it/12 ^^M [][] \OMS/cmsy/m/n/12 ^^T [] []  8\OT1/cmr/m/n/12 (\OML/cm
+m/b/it/12 u[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/
+cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 W[]\OML/cmm/m/it/12 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[66]
+Overfull \hbox (49.95601pt too wide) detected at line 69
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]; \OMS/cmsy/m/n/12 r ^^A \OT1/cmr/m/n/12 (
+[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/12 )) = [] [][] \O
+ML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y
+[][]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \OML/cmm/b/it/12 n \OML/cmm/m/it/12 
+ds \OT1/cmr/m/n/12 = [] [] [][][\OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 ]([] \OMS/c
+msy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \
+OML/cmm/b/it/12 n \OML/cmm/m/it/12 ds:
+ []
+
+
+Overfull \hbox (48.14322pt too wide) detected at line 73
+\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u[]\OML/cmm/m/it/12 ; \O
+ML/cmm/b/it/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
+1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y[][]; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT
+1/cmr/m/n/12 0)] = [][] + \OML/cmm/m/it/12 a\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 u
+[]\OML/cmm/m/it/12 ; ^^Y[][]\OT1/cmr/m/n/12 ) + [] [] [][][\OML/cmm/m/it/12 p[]
+\OT1/cmr/m/n/12 ]([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Y[][]\OT1/cmr/m/n/
+12 ) \OMS/cmsy/m/n/12 ^^A \OML/cmm/b/it/12 n \OML/cmm/m/it/12 ds:
+ []
+
+[67]
+Overfull \hbox (45.41003pt too wide) detected at line 87
+ []$[]  \OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u[]\OML/cmm/m/it
+/12 ; \OML/cmm/b/it/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/
+12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y[][]; \OT1/cmr/m/n/12 0\OML/cmm/m/it/
+12 ; \OT1/cmr/m/n/12 0)] \OMS/cmsy/m/n/12 ^^U ^^@[][][] \OT1/cmr/m/n/12 + [] []
+[] \OMS/cmsy/m/n/12 ^^@ []j[]j[]\OML/cmm/m/it/12 :$ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Overfull \hbox (32.31584pt too wide) detected at line 92
+\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u[]\OML/cmm/m/it/12 ; \O
+ML/cmm/b/it/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
+1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/
+m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OML/cmm/b/it/12 z[]\OT1/cmr
+/m/n/12 )] = (\OMS/cmsy/m/n/12 r ^^A \OML/cmm/b/it/12 u[]\OML/cmm/m/it/12 ; \OT
+1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OMS/cmsy/m/n/12 r ^^A \OML/cmm/b/it/12 z[]\O
+T1/cmr/m/n/12 ) + ^^A\OML/cmm/m/it/12 t[][][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/1
+2 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p[]; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t
+\OMS/cmsy/m/n/12 r ^^A \OML/cmm/b/it/12 z[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
+ []
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+[69]
+Overfull \hbox (14.44124pt too wide) in paragraph at lines 123--126
+\OT1/cmr/m/n/12 To com-plete the proof, we let $[]$
+ []
+
+
+Overfull \hbox (3.49063pt too wide) in alignment at lines 126--131
+ [][][] []
+ []
+
+[70]) (./contents/stabilized/energy_thesis.tex
+Overfull \hbox (20.19579pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/17.28 Energy es-ti-mate for the fully-discrete model 
+ []
+
+
+Overfull \hbox (22.69807pt too wide) detected at line 18
+\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u[]\OML/cmm/m/it/12 ; \O
+ML/cmm/b/it/12 z[]\OML/cmm/m/it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT
+1/cmr/m/n/12 (\OML/cmm/b/it/12 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/c
+mm/m/it/12 ; q[]\OT1/cmr/m/n/12 )] = (\OML/cmm/b/it/12 f[]\OML/cmm/m/it/12 ; \O
+ML/cmm/b/it/12 v[]\OT1/cmr/m/n/12 ) + (\OML/cmm/b/it/12 b[]\OML/cmm/m/it/12 ; \
+OML/cmm/b/it/12 w[]\OT1/cmr/m/n/12 ) + (\OML/cmm/m/it/12 g[]; q[]\OT1/cmr/m/n/1
+2 ) \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 v[]\OML/cmm/m/it/12 ; \
+OML/cmm/b/it/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 W
+[]\OML/cmm/m/it/12 ;
+ []
+
+[71] [72] [73]
+Overfull \hbox (28.46185pt too wide) detected at line 110
+ []$[]  [][] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j[]j[] \OT1/cmr/m/n/12 + [][] +
+ [][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C []$ 
+ []
+
+
+Overfull \hbox (36.42297pt too wide) detected at line 110
+ []$[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 :  $ 
+ []
+
+[74] [75]
+Overfull \hbox (12.98074pt too wide) in alignment at lines 154--160
+ [][][] []
+ []
+
+[76]
+Overfull \hbox (12.2744pt too wide) in paragraph at lines 181--182
+[]\OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 ;
+ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; N$ \OT1/cmr/m/n/12 we choose $(\OML/c
+mm/b/it/12 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/cmm/m/it/12 ; q[]\OT1
+/cmr/m/n/12 ) = (\OML/cmm/m/it/12 ^^L[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^Y[
+]\OML/cmm/b/it/12 v[]\OML/cmm/m/it/12 ; ^^L\OML/cmm/b/it/12 z[]\OML/cmm/m/it/12
+ ; ^^L[] \OT1/cmr/m/n/12 +
+ []
+
+[77] [78]
+Overfull \hbox (12.2744pt too wide) in paragraph at lines 217--218
+[]\OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 ;
+ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; N$ \OT1/cmr/m/n/12 we choose $(\OML/c
+mm/b/it/12 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/cmm/m/it/12 ; q[]\OT1
+/cmr/m/n/12 ) = (\OML/cmm/m/it/12 ^^L[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^Y[
+]\OML/cmm/b/it/12 v[]\OML/cmm/m/it/12 ; ^^L\OML/cmm/b/it/12 z[]\OML/cmm/m/it/12
+ ; ^^L[] \OT1/cmr/m/n/12 +
+ []
+
+
+Overfull \hbox (43.59248pt too wide) in alignment at lines 218--221
+ [][][] []
+ []
+
+[79]) (./contents/stabilized/apriori_thesis.tex [80]
+Overfull \hbox (9.72997pt too wide) detected at line 23
+\OML/cmm/b/it/12 ^^R[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) :=
+ \OML/cmm/m/it/12 ^^Y[]\OML/cmm/b/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[];
+ \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 u[
+]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  \OML
+/cmm/b/it/12 ^^R[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) := \OM
+L/cmm/m/it/12 ^^Y[]\OML/cmm/b/it/12 z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; \OM
+S/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 z[]\OT
+1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;  ^^R[]\OT
+1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) := \OML/cmm/m/it/12 ^^Y[]p\
+OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) \OM
+S/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1
+/cmr/m/n/12 )\OML/cmm/m/it/12 ; 
+ []
+
+[81]
+Overfull \hbox (11.83772pt too wide) detected at line 41
+\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u\OML/cmm/m/it/12 ; \OML
+/cmm/b/it/12 z\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/
+m/n/12 (\OML/cmm/b/it/12 v\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w\OML/cmm/m/it/12
+ ; q\OT1/cmr/m/n/12 )] = (\OML/cmm/b/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t
+[]; \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 v\
+OT1/cmr/m/n/12 ) + (\OML/cmm/b/it/12 b\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; \O
+MS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w\OT1/cm
+r/m/n/12 ) + (\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; \OMS/cms
+y/m/n/12 ^^A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; q\OT1/cmr/m/n/12 ) \OMS/cmsy/m/
+n/12 8\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 v\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w\
+OML/cmm/m/it/12 ; q\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 V[]\OML/cmm/m/it/12 ;[]
+
+ []
+
+
+Overfull \hbox (19.93964pt too wide) in alignment at lines 43--47
+ [][][] []
+ []
+
+
+Overfull \hbox (30.64687pt too wide) detected at line 60
+\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 [(\OML/cmm/b/it/12 u\OML/cmm/m/it/12 ; \OML
+/cmm/b/it/12 z\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/
+m/n/12 (\OML/cmm/b/it/12 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/cmm/m/i
+t/12 ; q[]\OT1/cmr/m/n/12 )] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 B[]\OT1/cmr/
+m/n/12 [(\OML/cmm/b/it/12 u[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 z[]\OML/cmm/m/
+it/12 ; p[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/b/it/1
+2 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n/
+12 )] = 0\OML/cmm/m/it/12 ;   \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OML/cmm/b/it/
+12 v[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 w[]\OML/cmm/m/it/12 ; q[]\OT1/cmr/m/n
+/12 ) \OMS/cmsy/m/n/12 2 V[]\OML/cmm/m/it/12 :
+ []
+
+[82]
+Overfull \hbox (8.59917pt too wide) in alignment at lines 95--99
+ [][][] []
+ []
+
+[83]
+Overfull \hbox (61.77852pt too wide) in alignment at lines 125--132
+ [][][] []
+ []
+
+[84]
+Overfull \hbox (28.10812pt too wide) detected at line 167
+[][] \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j[]j[] \OT1/cmr/m/n/12 + [][] + [][] \O
+MS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 C [] :
+ []
+
+[85]
+Overfull \hbox (66.37415pt too wide) detected at line 207
+[] [] [] []
+ []
+
+[86] [87]
+Overfull \hbox (30.8174pt too wide) in paragraph at lines 257--259
+\OT1/cmr/m/it/12 Assuming $\OML/cmm/b/it/12 u \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/
+12 H[] [] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 H[] []$\OT1/cmr/m/it/12 , $\OML/c
+mm/b/it/12 z \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[] []$
+ []
+
+[88]) (./contents/stabilized/results_thesis.tex [89] [90] [91]
+Overfull \hbox (26.251pt too wide) detected at line 137
+\OML/cmm/b/it/12 u \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ;  \OML/cmm/b/it/12 z 
+\OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ;
+ []
+
+[92]
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 146--146
+[]\OT1/cmr/m/n/10 (a)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/pressure_disc_NE16_0_01_STAB_025t.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 143935 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/pressure_disc_NE16_0_01_STAB_025t-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 23206 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/pressure_disc_NE16_0_01_STAB_025t-eps-converted-to.
+pdf /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_0_
+01_STAB_025t.eps>
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_0_01_
+STAB_025t-eps-converted-to.pdf, id=376, 1204.5pt x 837.1275pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_
+0_01_STAB_025t-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_0
+_01_STAB_025t-eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+pressure_disc_NE16_0_01_STAB_025t-eps-converted-to.pdf used on input line 146.
+(pdftex.def)             Requested size: 191.10214pt x 132.80629pt.
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 147--147
+[]\OT1/cmr/m/n/10 (b)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/pressure_disc_NE16_10STAB_025t.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 144356 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 23277 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf
+ /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_10STA
+B_025t.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_10STA
+B_025t-eps-converted-to.pdf, id=377, 1204.5pt x 837.1275pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_
+10STAB_025t-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_1
+0STAB_025t-eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf used on input line 147.
+(pdftex.def)             Requested size: 191.10214pt x 132.80629pt.
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 161--161
+[]\OT1/cmr/m/n/10 (a)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_h1_disp.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 58526 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_h1_disp-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 16026 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/linf_h1_disp-eps-converted-to.pdf /home/lorenz/Drop
+box/Dphil/thesis/contents/stabilized/linf_h1_disp.eps>
+(epstopdf)             \includegraphics on input line 161.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp-eps-convert
+ed-to.pdf, id=378, 385.44pt x 334.24875pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp-eps-con
+verted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+linf_h1_disp-eps-converted-to.pdf used on input line 161.
+(pdftex.def)             Requested size: 167.69714pt x 145.42253pt.
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 162--162
+[]\OT1/cmr/m/n/10 (b)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_hdiv_flux.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 57996 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_hdiv_flux-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 16083 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_hdiv_flux-eps-converted-to.pdf /home/lorenz/Drop
+box/Dphil/thesis/contents/stabilized/l2_hdiv_flux.eps>
+(epstopdf)             \includegraphics on input line 162.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux-eps-convert
+ed-to.pdf, id=379, 385.44pt x 334.24875pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux-eps-con
+verted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_hdiv_flux-eps-converted-to.pdf used on input line 162.
+(pdftex.def)             Requested size: 167.69714pt x 145.42253pt.
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 163--163
+[]\OT1/cmr/m/n/10 (c)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_l2_p.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 54072 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_l2_p-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15308 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/linf_l2_p-eps-converted-to.pdf /home/lorenz/Dropbox
+/Dphil/thesis/contents/stabilized/linf_l2_p.eps>
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p-eps-converted-
+to.pdf, id=380, 385.44pt x 334.24875pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+linf_l2_p-eps-converted-to.pdf used on input line 163.
+(pdftex.def)             Requested size: 167.69714pt x 145.42253pt.
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 164--164
+[]\OT1/cmr/m/n/10 (d)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_disp.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 58436 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_disp-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15589 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_l2_disp-eps-converted-to.pdf /home/lorenz/Dropbo
+x/Dphil/thesis/contents/stabilized/l2_l2_disp.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp-eps-converted
+-to.pdf, id=381, 386.44376pt x 333.245pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_l2_disp-eps-converted-to.pdf used on input line 164.
+(pdftex.def)             Requested size: 167.69714pt x 144.60953pt.
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 165--165
+[]\OT1/cmr/m/n/10 (e)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_flux.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 58562 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_flux-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15638 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_l2_flux-eps-converted-to.pdf /home/lorenz/Dropbo
+x/Dphil/thesis/contents/stabilized/l2_l2_flux.eps>
+(epstopdf)             \includegraphics on input line 165.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux-eps-converted
+-to.pdf, id=382, 385.44pt x 333.245pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_l2_flux-eps-converted-to.pdf used on input line 165.
+(pdftex.def)             Requested size: 167.69714pt x 144.98582pt.
+ [93 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/pressure_disc_NE16_
+0_01_STAB_025t-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/content
+s/stabilized/pressure_disc_NE16_10STAB_025t-eps-converted-to.pdf>]
+Overfull \vbox (27.41078pt too high) has occurred while \output is active []
+
+
+[94 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp-eps-con
+verted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_f
+lux-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/stabilize
+d/linf_l2_p-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/s
+tabilized/l2_l2_disp-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/c
+ontents/stabilized/l2_l2_flux-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/p_linf_l2_break_tight.eps>
+(epstopdf)                    date: 2014-09-18 08:24:13
+(epstopdf)                    size: 992389 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/p_linf_l2_break_tight-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-23 15:02:40
+(epstopdf)                    size: 22816 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/p_linf_l2_break_tight-eps-converted-to.pdf /home/lo
+renz/Dropbox/Dphil/thesis/contents/stabilized/p_linf_l2_break_tight.eps>
+(epstopdf)             \includegraphics on input line 176.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/p_linf_l2_break_tight-ep
+s-converted-to.pdf, id=560, 344.28625pt x 398.48875pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/p_linf_l2_break_tig
+ht-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/p_linf_l2_break_tigh
+t-eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+p_linf_l2_break_tight-eps-converted-to.pdf used on input line 176.
+(pdftex.def)             Requested size: 155.99762pt x 180.55869pt.
+ [95 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/p_linf_l2_break_tig
+ht-eps-converted-to.pdf>]
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 211--211
+[]\OT1/cmr/m/n/10 (a)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_h1_disp_3D.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 57406 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_h1_disp_3D-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15910 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/linf_h1_disp_3D-eps-converted-to.pdf /home/lorenz/D
+ropbox/Dphil/thesis/contents/stabilized/linf_h1_disp_3D.eps>
+(epstopdf)             \includegraphics on input line 211.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp_3D-eps-conv
+erted-to.pdf, id=596, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp_3D-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp_3D-eps-
+converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+linf_h1_disp_3D-eps-converted-to.pdf used on input line 211.
+(pdftex.def)             Requested size: 167.69714pt x 125.77231pt.
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 212--212
+[]\OT1/cmr/m/n/10 (b)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_hdiv_flux_3D.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 56740 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_hdiv_flux_3D-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15938 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_hdiv_flux_3D-eps-converted-to.pdf /home/lorenz/D
+ropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux_3D.eps>
+(epstopdf)             \includegraphics on input line 212.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux_3D-eps-conv
+erted-to.pdf, id=597, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux_3D-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hdiv_flux_3D-eps-
+converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_hdiv_flux_3D-eps-converted-to.pdf used on input line 212.
+(pdftex.def)             Requested size: 167.69714pt x 125.77231pt.
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 213--213
+[]\OT1/cmr/m/n/10 (c)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_l2_p_3D.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 53010 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/linf_l2_p_3D-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15177 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/linf_l2_p_3D-eps-converted-to.pdf /home/lorenz/Drop
+box/Dphil/thesis/contents/stabilized/linf_l2_p_3D.eps>
+(epstopdf)             \includegraphics on input line 213.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p_3D-eps-convert
+ed-to.pdf, id=598, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p_3D-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_l2_p_3D-eps-con
+verted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+linf_l2_p_3D-eps-converted-to.pdf used on input line 213.
+(pdftex.def)             Requested size: 167.69714pt x 125.77231pt.
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 214--214
+[]\OT1/cmr/m/n/10 (d)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_disp_3D.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 56928 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_disp_3D-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15806 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_l2_disp_3D-eps-converted-to.pdf /home/lorenz/Dro
+pbox/Dphil/thesis/contents/stabilized/l2_l2_disp_3D.eps>
+(epstopdf)             \includegraphics on input line 214.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp_3D-eps-conver
+ted-to.pdf, id=599, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp_3D-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_disp_3D-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_l2_disp_3D-eps-converted-to.pdf used on input line 214.
+(pdftex.def)             Requested size: 167.69714pt x 125.77231pt.
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 215--215
+[]\OT1/cmr/m/n/10 (e)|| 
+ []
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_flux_3D.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 56845 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/l2_l2_flux_3D-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 15517 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/l2_l2_flux_3D-eps-converted-to.pdf /home/lorenz/Dro
+pbox/Dphil/thesis/contents/stabilized/l2_l2_flux_3D.eps>
+(epstopdf)             \includegraphics on input line 215.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux_3D-eps-conver
+ted-to.pdf, id=600, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux_3D-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_l2_flux_3D-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+l2_l2_flux_3D-eps-converted-to.pdf used on input line 215.
+(pdftex.def)             Requested size: 167.69714pt x 125.77231pt.
+ [96]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/canteliver_diag_crop.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 99539 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/canteliver_diag_crop-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 9029 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/canteliver_diag_crop-eps-converted-to.pdf /home/lor
+enz/Dropbox/Dphil/thesis/contents/stabilized/canteliver_diag_crop.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/canteliver_diag_crop-eps
+-converted-to.pdf, id=604, 236.885pt x 158.5925pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/canteliver_diag_cro
+p-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/canteliver_diag_crop
+-eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+canteliver_diag_crop-eps-converted-to.pdf used on input line 234.
+(pdftex.def)             Requested size: 195.0pt x 130.55486pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/cantilever_plot.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 37042 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/cantilever_plot-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 10691 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/cantilever_plot-eps-converted-to.pdf /home/lorenz/D
+ropbox/Dphil/thesis/contents/stabilized/cantilever_plot.eps>
+(epstopdf)             \includegraphics on input line 235.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/cantilever_plot-eps-conv
+erted-to.pdf, id=605, 449.68pt x 337.26pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/cantilever_plot-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/cantilever_plot-eps-
+converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+cantilever_plot-eps-converted-to.pdf used on input line 235.
+(pdftex.def)             Requested size: 195.0pt x 146.2489pt.
+ [97 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/linf_h1_disp_3D-eps
+-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/l2_hd
+iv_flux_3D-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/st
+abilized/linf_l2_p_3D-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/
+contents/stabilized/l2_l2_disp_3D-eps-converted-to.pdf> </home/lorenz/Dropbox/D
+phil/thesis/contents/stabilized/l2_l2_flux_3D-eps-converted-to.pdf>] [98]
+Overfull \hbox (19.61441pt too wide) in paragraph at lines 248--250
+\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 []$ \OT1/cmr/m/n/12 are the so-lu-tion
+s to the char-ac-ter-is-tic equa-tion $\OML/cmm/m/it/12 J[]\OT1/cmr/m/n/12 (\OM
+L/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (1 \OMS/c
+msy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^W\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 xJ[]\OT1/c
+mr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =\OT1/cmr/m/n/12
+ (1 \OMS/cmsy/m/n/12 ^^@
+ []
+
+[99 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/canteliver_diag_crop
+-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/c
+antilever_plot-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined_diag.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 44116 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined_diag-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 7006 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/unconfined_diag-eps-converted-to.pdf /home/lorenz/D
+ropbox/Dphil/thesis/contents/stabilized/unconfined_diag.eps>
+(epstopdf)             \includegraphics on input line 257.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_diag-eps-conv
+erted-to.pdf, id=810, 162.6075pt x 128.48pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_diag-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_diag-eps-
+converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+unconfined_diag-eps-converted-to.pdf used on input line 257.
+(pdftex.def)             Requested size: 155.99762pt x 123.26685pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 2330790 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 412829 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/unconfined-eps-converted-to.pdf /home/lorenz/Dropbo
+x/Dphil/thesis/contents/stabilized/unconfined.eps>
+(epstopdf)             \includegraphics on input line 258.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined-eps-converted
+-to.pdf, id=811, 747.79375pt x 522.95375pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+unconfined-eps-converted-to.pdf used on input line 258.
+(pdftex.def)             Requested size: 195.0pt x 136.36374pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined_results_delta.eps>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 99006 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/stabilized/unconfined_results_delta-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-02-17 02:51:16
+(epstopdf)                    size: 26838 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/unconfined_results_delta-eps-converted-to.pdf /home
+/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_results_delta.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_results_delta
+-eps-converted-to.pdf, id=812, 559.08875pt x 522.95375pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_results_
+delta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_results_d
+elta-eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/
+unconfined_results_delta-eps-converted-to.pdf used on input line 264.
+(pdftex.def)             Requested size: 234.00238pt x 218.88101pt.
+ [100]) [101 </home/lorenz/Dropbox/Dphil/thesis/contents/stabilized/unconfined_
+diag-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/stabiliz
+ed/unconfined-eps-converted-to.pdf>]
+(./contents/stabilized/conclusions_thesis.tex) [102 </home/lorenz/Dropbox/Dphil
+/thesis/contents/stabilized/unconfined_results_delta-eps-converted-to.pdf>])
+[103]
+Chapter 6.
+(./contents/large_chapter.tex (./contents/large/intro.tex)
+(./contents/large/model_review.tex [104
+
+] [105]) (./contents/large/fem.tex
+[106]
+Overfull \hbox (8.02809pt too wide) detected at line 49
+[] []
+ []
+
+[107]
+Overfull \hbox (13.34544pt too wide) detected at line 88
+ []$[]   [][] \OML/cmm/b/it/12 ^^[[] \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 r[]\OML
+/cmm/b/it/12 v[] \OML/cmm/m/it/12 dv \OMS/cmsy/m/n/12 ^^@ [][] \OML/cmm/m/it/12
+ p[]\OMS/cmsy/m/n/12 r ^^A \OML/cmm/b/it/12 v[] \OML/cmm/m/it/12 dv \OT1/cmr/m/
+n/12 = [][] \OML/cmm/m/it/12 ^^Z\OML/cmm/b/it/12 f[] \OMS/cmsy/m/n/12 ^^A \OML/
+cmm/b/it/12 v[] \OML/cmm/m/it/12 dv \OT1/cmr/m/n/12 + [][] \OML/cmm/b/it/12 t[]
+ \OMS/cmsy/m/n/12 ^^A \OML/cmm/b/it/12 v[] \OML/cmm/m/it/12 ds \OMS/cmsy/m/n/12
+ 8\OML/cmm/b/it/12 v[] \OMS/cmsy/m/n/12 2 \OML/cmm/b/it/12 W[]\OML/cmm/m/it/12 
+;$ 
+ []
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 121.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [44
+) [108] [109] [110]
+[111]) (./contents/large/implementation_details.tex [112]
+Overfull \hbox (22.18001pt too wide) in alignment at lines 57--72
+ [][][] []
+ []
+
+[113]
+Overfull \hbox (10.27371pt too wide) detected at line 89
+[] []
+ []
+
+
+Overfull \hbox (3.9473pt too wide) in paragraph at lines 89--91
+\OT1/cmr/m/n/12 The dis-cretiza-tion and im-ple-men-ta-tion of this ad-di-tiona
+l con-straint is straight-
+ []
+
+[114]) (./contents/large/results.tex [115]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/unconfined_diag.eps>
+(epstopdf)                    date: 2013-12-06 16:26:31
+(epstopdf)                    size: 44116 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/unconfined_diag-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-01-03 12:22:21
+(epstopdf)                    size: 6959 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/unconfined_diag-eps-converted-to.pdf /home/loren
+z/Dropbox/Dphil/thesis/contents/large/figures/unconfined_diag.eps>
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_diag-eps-c
+onverted-to.pdf, id=901, 162.6075pt x 128.48pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_diag-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_diag-e
+ps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/unconfined_diag-eps-converted-to.pdf used on input line 27.
+(pdftex.def)             Requested size: 175.49881pt x 138.67593pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/unconfined_large.eps>
+(epstopdf)                    date: 2014-04-03 04:45:25
+(epstopdf)                    size: 5559047 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/unconfined_large-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-03 05:35:22
+(epstopdf)                    size: 194197 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/unconfined_large-eps-converted-to.pdf /home/lore
+nz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large.eps>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large-eps-
+converted-to.pdf, id=902, 1152.305pt x 805.0075pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large-
+eps-converted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/unconfined_large-eps-converted-to.pdf used on input line 28.
+(pdftex.def)             Requested size: 214.50119pt x 149.8453pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[116] [117 </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined
+_diag-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/large/f
+igures/unconfined_large-eps-converted-to.pdf>]
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large_plot
+.pdf, id=921, 562.1pt x 321.2pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large
+_plot.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_large_
+plot.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/unconfined_large_plot.pdf used on input line 67.
+(pdftex.def)             Requested size: 312.00119pt x 178.2877pt.
+ [118 </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/unconfined_larg
+e_plot.pdf>] [119]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pone001.eps>
+(epstopdf)                    date: 2014-09-21 09:40:34
+(epstopdf)                    size: 1455872 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pone001-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:32
+(epstopdf)                    size: 18079 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/pone001-eps-converted-to.pdf /home/lorenz/Dropbo
+x/Dphil/thesis/contents/large/figures/pone001.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone001-eps-converted
+-to.pdf, id=947, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone001-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone001-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/pone001-eps-converted-to.pdf used on input line 120.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pzero001.eps>
+(epstopdf)                    date: 2014-09-21 09:40:54
+(epstopdf)                    size: 1463530 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pzero001-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:33
+(epstopdf)                    size: 19789 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/pzero001-eps-converted-to.pdf /home/lorenz/Dropb
+ox/Dphil/thesis/contents/large/figures/pzero001.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero001-eps-converte
+d-to.pdf, id=948, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero001-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero001-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/pzero001-eps-converted-to.pdf used on input line 121.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pone1.eps>
+(epstopdf)                    date: 2014-09-21 09:40:44
+(epstopdf)                    size: 1456596 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pone1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:33
+(epstopdf)                    size: 18305 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/pone1-eps-converted-to.pdf /home/lorenz/Dropbox/
+Dphil/thesis/contents/large/figures/pone1.eps>
+(epstopdf)             \includegraphics on input line 122.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone1-eps-converted-t
+o.pdf, id=949, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone1-eps-conver
+ted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone1-eps-convert
+ed-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/pone1-eps-converted-to.pdf used on input line 122.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pzero1.eps>
+(epstopdf)                    date: 2014-09-21 09:41:09
+(epstopdf)                    size: 1464419 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/pzero1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:34
+(epstopdf)                    size: 20184 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/pzero1-eps-converted-to.pdf /home/lorenz/Dropbox
+/Dphil/thesis/contents/large/figures/pzero1.eps>
+(epstopdf)             \includegraphics on input line 123.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero1-eps-converted-
+to.pdf, id=950, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero1-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pzero1-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/pzero1-eps-converted-to.pdf used on input line 123.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 120--124
+ [][][]  
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 120--124
+ [][] 
+ []
+
+[120] [121 </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/pone001-ep
+s-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/p
+zero001-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/large
+/figures/pone1-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/content
+s/large/figures/pzero1-eps-converted-to.pdf>] [122]
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/setup_balls.eps>
+(epstopdf)                    date: 2014-06-13 07:13:09
+(epstopdf)                    size: 4061979 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/setup_balls-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-06-13 07:14:03
+(epstopdf)                    size: 47180 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/setup_balls-eps-converted-to.pdf /home/lorenz/Dr
+opbox/Dphil/thesis/contents/large/figures/setup_balls.eps>
+(epstopdf)             \includegraphics on input line 141.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/setup_balls-eps-conve
+rted-to.pdf, id=1001, 885.3075pt x 747.79375pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/setup_balls-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/setup_balls-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/setup_balls-eps-converted-to.pdf used on input line 141.
+(pdftex.def)             Requested size: 175.49881pt x 148.23248pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/bigswell_1s.eps>
+(epstopdf)                    date: 2014-09-21 09:41:50
+(epstopdf)                    size: 1210073 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/bigswell_1s-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:34
+(epstopdf)                    size: 283476 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/bigswell_1s-eps-converted-to.pdf /home/lorenz/Dr
+opbox/Dphil/thesis/contents/large/figures/bigswell_1s.eps>
+(epstopdf)             \includegraphics on input line 142.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/bigswell_1s-eps-conve
+rted-to.pdf, id=1002, 866.23625pt x 603.25375pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/bigswell_1s-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/bigswell_1s-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/bigswell_1s-eps-converted-to.pdf used on input line 142.
+(pdftex.def)             Requested size: 234.00238pt x 162.96353pt.
+
+Overfull \hbox (19.50119pt too wide) in paragraph at lines 141--143
+ [][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/swell_plong.eps>
+(epstopdf)                    date: 2014-09-21 09:42:19
+(epstopdf)                    size: 1790208 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/swell_plong-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:35
+(epstopdf)                    size: 23112 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/swell_plong-eps-converted-to.pdf /home/lorenz/Dr
+opbox/Dphil/thesis/contents/large/figures/swell_plong.eps>
+(epstopdf)             \includegraphics on input line 170.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_plong-eps-conve
+rted-to.pdf, id=1003, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_plong-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_plong-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/swell_plong-eps-converted-to.pdf used on input line 170.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+Package epstopdf Info: Source file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/swell_jlong.eps>
+(epstopdf)                    date: 2014-09-21 09:42:36
+(epstopdf)                    size: 1473358 bytes
+(epstopdf)             Output file: </home/lorenz/Dropbox/Dphil/thesis/contents
+/large/figures/swell_jlong-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-09-24 06:24:35
+(epstopdf)                    size: 22054 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/lorenz/Dropbox/Dphil
+/thesis/contents/large/figures/swell_jlong-eps-converted-to.pdf /home/lorenz/Dr
+opbox/Dphil/thesis/contents/large/figures/swell_jlong.eps>
+(epstopdf)             \includegraphics on input line 171.
+Package epstopdf Info: Output file is already uptodate.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_jlong-eps-conve
+rted-to.pdf, id=1004, 481.8pt x 401.5pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_jlong-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/swell_jlong-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/large/figur
+es/swell_jlong-eps-converted-to.pdf used on input line 171.
+(pdftex.def)             Requested size: 195.0pt x 162.49632pt.
+ [123 </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/setup_balls-eps
+-converted-to.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/large/figures/bi
+gswell_1s-eps-converted-to.pdf>])
+(./contents/large/conclusion.tex [124 </home/lorenz/Dropbox/Dphil/thesis/conten
+ts/large/figures/swell_plong-eps-converted-to.pdf> </home/lorenz/Dropbox/Dphil/
+thesis/contents/large/figures/swell_jlong-eps-converted-to.pdf>])) [125]
+Chapter 7.
+(./contents/lung_chapter.tex (./contents/lung/introduction.tex)
+(./contents/lung/model_assumptions.tex [126
+
+] [127] [128])
+(./contents/lung/model_equations.tex [129] [130] [131]
+Overfull \hbox (3.90854pt too wide) in paragraph at lines 48--50
+\OT1/cmr/m/n/12 For no-ta-tional pur-poses we have added sub-script $\OML/cmm/m
+/it/12 di$ \OT1/cmr/m/n/12 to the most dis-tal branches
+ []
+
+[132] [133] [134]) (./contents/lung/implementation.tex [135]
+Overfull \hbox (12.50623pt too wide) in paragraph at lines 9--9
+[]\OT1/cmr/bx/n/14.4 Discrete cou-pling of the fluid net-work to the poroe-
+ []
+
+[136]
+Overfull \hbox (48.42963pt too wide) detected at line 17
+\OT1/cmr/m/n/12 
+[] := [] \OML/cmm/m/it/12 ;
+ []
+
+[137]
+Overfull \hbox (40.38036pt too wide) detected at line 165
+[] [] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 ;
+ []
+
+[138]
+Overfull \hbox (103.85474pt too wide) detected at line 197
+\OML/cmm/b/it/12 X \OT1/cmr/m/n/12 = [\OML/cmm/b/it/12 x[]\OT1/cmr/m/n/12 ]\OML
+/cmm/m/it/12 ;  \OML/cmm/b/it/12 x[] \OT1/cmr/m/n/12 := []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+) (./contents/lung/model_generation.tex [139] [140] [141])
+(./contents/lung/results.tex [142]
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/slice_out_shrink.pdf, 
+id=1100, 551.05875pt x 550.055pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/slice_out_shrink.
+pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/slice_out_shrink.p
+df>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/slice_out_shrink.pdf used on input line 12.
+(pdftex.def)             Requested size: 195.0pt x 194.6456pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/disease_out_shrink.pdf
+, id=1101, 551.05875pt x 550.055pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/disease_out_shrin
+k.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/disease_out_shrink
+.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/disease_out_shrink.pdf used on input line 13.
+(pdftex.def)             Requested size: 195.0pt x 194.6456pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/volume_tracheaz-crop.p
+df, id=1102, 433.62pt x 404.51125pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/volume_tracheaz-c
+rop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/volume_tracheaz-cr
+op.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/volume_tracheaz-crop.pdf used on input line 25.
+(pdftex.def)             Requested size: 128.70071pt x 120.0581pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flowrate_tracheaz-crop
+.pdf, id=1103, 437.635pt x 416.55624pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flowrate_tracheaz
+-crop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flowrate_tracheaz-
+crop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/flowrate_tracheaz-crop.pdf used on input line 26.
+(pdftex.def)             Requested size: 124.80286pt x 118.78967pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_tracheaz-crop
+.pdf, id=1104, 454.69875pt x 404.51125pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_tracheaz
+-crop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_tracheaz-
+crop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pressure_tracheaz-crop.pdf used on input line 27.
+(pdftex.def)             Requested size: 128.70071pt x 114.49684pt.
+ [143]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[144 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/slice_out_shrink.
+pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/disease_out_shrin
+k.pdf>]
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_HD.png, id
+=1118, 925.4575pt x 682.55pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_HD.pn
+g Graphic file (type png)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_HD.png
+>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pathway_res_HD.png used on input line 39.
+(pdftex.def)             Requested size: 195.0pt x 143.8084pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_tissue.png
+, id=1119, 812.03375pt x 480.79625pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_tissu
+e.png Graphic file (type png)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_tissue
+.png>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pathway_res_tissue.png used on input line 40.
+(pdftex.def)             Requested size: 195.0pt x 115.45213pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/vent_res_scatter-crop.
+pdf, id=1120, 504.88625pt x 418.56375pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/vent_res_scatter-
+crop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/vent_res_scatter-c
+rop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/vent_res_scatter-crop.pdf used on input line 47.
+(pdftex.def)             Requested size: 195.0pt x 161.66167pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatter-c
+rop.pdf, id=1121, 469.755pt x 419.5675pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scat
+ter-crop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatt
+er-crop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pressure_res_scatter-crop.pdf used on input line 48.
+(pdftex.def)             Requested size: 195.0pt x 174.16208pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/T_H_h.pdf, id=1122, 31
+7.50621pt x 226.9278pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/T_H_h.pdf Graphic
+ file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/T_H_h.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/T_H_h.pdf used on input line 57.
+(pdftex.def)             Requested size: 195.0pt x 139.37105pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_low.pdf, id=1123, 
+170.3163pt x 104.5506pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_low.pdf Graph
+ic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/P_H_low.pdf used on input line 58.
+(pdftex.def)             Requested size: 195.0pt x 119.7042pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_surf_low.pdf, id=1
+124, 159.9576pt x 105.996pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_surf_low.pdf 
+Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_surf_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/P_H_surf_low.pdf used on input line 59.
+(pdftex.def)             Requested size: 195.0pt x 129.21948pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_H_low.pdf, id=1125,
+ 150.0807pt x 104.5506pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_H_low.pdf Grap
+hic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_H_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/Jv_H_low.pdf used on input line 60.
+(pdftex.def)             Requested size: 167.69714pt x 116.82306pt.
+
+[145 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/volume_tracheaz-c
+rop.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flowrate_trac
+heaz-crop.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressur
+e_tracheaz-crop.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[146 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_HD.pn
+g> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pathway_res_tissue.
+png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[147 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/vent_res_scatter-
+crop.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res
+_scatter-crop.pdf>] [148 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figur
+es/T_H_h.pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_low.
+pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_H_surf_low.pdf>
+ </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_H_low.pdf>]
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_Air_ball-crop.pdf, i
+d=1205, 416.55624pt x 405.515pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_Air_ball-crop.p
+df Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_Air_ball-crop.pd
+f>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/j_Air_ball-crop.pdf used on input line 89.
+(pdftex.def)             Requested size: 123.23776pt x 119.9662pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_Air_ball-crop.pdf, i
+d=1206, 426.59375pt x 407.5225pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_Air_ball-crop.p
+df Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_Air_ball-crop.pd
+f>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/p_Air_ball-crop.pdf used on input line 90.
+(pdftex.def)             Requested size: 124.80286pt x 119.22316pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_Air_ball-crop.pdf
+, id=1207, 413.545pt x 407.5225pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_Air_ball-cro
+p.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_Air_ball-crop
+.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/sige_Air_ball-crop.pdf used on input line 91.
+(pdftex.def)             Requested size: 124.80286pt x 122.98523pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_C_low.pdf, id=1208, 
+170.3163pt x 104.5506pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_C_low.pdf Graph
+ic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_C_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/P_C_low.pdf used on input line 114.
+(pdftex.def)             Requested size: 195.0pt x 119.7042pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_C_low.pdf, id=1209,
+ 150.0807pt x 104.5506pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_C_low.pdf Grap
+hic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_C_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/Jv_C_low.pdf used on input line 115.
+(pdftex.def)             Requested size: 167.69714pt x 116.82306pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/S_C_low.pdf, id=1210, 
+184.28851pt x 105.996pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/S_C_low.pdf Graph
+ic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/S_C_low.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/S_C_low.pdf used on input line 116.
+(pdftex.def)             Requested size: 206.69952pt x 118.88936pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flux.pdf, id=1211, 569
+.12625pt x 569.12625pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flux.pdf Graphic 
+file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/flux.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/flux.pdf used on input line 117.
+(pdftex.def)             Requested size: 117.00119pt x 117.00163pt.
+ [149 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_Air_ball-crop.
+pdf> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_Air_ball-crop.p
+df> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_Air_ball-crop
+.pdf>]
+[150 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/P_C_low.pdf> </ho
+me/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_C_low.pdf> </home/loren
+z/Dropbox/Dphil/thesis/contents/lung/figures/S_C_low.pdf> </home/lorenz/Dropbox
+/Dphil/thesis/contents/lung/figures/flux.pdf>]
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_C_ball-crop.pdf, id=
+1395, 411.5375pt x 407.5225pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_C_ball-crop.pdf
+ Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_C_ball-crop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/j_C_ball-crop.pdf used on input line 133.
+(pdftex.def)             Requested size: 122.07138pt x 120.87723pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_C_ball-crop.pdf, id=
+1396, 433.62pt x 400.49625pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_C_ball-crop.pdf
+ Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_C_ball-crop.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/p_C_ball-crop.pdf used on input line 134.
+(pdftex.def)             Requested size: 128.70071pt x 118.86647pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_C_ball-crop.pdf, 
+id=1397, 426.59375pt x 403.5075pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_C_ball-crop.
+pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_C_ball-crop.p
+df>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/sige_C_ball-crop.pdf used on input line 135.
+(pdftex.def)             Requested size: 125.58243pt x 118.7874pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_W_low2.pdf, id=1398
+, 149.358pt x 102.8643pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_W_low2.pdf Gra
+phic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_W_low2.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/Jv_W_low2.pdf used on input line 144.
+(pdftex.def)             Requested size: 187.19833pt x 128.93634pt.
+
+[151 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/j_C_ball-crop.pdf
+> </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/p_C_ball-crop.pdf> <
+/home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/sige_C_ball-crop.pdf>]
+[152 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/Jv_W_low2.pdf>]
+[153]
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/recoil_tracheaz-crop.p
+df, id=1443, 559.08875pt x 501.875pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/recoil_tracheaz-c
+rop.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/recoil_tracheaz-cr
+op.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/recoil_tracheaz-crop.pdf used on input line 175.
+(pdftex.def)             Requested size: 195.0pt x 175.04623pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatter_4
+sec.pdf, id=1444, 541.02126pt x 523.9575pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scat
+ter_4sec.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatt
+er_4sec.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pressure_res_scatter_4sec.pdf used on input line 181.
+(pdftex.def)             Requested size: 195.0pt x 188.8484pt.
+
+</home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatter_1
+sec.pdf, id=1445, 541.02126pt x 523.9575pt>
+File: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scat
+ter_1sec.pdf Graphic file (type pdf)
+
+<use /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/pressure_res_scatt
+er_1sec.pdf>
+Package pdftex.def Info: /home/lorenz/Dropbox/Dphil/thesis/contents/lung/figure
+s/pressure_res_scatter_1sec.pdf used on input line 182.
+(pdftex.def)             Requested size: 195.0pt x 188.8484pt.
+ [154 </home/lorenz/Dropbox/Dphil/thesis/contents/lung/figures/recoil_tracheaz-
+crop.pdf>]) (./contents/lung/discussion.tex [155 </home/lorenz/Dropbox/Dphil/th
+esis/contents/lung/figures/pressure_res_scatter_4sec.pdf> </home/lorenz/Dropbox
+/Dphil/thesis/contents/lung/figures/pressure_res_scatter_1sec.pdf>] [156] [157]
+ [158] [159])) [160]
+Chapter 8.
+(./contents/conclusion_chapter.tex [161
+
+] [162]
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[163]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+[164]
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+[165]) [166]
+Appendix A.
+(./contents/appendix/appendix.tex [167
 
 ]
+Overfull \hbox (37.02808pt too wide) detected at line 70
+\OML/cmm/b/it/12 D \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 :
+ []
 
-LaTeX Warning: Reference `sec:numerical_simulations' on page 45 undefined on in
-put line 43.
+[168]) (./thesis.bbl [169] [170
 
-[45]) (./thesis.bbl [46] [47
-
-]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [48] [49] [50] [51] [52] [53] [54] [55]) [56]
-(./thesis.aux)
+] [171] [172] [173] [174] [175] [176] [177]
+[178] [179] [180] [181] [182] [183] [184] [185]) [186] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 2 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 16798 strings out of 494245
- 310622 string characters out of 6158904
- 388101 words of memory out of 5000000
- 19624 multiletter control sequences out of 15000+600000
- 15132 words of font info for 55 fonts, out of 8000000 for 9000
- 430 hyphenation exceptions out of 8191
- 56i,17n,85p,1546b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (62 pages, 3304212 bytes).
+ 18063 strings out of 493304
+ 346165 string characters out of 6139870
+ 389053 words of memory out of 5000000
+ 20878 multiletter control sequences out of 15000+600000
+ 20997 words of font info for 77 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 56i,17n,85p,2255b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmex
+tra/cmbsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/zapfding/uzdr.pfb>
+Output written on thesis.pdf (197 pages, 8203111 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+ 1657 PDF objects out of 1728 (max. 8388607)
+ 1046 compressed objects within 11 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 

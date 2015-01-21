@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                    The poroelastic model                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section {The poroelastic model}
+\label{sec:model}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Governing equations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Governing equations}
+\label{sec:nondimensional}
+
+Following \cite{phillips2007coupling} and \cite{showalter2000diffusion}, the governing equations for a fully saturated, incompressible poroelastic flow are
+\begin{subequations}
+\label{strong_cont_system}
+\begin{align}
+-(\lambda+\mu) \nabla (\nabla\cdot\mathbf{u}) - \mu \nabla^{2} \mathbf{u} + \alpha \nabla p = \mathbf{f} \quad &\mbox{in}\; \Omega\times (0,T),\\
+\perminv \mathbf{z} + \nabla p =  \mathbf{b} \quad   &\mbox{in}\; \Omega\times (0,T), \\
+c_0 p_t + \nabla \cdot (\alpha\mathbf{u}_{t} + \mathbf{z} )  = g \quad  &\mbox{in}\; \Omega\times (0,T), \\
+\mathbf{u} = \mathbf{u}_{D} \quad & \mbox{on}\; \Gamma_{D}\times (0,T), \\
+\mathbf{\sigma}\mathbf{n} = \mathbf{t}_{N} \quad  &\mbox{on}\; \Gamma_{N}\times (0,T), \\
+\mathbf{z} \cdot \mathbf{n} = {q_{D}} \quad  &\mbox{on}\; \Gamma_{F}\times (0,T), \\
+p = p_{D}  \quad  &\mbox{on}\; \Gamma_{P}\times (0,T), \\
+\mathbf{u}(0,\cdot) = \mathbf{u}^{0}\quad  &\mbox{in}\;\Omega,
+\end{align}
+\end{subequations}
+where $\dispcont$ is the displacement, $\fluxcont$ is the fluid flux and $\pcont$ is the pressure. Here $\mathbf{f}$ is the body force on the solid, $\mathbf{b}$ is the body force on the fluid and $g$ is the fluid source term, $\lambda$ and $\mu$ are the first and second Lam\'e parameters respectively, and $\perm$ is the dynamic permeability tensor. We will assume the Biot-Willis constant $\alpha=1$, and the constrained specific storage coefficient $c_0=0$. Our analysis can be extended to the situation when these last two assumptions do not hold, but it is necessarily more complicated. We consider $\Omega$ to be a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and for the purpose of defining boundary conditions, $\partial\Omega=\Gamma_D \cup \Gamma_N$ for displacement and stress boundary conditions and $\partial\Omega=\Gamma_P \cup \Gamma_F$ for pressure and flux boundary conditions, with outward pointing unit normal $\mathbf{n}$.
+
+\begin{rem}
+\label{remark:bdy}
+Since the above resulting system of equations is linear, for ease of presentation,  we will assume all Dirichelet boundary conditions are homogeneous, ie., $\mathbf{u}_{D} = {\bf 0}, {q_{D}} = 0, p_{D}=0$.  %Hence, $\mixedspace = \mixedspacetest$.
+\end{rem}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Weak formulation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Weak formulation}
+\label{sec:weak_formulation}
+
+We define the following spaces for displacement, fluid flux and pressure respectively,
+\begin{eqnarray*}
+\dispspace &=& \lbrace \dispcont \in (H^{1} (\Omega))^d :\dispcont= {\bf 0} \;\mbox{on} \;\Gamma_{D} \rbrace, \\
+\fluxspace &=& \lbrace \fluxcont \in H_{div}(\Omega):\fluxcont \cdot \normal = 0 \;\mbox{on} \;\Gamma_{F} \rbrace, \\
+\pspace    &=& \left\lbrace
+  \begin{array}{l l}
+    L^{2}(\Omega)     &\; \text{if} \; \Gamma_{N} \cup \Gamma_{P} \neq \emptyset \\
+    L^{2}_{0}(\Omega) &\; \text{if} \;\Gamma_{N} \cup \Gamma_{P}=\emptyset,
+  \end{array} \right \rbrace,
+\end{eqnarray*}
+where
+$L^{2}_{0}(\Omega) = \left\lbrace q \in L^{2}(\Omega) : \int_{\Omega} q\;\mbox{d}x=0\right\rbrace,$
+which we combine to construct the mixed solution space
+\begin{equation*}
+\mixedspace = \left\lbrace \dispspace  \times \fluxspace  \times  \pspace \right\rbrace.
+\end{equation*}
+%The test functions lie in $\mixedspacetest = \left\lbrace \mathbf{W}^{E}_{0}  \times \mathbf{W}^{D}_{0}  \times  \mathcal{L}(\Omega)\right\rbrace$ where $\mathbf{W}^{E}_{0}=\lbrace \dispconttest \in (H^{1}( \Omega))^d:\dispconttest=0 \;\mbox{on} \;\Gamma_{D} \rbrace$, and $\mathbf{W}^{D}_{0}=\lbrace \fluxconttest \in H_{div}( \Omega):\fluxconttest \cdot \normal =0 \;\mbox{on} \;\Gamma_{F} \rbrace$.
+We define the bilinear form
+\begin{equation*}
+a(\dispcont,\dispconttest) = \int_{\Omega}2\mu (\epsilon(\dispcont):\epsilon(\dispconttest))
+                           + \lambda (\nabla \cdot \dispcont)(\nabla \cdot \dispconttest) \; {\rm d}x,
+\end{equation*}
+for $\dispcont, \dispconttest \in \dispspace$. This bilinear form is continuous such that
+\begin{equation}
+\label{eqn:a_cont}
+a(\dispcont,\dispconttest) \leq C_{c} \honenorm{ \dispcont }\honenorm {\dispconttest}
+  \; \forall \dispcont,\dispconttest \in (H^{1}(\Omega))^d.
+\end{equation}
+Using Korn's inequality \cite{brenner2008mathematical,ciarlet2002}, and $\int_{\Omega} \lambda (\nabla \cdot \dispconttest  )(\nabla \cdot \dispconttest  ) \geq 0 $ we have
+\begin{equation}
+\anorm{\dispconttest}^{2}=a( \dispconttest,\dispconttest)\geq 2\mu \ltwonorm{\epsilon(\dispconttest)}^{2}\geq C_{k}\honenorm{\dispdisctest}^{2}\;\;\forall \dispconttest \in \dispspace.
+\label{eqn:a_coercive}
+\end{equation}
+Since $\perm$ is assumed to be a symmetric and strictly positive definite tensor, there exists eigenfunctions $\lambda_{min},\lambda_{max} > 0 $ such that $\forall \mathbf{x} \in \Omega, \; \lambda_{min} \ltwonorm{\mathcal{\mathbf{\eta}}} \leq  \mathbf{\eta}^{t} \perm(\mathbf{x})\mathbf{\eta} \leq  \lambda_{max} \ltwonorm{\mathcal{\mathbf{\eta}}} \;\; \forall \mathbf{\eta} \in \mathbb{R}^{d}$, and
+\begin{equation}
+\label{eqn:m_coercive}
+{\lambda_{min}^{-1}}\ltwonorm{\fluxconttest}^{2} \geq (\perminv \fluxconttest,\fluxconttest) \geq {\lambda_{max}^{-1}}\ltwonorm{\fluxconttest}^{2} \; \forall \fluxconttest \in \fluxspace,
+\end{equation}
+
+The continuous weak problem is: Find $\dispcont(x,t) \in \dispspace$, $\fluxcont(x,t) \in \fluxspace$, and $\pcont(x,t) \in \pspace$ for any time $t\in[0,T]$ such that:
+\begin{subequations}
+\label{eqns:weak_cont_system}
+\begin{align}
+& a(\dispcont,\dispconttest) - (\pcont,\nabla \cdot \dispconttest)=(\mathbf{f},\dispconttest) + (\mathbf{t}_{N},\dispconttest)_{\Gamma_{N}} \; \forall \dispconttest\in \dispspace,
+\label{eqn:weak_cont_elast_mom} \\
+&(\perminv \fluxcont,\fluxconttest) - (\pcont,\nabla \cdot \fluxconttest) = (\mathbf{b},\fluxconttest)
+%- (p_{D},\fluxconttest\cdot \normal)_{\Gamma_{P}}
+\; \forall\fluxconttest\in \fluxspace,
+\label{eqn:weak_cont_flux_mom} \\
+&(\nabla \cdot  {\dispconttime},\pconttest) + (\nabla \cdot \fluxcont,\pconttest) = (g,\pconttest) \; \forall\pconttest\in \pspace. \label{eqn:weak_cont_mass}
+\end{align}
+\end{subequations}
+We will assume the following regularity requirements on the data,
+\begin{equation}
+\label{eqns:weak_cont_system_data}
+\begin{gathered}\begin{aligned}
+&\mathbf{f}\in C^{1}([0,T]; (H^{-1}(\Omega))^{d}),  \\
+&\mathbf{b}\in C^{1}([0,T]; H_{div}^{-1}(\Omega)),
+\end{aligned}\end{gathered}
+\qquad
+\begin{gathered}\begin{aligned}
+&\mathbf{t}_{N}\in C^{1}([0,T]; H^{-1/2}(\Gamma_{N})), \\
+&g\in C^{0}([0,T]; (L^{2}(\Omega))^{d}),
+\end{aligned}\end{gathered}
+%&\dispcont_{D}\in C^{1}([0,T]; H^{1/2}(\Gamma_{D})),
+%&p_{D}\in C^{0}([0,T]; L^{2}(\Gamma_{P})), \\
+%&q_{D}\in C^{0}([0,T]; TrW), \\
+\end{equation}
+%where $TrW:=\left\lbrace \mathbf{w}\cdot\mathbf{n}|_{\Gamma_{f}}: \mathbf{w}\in H_{div}(\Omega)  \right\rbrace$.
+For the initial conditions we require that $\mathbf{u}^{0} \in  (H^{1}(\Omega))^{d}$.
+%\begin{equation}
+%\mathbf{u}^{0} \in  (H^{1}(\Omega))^{d}.%,\;\;\; \mathbf{z}^{0} \in  (H_{div}(\Omega))^{d}, \;\;\; p^{0} \in \pspace.
+%\label{eqn:initial}
+%\end{equation}
+{The well-posedness of the continuous two-field formulation has been proven by \cite{showalter2000diffusion}. \cite{lipnikov2002numerical} proves well-posedness for the continuous three-field formulation (\ref{eqns:weak_cont_system}). In this work we also establish the well-posedness of (\ref{eqns:weak_cont_system}) as a result of the energy estimates proven in section \ref{sec:energy}, see remark \ref{remark:wellposedness}.}
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Fully-discrete model
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Fully-discrete model}
+\label{sec:fully_discrete}
+Let $\mathcal{T}^{h}$ be a partition of $\Omega$ into non-overlapping elements $K$, where $h$ denotes the size of the largest element in $\mathcal{T}^{h}$ and assume that the partition is quasi-uniform. We define the following finite element spaces,
+\begin{eqnarray*}
+\dispspacedisc &=& \left\lbrace \dispdisc  \in C^{0}(\Omega): \dispdisc |_{K} \in P_{1}(K) \ \forall K \in \mathcal{T}^{h}, \dispdisc  = 0 \; \mbox{on} \;\Gamma_{D} \right\rbrace,  \\
+\fluxspacedisc &=&\left\lbrace \fluxdisc  \in C^{0}(\Omega): \fluxdisc |_{K} \in P_{1}(K) \ \forall K \in \mathcal{T}^{h},  \fluxdisc \cdot \normal = 0 \; \mbox{on} \;\Gamma_{F} \right\rbrace, \\
+\pspacedisc &=& \left\lbrace
+  \begin{array}{l l}
+    \left\lbrace \pdisc: \pdisc |_{K} \in P_{0}(K) \ \forall K \in \mathcal{T}^{h} \right\rbrace & \; \text{if $\Gamma_{N} \cup \Gamma_{P} \neq \emptyset$}\\
+    \left\lbrace \pdisc: \pdisc |_{K} \in P_{0}(K), \int_{\Omega}  \pdisc =0 \ \forall K \in \mathcal{T}^{h}\right\rbrace & \; \text{if $\Gamma_{N} \cup \Gamma_{P}=\emptyset$}
+  \end{array} \right. ,
+\end{eqnarray*}
+where $P_{0}(K)$ and $P_{1}(K)$ are respectively the spaces of constant and linear polynomials on $K$. We partition $[0,T]$ into $N$ evenly spaced non-overlapping regions $(t_{n-1}, t_n]$, $n=1,2,\dots, N$ , where $t_n-t_{n-1} = \Delta t$. For any sufficiently smooth function $v(t,x)$ we define $v^n(x) = v(t_n,x)$  and the discrete time derivative by $v_{\Delta t}^{n} := \frac{v^{n}-v^{n-1}}{\Delta t}$.
+
+The fully discrete weak problem is: For $n = 1,2, \ldots,N$, $\dispdisc^{n} \in \dispspacedisc$, find $\fluxdisc^{n} \in \fluxspacedisc$ and $\pdisc^{n} \in \pspacedisc $ such that
+\begin{subequations}
+\begin{align}
+&a(\dispdisc^{n},\dispdisctest)-(\pdisc^{n},\nabla \cdot \dispdisctest) =(\mathbf{f}^{n},\dispdisctest)+(\mathbf{t}_{N},\dispdisctest)_{\Gamma_{N}}
+\; \forall \dispdisctest\in \dispspacedisc,
+\label{eqn:weak_fulldisc_elast_mom} \\
+&(\perminv \fluxdisc^{n},\fluxdisctest)-(\pdisc^{n},\nabla \cdot \fluxdisctest)
+= (\mathbf{b}^{n},\fluxdisctest)
+%-(p_{D},\fluxdisctest\cdot \normal)_{\Gamma_{P}}
+\; \forall \fluxdisctest\in \fluxspacedisc,
+\label{eqn:weak_fulldisc_flux_mom} \\
+&(\nabla \cdot \dispdisctimedisc,\pdisctest)+(\nabla \cdot \fluxdisc^{n},\pdisctest) + J\left(\pdisctimedisc,\pdisctest\right)
+=(g^{n},\pdisctest)  \; \forall \pdisctest\in \pspacedisc.
+\label{eqn:weak_fulldisc_mass}
+\end{align}
+\label{eqns:weak_fulldisc_system}
+\end{subequations}
+The stabilization term is
+\begin{equation}
+J(\pcont,\pconttest)= \delta \sum_{K} \int_{\partial K \backslash \partial \Omega} h_{\partial K} [\pcont][\pconttest] \;\mbox{d}s.
+\end{equation}
+Here $\delta$ is a stabilization parameter that is independent of $h$ and $\Delta t $.  Here $ h_{\partial K} $ denotes the size (diameter) of an element edge in 2D or face in 3D, and $[\cdot]$ is the jump across an edge or face (taken on the interior edges only). %We will see in the numerical results, section \ref{sec:results} that the convergence is not sensitive to $\delta$.
+
+We also assume
+\begin{subequations}
+\begin{align}
+a(\dispdisc^{0},\dispdisctest)
+&= a(\dispcont^{0},\dispdisctest)\; \forall \dispdisctest\in \dispspacedisc,
+\label{eqn:a_initial} \\
+J(\pdisc^{0},\pdisctest) &= J(\pcont^{0},\pdisctest)\; \forall \pdisctest\in \pspacedisctest,
+\label{eqn:p_initial}
+\end{align}
+\label{eqns:weak_disc_initial}
+\end{subequations}
+where $p^{0} \in \pspace$.
+
+
+ 

@@ -1,0 +1,20 @@
+\section{Conclusion}
+%Stabilized low-order methods can offer significant computational advantages over higher order approaches. In particular, one can employ meshes with fewer degrees of freedom, fewer Gauss points, and simpler data structures. The additional stabilization terms can also improve the convergence properties of iterative solvers. These factors become crucial when considering large-scale, coupled, three-dimensional problems. There has also been a need for a method that is able to overcome both pressure oscillations due to the mixed finite element formulation not satisfying the LBB (inf-sup) condition and due to steep pressure gradients in the solution.
+
+The main contribution of this chapter has been to extend the local pressure jump stabilization method \cite{burman2007unified}, already applied to three-field linear poroelasticity in chapter \ref{chap:linear_poro} to the large deformation case. Thus, the proposed scheme is built on an existing scheme, for which rigorous theoretical results about the stability and optimal convergence have been proven, and numerical experiments have confirmed its ability to overcome spurious pressure oscillations. Due to the discontinuous pressure approximation, sharp pressure gradients due to changes in material coefficients or boundary layer solutions can be captured reliably, circumventing the need for severe mesh refinement. Also, the addition of the stabilization term introduces minimal additional computational work, can be assembled locally on each element using standard element information, and leads to a symmetric addition to the original system matrix, thus preserving any existing symmetry. As the numerical examples have demonstrated, the stabilization scheme is robust and leads to high-quality solutions.
+
+
+%This is (below) basically outline of paper sections
+%We first derived the general poroelasticity equations and then reformulated the model to arrive at the standard quasi-static poroelasticity formulation. We then outlined the linearization and subsequent discretization of the equations, along with a detailed descritpion of the resulting Newton algorithm. Finally we presented numerical experiments in 3D that verify the method against analytical solutions and illustrate the effectiveness of the method to capture stepp pressure gradients due to changes in material parameters of boundary layer solutions.
+
+
+%In this work we have proposed a stabilization scheme to allow
+%for the use of Q4P4 elements, though the same scheme can also
+%be applied to simplicial elements and three-dimensions. The method
+%employed has several appealing features. It requires only a
+%minor modification of standard finite element codes, and adds
+%little additional computational cost to the assembly routines. All
+%necessary computations can be performed at the element level
+%using standard shape-function information, and no higher-order
+%derivatives or stress-recovery techniques must be employed. It also
+%leads to a symmetric modification of the system

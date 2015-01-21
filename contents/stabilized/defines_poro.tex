@@ -1,0 +1,344 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           VARIABLES                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Displacement
+\newcommand{\dispcont}{\mathbf{u}}
+\newcommand{\dispcontn}{\mathbf{u}(t_{n}, \cdot)}
+\newcommand{\dispconttest}{\mathbf{v}}
+\newcommand{\dispconttime}{{\mathbf{u}_{t}}}
+\newcommand{\dispconttimen}{{\mathbf{u}_{t}}(t_{n},\cdot)}
+\newcommand{\dispconttimedisc}{{\mathbf{u}_{\Delta t}}}
+\newcommand{\dispconttimediscn}{{\mathbf{u}_{\Delta t}}(t_{n},\cdot)}
+\newcommand{\dispdisctimediscn}{{\mathbf{u}_{\Delta t,h}^{n}}}
+
+\newcommand{\dispdisc}{\mathbf{u}_{h}}
+\newcommand{\dispdiscn}{\mathbf{u}_{h}^{n}}
+\newcommand{\dispdisctest}{\mathbf{v}_{h}}
+\newcommand{\dispdisctime}{{\mathbf{u}_{t}}_{h}}
+\newcommand{\dispdisctimedisc}{{\mathbf{u}_{\Delta t,h}}}
+
+%Fluid flux
+\newcommand{\fluxcont}{\mathbf{z}}
+\newcommand{\fluxcontn}{\mathbf{z}(t_{n},\cdot)}
+\newcommand{\fluxconttest}{\mathbf{w}}
+\newcommand{\fluxconttime}{\mathbf{z}_{t}}
+\newcommand{\fluxconttimen}{\mathbf{z}_{t}(t_{n},\cdot)}
+\newcommand{\fluxconttimedisc}{\mathbf{z}_{\Delta t}}
+\newcommand{\fluxconttimediscn}{\mathbf{z}_{\Delta t}(t_{n})}
+
+\newcommand{\fluxdisc}{\mathbf{z}_{h}}
+\newcommand{\fluxdiscn}{\mathbf{z}_{h}^{n}}
+\newcommand{\fluxdisctest}{\mathbf{w}_{h}}
+\newcommand{\fluxdisctime}{{\mathbf{z}_{t}}_{h}}
+\newcommand{\fluxdisctimedisc}{{\mathbf{z}_{\Delta t,h}}}
+\newcommand{\fluxdisctimediscn}{{\mathbf{z}_{\Delta t,h}^{n}}}
+
+
+%Pressure
+\newcommand{\pcont}{p}
+\newcommand{\pcontn}{p(t_{n},\cdot)}
+\newcommand{\pconttest}{{q}}
+\newcommand{\pconttime}{{{p}_{t}}}
+\newcommand{\pconttimen}{{{p}_{t}}(t_{n},\cdot)}
+\newcommand{\pconttimedisc}{{{p}_{\Delta t}}}
+\newcommand{\pconttimediscn}{{{p}_{\Delta t}}(t_{n}, \cdot)}
+\newcommand{\pconthat}{\hat{p}}
+
+\newcommand{\pdisc}{p_h}
+\newcommand{\pdiscn}{p_{h}^{n}}
+\newcommand{\pdisctest}{{q}_{h}}
+\newcommand{\pdisctime}{{{p}_{t}}_h}
+\newcommand{\pdisctimedisc}{{{p}_{\Delta t,h}}}
+\newcommand{\pdisctimediscn}{{{p}_{\Delta t,h}^{n}}}
+\newcommand{\pdischat}{\hat{p}_h}
+
+
+%Other variables
+\newcommand{\normal}{\mathbf{n}}
+\newcommand{\proj}{\pi_{h}^{OLD}}
+\newcommand{\projconst}{\pi_{h}^{0}}
+\newcommand{\projlinear}{\pi_{h}^{1}}
+\newcommand{\projscott}{\pi_{h}^{1}}%%{\pi_{h}^{s}}
+\newcommand{\vp}{\mathbf{v}_{p}}
+\newcommand{\vph}{\mathbf{v}_{p_h}}
+\newcommand{\vphn}{\mathbf{v}_{p_h^n}}
+\newcommand{\vthetadtn}{\mathbf{v}_{\theta_{\Delta t, p}^n}}
+
+\newcommand{\fdispcont}{\mathbf{r}}
+\newcommand{\fdispconttime}{\mathbf{r}_{t}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                             SPACES                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Continuous spaces
+\newcommand{\dispspace}{\mathbf{W}^{E}(\Omega)}
+\newcommand{\fluxspace}{\mathbf{W}^{D}(\Omega)}
+\newcommand{\pspace}{\mathcal{L}(\Omega)}
+
+%Discrete spaces
+\newcommand{\dispspacedisc}{\mathbf{W}^{E}_{h}}
+\newcommand{\fluxspacedisc}{\mathbf{W}^{D}_{h}}
+\newcommand{\pspacedisc}{{Q}_{h}}
+\newcommand{\pspacedisctest}{{Q}_{h}}
+
+% Test spaces
+\newcommand{\elastspacetest}{\mathbf{W}^{E}_{0}(\Omega)}
+\newcommand{\darcyspacetest}{\mathbf{W}^{D}_{0}(\Omega)}
+\newcommand{\pspaceconttest}{\mathcal{L}(\Omega)}
+
+
+%Mixed spaces
+\newcommand{\mixedspace}{\mathcal{W}^{X}}
+\newcommand{\mixedspacetime}{\mathcal{W}^{X}_{T}}
+\newcommand{\mixedspacedisc}{\mathcal{W}^{X}_{h}}
+\newcommand{\mixedspacedisctau}{\mathcal{W}^{X}_{\tau\, h}}
+
+\newcommand{\dispspacedisctest}{\mathbf{W}^{E}_{h0}}
+\newcommand{\fluxspacedisctest}{\mathbf{W}^{D}_{h0}}
+
+\newcommand{\mixedspacetest}{\mathcal{V}^{X}}
+\newcommand{\mixedspacedisctest}{\mathcal{V}^{X}_{h}}
+
+\newcommand{\honespace}{\left[ H^{1}_{0}  \right]^{d}}
+\newcommand{\polyspace}{\mathbf{V}_{h}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           ERRORS                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Auxiliary errors
+\newcommand{\auxdisp}{\mathbf{\theta}_{\mathbf{u}}}
+\newcommand{\auxdispn}{\mathbf{\theta}^{n}_{\mathbf{u}}}
+\newcommand{\auxdispntime}{\mathbf{\theta}^{n}_{\Delta t ,\mathbf{u}}}
+\newcommand{\auxdisptime}{\mathbf{\theta}_{\Delta t ,\mathbf{u}}}
+\newcommand{\auxdispnm}{\mathbf{\theta}^{n-1}_{\mathbf{u}}}
+
+\newcommand{\auxflux}{\mathbf{\theta}_{\mathbf{z}}}
+\newcommand{\auxfluxn}{\mathbf{\theta}^{n}_{\mathbf{z}}}
+\newcommand{\auxfluxntime}{\mathbf{\theta}^{n}_{\Delta t, \mathbf{z}}}
+
+\newcommand{\auxp}{{\theta}_{{p}}}
+\newcommand{\auxpn}{{\theta}^{n}_{{p}}}
+\newcommand{\auxpntime}{{\theta}^{n}_{\Delta t, p}}
+\newcommand{\auxptime}{{\theta}_{\Delta t, p}}
+
+\newcommand{\auxphat}{{\theta}_{{\hat{p}}}}
+\newcommand{\auxpnhat}{{\theta}^{n}_{{\hat{p}}}}
+
+%Interpolation errors
+\newcommand{\intdisp}{\mathbf{\eta}_{\mathbf{u}}}
+\newcommand{\fedisp}{\mathbf{e}_{\mathbf{u}}}
+\newcommand{\feflux}{\mathbf{e}_{\mathbf{z}}}
+\newcommand{\fep}{{e}_{{p}}}
+\newcommand{\intdispn}{\mathbf{\eta}^{n}_{\mathbf{u}}}
+\newcommand{\intdispntime}{\mathbf{\eta}^{n}_{\Delta t, \dispcont}}
+\newcommand{\intdisptime}{\mathbf{\eta}_{\Delta t ,\dispcont}}
+\newcommand{\intdispnconttime}{\mathbf{\eta}^{n}_{\dispcont_{t}}}
+\newcommand{\intdispnconttimet}{\mathbf{\eta}^{n}_{\dispcont_{tt}}}
+\newcommand{\intdispconttime}{\mathbf{\eta}_{\dispcont_{t}}}
+\newcommand{\intdispconttimet}{\mathbf{\eta}_{\dispcont_{tt}}}
+
+\newcommand{\intdispnt}{\mathbf{\eta}^{n}_{\mathbf{u}_{t}}}
+\newcommand{\intdispntm}{\mathbf{\eta}^{n-1}_{\mathbf{u}_{t}}}
+\newcommand{\intdispnm}{\mathbf{\eta}^{n-1}_{\mathbf{u}}}
+
+\newcommand{\intfluxn}{\mathbf{\eta}^{n}_{\mathbf{z}}}
+\newcommand{\intflux}{\mathbf{\eta}_{\mathbf{z}}}
+\newcommand{\intfluxntime}{\mathbf{\eta}^{n}_{\Delta t ,\fluxcont}}
+\newcommand{\intfluxtime}{\mathbf{\eta}_{\Delta t ,\fluxcont}}
+\newcommand{\intfluxconttime}{\mathbf{\eta}_{\fluxcont_{t}}}
+\newcommand{\intfluxconttimet}{\mathbf{\eta}_{\fluxcont_{tt}}}
+
+\newcommand{\intpn}{{\eta}^{n}_{{p}}}
+\newcommand{\intpnm}{{\eta}^{n-1}_{{p}}}
+\newcommand{\intpntime}{{\eta}^{n}_{\Delta t ,\pcont}}
+\newcommand{\intptime}{{\eta}_{\Delta t ,\pcont}}
+\newcommand{\intpnhat}{{\eta}^{n}_{{{p}}}}
+\newcommand{\intpnconttime}{{\eta}^{n}_{\pcont_{t}}}
+\newcommand{\intpconttime}{{\eta}_{\pcont_{t}}}
+\newcommand{\intpnconttimet}{{\eta}^{n}_{\pcont_{tt}}}
+\newcommand{\intpconttimet}{{\eta}_{\pcont_{tt}}}
+
+%Time errors
+\newcommand{\timerr}{\mathbf{\rho}}
+\newcommand{\disptimerrn}{\mathbf{\rho}_{\dispcont}^{n}}
+\newcommand{\ptimerrn}{{\rho}_{\pcont}^{n}}
+
+%Other errors
+\newcommand{\edisp}{\mathbf{e_{u}}}
+\newcommand{\eflux}{\mathbf{e_{z}}}
+\newcommand{\ep}{{e_{p}}}
+\newcommand{\dispinterp}{\mathbf{\eta}_{u}}
+\newcommand{\disptinterp}{\mathbf{\eta}_{u_{t}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                       TRIPLE NORMS                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Abreviation for triples
+\newcommand{\conttriple}{(\dispcont,\fluxcont,\pcont)}
+\newcommand{\conttriplehat}{(\dispcont,\fluxcont,\pconthat)}
+
+\newcommand{\conttripletest}{(\dispconttest,\fluxconttest,\pconttest)}
+\newcommand{\disctriple}{(\dispdisc,\fluxdisc,\pdisc)}
+\newcommand{\disctriplehat}{(\dispdisc,\fluxdisc,\pdischat)}
+
+\newcommand{\disctriplen}{(\dispdisc^{n},\fluxdisc^{n},\pdisc^{n})}
+\newcommand{\disctriplenhat}{(\dispdisc^{n},\fluxdisc^{n},\pdischat^{n})}
+
+\newcommand{\conttriplen}{(\dispcontn,\fluxcontn,\pcontn)}
+\newcommand{\conttriplenhat}{(\dispcont^{n},\fluxcont^{n},\pconthat^{n})}
+
+\newcommand{\errortriplen}{(\dispcontn-\dispdisc^{n},\fluxcontn-\fluxdisc^{n},\pcontn-\pdisc^{n})}
+\newcommand{\feerrortriplen}{(\fedisp^{n},\feflux^{n},\fep^{n})}
+\newcommand{\feerrortriple}{(\fedisp,\feflux,\fep)}
+\newcommand{\errortriplenhat}{(\dispcont^{n}-\dispdisc^{n},\fluxcont^{n}-\fluxdisc^{n},\pconthat^{n}-\pdischat^{n})}
+
+
+\newcommand{\disctripletest}{(\dispdisctest,\fluxdisctest,\pdisctest)}
+\newcommand{\disctripletesttime}{(\dispdisctest,\fluxdisctest,\pdisctest)}
+\newcommand{\disctripletestn}{(\dispdisctest^{n},\fluxdisctest^{n},\pdisctest^{n})}
+
+\newcommand{\errortriple}{(\dispcont-\dispdisc,\fluxcont-\fluxdisc,\pcont-\pdisc)}
+\newcommand{\auxerrortriple}{(\mathbf{\eta},\mathbf{\omega},\zeta)}
+\newcommand{\auxerrortriplen}{(\mathbf{\eta}^{n},\mathbf{\omega}^{n},\zeta^{n})}
+\newcommand{\errortripletime}{(\dispcont-\dispdisc,\fluxcont-\fluxdisc,\pcont-\pdisc,\dispcont_{t}-\bar{\partial}{\dispdisc} )}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                            NORMS                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\seminorm}[1]      {{\left\vert #1 \right\vert}}
+
+\newcommand{\doublenorm}[1]    {{\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert}}
+\newcommand{\honenorm}[1]  {\doublenorm{#1}_{1,\Omega}}
+\newcommand{\htwonorm}[1]  {\doublenorm{#1}_{2,\Omega}}
+\newcommand{\htwonormk}[1] {\doublenorm{#1}_{2,K}}
+\newcommand{\ltwonorm}[1]  {\doublenorm{#1}_{0,\Omega}}
+\newcommand{\honenormk}[1] {\doublenorm{#1}_{1,K}}
+\newcommand{\ltwonormk}[1] {\doublenorm{#1}_{0,K}}
+\newcommand{\ltwonormdk}[1]{\doublenorm{#1}_{0,\partial K}}
+\newcommand{\hmnorm}[1]    {\doublenorm{#1}_{m,\Omega}}
+\newcommand{\dualnorm}[1]  {\doublenorm{#1}_{-1,\Omega}}
+
+\newcommand{\triplenorm}[1]        {\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert_{A}}
+\newcommand{\triplenormtime}[1]    {\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert_{B}}
+\newcommand{\triplenormtimedisc}[1]{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert_{B_{h,\Delta t}}}
+\newcommand{\tripletimenorm}[1]    {{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}_{L^{2}}}
+
+%
+\newcommand{\anorm}[1] {\doublenorm{#1}_{a,\Omega}}
+\newcommand{\jnorm}[1] {|{#1}|_{J,\Omega}}
+
+
+%Time norms
+\newcommand{\honetimenorm}[1]     {\doublenorm{#1}_{L^{2}(H^{1})}}
+\newcommand{\htwotimenorm}[1]     {\doublenorm{#1}_{L^{2}(H^{2})}}
+\newcommand{\ltwotimenorm}[1]     {\doublenorm{#1}_{L^{2}(L^{2})}}
+\newcommand{\ltwotimecontnorm}[1] {\doublenorm{#1}_{L^{2}(L^{2})}}
+\newcommand{\jtimenorm}[1]        {\doublenorm{#1}_{L^{2}(J)}}
+\newcommand{\honetimeinftynorm}[1]{\doublenorm{#1}_{L^{\infty}(H^{1})}}
+\newcommand{\htwotimeinftynorm}[1]{\doublenorm{#1}_{L^{\infty}(H^{2})}}
+\newcommand{\ltwotimeinftynorm}[1]{\doublenorm{#1}_{L^{\infty}(L^{2})}}
+\newcommand{\jtimeinftynorm}[1]   {\doublenorm{#1}_{L^{\infty}(J)}}
+
+\newcommand{\honeconttimenorm}[1]{\doublenorm{#1}_{L^{2}(H^{1})}}
+\newcommand{\htwoconttimenorm}[1]{\doublenorm{#1}_{L^{2}(H^{2})}}
+\newcommand{\ltwoconttimenorm}[1]{\doublenorm{#1}_{L^{2}(L^{2})}}
+\newcommand{\ltwoconttimeinftynorm}[1]{\doublenorm{#1}_{L^{\infty}(L^{2})}}
+
+\newcommand{\jconttimenorm}[1]{\doublenorm{#1}_{L^{2}(J)}}
+
+%Seminorms
+\newcommand{\honeseminorm}[1]{\seminorm{#1}_{1,\Omega}}
+\newcommand{\htwoseminorm}[1]{\seminorm{#1}_{2,\Omega}}
+\newcommand{\jseminorm}[1]{\seminorm{#1}_{J,\Omega}}
+
+
+
+%Theorems and Lemmas
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{remark}{Remark}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                        MISCELLANEOUS                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%permeability tensor
+\newcommand{\perm}{k}
+\newcommand{\perminv}{k^{-1}}
+%\newcommand{\permscalar}{{\kappa^{-1}}}
+%\newcommand{\kperm}{\mathbf{k}_{f}}
+
+
+
+%Shortenings.
+\newcommand{\timederiv}{\frac{\partial }{\partial t }}
+
+%Derivatives
+\newcommand{\deriv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\mderiv}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dderiv}[3]{\mbox{D} #1 (#2)[#3]}
+
+%Spatial description of the material velocity
+\newcommand{\vell}{\mathbf{v}(\mathbf{x},t)}
+\newcommand{\vels}{\mathbf{v}}
+
+%Material description of the material velocity
+\newcommand{\Vell}{\mathbf{V}(\mathbf{X},t)}
+\newcommand{\Vels}{\mathbf{V}}
+
+%deformation map
+\newcommand{\defmap}{\mathbf\varphi(\mathbf{X},t)}
+\newcommand{\defmapinv}{\mathbf\varphi^{-1}(\mathbf{x},t)}
+
+%spatial gradient
+\newcommand{\spatgrad}{\nabla_{\mathbf{x}}}
+
+%boldsymbol short
+\newcommand{\bb}[1]{\mathbf{#1}}
+%domega
+\newcommand{\dv}{\mbox{d}\Omega}
+%dbound
+\newcommand{\ds}{\mbox{d}\Gamma}
+%Gradients
+\newcommand{\GradX}{\nabla_{\mathbf{X}}}
+\newcommand{\gradx}{\nabla_{\mathbf{x}}}
+
+
+
+%Helmholtz energy
+\newcommand{\helm}{\mathbf{\Psi}}
+
+
+%Tensors
+\newcommand{\identity}{\mathbf{I}}
+\newcommand{\spatialincremental}{\mathfrak{c}}
+\newcommand{\si}{\mathfrak{c}}
+
+%Divergence
+\newcommand{\divergence}{\nabla \cdot}
+
+%test functions for the dual problem (used to prove improved convergence)
+\newcommand{\dispconttestd}{\mathbf{\phi}}
+\newcommand{\fluxconttestd}{\mathbf{\psi}}
+\newcommand{\pconttestd}{r}
+
+
+

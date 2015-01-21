@@ -1,0 +1,277 @@
+\section{A-priori error analysis}
+\label{sec:apriori}
+Lemma \ref{garlerkinorthog} provides a Galerkin orthogonality result obtained by comparing continuous and discrete weak forms, which is the corner stone of the error analysis.  Lemma \ref{interp_error} is a standard approximation result for projections. Lemma \ref{fully_discrete_main_error} bounds the auxiliary errors for displacement, flux and pressure in the appropriate norms and Lemma \ref{fully_discrete_div_error} bounds the auxiliary error for the divergence of the flux. Since Lemmas \ref{fully_discrete_main_error} and \ref{fully_discrete_div_error} bound the auxiliary errors at the same order as the projection errors, combining projection and auxiliary errors in Theorem \ref{error} provides an optimal error estimate.
+
+%%%\input{apriori_definitions}
+%\subsection{Notation}
+We define the finite element error functions
+\begin{eqnarray*}
+\fedisp :=\dispcont - \dispdisc, ,\; \; \;  \feflux:=\fluxcont - \fluxdisc, \;\; \;  \fep:={\pcont} - {\pdisc}.
+\label{eqn:fe_error_def}
+\end{eqnarray*}
+We introduce the following projection errors:
+\begin{eqnarray*}
+\intdisp:=\dispcont - \projlinear\dispcont, \; \intflux :=\fluxcont - \projlinear \fluxcont,\; \eta_p :={\pcont} - \projconst{\pcont},\;
+\label{eqn:proj_error_def}
+\end{eqnarray*}
+where we have assumed $\fluxcontn \in (H^1(\Omega))^d$.
+
+Auxiliary errors:
+\begin{equation}
+\auxdispn (\cdot ):=\projlinear\dispcontn-\dispdisc^{n} (\cdot ),\; \auxfluxn (\cdot ):=\projlinear\fluxcontn-\fluxdisc^{n} (\cdot ),\; \auxpn (\cdot ):= \projconst\pcontn-\pdisc^{n} (\cdot ),\;
+\label{eqn:aux_def}
+\end{equation}
+and time-discretization errors:
+\begin{equation}
+\disptimerrn (\cdot ):= \frac{\dispcontn-\dispcont(t_{n-1},\cdot)}{\Delta t}  - \frac{ \partial \dispcontn }{\partial t},\;
+\ptimerrn:= \frac{\pcontn-\pcont(t_{n-1},\cdot)}{\Delta t}  - \frac{ \partial \pcontn }{\partial t}.
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      Galerkin orthogonality                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Galerkin orthogonality}
+We now give a Galerkin orthogonality type argument for analysing the difference between the fully-discrete approximation and the true solution. For this we introduce the continuous counterpart of the fully-discrete combined weak form (\ref{eqn:B_weakform}) given by
+\begin{equation*}
+\label{eqn:Bcont_weakform}
+B^{n}[\conttriple,\conttripletest] = (\mathbf{f}(t_{n},\cdot),\dispconttest)  +   (\mathbf{b}(t_{n}),\fluxconttest)   + (g(t_{n},\cdot),\pconttest) \; \forall \conttripletest \in \mixedspacetest,
+\end{equation*}
+where
+\begin{eqnarray*}
+\label{B_weak_form_cont}
+B^{n}[\conttriple,\conttripletest]&=&a({\dispcontn},\dispconttest)+\perminv( \fluxcontn, \fluxconttest) - ({\pcontn}, \nabla \cdot \dispconttest) \\
+&& - ({\pcontn}, \nabla \cdot \fluxconttest) + (\nabla \cdot \dispconttimen,\pconttest)  + (\nabla \cdot \fluxcontn,\pconttest ).
+\end{eqnarray*}
+
+\begin{lemma}
+\label{garlerkinorthog}
+Assuming  $\conttriplen \in \left(H^{1}(\Omega) \right)^{d} \times H_{div}(\Omega)  \times \left( H^{1}(\Omega)\cap \pspace \right)$
+\begin{equation*}
+B_{\Delta t,h}^{n}[\feerrortriple,\disctripletest] = (\nabla \cdot \disptimerrn,\pdisctest )+  J(\ptimerrn,\pdisctest) \;\; \forall \disctripletest \in \mixedspacedisctest.
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Subtracting the discrete weak form (\ref{eqn:B_weakform}) from the continuous weak form (\ref{eqn:Bcont_weakform}), we obtain
+\begin{equation*}
+ B^{n}[\conttriple,\disctripletest]-B_{\Delta t,h}^{n}[\disctriple,\disctripletest]=0, \;\;  \forall \disctripletest \in \mixedspacedisctest.
+\end{equation*}
+%Giving
+%\begin{multline*}
+%a({\dispcontn-\dispdisc^{n}},\dispdisctest)+(\perminv( \fluxcontn-\fluxdisc^{n}), \fluxdisctest) - (\pcontn-\pdisc^{n}, \nabla \cdot \dispdisctest)  - (\pcontn-\pdisc^{n}, \nabla \cdot \fluxdisctest) \\ + (\nabla \cdot (\fluxcontn - \fluxdisc^{n} ),\pconttest^{n}) +  (\nabla \cdot  ( \dispconttimen  -\dispdisctimediscn ),\pdisctest)  - J(\pdisctimediscn,\pdisctest)=0.
+%\end{multline*}
+Now add $J(\pconttimen,\pconttest)=0$ to the left hand side, see  (\ref{zero_jump}). Finally add $ (\nabla \cdot \left ( \dispconttimediscn -\dispconttimen  \right),\pconttest) + J( \pconttimediscn -\pconttimen,\pconttest  )$ to the left and the righthand side to obtain the desired result.
+%\begin{multline}
+%a({\dispcontn-\dispdisc^{n}},\dispconttest)+(\perminv( \fluxcontn-\fluxdisc^{n}), \fluxdisctest)   - (\pcontn-\pdisc^{n}, \nabla \cdot \dispdisctest)   - (\pcontn-\pdisc^{n}, \nabla \cdot \fluxdisctest) + (\nabla \cdot (\fluxcontn - \fluxdisc^{n} ),\pconttest) \\ + (\nabla \cdot  ( \dispconttimediscn - \dispdisctimediscn ),\pconttest)  + J(\pconttimediscn - \pdisctimediscn,\pdisctest)     =   (\nabla \cdot \left ( \dispconttimediscn -\dispconttimen  \right),\pdisctest) \\  + J( \pconttimediscn -\pconttimen,\pdisctest  ).
+%\end{multline}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                      Auxiliary error estimates                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Auxiliary error estimates}
+
+\begin{lemma}
+\label{fully_discrete_main_error}
+Assuming $\dispcont  \in H^{2}\left(0,T; \left(L^{2}(\Omega) \right)^{d}\right)  \cap H^1\left( 0,T; \left( H^2(\Omega) \right)^d \right)$, $ \fluxcont \in L^{2}\left(0,T;\left(H^{1}(\Omega) \right)^{d}\right)$ and $ p \in   H^{2}\left(0,T;H^{1}(\Omega)\cap \pspace \right)$, then the finite element solution (\ref{eqns:weak_fulldisc_system}) satisfies the error estimate
+\begin{equation}
+\triplenormtime{[\auxdisp,\auxflux,\auxp] }^2 + \jtimeinftynorm{\auxp}^2 \leq  C(T) ( h^2Ê+ \Delta t^2).
+\end{equation}
+\end{lemma}
+
+
+%%%\input{apriori_proof}
+\begin{proof}
+Using  Lemma \ref{garlerkinorthog} and choosing $\dispdisctest^n=\auxdispntime + \projscott \vphn$, $\fluxdisctest^n=  \auxfluxn $, $\pdisctest^n=  \auxpn$,  we get
+\begin{eqnarray*}
+&&B_{\Delta t,h}^{n}[({\auxdispn+\intdispn}, {\auxfluxn+\intfluxn}, \auxpn+\intpn),
+                      (\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] \\
+&& \qquad = (\nabla \cdot \disptimerrn, \auxpn)+  J(\ptimerrn, \auxpn)
+\end{eqnarray*}
+Rearranging gives
+\begin{eqnarray*}
+&&B_{\Delta t,h}^{n}[({\auxdispn}, {\auxfluxn}, \auxpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] \\
+&& \qquad = (\nabla \cdot \disptimerrn, \auxpn)+  J(\ptimerrn, \auxpn)
+         - B_{Delta t,h}^{n}[({\intdispn}, {\intfluxn},\intpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)]
+\end{eqnarray*}
+Expanding the righthand side, noting that $(\intpn, \nabla \cdot( \auxdispntime+ \projscott \vp))=0,\;( \intpn, \nabla \cdot  \auxfluxn )=0$, multiplying both sides by $\Delta t$ and summing gives
+\begin{eqnarray}
+\label{theta_bilin}
+\sum_{n=1}^N \Delta t B_{\Delta t,h}^{n}[({\auxdispn}, {\auxfluxn}, \auxpn),(\auxdispntime + \projscott \vphn,  \auxfluxn, \auxpn)] \nonumber = \sum_{i=1}^7 \Phi_{i},
+\end{eqnarray}
+where
+\begin{equation*}
+\begin{gathered}\begin{aligned}
+&\Phi_{1}:= -\sum^{N}_{n=1} \Delta ta({\intdispn},\auxdispntime), \\
+&\Phi_{4}:= -\sum^{N}_{n=1} \Delta t J(\intpntime, \auxpn), \\
+&\Phi_{7}:= -\sum^{N}_{n=1} \Delta t (\auxpn, \nabla\cdot (\intdispntime + \intfluxn)).
+\end{aligned}\end{gathered}
+\begin{gathered}\begin{aligned}
+&\Phi_{2}:= -\sum^{N}_{n=1} \Delta t(\perminv(\intfluxn,  \auxfluxn )), \\
+&\Phi_{5}:=  \sum^{N}_{n=1} \Delta t(\nabla \cdot \disptimerrn, \auxpn ), \\
+&\phantom{\Phi_{7}:= -\sum^{N}_{n=1} }
+\end{aligned}\end{gathered}
+\begin{gathered}\begin{aligned}
+&\Phi_{3}:=-\sum^{N}_{n=1} \Delta t a(\intdispn, \projscott \vp), \\
+&\Phi_{6}:= \sum^{N}_{n=1} \Delta tJ(\ptimerrn, \auxpn),\\
+&\phantom{\Phi_{7}:= -\sum^{N}_{n=1} }
+\end{aligned}\end{gathered}
+\end{equation*}
+
+%%%\input{apriori_individual_bounds}
+We now individually consider the terms on the right hand side of (\ref{theta_bilin}):
+
+To bound the first quantity, we use (\ref{eq: time deriv error}), Lemma \ref{interp_error}, the triangle, Cauchy-Schwarz and Young's inequalities, $\auxdisp^{0}=0$, and (\ref{eqn:a_cont}),
+\begin{eqnarray}
+\label{eqn:rhs_1}
+\Phi_{1}&=& - \sum^{N}_{n=1} a({\intdispn},\auxdispn-\auxdispnm) \nonumber \\
+ &=&-a(\intdisp^{N},\auxdisp^{N}) + \sum^{N}_{n=1} a({\intdispn-\intdispnm},\auxdispnm) \nonumber \\
+ &=&-a(\intdisp^{N},\auxdisp^{N}) +\Delta t\sum^{N}_{n=1} a\left(  \left(I-\projlinear\right)
+       \left(\disptimerrn + \frac{ \partial \dispcontn }{\partial t}\right) ,\auxdispnm\right) \nonumber \\
+ &\leq& {\epsilon C}\honenorm{\auxdisp^{N}}^{2} + \frac{C h^2}{\epsilon}\htwonorm{\dispcont^{N}}^{2} + {\epsilon C } \honetimenorm{\auxdisp}^{2}+ \frac{ C h^2}{2\epsilon} \htwotimenorm{\dispcont_t}^{2} + \frac{C \Delta t^{2}}{2\epsilon}  \honetimenorm{\dispcont_{tt}}^{2}. \nonumber \\
+\end{eqnarray}
+Next, using (\ref{eqn:m_coercive}), Young's inequality,  (\ref{clem_bound}) and Lemma \ref{interp_error},
+\begin{equation*}
+\label{eqn:rhs_2}
+\Phi_{2} \leq \frac{\epsilon}{ 2 } \ltwotimenorm{\auxflux}^{2} +  \frac{\lambda_{min}^{-2} h^2}{ 2 \epsilon } \honetimenorm{\fluxcont}^{2}.
+\end{equation*}
+Using (\ref{eqn:a_cont}), Young's inequality and  Lemma \ref{interp_error},
+\begin{equation*}
+\label{eqn:rhs_3}
+\Phi_{3}\leq \frac{ \epsilon}{ 2 } \honetimenorm{\projscott \vphn}^{2} +  \frac{  C}{ 2 \epsilon}\honetimenorm{\intdisp}^{2}
+\leq \frac{ \epsilon \hat{c}^{2}}{ 2 } \ltwotimenorm{\auxp}^{2} +  \frac{C h^2}{ 2 \epsilon }\htwotimenorm{\dispcont}^{2}.
+\end{equation*}
+The bound on $\Phi_4$ is obtained using a similar argument to the bound on $\Phi_1$,
+\begin{equation*}
+\label{eqn:rhs_4}
+\Phi_{4} \leq {\epsilon }  \jtimenorm{\auxp}^{2}+ \frac{h^2 }{2\epsilon}  \honetimenorm{p_t}^{2} + \frac{\Delta t^{2}}{2\epsilon}  \honetimenorm{p_{tt}}^{2}.
+\end{equation*}
+Using the Cauchy-Schwarz and Young's inequalities and lemma \ref{interp_error},
+\begin{equation*}
+\label{eqn:rhs_6}
+\Phi_{5} \leq  \frac{ \epsilon}{2} \ltwotimenorm{\auxp}^{2} + \frac{\Delta t^{2} }{2\epsilon}  \ltwotimenorm{\dispcont_{tt}}^{2} \mbox{ and }
+\Phi_{6} \leq  \frac{ \epsilon}{2} \jtimenorm{\auxp}^{2} + \frac{ \Delta t^{2} }{2\epsilon}   \ltwotimenorm{p_{tt}}^{2}.
+\end{equation*}
+Finally, using the Cauchy-Schwarz and Young's inequalities, and a similar argument to the bound on $\Phi_1$,
+\begin{equation*}
+\label{eqn:rhs_7}
+\Phi_{7} \leq  \frac{ 3\epsilon }{2} \ltwotimenorm{\auxp}^{2} + \frac{h^2 }{2\epsilon}  \htwotimenorm{ \dispcont_t}^{2} + \frac{\Delta t^{2}}{2\epsilon}Ê \honetimenorm{\dispcont_{tt}}^{2} + \frac{ h^2 }{2\epsilon}  \htwotimenorm{\fluxcont}^2.
+\end{equation*}
+
+
+\noindent Combining these bounds with an application of coercivity Lemma \ref{lemma_bf} to (\ref{theta_bilin}), noting the assumed regularity of the continuous solution and  choosing $\epsilon$ sufficiently small, gives
+\begin{equation}
+\label{eqn:combine_results_1}
+\honenorm{\auxdisp^{N}}^{2} + \jnorm{\auxp^{N}}^{2}  +  \ltwotimenorm{\auxflux}^{2}  + \ltwotimenorm{\auxp}^{2}
+\leq  C\left( \honetimenorm{\auxdisp}^{2} + \jtimenorm{\auxp}^{2} + h^2 + \Delta t^2 \right).
+\end{equation}
+An application of Gronwall's lemma gives
+\begin{equation*}
+\honenorm{\auxdisp^{N}}^{2} + \jnorm{\auxp^{N}}^{2}  +  \ltwotimenorm{\auxflux}^{2}  + \ltwotimenorm{\auxp}^{2}
+   \leq   C(T) \left( h^2 + \Delta t^2 \right).
+\end{equation*}
+Because the above holds for all time steps $n=0, 1,..., N$, we can get the desired $L^{\infty}$ bounds to complete the proof of the theorem.
+\end{proof}
+
+
+We now present an a-priori auxiliary error estimate of the fluid flux, in its natural $Hdiv$ norm.
+\begin{lemma}
+\label{fully_discrete_div_error}
+Assuming $\dispcont  \in H^{2}\left(0,T; \left(H^{1}(\Omega) \right)^{d}\right)  \cap H^1\left( 0,T; \left( H^2(\Omega) \right)^d \right)$, $ \fluxcont \in L^{2}\left(0,T;\left(H^{2}(\Omega) \right)^{d}\right)$ and $ p \in   H^{2}\left(0,T;J \cap \pspace \right) \cap H^1(0,T;H^1(\Omega)) $, then the finite element solution (\ref{eqns:weak_fulldisc_system}) satisfies the auxillary error estimate
+\begin{eqnarray}
+\ltwotimenorm{\nabla \cdot \auxflux}^{2} \leq C(T) ( h^2Ê+ \Delta t^2).
+\end{eqnarray}
+\end{lemma}
+
+%%%\input{apriori_proof_div}
+\begin{proof}
+
+Similarly to the approach taken in obtaining (\ref{eqn:Bstar_weakform}) we may easily obtain the following identity
+\begin{eqnarray*}
+\sum_{n=1}^{N} \Delta t  \mathcal{B}_{h}^{n}[(\auxdispn,\auxfluxn,\auxpn ),( \beta\auxdispntime + \projscott \vthetadtn,  \beta \auxfluxn, \beta \auxpntime + \nabla \cdot \auxfluxn  )]  = \sum_{i=1}^{6} \Psi_{i} ,
+\label{eqn:apriori_div_sum}
+\end{eqnarray*}
+where
+\begin{equation*}
+\begin{gathered}\begin{aligned}
+&\Psi_{1} = -\sum^{N}_{n=1} \Delta ta({\intdispntime},\beta\auxdispntime+ \projscott \vthetadtn), \\
+&\Psi_{3} =  \sum^{N}_{n=1} \Delta t J(\intpntime,\beta \auxpntime + \nabla \cdot \auxfluxn), \\
+&\Psi_{5} =  \sum^{N}_{n=1} \Delta tJ(\ptimerrn,\beta \auxpntime+\nabla \cdot \auxfluxn ),
+\end{aligned}\end{gathered}
+\
+\begin{gathered}\begin{aligned}
+&\Psi_{2} = -\sum^{N}_{n=1} \Delta t (\nabla \cdot ( \intdispntime +  \intfluxn) ,\nabla \cdot \auxfluxn  + \beta \auxpntime), \\
+&\Psi_{4} = -\sum^{N}_{n=1} \Delta t(\perminv(\intfluxntime, \beta \auxfluxn )), \\
+&\Psi_{6} =  \sum^{N}_{n=1} \Delta t(\nabla \cdot \disptimerrn,\beta \auxpntime +\nabla \cdot \auxfluxn  ).
+\end{aligned}\end{gathered}
+\end{equation*}
+
+We now bound the terms on the right hand side of (\ref{eqn:apriori_div_sum}) using machinery developed during the previous proof:
+
+To bound the first quantity, we use (\ref{eq: time deriv error}), Lemma \ref{interp_error}, the triangle, Cauchy-Schwarz and Young's inequalities, $\auxdisp^{0}=0$, (\ref{clem_bound}), (\ref{J_bound}), (\ref{eqn:a_cont}), and Lemma \ref{interp_error},
+\begin{eqnarray}
+&&\Psi_{1} \leq  \frac{C\epsilon}{ 2 } \honetimenorm{\auxdisptime}^{2} + \frac{\hat{c}^{2}\epsilon}{ 2 } \ltwotimenorm{\auxptime}^{2} +  \frac{ Ch^2}{2\epsilon} \htwotimenorm{\dispcont_t}^{2} \nonumber \\
+&& \qquad + \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2},
+\label{eqn:rhsdiv_1} \\
+&&\Psi_{2} \leq  \epsilon \ltwotimenorm{\nabla \cdot \auxflux }^{2} +{  \epsilon }\ltwotimenorm{\auxptime }^{2} + \frac{ Ch^2}{2\epsilon}  \left(  \htwotimenorm{\dispcont_t}^{2} +  \htwotimenorm{\fluxcont}^{2} \right) \nonumber \\
+&& \qquad + \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2} ,
+\label{eqn:rhsdiv_2} \\
+&& \Psi_{3} \leq  {\epsilon C}\ltwotimenorm{\nabla \cdot \auxflux}^{2} + {\epsilon} \jtimenorm{\auxpntime }^{2}  +
+ \frac{ Ch^2}{2\epsilon} \honetimenorm{\pcont_t}^{2} + \frac{C}{2\epsilon} \Delta t^{2} \jtimenorm{\pcont_{tt}}^{2},
+\label{eqn:rhsdiv_3} \\
+&&\Psi_{4} \leq   \epsilon \ltwotimenorm{\auxflux}^{2} +
+ \frac{ Ch^2}{2\epsilon} \honetimenorm{\fluxcont_t}^{2} + \frac{C}{2\epsilon} \Delta t^{2} \ltwotimenorm{\fluxcont_{tt}}^{2},
+\label{eqn:rhsdiv_4} \\
+&& \Psi_{5} \leq \epsilon \jtimenorm{\auxptime}^{2} + { \epsilon C} \ltwotimenorm{\nabla \cdot \auxflux}^{2}+ \frac{ C \Delta t^{2} }{2\epsilon}   \jtimenorm{ \pcont_{tt} }^{2}
+\label{eqn:rhsdiv_5} \\
+&& \Psi_{6} \leq { \epsilon}\ltwotimenorm{\auxptime}^{2} +  \epsilon \ltwotimenorm{\nabla \cdot \auxflux}^{2}+ \frac{C}{2\epsilon} \Delta t^{2} \honetimenorm{\dispcont_{tt}}^{2}.
+\label{eqn:rhsdiv_6}
+\end{eqnarray}
+We can now combine the individual bounds (\ref{eqn:rhsdiv_1}), (\ref{eqn:rhsdiv_2}), (\ref{eqn:rhsdiv_3}), (\ref{eqn:rhsdiv_4}), (\ref{eqn:rhsdiv_5}), and (\ref{eqn:rhsdiv_6}), with the coercivity result Lemma \ref{lemma_bstar}, choosing $\beta$ sufficiently large, use the assumption $\auxflux^{0}=0$, the assumed regularity of ${\bf u}, {\bf z}$ and $p$, and choosing $\epsilon$ sufficiently small  to obtain
+\begin{equation*}
+\ltwonorm{\auxflux^{N}}^{2}   + \ltwotimenorm{\nabla \cdot \auxflux}^{2}
+ \leq
+C \ltwotimenorm{\auxflux}^{2}+ C(h^2 + \Delta t^2).
+\end{equation*}
+Applying Gronwall's lemma, we get the desired result.
+\end{proof}
+
+
+%\begin{graybox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     The a priori error estimate                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The a priori error estimate}
+
+Combining the previous lemmas we have the following.
+
+\begin{theorem}
+\label{error}
+Assuming $\dispcont  \in H^{2}\left(0,T; \left(L^{2}(\Omega) \right)^{d}\right) \cap H^1\left( 0,T; \left( H^2(\Omega) \right)^d \right)$, $ \fluxcont \in L^{2}\left(0,T;\left(H^{1}(\Omega) \right)^{d}\right)$ and $ p \in   H^{2}\left(0,T;H^{1}(\Omega)\cap \pspace \right)$, then the finite element solution (\ref{eqns:weak_fulldisc_system}) satisfies the error estimate
+\begin{eqnarray*}{}
+\label{full_error}
+\triplenormtime{\fedisp,\feflux,\fep}^2  &\leq&  C(h^2 +\Delta t^2 ).
+\end{eqnarray*}
+Assuming $\dispcont  \in H^{2}\left(0,T; \left(H^{1}(\Omega) \right)^{d}\right)  \cap H^1\left( 0,T; \left( H^2(\Omega) \right)^d \right)$, $ \fluxcont \in L^{2}\left(0,T;\left(H^{2}(\Omega) \right)^{d}\right)$ and $ p \in   H^{2}\left(0,T;J \cap \pspace \right) \cap H^1(0,T;H^1(\Omega)) $, then the finite element solution (\ref{eqns:weak_fulldisc_system}) satisfies the error estimate
+\begin{eqnarray*}
+\label{full_div_error}
+\triplenormtime{\fedisp,\feflux,\fep}^2 +  \ltwotimenorm{\nabla\cdot \feflux}^2    &\leq&  C(h^2 +\Delta t^2 ).
+\end{eqnarray*}
+\end{theorem}
+
+\begin{proof}
+We first write the errors as $\fedisp^n = \intdispn + \auxdispn$, and similarly for the other variables. Using lemma \ref{interp_error} we can bound the projection errors, and using lemma \ref{fully_discrete_main_error} and lemma \ref{fully_discrete_div_error} we can bound the auxillary errors to give the desired result.
+\end{proof}
+
+
+%\begin{remark}
+%\label{remark:extension}
+%The extension of these theoretical results to the full Biot equations (\ref{eqn:strong_cont_system_biot}), with $\epsilon \in \mathbb{R}_{> %0} \text{ and } c_{0}\in \mathbb{R}_{> 0}$ is straightforward. The constant $\epsilon$ would just get absorbed by the general constant $C$. %When $c_{0}>0$, an additional pressure term is introduced in the mass conservation equation. This term only adds coercivity to the system %and would therefore only aid the stability analysis.
+%\end{remark}
+

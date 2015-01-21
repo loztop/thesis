@@ -1,6 +1,6 @@
 Within the theory of continuum mixture theory, a poroelastic medium is treated as the superposition of
 two interacting continua simultaneously occupying the same physical space. The
-superscript $\alpha \in {s, f}$ denotes a quantity related to the solid or fluid.  Before presenting the mixture theory, we give a review of solid mechanics. This will form the basis of the description of the solid skeleton. The following review of continuum mechanics closely follows chapter 4 in \citet{gonzalez2008first}, and the standard Poromechanics book by \citet{coussy2004poromechanics}. Most of the kinematic quantities described here will be associated with the solid skeleton, since this also describes the motion of the fluid domain.
+superscript $\alpha \in \lbrace s, f \rbrace$ denotes a quantity related to the solid or fluid, respectively. Before presenting the mixture theory, we give a review of solid mechanics. This will form the basis of the description of the solid skeleton. The following review of continuum mechanics closely follows Chapter 4 in \citet{gonzalez2008first}, and the standard Poromechanics book by \citet{coussy2004poromechanics}. %Most of the kinematic quantities described here will be associated with the solid skeleton, since this also describes the motion of the fluid domain.
 \begin{figure}[H]
 \begin{center}
 
@@ -88,17 +88,17 @@ differentiable, invertible mapping from $\Omega_{0}$ to $\Omega_{t}$. Thus the i
  \boldsymbol{u}(\boldsymbol{X},t)=\boldsymbol\chi(\boldsymbol{X},t)-\boldsymbol{X}.
  \label{eqn:displacement}
 \end{equation}
-The deformation gradient tensor,
+The deformation gradient tensor is
 \begin{equation}
  \boldsymbol{F}=\frac{\partial \boldsymbol\chi(\boldsymbol{X},t)}{\partial \boldsymbol{X}}=\boldsymbol{I}+\frac{\partial \boldsymbol{u}(\boldsymbol{X},t)}{\partial \boldsymbol{X}} ,
  \label{eqn:deformation_gradient}
 \end{equation}
-maps a material line element in the reference configuration ${d}\boldsymbol{X}$, to a line element ${d}\boldsymbol{x}$ in the current configuration, i.e. ${d}\boldsymbol{x}=\boldsymbol{F}{d}\boldsymbol{X}$. The symmetric right Cauchy-Green deformation tensor is given by
+and maps a material line element in the reference configuration ${d}\boldsymbol{X}$, to a line element ${d}\boldsymbol{x}$ in the current configuration, i.e. ${d}\boldsymbol{x}=\boldsymbol{F}{d}\boldsymbol{X}$. The symmetric right Cauchy-Green deformation tensor is given by
 \begin{equation}
 \boldsymbol{C}={\boldsymbol{F}}^{T}{\boldsymbol{F}}.
 \label{eqn:right_cg_tensor}
 \end{equation}
-The jacobian is defined as
+The Jacobian is defined as
 \begin{equation}
  J=\mbox{det}(\boldsymbol{F}),
  \label{eqn:jacobian}
@@ -125,7 +125,7 @@ We denote by $\boldsymbol{V}(\boldsymbol{X},t)$ the velocity at time $t$ of the 
 \begin{equation}
  \boldsymbol{V}(\boldsymbol{X},t)= \pderiv{}{t}\boldsymbol\chi(\boldsymbol{X},t).
 \end{equation}
-Similarly, we denote by $\boldsymbol{A}(\boldsymbol{X},t)$ the acceleration, given by
+Similarly, we denote by $\boldsymbol{A}(\boldsymbol{X},t)$ the acceleration of the material solid particle, given by
 \begin{equation}
  \boldsymbol{A}(\boldsymbol{X},t)= \frac{\partial^{2}}{\partial t^{2}}\boldsymbol\chi(\boldsymbol{X},t).
 \end{equation}
@@ -134,15 +134,32 @@ We see that the velocity and acceleration of material particles are material fie
 \label{eqn:vs_spatial}
  \boldsymbol{v}^{s}(\boldsymbol{x},t)= \left. \left[ \pderiv{}{t}\boldsymbol\chi(\boldsymbol{X},t) \right] \right|_{\boldsymbol{X}={\chi}^{-1}(\boldsymbol{x},t)}.
 \end{equation}
-Similarly, for the spatial description of the solid acceleration, we have
-\begin{equation}
- \boldsymbol{a}^{s}(\boldsymbol{x},t)= \left. \left[ \frac{\partial^{2}}{\partial t^{2}}\boldsymbol\chi(\boldsymbol{X},t) \right] \right|_{\boldsymbol{X}={\chi}^{-1}(\boldsymbol{x},t)}.
-\end{equation}
-Notice that $\boldsymbol{v}^{s}(\boldsymbol{x},t)$ and $\boldsymbol{a}^{s}(\boldsymbol{x},t)$ correspond to the velocity and acceleration of the solid material particle whose current coordinates are $\boldsymbol{x}$ at time $t$. Also note that by definition of $\boldsymbol{v}^{s}$ in (\ref{eqn:vs_spatial}) we have (see \citep[page 132]{gonzalez2008first})
+%
+Due to the definition of $\boldsymbol{v}^{s}$ in (\ref{eqn:vs_spatial}) we also have (see section 4.4.4 in \cite{gonzalez2008first})
+%(see \citep[page 132]{gonzalez2008first})
 \begin{equation}
  \left. \boldsymbol{v}^{s}(\boldsymbol{x},t)
 \right|_{\boldsymbol{x}=\boldsymbol{\chi}(\boldsymbol{X},t)} =  \pderiv{}{t}\boldsymbol{\chi}(\boldsymbol{X},t) .
 \label{eqn:spatial_velocity}
+\end{equation}
+To simplify notation we will follow \cite{ateshian2010finite} and write
+\begin{equation}
+  \boldsymbol{v}^{s}(\boldsymbol{x},t)
+  =  \pderiv{}{t}\boldsymbol{\chi}(\boldsymbol{X},t) .
+\label{eqn:spatial_velocity_simple}
+\end{equation}
+%
+%
+Similarly, for the spatial description of the solid acceleration, we have
+\begin{equation}
+ \boldsymbol{a}^{s}(\boldsymbol{x},t)= \left. \left[ \frac{\partial^{2}}{\partial t^{2}}\boldsymbol\chi(\boldsymbol{X},t) \right] \right|_{\boldsymbol{X}={\chi}^{-1}(\boldsymbol{x},t)}.
+\end{equation}
+Notice that $\boldsymbol{v}^{s}(\boldsymbol{x},t)$ and $\boldsymbol{a}^{s}(\boldsymbol{x},t)$ correspond to the velocity and acceleration of the solid material particle whose current coordinates are $\boldsymbol{x}$ at time $t$. 
+%
+The acceleration of the fluid is given by (see section 3.1 in \cite{boer2005trends}), 
+\begin{equation}
+\boldsymbol{a}^{f} = \frac{d^{f} \boldsymbol{v}^{f}}{d t} = \pderiv{}{t}\boldsymbol{v}^{f} + (\nabla \boldsymbol{v}^{f})\boldsymbol{v}^{f}.
+ \label{eqn:fluid_acceleration}
 \end{equation}
 %\subsubsection{The Reynolds transport theorem for mixtures velocity and acceleration}
 %For a spatial field $\boldsymbol{w}^{s}=\boldsymbol{w}^{s}(\boldsymbol{x},t)$ associated with the solid skeleton, the particle derivative is defined as 
@@ -155,17 +172,19 @@ Notice that $\boldsymbol{v}^{s}(\boldsymbol{x},t)$ and $\boldsymbol{a}^{s}(\bold
 %\frac{d^{f} \boldsymbol{w}^{f}}{dt}=\pderiv{}{t}\boldsymbol{w}^{f} + %(\nabla\boldsymbol{w}^{f})\boldsymbol{v}^{f}. 
 %\end{equation}
 %Here $\boldsymbol{v}^{f}$ is the velocity of the fluid. 
-The \textbf{particle derivative of a field} $\mathcal{G}(\boldsymbol{x},t)$ with respect to the particle $\alpha$ ($s$ or $f$) is given by (see \citep[eqn. (1.43)]{coussy2004poromechanics})
+The \textbf{particle derivative of a field} $\mathcal{G}(\boldsymbol{x},t)$ with respect to the particle $\alpha$ ($s$ or $f$) is given by %(see section 1.3.1 in \cite{coussy2004poromechanics})
+%(see \citep[eqn. (1.43)]{coussy2004poromechanics})
 \begin{equation}
 \frac{d^{\alpha}}{dt} \mathcal{G}=\pderiv{\mathcal{G}}{t}  + (\nabla\mathcal{G})\boldsymbol{v}^{\alpha},
+\label{eqn:material_deriv}
 \end{equation}
-where $\nabla( \cdot)= \frac{\partial (\cdot) }{\partial \boldsymbol{x} } $ denotes the partial derivative with respect to $\boldsymbol{x}$. Since nearly all our workings will be performed in the current configuration we will keep the shorthand notation $\nabla$ to denote the spatial gradient in the current configuration instead of explicitly writing  $\nabla_{\boldsymbol{x}}$. The \textbf{particle derivative of a material volume} with respect to the $\alpha$-constituent is given by (see \citep[eqn. (1.42)]{coussy2004poromechanics})
+where $\nabla( \cdot)= \frac{\partial (\cdot) }{\partial \boldsymbol{x} } $ denotes the partial derivative with respect to $\boldsymbol{x}$. Since nearly all our workings will be performed in the current configuration we will keep the shorthand notation $\nabla$ to denote the spatial gradient in the current configuration instead of explicitly writing  $\nabla_{\boldsymbol{x}}$. The \textbf{particle derivative of a material volume} with respect to the $\alpha$-constituent is given by (see section 1.3.1 in \cite{coussy2004poromechanics})
 \begin{equation}
-\frac{d^{\alpha}}{dt} (d \Omega_{t})=\left(\nabla \cdot \boldsymbol{v}^{f}   \right)d \Omega_{t}. 
+\frac{d^{\alpha}}{dt}\int_{\Omega_{t}} d \Omega_{t}=\int_{\Omega t} \nabla \cdot \boldsymbol{v}^{\alpha}  d \Omega_{t}. 
 \end{equation}
-The particle derivative also applies to a volume integral. Thus, for any quantity $\mathcal{G}$, associated with the $\alpha$ constituent, we have (see \citep[eqn. (1.47)]{coussy2004poromechanics})
+The particle derivative also applies to a volume integral. Thus, for any quantity $\mathcal{G}$, associated with the $\alpha$ constituent, we have %(see \citep[eqn. (1.47)]{coussy2004poromechanics})
 \begin{equation}
 \label{eqn:reynolds_transport}
-\frac{d^{\alpha}}{dt} \int_{\Omega_{t}} \mathcal{G} d \Omega_{t} =  \int_{\Omega_{t}} \frac{d^{\alpha}}{dt}(\mathcal{G} d \Omega_{t})= \int_{\Omega_{t}} \left( \frac{d^{\alpha}\mathcal{G}}{dt} + \mathcal{G} \nabla \cdot \boldsymbol{v}^{\alpha} \right) d \Omega_{t}= \int_{\Omega_{t}} \left( \frac{\partial \mathcal{G}}{ \partial t} +  \nabla \cdot \mathcal{G} \boldsymbol{v}^{\alpha} \right) d \Omega_{t}.
+\frac{d^{\alpha}}{dt} \int_{\Omega_{t}} \mathcal{G} d \Omega_{t} = \int_{\Omega_{t}} \left( \frac{d^{\alpha}\mathcal{G}}{dt} + \mathcal{G} \nabla \cdot \boldsymbol{v}^{\alpha} \right) d \Omega_{t}= \int_{\Omega_{t}} \left( \frac{\partial \mathcal{G}}{ \partial t} +  \nabla \cdot \mathcal{G} \boldsymbol{v}^{\alpha} \right) d \Omega_{t}.
 \end{equation}
-This is commonly known as the Reynolds transport theorem, in the last step we have used the identity  $\nabla \cdot (\psi \boldsymbol{s}) =  \boldsymbol{s} \cdot \nabla \psi + \psi \nabla \cdot \boldsymbol{s} $ for some scalar $\psi$ and vector $\boldsymbol{s}$.
+This is commonly known as the Reynolds transport theorem. In the last step of (\ref{eqn:reynolds_transport}) we have used the identity  $\nabla \cdot (\psi \boldsymbol{s}) =  \boldsymbol{s} \cdot \nabla \psi + \psi \nabla \cdot \boldsymbol{s} $ for some scalar $\psi$ and vector $\boldsymbol{s}$.

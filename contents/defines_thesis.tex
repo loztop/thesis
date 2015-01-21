@@ -1,3 +1,8 @@
+\renewcommand{\mathbf}[1]{\boldsymbol{#1}}
+\renewcommand{\citet}[1]{\cite{#1}}
+\renewcommand{\citep}[1]{\cite{#1}}
+
+
 %Derivatives
 \newcommand{\deriv}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
 \newcommand{\mderiv}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
@@ -29,9 +34,9 @@
 \newcommand{\grad}{\nabla_{\mathbf{x}}}
 
 %permeability tensor
-\newcommand{\perm}{\mathbf{\kappa}}
-\newcommand{\perminv}{\mathbf{\kappa^{-1}}}
-\newcommand{\permscalar}{{\kappa^{-1}}}
+\newcommand{\perm}{\mathbf{k}}
+\newcommand{\perminv}{\mathbf{k^{-1}}}
+\newcommand{\permscalar}{{k^{-1}}}
 \newcommand{\kperm}{\mathbf{k}_{f}}
 
 %Helmholtz energy
@@ -53,34 +58,14 @@
 
 %Tensors
 \newcommand{\identity}{\mathbf{I}}
-\newcommand{\spatialincremental}{\mathfrak{c}}
-\newcommand{\si}{\mathfrak{c}}
+\newcommand{\spatialincremental}{\mathbf{\Theta}}
+\newcommand{\si}{\mathbf{\Theta}}
 
 %Divergence
 \newcommand{\divergence}{\nabla \cdot}
 
+ 
 
-%Spaces
-\newcommand{\mixedspace}{\mathcal{W}^{X}}
-\newcommand{\mixedspacetime}{\mathcal{W}^{X}_{T}}
-\newcommand{\mixedspacetest}{\mathcal{V}^{X}}
-\newcommand{\mixedspacedisctest}{\mathcal{V}^{X}_{h}}
-\newcommand{\mixedspacedisc}{\mathcal{W}^{X}_{h}}
-\newcommand{\mixedspacedisctau}{\mathcal{W}^{X}_{\tau\, h}}
-\newcommand{\pspacedisc}{{Q}_{h}}
-\newcommand{\pspacecont}{\mathcal{L}(\Omega)}
-\newcommand{\pspaceconttest}{\mathcal{L}(\Omega)}
-\newcommand{\dispspacedisc}{\mathbf{W}^{E}_{h}}
-\newcommand{\fluxspacedisc}{\mathbf{W}^{D}_{h}}
-\newcommand{\pspacedisctest}{{Q}_{h}}
-\newcommand{\dispspacedisctest}{\mathbf{W}^{E}_{h0}}
-\newcommand{\fluxspacedisctest}{\mathbf{W}^{D}_{h0}}
-\newcommand{\elastspace}{\mathbf{W}^{E}}
-\newcommand{\darcyspace}{\mathbf{W}^{D}}
-\newcommand{\elastspacetest}{\mathbf{W}^{E}_{0}}
-\newcommand{\darcyspacetest}{\mathbf{W}^{D}_{0}}
-\newcommand{\honespace}{\left[ H^{1}_{0}  \right]^{d}}
-\newcommand{\polyspace}{\mathbf{V}_{h}}
 
 %VARIABLES
 
@@ -99,6 +84,7 @@
 \newcommand{\dispconttimedisc}{{\mathbf{u}_{\delta t}}}
 \newcommand{\dispconttimediscn}{{\mathbf{u}_{\delta t}}(t_{n},\cdot)}
 \newcommand{\dispdisctimediscn}{{\mathbf{u}_{\delta t,h}^{n}}}
+\newcommand{\dispdisctimen}{{\boldsymbol{u}^{n}_{h, \delta t}}}
 
 %Fluid flux
 \newcommand{\fluxcont}{\mathbf{z}}
@@ -181,6 +167,7 @@
 \newcommand{\fedisp}{\mathbf{e}_{\mathbf{u}}}
 \newcommand{\feflux}{\mathbf{e}_{\mathbf{z}}}
 \newcommand{\fep}{{e}_{{p}}}
+
 \newcommand{\intdispn}{\mathbf{\eta}^{n}_{\mathbf{u}}}
 \newcommand{\intdispntime}{\mathbf{\eta}^{n}_{\delta t, \dispcont}}
 \newcommand{\intdisptime}{\mathbf{\eta}_{\delta t ,\dispcont}}
@@ -329,7 +316,13 @@
 
 
 %new stuff
-\newtheorem{proof}{Proof}
+
+\newtheorem{rem}{Remark}[section]
+
+
+%\newtheorem{proof}{Proof}
+%\newtheorem{proof}{Proof}
+
 
 \newcommand{\dispdiscchange}{\xi\boldsymbol{u}_{h}}
 
@@ -343,9 +336,47 @@
 \newcommand{\solntrip}{{\mathfrak{u}}}
 \newcommand{\solnattrip}{\bar{\mathfrak{u}}}
 \newcommand{\testtrip}{{\mathfrak{v}}}
-\newcommand{\perminvat}{\bar{\boldsymbol{\kappa}}^{-1}}
+\newcommand{\perminvat}{\bar{\boldsymbol{k}}^{-1}}
 \newcommand{\fluxdiscchange}{\xi\boldsymbol{z}_{h}}
 \newcommand{\solnattripdisc}{\bar{\mathfrak{u}}_{h}}
 \newcommand{\testtripdisc}{{\mathfrak{v}_{h}}}
 \newcommand{\lambdaconttest}{\boldsymbol{l}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                             SPACES                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Continuous spaces
+\newcommand{\dispspace}{\mathbf{W}^{E}(\Omega)}
+\newcommand{\fluxspace}{\mathbf{W}^{D}(\Omega)}
+\newcommand{\pspace}{\mathcal{L}(\Omega)}
+
+%Discrete spaces
+\newcommand{\dispspacedisc}{\mathbf{W}^{E}_{h}}
+\newcommand{\fluxspacedisc}{\mathbf{W}^{D}_{h}}
+\newcommand{\pspacedisc}{{Q}_{h}}
+\newcommand{\pspacedisctest}{{Q}_{h}}
+
+% Test spaces
+\newcommand{\elastspacetest}{\mathbf{W}^{E}_{0}(\Omega)}
+\newcommand{\darcyspacetest}{\mathbf{W}^{D}_{0}(\Omega)}
+\newcommand{\pspaceconttest}{\mathcal{L}(\Omega)}
+
+
+%Mixed spaces
+\newcommand{\mixedspace}{\mathcal{W}^{X}}
+\newcommand{\mixedspacetime}{\mathcal{W}^{X}_{T}}
+\newcommand{\mixedspacedisc}{\mathcal{W}^{X}_{h}}
+\newcommand{\mixedspacedisctau}{\mathcal{W}^{X}_{\tau\, h}}
+
+\newcommand{\dispspacedisctest}{\mathbf{W}^{E}_{h0}}
+\newcommand{\fluxspacedisctest}{\mathbf{W}^{D}_{h0}}
+
+\newcommand{\mixedspacetest}{\mathcal{V}^{X}}
+\newcommand{\mixedspacedisctest}{\mathcal{V}^{X}_{h}}
+
+\newcommand{\honespace}{\left[ H^{1}_{0}  \right]^{d}}
+\newcommand{\polyspace}{\mathbf{V}_{h}}
 

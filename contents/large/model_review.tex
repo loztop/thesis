@@ -1,0 +1,40 @@
+\section{The model}
+\label{sec:large_model}
+%To arrive at the simplified, quasi-static, fully saturated incompressible large deformation poroelasticity formulation, we will introduce some additional model assumptions% that will be justified later (see other document)
+%, and introduce the fluid flux variable given by
+%\begin{equation}
+%  \boldsymbol{z}=\phi(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}).
+%\label{eqn:relative_fluid}
+%\end{equation}
+Following \cite{ateshian2010finite} and \cite{almeida1998finite}, we recall the governing equations (\ref{eqn:simple_mixture_model}) for a fully saturated, incompressible poroelastic model  valid in large deformations. The problem is to find $\boldsymbol{\chi}(\boldsymbol{X},t)$,  $\boldsymbol{z}(\boldsymbol{x},t)$ and $p(\boldsymbol{x},t)$ such that
+\begin{equation}
+\label{eqn:mixture_momentum_reform}
+\begin{gathered}\begin{aligned}
+-\nabla \cdot( \boldsymbol{\sigma}_{e} -p\boldsymbol{I}) &= \rho\boldsymbol{f} \\
+{\perm^{-1}\boldsymbol{z}} + \nabla p &=  \rho^{f}\boldsymbol{f}  \\
+\nabla \cdot (\boldsymbol{v}^{s} + \boldsymbol{z} )  &= g  \\
+\boldsymbol{\chi} &= \boldsymbol{X}+\boldsymbol{u}_{D}  \\
+(\boldsymbol{\sigma}_{e}-p\boldsymbol{I})\boldsymbol{n} &= \boldsymbol{t}_{N}  \\
+\boldsymbol{z} \cdot \boldsymbol{n} &= {q_{D}}  \\
+p &= p_{D}  \\
+\boldsymbol{\chi}(0) &= \boldsymbol{X} + \boldsymbol{u}^{0}
+\end{aligned}\end{gathered}
+\;
+%\left .
+\begin{gathered}\begin{aligned}
+&\mbox{in} \; \Omega_{t}, \\
+&\mbox{in} \; \Omega_{t}, \\
+&\mbox{in} \; \Omega_{t}, \\
+&\mbox{on} \; \Gamma_{d}, \\
+&\mbox{on} \; \Gamma_{t}, \\
+&\mbox{on} \; \Gamma_{f}, \\
+&\mbox{on} \; \Gamma_{p}, \\
+&\mbox{in} \; \Omega_{0}.
+\end{aligned}\end{gathered}
+%\qquad \right \}
+\end{equation}
+
+where $\boldsymbol{v}^{s}(\boldsymbol{x},t)=  \pderiv{}{t}\boldsymbol{\chi}(\boldsymbol{X},t)$.
+\begin{rem}
+It is a  straightforward extension to include the solid inertia $\boldsymbol{a}^{s}$ which can the be discretized using a Newmark scheme, see e.g. \cite{chapelle2010poroelastic}, \cite{li2004dynamics}, \cite{sauter2010robust}.
+\end{rem}

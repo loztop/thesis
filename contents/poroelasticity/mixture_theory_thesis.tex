@@ -1,53 +1,45 @@
-
-%The mixture model for quasistatic finite poroelasticity has now been reformulated entirely in terms of quantities defined on $\Omega^{s}_{t}$.
-
-%We will subsequently drop the superscript s, understanding that unless otherwise noted all quantities are defined on the
-%solid reference or current configurations.
-
-%\subsection{Mixture theory}
-%The following section closely follows the book by Boer et al. \cite{boer2005trends}. 
-\subsection{Volume fractions}
-The porous medium is assumed to be saturated consisting of a solid part and a fluid part. The fluid part accounts for volume fractions $\phi_{0}(\boldsymbol{X},t=0)$ and $\phi(\boldsymbol{x},t)$ of the total volume in the reference and the current (deformed) configuration. The fractions for the solid are thus given by $1-\phi_{0}$ and $1-\phi$ in the reference and the current configuration respectively, $\phi$ is also often known as the porosity. In standard elasticity theory $\rho$ denotes the density of the solid, and for an incompressible solid we have that $\rho\mbox{d}\Omega_{t} = \rho_{0}\mbox{d}\Omega_{0}$. We now change the definition of $\rho$ to be the density of the {mixture} in the current configuration which is given by
+\section{Volume fractions}
+We restrict our attention to saturated porous media which are assumed to consist of solid and fluid parts. The fluid accounts for volume fractions $\phi_{0}(\boldsymbol{X},t=0)$ and $\phi(\boldsymbol{x},t)$ of the total volume in the reference and the current and deformed configurations respectively, where $\phi$ is known as the porosity. The fractions for the solid are therefore $1-\phi_{0}$ and $1-\phi$ in the reference and the current configuration respectively. For a mixture the density in the current configuration is given by
 \begin{equation}
-\rho=\rho^{s}(1-\phi) + \rho^{f}\phi \;\;\;\ \mbox{in} \; \Omega_{t},
-\label{rho_mixture} 
+\rho:=\rho^{s}(1-\phi) + \rho^{f}\phi \;\;\;\ \mbox{in} \; \Omega_{t},
+\label{rho_mixture}
 \end{equation}
-\noindent where $\rho^{s}$ and $\rho^{f}$ are the densities of the fluid and solid, respectively. We will also assume that both the solid and the fluid are incompressible, such that $\rho^{s}=\rho^{s}_{0}$ and $
-\rho^{f}=\rho^{f}_{0}$. For notational convenience we also define 
+\noindent where $\rho^{s}$ and $\rho^{f}$ are the densities of the fluid and solid, respectively. We assume that both the solid and the fluid are incompressible so that $\rho^{s}=\rho^{s}_{0}$ and $\rho^{f}=\rho^{f}_{0}$. For notational convenience we also define
 \begin{equation}
 \hat\rho^{s}=\rho^{s}(1-\phi),
 \label{eqn:rhos_hat}
 \end{equation}
 and
 \begin{equation}
-\hat\rho^{f}=\rho^{f}\phi. 
+\hat\rho^{f}=\rho^{f}\phi.
 \label{eqn:rhof_hat}
 \end{equation}
 Due to mass conservation and the incompressibility of both the solid and the fluid phase we have
 \begin{equation}
-J = \frac{1-\phi_{0}}{1-\phi}.
-\label{incomp_mixture} 
+J = \frac{1-\phi_{0}}{1-\phi},
+\label{incomp_mixture}
 \end{equation}
-Here $J$ represents the change in volume of the solid skeleton. The solid skeleton includes the solid (tissue in biological applications) and the voids are occupied by the fluid. Note that although the solid is assumed to be incompressible the solid skeleton is able to change in volume, since fluid can enter or leave the solid skeleton.
-\subsection{Balance of mass}
-When no mass change occurs, neither for the solid skeleton or the fluid contained in $\Omega_{t}$, using the Reynolds transport theorem (\ref{eqn:reynolds_transport}), the mass balance can be expressed as
+where $J$ represents the change in volume of the solid skeleton. The solid skeleton includes the solid (tissue in biological applications) and the voids occupied by the fluid. Note that although the solid is assumed to be incompressible the solid skeleton is able to change in volume, since fluid can enter or leave the solid skeleton.
+
+\section{Conservation of mass}
+When no mass change occurs, neither for the solid skeleton or the fluid contained in $\Omega_{t}$, using the Reynolds transport theorem (\ref{eqn:reynolds_transport}), the balance of mass, for a volume $V(t)$ that moves with the deforming poroelastic medium, can be expressed as
 \begin{equation*}
-\frac{d^{s}}{dt}\int_{\Omega_{t}}(1-\phi)\rho^{s}  d \Omega_{t} = \int_{\Omega_{t}} \left( \frac{\partial (1-\phi)\rho^{s} }{\partial t} + \nabla \cdot ( (1-\phi)\rho^{s}\boldsymbol{v}^{s}) \right) d \Omega_{t},
+\frac{d^{s}}{dt}\int_{V(t)}(1-\phi)\rho^{s}  d \Omega_{t} = \int_{V(t)} \left( \frac{\partial (1-\phi)\rho^{s} }{\partial t} + \nabla \cdot ( (1-\phi)\rho^{s}\boldsymbol{v}^{s}) \right) d \Omega_{t},
 \end{equation*}
 \begin{equation*}
-\frac{d^{f}}{dt}\int_{\Omega_{t}}\phi\rho^{f}  d \Omega_{t} = \int_{\Omega_{t}} \left( \frac{\partial \phi\rho^{f} }{\partial t} + \nabla \cdot ( \phi\rho^{f} \boldsymbol{v}^{f}) \right) d \Omega_{t}.
+\frac{d^{f}}{dt}\int_{V(t)}\phi\rho^{f}  d \Omega_{t} = \int_{V(t)} \left( \frac{\partial \phi\rho^{f} }{\partial t} + \nabla \cdot ( \phi\rho^{f} \boldsymbol{v}^{f}) \right) d \Omega_{t}.
 \end{equation*}
-Thus, the balance of mass for the solid is given by (see \citet[eqn. (8.57)]{boer2005trends})
+Thus, the balance of mass for the solid is given by 
 \begin{equation}
 \frac{\partial (1-\phi)\rho^{s} }{\partial t} + \nabla \cdot ( (1-\phi)\rho^{s}\boldsymbol{v}^{s})=0 \;\;\;\mbox{in}\;\Omega_{t},
 \label{eqn:solid_mass}
 \end{equation}
 where $\boldsymbol{v}^{s}$ is the velocity vector of the solid. Similarly, the balance of mass for the fluid is given by
 \begin{equation}
-\frac{\partial \phi\rho^{f} }{\partial t} + \nabla \cdot ( \phi\rho^{f} \boldsymbol{v}^{f})=g \;\;\;\mbox{in}\;\Omega_{t},
+\frac{\partial \phi\rho^{f} }{\partial t} + \nabla \cdot ( \phi\rho^{f} \boldsymbol{v}^{f})=\rho^{f}g \;\;\;\mbox{in}\;\Omega_{t},
 \label{eqn:fluid_mass}
 \end{equation}
-where $\boldsymbol{v}^{f}$ is the velocity vector of the fluid and $g$ is a general source or sink term. Adding (\ref{eqn:solid_mass}) and (\ref{eqn:fluid_mass}), and noting that $\rho^{s}$ and $\rho^{f}$ are assumed to be constants,  we arrive at the continuity or mass balance equation of the mixture (see \citet[eqn. (8.59)]{boer2005trends}) 
+where $\boldsymbol{v}^{f}$ is the velocity vector of the fluid and $g$ is a general source or sink term. Noting that $\rho^{s}$ and $\rho^{f}$ are constants (in space and time), these can be factored out of equations (\ref{eqn:solid_mass}) and (\ref{eqn:fluid_mass}). Adding these two equations then provides the mass balance or continuity equation of the mixture (see section 8.3 in \cite{boer2005trends}),
 \begin{equation}
 \nabla \cdot((1-\phi) \boldsymbol{v}^{s}) + \nabla \cdot (\phi \boldsymbol{v}^f)=g \;\;\;\mbox{in}\;\Omega_{t}.
 \label{eqn:continuity}
@@ -55,64 +47,59 @@ where $\boldsymbol{v}^{f}$ is the velocity vector of the fluid and $g$ is a gene
 
 %where $\boldsymbol{w}$ is the relative flow vector given by $\boldsymbol{w}=\phi(\boldsymbol{v}^{f}-\boldsymbol{v})$.
 
-\subsection{Balance of momentum}
+\section{Conservation of momentum}
 %The balance law of linear momentum for each individual constituent is that the particle time derivative
 %of the momentum is equal to the sum of external forces, such that
 The balance law of linear momentum for each individual constituent is givn by
 \begin{equation}
-\frac{d^{\alpha}}{dt} \int_{\Omega_{t}} \hat\rho^{\alpha}\boldsymbol{v}^{\alpha} d\Omega_{t} =\int_{\Omega_{t}} \nabla \cdot \boldsymbol\sigma^{\alpha} + \hat\rho^{\alpha} {\boldsymbol{f}} + \hat{\boldsymbol{p}}^{\alpha}  \; d\Omega_{t}.
+\frac{d^{\alpha}}{dt} \int_{V(t)} \hat\rho^{\alpha}\boldsymbol{v}^{\alpha} d\Omega_{t} =\int_{V(t)} \nabla \cdot \boldsymbol\sigma^{\alpha} + \hat\rho^{\alpha} {\boldsymbol{f}} + \hat{\boldsymbol{p}}^{\alpha}  + \Theta^{\alpha}\boldsymbol{v}^{\alpha} \; d\Omega_{t}.
 \label{eqn:momentum_alpha_axium}
 \end{equation}
-Here $\boldsymbol\sigma^{\alpha}$ is the Cauchy stress tensor of the $\alpha$ constituent, $\boldsymbol{f}$ is a volume force acting on the constituents, and $\hat{\boldsymbol{p}}^{\alpha}$ are interaction forces representing frictional interactions between the solid and fluid, defined later in section \ref{sec:constitutive}. Using the Reynolds transport theorem (\ref{eqn:reynolds_transport}), and the balance of mass of the solid (\ref{eqn:solid_mass}) and fluid (\ref{eqn:fluid_mass}), we get (see \citet[eqn. (4.15)]{boer2005trends})
+Here $\boldsymbol\sigma^{\alpha}$ is the Cauchy stress tensor of the $\alpha$ constituent, $\boldsymbol{f}$ is a volume force acting on the constituents, $\hat{\boldsymbol{p}}^{\alpha}$ are interaction forces representing frictional interactions between the solid and fluid, defined later in section \ref{sec:constitutive}, and  $\Theta^{\alpha}\boldsymbol{v}^{\alpha} $ is the variation of momentum due to the $\alpha$ constituent source term \cite{chapelle2014general}. Note that from (\ref{eqn:solid_mass}) and (\ref{eqn:fluid_mass}) that we have $\Theta^{s}=0$ and $\Theta^{f}=\rho^{f}g$. Using the first step of the Reynolds transport theorem (\ref{eqn:reynolds_transport}), and the chain rule, we obtain %(see section 4.2 in \cite{boer2005trends})
 \begin{equation}
-\nabla \cdot \boldsymbol\sigma^{\alpha} + \hat\rho^{\alpha}\boldsymbol{f} + \hat{\boldsymbol{p}}^{\alpha}=\hat\rho^{\alpha}\boldsymbol{a}^{\alpha} +  \boldsymbol{v}^{\alpha}\left(  \frac{d^{\alpha}\hat{\rho}^{\alpha}  }{dt}  + \hat{\rho}^{\alpha}  \nabla \cdot \boldsymbol{v}^{\alpha} \right)\;\;\;\mbox{in}\;\Omega_{t},
+\nabla \cdot \boldsymbol\sigma^{\alpha} + \hat\rho^{\alpha}\boldsymbol{f} + \hat{\boldsymbol{p}}^{\alpha}+\Theta^{\alpha}\boldsymbol{v}^{\alpha}=\hat\rho^{\alpha}\boldsymbol{a}^{\alpha} +  \boldsymbol{v}^{\alpha}\left(  \frac{d^{\alpha}\hat{\rho}^{\alpha}  }{dt}  + \hat{\rho}^{\alpha}  \nabla \cdot \boldsymbol{v}^{\alpha} \right)\;\;\;\mbox{in}\;\Omega_{t},
 \label{eqn:momentum_alpha}
 \end{equation}
-where $\boldsymbol{a}^{\alpha}$ are acceleration vectors of the constituents. The acceleration of the solid and fluid are given by (see \citet[eqn. (3.7,3.9)]{boer2005trends}), 
-\begin{equation}
-\boldsymbol{a}^{f} = \frac{d^{f} \boldsymbol{v}^{f}}{d t} = \pderiv{}{t}\boldsymbol{v}^{f} + (\nabla \boldsymbol{v}^{f})\boldsymbol{v}^{f}.
- \label{eqn:fluid_acceleration}
-\end{equation}
-\begin{equation}
- \boldsymbol{a}^{s}(\boldsymbol{x},t)|_{\boldsymbol{x}={\chi}(\boldsymbol{X},t)}=   \frac{\partial^{2}}{\partial t^{2}}\boldsymbol\chi(\boldsymbol{X},t) . 
- \label{eqn:spatial_solid_acceleration}
-\end{equation}
-%\begin{equation}
-%\boldsymbol{a}^{s} = \frac{d_{s} \boldsymbol{v}^{s}}{d t} = \pderiv{}{t}\boldsymbol{v}^{s} + (\nabla %\boldsymbol{v}^{s})\boldsymbol{v}^{s}.
-%\label{eqn:momentum_alpha}
-%\end{equation}
-%??? OR/AND ?? (see page 132 in \cite{gonzalez2008first}) also (see eqn. (3.7, 3.8) in \cite{boer2005trends} but with strange notation) 
-We also have that by the action reaction law, each constituent exerts an opposite interaction force on the other constituent 
+where $\boldsymbol{a}^{\alpha}$ are acceleration vectors of the constituents. Since each constituent exerts an equal and opposite interaction force on the other, 
 \begin{equation}
  \hat{\boldsymbol{p}}^{s}+\hat{\boldsymbol{p}}^{f}=0.
 \end{equation}
-%Note that it is straightforward to extend this model to include additional constituents.
 
-\subsection{Constitutive relations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Constitutive relations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Constitutive relations}
 \label{sec:constitutive}
-The interaction force is given by (see \citet[eqn. (3.49)]{coussy2004poromechanics})
+
+The interaction force is given by (see \cite[eqn. (3.49)]{coussy2004poromechanics})
 \begin{equation}
- \hat{\boldsymbol{p}}^{s}=-\hat{\boldsymbol{p}}^{f}=-p\nabla \phi + \phi^{2} \boldsymbol{\kappa}^{-1}\cdot(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}),
+ \hat{\boldsymbol{p}}^{s}=-\hat{\boldsymbol{p}}^{f}=-p\nabla \phi + \phi^{2} \perm^{-1}\cdot(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}),
 \end{equation}
-where $\boldsymbol{\kappa}$ is the (dynamic) permeability tensor, which includes the dynamic viscosity of the fluid i.e. $\boldsymbol{\kappa}=\mu_{f}^{-1}\boldsymbol{k}$, where $\mu_{f}$ and $\boldsymbol{k}$ are the fluid viscosity and the intrinsic permeability tensor, respectively. The fluid pressure is denoted by $p$. According to \citet{coussy2004poromechanics}, the first term,  $p  \nabla \phi$, accounts for the pressure effect resulting from the variation of the section offered to the fluid flow, and the second term,  $\phi^{2} \boldsymbol{\kappa}^{-1}\cdot(\boldsymbol{v}^{f}-\boldsymbol{v}^{s})$, describes the viscous resistance opposed by the shear stress to the fluid flow from the drag at the internal walls of the porous network. This particular choice for the interaction force means that the momentum balance for the fluid flow can later be reduced to the well known Darcy law. The permeability tensor in the current configuration is given by 
+where $\perm$ is the (dynamic) permeability tensor.
+%, which includes the dynamic viscosity of the fluid i.e. $\boldsymbol{k}=\mu_{f}^{-1}\boldsymbol{k}$, where $\mu_{f}$ and $\boldsymbol{k}$ are the fluid viscosity and the intrinsic permeability tensor, respectively. The fluid pressure is denoted by $p$.
+The first term,  $p \nabla \phi$, accounts for the pressure effect resulting from the variation of the section offered to the fluid flow, and the second term,  $\phi^{2} \perm \cdot (\boldsymbol{v}^{f}-\boldsymbol{v}^{s})$, describes the viscous resistance opposed by the shear stress to the fluid flow from the drag at the internal walls of the porous network \cite{coussy2004poromechanics}. This particular choice for the interaction force means that the momentum balance for the fluid flow can later be reduced to the well known Darcy law.
+
+The permeability tensor in the current configuration is given by
 \begin{equation}
- \boldsymbol{\kappa}=J^{-1} \boldsymbol{F} \boldsymbol{\kappa}_{0}(\boldsymbol{\chi}) \boldsymbol{F}^{T} ,
+ \perm=J^{-1} \boldsymbol{F} \perm_{0}(\boldsymbol{\chi}) \boldsymbol{F}^{T} ,
  \label{eqn:permeability_const}
 \end{equation}
-where $\boldsymbol{\kappa}_{0}(\boldsymbol{\chi}) $ is the permeability in the reference configuration, which may be chosen to be some (nonlinear) function dependent on the deformation. Examples of deformation dependent permeability tensors for biological tissues can be found in \citep{kowalczyk1994modelling,holmes1990nonlinear,lai1980drag}.
-%The permeability tensor $\boldsymbol{\kappa}$  An isotropic assumption is commonly %used:
+where $\perm_{0}(\boldsymbol{\chi}) $ is the permeability in the reference configuration, which may be chosen to be some (nonlinear) function dependent on the deformation. Examples of deformation dependent permeability tensors for biological tissues can be found in \cite{kowalczyk1994modelling,holmes1990nonlinear,lai1980drag}.
+%The permeability tensor $\boldsymbol{k}$  An isotropic assumption is commonly %used:
 %\begin{equation}
-% \boldsymbol{\kappa}=\kappa_{0}\Pi \left( J \right)\boldsymbol{I},
+% \boldsymbol{k}=k_{0}\Pi \left( J \right)\boldsymbol{I},
 % \label{eqn:permeability_const}
 %\end{equation}
-%where $\kappa_{0}$ is the permeability in the reference configuration and $\Pi %\left( J \right)$ is some function dependent on the volume change. Examples of %deformation dependent permeability tensors for biological tissues can be found in %\citep{kowalczyk1994modelling,holmes1990nonlinear,lai1980drag}.
-%For example in \citet{kowalczyk1994modelling}, the following isotropic constitutive law for the permeability of lung tissue is proposed
+%where $k_{0}$ is the permeability in the reference configuration and $\Pi %\left( J \right)$ is some function dependent on the volume change. Examples of %deformation dependent permeability tensors for biological tissues can be found in %\cite{kowalczyk1994modelling,holmes1990nonlinear,lai1980drag}.
+%For example in \cite{kowalczyk1994modelling}, the following isotropic constitutive law for the permeability of lung tissue is proposed
 %\begin{equation}
-% \boldsymbol{\kappa}=\kappa_{0}  \left( J \frac{  \phi  }{\phi_{0}} \right)^{2/3}\boldsymbol{I},
+% \boldsymbol{k}=k_{0}  \left( J \frac{  \phi  }{\phi_{0}} \right)^{2/3}\boldsymbol{I},
 % \label{eqn:permeability_const}
 %\end{equation}
-%where $\kappa_{0}$ is the permeability in the reference configuration. Various other constitutive laws for biological tissues have also been proposed \citep{holmes1990nonlinear,lai1980drag}. 
-The solid stress tensor is given by the effective stress principle (see eqn. (8.62) in \citet{boer2005trends}),
+%where $k_{0}$ is the permeability in the reference configuration. Various other constitutive laws for biological tissues have also been proposed \cite{holmes1990nonlinear,lai1980drag}.
+
+The solid stress tensor is given by the effective stress principle (see eqn. (8.62) in \cite{boer2005trends}),
 \begin{equation}
 \boldsymbol\sigma^{s} =\boldsymbol\sigma^{s}_{e} - (1-\phi)\boldsymbol{I}p,
 \end{equation}
@@ -121,49 +108,70 @@ where $\boldsymbol\sigma^{s}_{e}$ is the effective stress tensor given by
 \boldsymbol\sigma^{s}_{e}=\frac{1}{J}\boldsymbol{F}\cdot 2 \frac{\partial W(\boldsymbol\chi)}{\partial \boldsymbol{C}}  \cdot \boldsymbol{F}^{T}.
 \label{eqn:sigma_e}
 \end{equation}
-Here $W(\boldsymbol{\chi})$ denotes a strain-energy law (hyperelastic Helmholtz energy functional) dependent on the deformation of the solid. The fluid stress tensor can be written as (see \citet[eqn. (8.63)]{boer2005trends})
+Here $W(\boldsymbol{\chi})$ denotes a strain-energy law (hyperelastic Helmholtz energy functional) dependent on the deformation of the solid. The fluid stress tensor can be written as (see \cite[eqn. (8.63)]{boer2005trends})
 \begin{equation}
 \boldsymbol\sigma^{f} =\boldsymbol\sigma^{f}_{vis} - \phi\boldsymbol{I}p,
 \label{eqn:sigma_vis}
 \end{equation}
-where $\boldsymbol\sigma^{f}_{vis}$ denotes the viscous stress tensor of the fluid, given by  (see \citet[eqn. (6.145)]{boer2005trends})
+where $\boldsymbol\sigma^{f}_{vis}$ denotes the viscous stress tensor of the fluid, given by  (see \cite[eqn. (6.145)]{boer2005trends})
 \begin{equation}
 \boldsymbol\sigma^{f}_{vis}= \mu_{f} \phi ( \nabla \boldsymbol{v}_f + (\nabla \boldsymbol{v}_f)^{T} - \frac{2}{3}\nabla \cdot\boldsymbol{v}_f),
 \label{eqn:viscous_stress}
 \end{equation}
 where $\mu_{f}$ is the dynamic viscosity of the fluid. \newline
 
-
-\subsection{Momentum balance of the mixture}
-The balance of linear momentum for the mixture can be obtained by adding the momentum of all its constituents, the solid and the fluid. Using the constitutive relations, and then adding the momentum balance equation $(\ref{eqn:momentum_alpha})$ with $\alpha=s$ and $\alpha=f$ we get
-\begin{equation*}
-\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{s}\left(  \frac{d^{s}\hat{\rho}^{s}  }{dt}  + \hat{\rho}^{s}  \nabla \cdot \boldsymbol{v}^{s} \right) +  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f} \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t}. 
-\end{equation*}
-After some calculations (see \citet[section 3.2]{chapelle2010poroelastic} for details) we get
+Summing the conservation laws (\ref{eqn:momentum_alpha}) for its constituents and applying the constitutive relations, the conservation of linear momentum for the mixture is
+\begin{multline}
+%\label{mixture_motion_eulerian}
+\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{s}\left(  \frac{d^{s}\hat{\rho}^{s}  }{dt}  + \hat{\rho}^{s}  \nabla \cdot \boldsymbol{v}^{s} \right) +  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f} \nabla \cdot \boldsymbol{v}^{f} \right) \\
+\qquad =\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} + g\boldsymbol{v}^{f} \;\;\; \mbox{in} \; \Omega_{t}.
+\end{multline}
+Applying (\ref{eqn:solid_mass}) and (\ref{eqn:fluid_mass}), along with applications of (\ref{eqn:material_deriv}), we get
 \begin{equation}
-\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f} =\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t}. 
+\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f} =\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t}.
 \label{mixture_motion_eulerian}
 \end{equation}
-
-\subsection{Momentum balance of the fluid}
-The momentum equation for the fluid flow can be identified from $(\ref{eqn:momentum_alpha})$ with $\alpha=f$ as 
+The momentum equation for the fluid flow can be identified from $(\ref{eqn:momentum_alpha})$ with $\alpha=f$ as
 \begin{equation}
-\hat\rho^{f} {\boldsymbol{a}}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})  + \hat \rho^{f}\boldsymbol{f}  + p \nabla \phi-\phi^{2} \boldsymbol{\kappa}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) \; \mbox{in} \; \Omega_{t}.
+\hat\rho^{f} {\boldsymbol{a}}^{f}  =\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})  + \hat \rho^{f}\boldsymbol{f}  + p \nabla \phi-\phi^{2} \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) \, \mbox{in} \, \Omega_{t}.
 \label{general_darcy}
 \end{equation}
+ 
+
+
+
+%%%%OLD BALANCE OF MOMENTUM %%%%
+
+%\subsection{Momentum balance of the mixture}
+%The balance of linear momentum for the mixture can be obtained by adding the momentum of all its constituents, the solid and the fluid. Using the constitutive relations, and then adding the momentum balance equation $(\ref{eqn:momentum_alpha})$ with $\alpha=s$ and $\alpha=f$ we get
+%\begin{equation*}
+%\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{s}\left(  \frac{d^{s}\hat{\rho}^{s}  }{dt}  + \hat{\rho}^{s}  \nabla \cdot \boldsymbol{v}^{s} \right) +  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f} \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t}. 
+%\end{equation*}
+%After some calculations (see \citet[section 3.2]{chapelle2010poroelastic} for details) we get
+%\begin{equation}
+%\hat\rho^{s}\boldsymbol{a}^{s}+\hat\rho^{f}\boldsymbol{a}^{f} =\nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t}. 
+%\label{mixture_motion_eulerian}
+%\end{equation}
+%
+%\subsection{Momentum balance of the fluid}
+%The momentum equation for the fluid flow can be identified from $(\ref{eqn:momentum_alpha})$ with $\alpha=f$ as 
+%\begin{equation}
+%\hat\rho^{f} {\boldsymbol{a}}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})  + \hat \rho^{f}\boldsymbol{f}  + p \nabla \phi-\phi^{2} \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) \; \mbox{in} \; \Omega_{t}.
+%\label{general_darcy}
+%\end{equation}
 %Using the fluid mass conservation equation (\ref{eqn:fluid_mass}) we get
 %\begin{equation}
-%\hat\rho^{f} {\boldsymbol{a}}^{f}+  \boldsymbol{v}^{f}g =\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})  + \hat \rho^{f}\boldsymbol{f}  + p \nabla \phi-\phi^{2} \boldsymbol{\kappa}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) \; \mbox{in} \; \Omega_{t}.
+%\hat\rho^{f} {\boldsymbol{a}}^{f}+  \boldsymbol{v}^{f}g =\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})  + \hat \rho^{f}\boldsymbol{f}  + p \nabla \phi-\phi^{2} \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) \; \mbox{in} \; \Omega_{t}.
 %\label{general_darcy}
 %\end{equation}
 
-\subsection{Summary of the general poroelasticity model}
-We define the boundary $\partial\Omega_{t} = \Gamma_{d}  \cup \Gamma_{t} $ for the mixture (solid skeleton), and $\partial\Omega_{t} = \Gamma_{p}  \cup \Gamma_{f} $ for the fluid, with an outward pointing unit normal $\boldsymbol{n}$. The strong problem for the full mixture theory model is to find $\boldsymbol{\chi}(\boldsymbol{X},t)$,  $\boldsymbol{v}^{f}(\boldsymbol{x},t)$ and $p(\boldsymbol{x},t)$ such that
+\section{Summary of the general poroelasticity model}
+We consider $\Omega_{t}$ to be a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and for the purpose of defining boundary conditions, $\partial\Omega_{t}=\Gamma_D \cup \Gamma_N$ for displacement and stress boundary conditions and $\partial\Omega_{t}=\Gamma_P \cup \Gamma_F$ for pressure and flux boundary conditions, with outward pointing unit normal $\mathbf{n}$. The strong problem for the full mixture theory model is to find $\boldsymbol{\chi}(\boldsymbol{X},t)$,  $\boldsymbol{v}^{f}(\boldsymbol{x},t)$ and $p(\boldsymbol{x},t)$ such that
 \begin{comment}
 \begin{subequations}
 \begin{align}
 \hat\rho^{s} \boldsymbol{a}^{s}+\hat \rho^{f} \boldsymbol{a}^{f} = \nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t},\\
-\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I}) + p \nabla \phi - \phi \boldsymbol{\kappa}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f}  \;\;\; \mbox{in} \; \Omega_{t}, \\
+\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I}) + p \nabla \phi - \phi \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f}  \;\;\; \mbox{in} \; \Omega_{t}, \\
 \nabla \cdot((1-\phi) \boldsymbol{v}^{s}) + \nabla \cdot (\phi \boldsymbol{v}^f)=g \;\;\;\;\;\mbox{in}\;\Omega_{t},
 \\
 \boldsymbol{\chi} =\boldsymbol{X}+\boldsymbol{u}_{D}   \;\;\; \mbox{on}\; \Gamma_{d},
@@ -185,40 +193,40 @@ We define the boundary $\partial\Omega_{t} = \Gamma_{d}  \cup \Gamma_{t} $ for t
 \hat\rho^{s} \boldsymbol{a}^{s}+\hat \rho^{f} \boldsymbol{a}^{f} = \nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f} \;\;\; \mbox{in} \; \Omega_{t},
 \end{equation}
 \begin{multline}
-\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I}) \\+ p \nabla \phi - \phi \boldsymbol{\kappa}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f}  \;\;\; \mbox{in} \; \Omega_{t}, 
+\hat\rho^{f}\boldsymbol{a}^{f}=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I}) + p \nabla \phi - \phi \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f}  \;\;\; \mbox{in} \; \Omega_{t}, 
 \end{multline}
 \begin{equation}
 \nabla \cdot((1-\phi) \boldsymbol{v}^{s}) + \nabla \cdot (\phi \boldsymbol{v}^f)=g \;\;\;\;\;\mbox{in}\;\Omega_{t},
 \end{equation}
 \begin{equation}
-\boldsymbol{\chi} =\boldsymbol{X}+\boldsymbol{u}_{D}   \;\;\; \mbox{on}\; \Gamma_{d},
+\boldsymbol{\chi} =\boldsymbol{X}+\boldsymbol{u}_{D}   \;\;\; \mbox{on}\; \Gamma_{D},
 \end{equation}
 \begin{equation}
-(\boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I})\boldsymbol{n} = \boldsymbol{t}_{N}   \;\;\; \mbox{on}\; \Gamma_{t},
+(\boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I})\boldsymbol{n} = \boldsymbol{t}_{N}   \;\;\; \mbox{on}\; \Gamma_{N},
 \end{equation}
 \begin{equation}
-\boldsymbol{v}^{f}   = \boldsymbol{v}^{f}_{D}  \;\;\; \mbox{on}\; \Gamma_{f},
+\boldsymbol{v}^{f}   = \boldsymbol{v}^{f}_{D}  \;\;\; \mbox{on}\; \Gamma_{F},
 \end{equation}
 \begin{equation}
-\mu_{f} \phi \frac{\partial \boldsymbol{v}^{f}}{\partial \boldsymbol{n}}- \phi p\boldsymbol{n}=\hat{\boldsymbol{s}}  \;\;\; \mbox{on}\; \Gamma_{p},
+(\boldsymbol{\sigma}_{vis}- \phi p \boldsymbol{I})\boldsymbol{n}={\boldsymbol{s}_{P}}  \;\;\; \mbox{on}\; \Gamma_{P},
 \end{equation}
 \begin{equation}
 \boldsymbol{\chi}(0) = \boldsymbol{X} + \boldsymbol{u}^{0},  \;\;\; \boldsymbol{v}^{s}(0) = {\boldsymbol{v}^{s0}},  \;\;\;\boldsymbol{v}^{f}(0) = {\boldsymbol{v}^{f0}} \;\;\;  \mbox{in}\;\Omega_{0}.
 \end{equation}
 \label{eqn:full_mixture_model}
 \end{subequations}
-We have summarized all the variables and corresponding equations in table \ref{tab:recap_full_model}. 
+We have also summarized all the variables and corresponding equations in Table \ref{tab:recap_full_model}. 
 %
 %
 \begin{table}[H]
 \begin{center}
-\scalebox{0.8}{
+\scalebox{0.82}{
 \begin{tabular}{ l c  || c c }
 \hline
 \bf Unknown & \bf Notation     & \bf Equation &  \\
 \hline\bf{{Primary variables}}& &   \bf{{Primary equations (general model)}} & \\ \hline
 Motion of the solid &  $\boldsymbol\chi$  & $\hat\rho^{s} \boldsymbol{a}^{s}+\hat \rho^{f} \boldsymbol{a}^{f} = \nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f}$ & (\ref{mixture_motion_eulerian})  \\
-Fluid velocity &  $\boldsymbol{v}^{f}$  & $\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})$   &   \\ & & $  \;\;\;\; + p \nabla \phi - \phi \boldsymbol{\kappa}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f} $& (\ref{general_darcy}) \\
+Fluid velocity &  $\boldsymbol{v}^{f}$  & $\hat\rho^{f}\boldsymbol{a}^{f}  =\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I})   + p \nabla \phi - \phi \boldsymbol{k}^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f} $& (\ref{general_darcy}) \\
 Pressure of the fluid  &  $p$ & $ \nabla \cdot((1-\phi) \boldsymbol{v}^{s}) + \nabla \cdot (\phi \boldsymbol{v}^f)=g $ & (\ref{eqn:continuity}) \\
 \hline\bf{{Secondary variables}} & &   \bf{{Secondary equations}}  \\ \hline
 Deformation gradient tensor &  $\boldsymbol{F}$ & $ \boldsymbol{F}=\frac{\partial }{\partial \boldsymbol{X}}\boldsymbol\chi(\boldsymbol{X},t) $ & (\ref{eqn:deformation_gradient})\\
@@ -235,7 +243,7 @@ Eulerian fluid density &  $\hat{\rho_f}$ & $\hat\rho^{f}=\rho^{f}\phi$ & (\ref{e
 \hline\bf{{Constitutive variables}}& &   \bf{{Constitutive equations}} & \\ \hline
 Solid elastic stress tensor &  $\boldsymbol{\sigma}_{e}$ & $ \boldsymbol\sigma^{s}_{e}=\frac{1}{J}\boldsymbol{F}\cdot 2 \frac{\partial W(\boldsymbol\chi)}{\partial \boldsymbol{C}}  \cdot \boldsymbol{F}^{T}$ & (\ref{eqn:sigma_e}) \\
 Fluid viscous stress tensor &  $\boldsymbol{\sigma}_{vis}$ & $\boldsymbol\sigma^{f}_{vis}= \mu_{f} \phi ( \nabla \boldsymbol{v}_f + (\nabla \boldsymbol{v}_f)^{T} - \frac{2}{3}\nabla \cdot\boldsymbol{v}_f)$ & (\ref{eqn:sigma_vis}) \\
-Permeability tensor &  $\boldsymbol{\kappa}$& $ \boldsymbol{\kappa}=J^{-1} \boldsymbol{F} \boldsymbol{\kappa}_{0} \boldsymbol{F}^{T} $& (\ref{eqn:permeability_const})\\
+Permeability tensor &  $\boldsymbol{k}$& $ \boldsymbol{k}=J^{-1} \boldsymbol{F} \boldsymbol{k}_{0}(\boldsymbol{\chi})  \boldsymbol{F}^{T} $& (\ref{eqn:permeability_const})\\
 \hline
 \end{tabular}
 }
@@ -272,14 +280,14 @@ Fluid source term &  $g$
 \end{table}
 \end{comment}
 
-\subsection{Simplification and reformulation of the model}
+\section{Simplification and reformulation of the model}
 %To arrive at the simplified, quasi-static, fully saturated incompressible large deformation poroelasticity formulation, we will introduce some additional model assumptions% that will be justified later (see other document)
 %, and introduce the fluid flux variable given by
 %\begin{equation}
 %  \boldsymbol{z}=\phi(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}).
 %\label{eqn:relative_fluid}
 %\end{equation}
-To arrive at the quasi-static, fully saturated, incompressible three-field large deformation poroelasticity model, we will now ignore inertia forces (left hand side of (\ref{mixture_motion_eulerian}) and (\ref{general_darcy})), and ignore the viscous shear stress in the fluid ($\boldsymbol{\sigma}_{vis}^{f}$ in  (\ref{general_darcy})). After making these assumptions, and rewriting the equations in terms of the fluid flux, given by
+To arrive at the quasi-static, fully saturated, incompressible three-field large deformation poroelasticity model, we will now ignore inertia forces (left hand side of (\ref{mixture_motion_eulerian}) and (\ref{general_darcy})), and ignore the viscous shear stress in the fluid ($\boldsymbol{\sigma}_{vis}^{f}$ in  (\ref{general_darcy})). Justifications for making these modelling assumptions with respect to the proposed lung model will be given in section \ref{sec:assumptions}. After making these assumptions, and rewriting the equations in terms of the fluid flux, given by
 \begin{equation}
   \boldsymbol{z}=\phi(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}),
 \label{eqn:relative_fluid}
@@ -294,19 +302,19 @@ the resulting problem is to find $\boldsymbol{\chi}(\boldsymbol{X},t)$,  $\bolds
 \label{eqn:mixture_mass_reform}
 \nabla \cdot (\boldsymbol{v}^{s} + \boldsymbol{z} )  = g \;\;\;\;\;\mbox{in}\;\Omega_{t},
 \\
-\boldsymbol{\chi} =\boldsymbol{X}+\boldsymbol{u}_{D}   \;\;\; \mbox{on}\; \Gamma_{d},
+\boldsymbol{\chi} =\boldsymbol{X}+\boldsymbol{u}_{D}   \;\;\; \mbox{on}\; \Gamma_{D},
 \\
-(\boldsymbol{\sigma}_{e}-p\boldsymbol{I})\boldsymbol{n} = \boldsymbol{t}_{N}   \;\;\; \mbox{on}\; \Gamma_{t},
+(\boldsymbol{\sigma}_{e}-p\boldsymbol{I})\boldsymbol{n} = \boldsymbol{t}_{N}   \;\;\; \mbox{on}\; \Gamma_{N},
 \\
-\boldsymbol{z} \cdot \boldsymbol{n} = {q_{D}}   \;\;\; \mbox{on}\; \Gamma_{f},
+\boldsymbol{z} \cdot \boldsymbol{n} = {q_{D}}   \;\;\; \mbox{on}\; \Gamma_{F},
 \\
-p = p_{D}   \;\;\; \mbox{on}\; \Gamma_{p},
+p = p_{D}   \;\;\; \mbox{on}\; \Gamma_{P},
 \\
 \boldsymbol{\chi}(0) = \boldsymbol{X} + \boldsymbol{u}^{0},   \;\;\;  \mbox{in}\;\Omega_{0}.
 \end{align}
 \label{eqn:simple_mixture_model}
 \end{subequations}
-This is the large deformation we will consider from here onwards.
+This is the large deformation model we will consider from here onwards.
 %The exact same poroelastic model has already been used to model hydrated biological tissues, and finite element methods have been developed to solve these equations (\ref{eqn:simple_mixture_model})  \cite{levenston1998variationally}, \cite{ateshian2010finite}.
 
 
@@ -333,7 +341,7 @@ Porosity &  $\phi$ & $ \phi = 1-\frac{1-\phi_{0}}{J}$ &  (\ref{incomp_mixture}) 
 Mixture density &  $\rho$ & $\rho=\rho^{s}(1-\phi)+\rho^{f}\phi$ & (\ref{rho_mixture})  \\
 \hline\bf{{Constitutive variables}}& &   \bf{{Constitutive equations}} & \\ \hline
 Solid elastic stress tensor &  $\boldsymbol{\sigma}_{e}$ & $ \boldsymbol\sigma^{s}_{e}=\frac{1}{J}\boldsymbol{F}\cdot 2 \frac{\partial W(\boldsymbol\chi)}{\partial \boldsymbol{C}}  \cdot \boldsymbol{F}^{T}$ & (\ref{eqn:sigma_e}) \\
-Permeability tensor &  $\boldsymbol{\kappa}$& $\boldsymbol{\kappa}=k_{0} \left(J \frac{  \phi  }{\phi_{0}}\right)^{2/3}\boldsymbol{I} $& (\ref{eqn:permeability_const})\\
+Permeability tensor &  $\boldsymbol{k}$& $\boldsymbol{k}=k_{0} \left(J \frac{  \phi  }{\phi_{0}}\right)^{2/3}\boldsymbol{I} $& (\ref{eqn:permeability_const})\\
 \hline
 \end{tabular}
 }

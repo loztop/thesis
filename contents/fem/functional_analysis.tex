@@ -1,4 +1,4 @@
-\section{Functional analysis}
+\section{Norms and spaces}
 Let $\Omega$ be a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and $\partial\Omega$ be the associated boundary. The space of square integrable functions is then given by
 \begin{equation*}
 L^{2}(\Omega)  = \left\lbrace  u : \int_{\Omega} |u(x)|^{2} \mbox{d}x < \infty \right\rbrace,
@@ -11,14 +11,14 @@ This space is equipped with the inner product
 \begin{equation*}
 (u,v)  :=  \int_{\Omega} u(x)v(x) \mbox{d}x,
 \end{equation*}
-such that $\ltwonorm{u}=(u,v)^{1/2}$. Throughout this thesis we shall frequently refer to the Hilbertian Sobolev spaces
+such that $\ltwonorm{u}=(u,v)^{1/2}$. Throughout this thesis we shall frequently refer to the Sobolev spaces
 $H^{1}(\Omega)$ and $H^{2}(\Omega)$. The definitions of these are as follows:
 %
 \begin{equation*}
-H^{1}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \right\rbrace
+H^{1}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \right\rbrace,
 \end{equation*}
 \begin{equation*}
-H^{2}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \;  \frac{\partial^{2} u }{\partial x_{i} \partial x_{j}} \in L_{2}(\Omega), \; i,j=1,\ldots ,n \right\rbrace
+H^{2}(\Omega)  = \left\lbrace  u  \in L^{2}(\Omega): \frac{\partial u }{\partial x_{j}} \in L_{2}(\Omega) , \; j=1,\ldots ,n, \;  \frac{\partial^{2} u }{\partial x_{i} \partial x_{j}} \in L_{2}(\Omega), \; i,j=1,\ldots ,n \right\rbrace.
 \end{equation*}
 The corresponding norms are defined as
 \begin{equation*}
@@ -31,7 +31,31 @@ We also define the divergence space
 \begin{equation*}
 H_{div}(\Omega)=\left\lbrace \boldsymbol{v}\in L^{2}(\Omega): \nabla \cdot \boldsymbol{v} \in L^{2}(\Omega) \right\rbrace.
 \end{equation*}
-The set of functions of $L^{2}(\partial \Omega)$ which are traces of functions of $H^{1}(\Omega)$ constitutes a subspace of $L^{2}(\partial \Omega)$ denoted by $H^{1/2}(\partial \Omega)$. We will also briefly use linear and bounded functionals (dual spaces) of $H^{1},H^{1/2}$ and $H_{div}$, which will be denoted by $H^{-1},H^{-1/2}$ and $H_{div}^{-1}$, respectively. Finally we define the following continuous time-dependent norms 
+The set of functions of $L^{2}(\partial \Omega)$ which are traces of functions of $H^{1}(\Omega)$ onto the boundary, constitutes a subspace of $L^{2}(\partial \Omega)$ denoted by $H^{1/2}(\partial \Omega)$. We will also briefly use linear and bounded functionals (dual spaces) of $H^{1},H^{1/2}$ and $H_{div}$, which will be denoted by $H^{-1},H^{-1/2}$ and $H_{div}^{-1}$, respectively. 
+
+We define the following norms for continuous in time functions $u$ such that the norm $L^2(0,T; X)$ satisfies
+\begin{equation*}
+ || u ||_{L^2( X) }= \left( \int_0^T || u (s,\cdot) ||^2_X ~ds \right)^{1/2},
+\end{equation*}
+and the norm $L^{\infty}(0,T; X)$ satisfies
+\begin{equation*}
+ || u ||_{L^{\infty}(X) }= \sup\left\lbrace ||{u (s,\cdot)}||_{X} : s \in [0,T] \right\rbrace,
+\end{equation*}
+where $X$ is any given function space over $\Omega$. We partition $[0,T]$ into $N$ evenly spaced non-overlapping regions $(t_{n-1}, t_n]$, $n=1,2,\dots, N$. For any sufficiently smooth function $u(t,x)$ we define $u^n(x) = u(t_n,x)$. Let the discrete approximation for all time to be the piecewise constant in time functions $v(t,{\bf x})  := v^n({\bf x})$ for $t \in (t_{n-1}, t_n]$. For such piecewise constant in time functions, $v$, we define the norms
+\begin{equation*}
+ || v ||_{L^2( X) }= \left( \sum_{n=1}^N \Delta t   || v^n||^2_X \right)^{1/2},
+\end{equation*}
+and
+\begin{equation*}
+ || v ||_{L^{\infty}( X) }= \max\left\lbrace ||{v^n}||_{X}, n=1,2,...,N \right\rbrace.
+\end{equation*}
+
+
+
+
+\begin{comment}
+
+Finally we define the following continuous time-dependent norms 
 \begin{equation*}
    \doublenorm{v}_{L^{2}(L^{2})} = \left( \int_{0}^{T} \ltwonorm{v(\cdot,t_{n})}^{2} dt \right)^{1/2}            ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \end{equation*}
    \begin{equation*}
@@ -40,7 +64,10 @@ and their discrete in time counterparts
 \begin{equation*}
   \doublenorm{v}_{l^{2}(L^{2})} = \left( \sum_{n=0}^{N} \Delta t_{n} \ltwonorm{v(\cdot,t_{n})}^{2} \right)^{1/2}            ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \end{equation*}
    \begin{equation*}
-  \doublenorm{v}_{l^{\infty}(L^{2})} =  \max\left\lbrace \ltwonorm{v(\cdot,t_{n})} : t_{n} \in [0,t_{1},t_{2},...,T] \right\rbrace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \end{equation*} Definitions for slightly different combinations of temporal and spatial norms such as $\doublenorm{v}_{H^{1}(L^{2})}$ are straightforward adaptations of the above.Additional shorthand notation we will be introduced throughout the thesis as is needed.
+  \doublenorm{v}_{l^{\infty}(L^{2})} =  \max\left\lbrace \ltwonorm{v(\cdot,t_{n})} : t_{n} \in [0,t_{1},t_{2},...,T] \right\rbrace.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \end{equation*} Definitions for slightly different combinations of temporal and spatial norms such as $\doublenorm{v}_{H^{1}(L^{2})}$ are straightforward adaptations of the above. Additional shorthand notation will be introduced throughout the thesis as is needed.
+
+\end{comment}
+
 
 
 

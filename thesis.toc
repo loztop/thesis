@@ -10,26 +10,109 @@
 \contentsline {subsection}{\numberline {2.1.4}The diseased lung}{12}
 \contentsline {section}{\numberline {2.2}Computational lung models}{14}
 \contentsline {section}{\numberline {2.3}Poroelastic models for lung parenchyma and other biological tissue}{15}
-\contentsline {section}{\numberline {2.4}Finite element methods for poroelasticity}{16}
-\contentsline {subsection}{\numberline {2.4.1}Linear three-field discretisations}{17}
-\contentsline {subsection}{\numberline {2.4.2}Discretisations valid in large deformations}{19}
+\contentsline {section}{\numberline {2.4}Finite element methods for poroelasticity}{17}
+\contentsline {subsection}{\numberline {2.4.1}Linear three-field discretisations}{18}
+\contentsline {subsection}{\numberline {2.4.2}Discretisations valid in large deformations}{20}
 \contentsline {chapter}{\numberline {3}Poroelasticity theory}{21}
 \contentsline {section}{\numberline {3.1}Kinematics}{22}
-\contentsline {subsection}{\numberline {3.1.1}Volume fractions}{26}
-\contentsline {subsection}{\numberline {3.1.2}Balance of mass}{28}
-\contentsline {subsection}{\numberline {3.1.3}Balance of momentum}{29}
-\contentsline {subsection}{\numberline {3.1.4}Constitutive relations}{30}
-\contentsline {subsection}{\numberline {3.1.5}Momentum balance of the mixture}{32}
-\contentsline {subsection}{\numberline {3.1.6}Momentum balance of the fluid}{32}
-\contentsline {subsection}{\numberline {3.1.7}Summary of the general poroelasticity model}{32}
-\contentsline {subsection}{\numberline {3.1.8}Simplification and reformulation of the model}{35}
-\contentsline {section}{\numberline {3.2}Linear poroelasticity}{36}
-\contentsline {chapter}{\numberline {4}Conclusion}{39}
-\contentsline {section}{\numberline {4.1}Review and remarks}{39}
-\contentsline {section}{\numberline {4.2}Future work}{41}
-\contentsline {subsection}{\numberline {4.2.1}Numerics}{41}
-\contentsline {subsection}{\numberline {4.2.2}Lung modelling}{42}
-\contentsline {chapter}{\numberline {A}Appendix}{44}
-\contentsline {section}{\numberline {A.1}Tangent modulus}{44}
-\contentsline {section}{\numberline {A.2}Matrix voigt notation}{45}
-\contentsline {subsection}{\numberline {A.2.1}Neo-Hookean example}{46}
+\contentsline {section}{\numberline {3.2}Volume fractions}{26}
+\contentsline {section}{\numberline {3.3}Conservation of mass}{28}
+\contentsline {section}{\numberline {3.4}Conservation of momentum}{29}
+\contentsline {section}{\numberline {3.5}Constitutive relations}{30}
+\contentsline {section}{\numberline {3.6}Summary of the general poroelasticity model}{32}
+\contentsline {section}{\numberline {3.7}Simplification and reformulation of the model}{35}
+\contentsline {section}{\numberline {3.8}Linear poroelasticity}{36}
+\contentsline {chapter}{\numberline {4}Finite element method}{39}
+\contentsline {section}{\numberline {4.1}Introduction}{39}
+\contentsline {section}{\numberline {4.2}Norms and spaces}{40}
+\contentsline {section}{\numberline {4.3}Model problem}{42}
+\contentsline {subsection}{\numberline {4.3.1}Weak formulation}{43}
+\contentsline {subsection}{\numberline {4.3.2}Time discretisation}{44}
+\contentsline {subsection}{\numberline {4.3.3}Finite element discretisation}{45}
+\contentsline {section}{\numberline {4.4}Mixed methods}{48}
+\contentsline {chapter}{\numberline {5}Stabilized low-order finite element approximation for linear three-field poroelasticity}{53}
+\contentsline {section}{\numberline {5.1}Introduction}{53}
+\contentsline {section}{\numberline {5.2}The poroelastic model}{55}
+\contentsline {subsection}{\numberline {5.2.1}Governing equations}{55}
+\contentsline {subsection}{\numberline {5.2.2}Weak formulation}{56}
+\contentsline {subsection}{\numberline {5.2.3}Fully-discrete model}{58}
+\contentsline {section}{\numberline {5.3}Norms and inequalities}{60}
+\contentsline {subsection}{\numberline {5.3.1}Useful inequalities}{60}
+\contentsline {subsection}{\numberline {5.3.2}J-norm}{61}
+\contentsline {subsection}{\numberline {5.3.3}Approximation results}{62}
+\contentsline {subsection}{\numberline {5.3.4}Triple-norms}{64}
+\contentsline {section}{\numberline {5.4}Existence and uniqueness of solutions to the fully-discrete model}{64}
+\contentsline {section}{\numberline {5.5}Energy estimate for the fully-discrete model}{71}
+\contentsline {subsection}{\numberline {5.5.1}Bound on the displacement, fluid flux and pressure}{71}
+\contentsline {subsection}{\numberline {5.5.2}Bound on the divergence of the fluid flux}{75}
+\contentsline {subsection}{\numberline {5.5.3}The energy estimate}{80}
+\contentsline {section}{\numberline {5.6}A-priori error analysis}{80}
+\contentsline {subsection}{\numberline {5.6.1}Galerkin orthogonality}{82}
+\contentsline {subsection}{\numberline {5.6.2}Auxiliary error estimates}{83}
+\contentsline {subsection}{\numberline {5.6.3}The a priori error estimate}{88}
+\contentsline {section}{\numberline {5.7}Implementation}{89}
+\contentsline {subsection}{\numberline {5.7.1}Algorithm to assemble the stabilization matrix}{90}
+\contentsline {section}{\numberline {5.8}Numerical Results}{91}
+\contentsline {subsection}{\numberline {5.8.1}2D test problem}{92}
+\contentsline {subsubsection}{Choice of $\delta $}{92}
+\contentsline {subsubsection}{2D convergence study}{93}
+\contentsline {subsubsection}{Alternative stabilization techniques}{95}
+\contentsline {subsection}{\numberline {5.8.2}3D test problem}{96}
+\contentsline {subsection}{\numberline {5.8.3}2D cantilever bracket problem}{98}
+\contentsline {subsection}{\numberline {5.8.4}3D unconfined compression stress relaxation}{99}
+\contentsline {section}{\numberline {5.9}Conclusion}{102}
+\contentsline {chapter}{\numberline {6}A stabilized finite element method for nonlinear poroelasticity valid in large deformations}{104}
+\contentsline {section}{\numberline {6.1}Introduction}{104}
+\contentsline {section}{\numberline {6.2}The model}{105}
+\contentsline {section}{\numberline {6.3}The stabilized finite element method}{106}
+\contentsline {subsection}{\numberline {6.3.1}Weak formulation}{106}
+\contentsline {subsection}{\numberline {6.3.2}The fully discrete model}{107}
+\contentsline {subsection}{\numberline {6.3.3}Newton's Method}{108}
+\contentsline {subsubsection}{Linearization}{109}
+\contentsline {section}{\numberline {6.4}Implementation details}{112}
+\contentsline {subsection}{\numberline {6.4.1}Newton algorithm}{112}
+\contentsline {subsection}{\numberline {6.4.2}No-flux boundary condition}{114}
+\contentsline {section}{\numberline {6.5}Numerical results}{115}
+\contentsline {subsection}{\numberline {6.5.1}3D unconfined compression stress relaxation}{116}
+\contentsline {subsection}{\numberline {6.5.2}Terzaghi's problem}{118}
+\contentsline {subsection}{\numberline {6.5.3}Swelling test}{122}
+\contentsline {section}{\numberline {6.6}Conclusion}{124}
+\contentsline {chapter}{\numberline {7}A poroelastic-fluid-network model of the lung}{126}
+\contentsline {section}{\numberline {7.1}Introduction}{126}
+\contentsline {section}{\numberline {7.2}Lung model assumptions}{127}
+\contentsline {subsection}{\numberline {7.2.1}Approximating lung parenchyma using a poroelastic medium}{127}
+\contentsline {subsection}{\numberline {7.2.2}Approximating the airways using a fluid network model}{130}
+\contentsline {section}{\numberline {7.3}Mathematical model}{130}
+\contentsline {subsection}{\numberline {7.3.1}A poroelastic model for lung parenchyma}{130}
+\contentsline {subsubsection}{Constitutive laws.}{130}
+\contentsline {subsection}{\numberline {7.3.2}A network flow model for the airway tree}{131}
+\contentsline {subsubsection}{Coupling the fluid network to the poroelastic model.}{132}
+\contentsline {subsection}{\numberline {7.3.3}Summary of the coupled lung model.}{135}
+\contentsline {section}{\numberline {7.4}Implementation}{136}
+\contentsline {subsection}{\numberline {7.4.1}Discrete coupling of the fluid network to the poroelastic model}{137}
+\contentsline {subsection}{\numberline {7.4.2}Finite element matrices}{138}
+\contentsline {section}{\numberline {7.5}Model generation}{140}
+\contentsline {subsection}{\numberline {7.5.1}Mesh generation}{140}
+\contentsline {subsection}{\numberline {7.5.2}Reference state, boundary conditions and initial conditions}{140}
+\contentsline {subsection}{\numberline {7.5.3}Simulation parameters}{142}
+\contentsline {section}{\numberline {7.6}Model exploration}{143}
+\contentsline {subsection}{\numberline {7.6.1}Normal breathing}{143}
+\contentsline {subsubsection}{Lung volume, flow and pressure drop}{144}
+\contentsline {subsubsection}{Pathway resistance}{145}
+\contentsline {subsubsection}{Airway tree-tissue coupling}{145}
+\contentsline {subsection}{\numberline {7.6.2}Breathing with airway constriction}{147}
+\contentsline {subsection}{\numberline {7.6.3}Breathing with locally weakened tissue}{151}
+\contentsline {subsection}{\numberline {7.6.4}Dynamic hysteresis}{152}
+\contentsline {section}{\numberline {7.7}Discussion}{155}
+\contentsline {subsection}{\numberline {7.7.1}Contributors of airway resistance and tissue mechanics to lung function}{156}
+\contentsline {subsection}{\numberline {7.7.2}Limitations and future work}{157}
+\contentsline {section}{\numberline {7.8}Conclusion}{160}
+\contentsline {chapter}{\numberline {8}Conclusion}{161}
+\contentsline {section}{\numberline {8.1}Review and remarks}{161}
+\contentsline {section}{\numberline {8.2}Future work}{163}
+\contentsline {subsection}{\numberline {8.2.1}Numerics}{163}
+\contentsline {subsection}{\numberline {8.2.2}Applications}{164}
+\contentsline {chapter}{\numberline {A}Appendix}{167}
+\contentsline {section}{\numberline {A.1}Spatial tangent modulus}{167}
+\contentsline {section}{\numberline {A.2}Matrix Voigt notation}{168}
+\contentsline {section}{\numberline {A.3}Neo-Hookean strain energy}{169}

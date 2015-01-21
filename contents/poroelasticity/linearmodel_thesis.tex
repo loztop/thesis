@@ -1,4 +1,4 @@
-We will now now assume small deformations to yield a linear model of poroelastcicty. This model is often refered to Biot's model in the geomechanics community and contains some additional terms. We will introduce the Biot model here, for use with a 2D cantilever bracket problem later tested in section \ref{section:overcoming}, and to highlight that any subsequent theory develop in later chapters can be extended to the full Biot model. The governing equations of the Biot model, with displacement $\dispcont$, fluid flux $\fluxcont$, and pressure $\pcont$ as primary variables are summarized below:  
+To allow us to perform rigorous analysis of the proposed finite element scheme presented in Chapter \ref{chap:linear_poro}, we will now assume small deformations to yield a linear model of poroelasticity. This model is often referred to as the `Biot model' in the geomechanics community and contains some additional terms. We will introduce the full Biot model here for use with a 2D cantilever bracket problem later tested in section \ref{section:overcoming}, and to highlight that any subsequent theory developed in later chapters can be extended to the full Biot model. The governing equations of the Biot model, with displacement $\dispcont$, fluid flux $\fluxcont$, and pressure $\pcont$ as primary variables are summarized below:  
 \begin{subequations}
 \begin{align}
 \label{eqn:strong_mixture_momentum}
@@ -14,11 +14,11 @@ p = p_{D}   \;\;\; \mbox{on}\; \Gamma_{P} \times (0,T),
 \\
 \mathbf{z}\cdot \mathbf{n} = {q_{D}}   \;\;\; \mbox{on}\; \Gamma_{F} \times (0,T),
 \\
-\mathbf{u}(0,\cdot) = \mathbf{u}^{0},  \;\;\; p(0) = p^{0}, \;\;\; \mbox{in}\; \Omega,
+\mathbf{u}(0,\cdot) = \mathbf{u}^{0},  \;\;\; p(0) = p^{0}, \;\;\; \mbox{in}\; \Omega.
 \end{align}
 \label{eqn:strong_cont_system_biot}
 \end{subequations}
-where $\mathbf{\sigma}$ is the total stress tensor given by $\mathbf{\sigma}=\lambda \mbox{tr}(\mathbf{\epsilon}(\dispcont))\identity + 2\mu_{s}\mathbf{\epsilon}(\dispcont)-\alpha p\mathbf{I}$, with the linear strain tensor defined as $\mathbf{\epsilon}(\dispcont)=\frac{1}{2}\left(\nabla \dispcont + \left( \nabla \dispcont \right)^{T} \right)$, $g$ is the fluid source term, $\mathbf{f}$ is the body force on the mixture, and $\mathbf{b}$ is the body force on the fluid.  Here $\Omega$ is a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and for the purpose of defining boundary conditions, $\partial\Omega=\Gamma_D+\Gamma_N$ for displacement and stress boundary conditions and  $\partial\Omega=\Gamma_P+\Gamma_F$ for pressure and flux boundary conditions, with outward pointing unit normal $\mathbf{n}$. The parameters along with a description are given in Table \ref{tab:parameters}.
+Here $\mathbf{\sigma}$ is the total stress tensor given by $\mathbf{\sigma}=\lambda \mbox{tr}(\mathbf{\epsilon}(\dispcont))\identity + 2\mu_{s}\mathbf{\epsilon}(\dispcont)-\alpha p\mathbf{I}$, with the linear strain tensor defined as $\mathbf{\epsilon}(\dispcont)=\frac{1}{2}\left(\nabla \dispcont + \left( \nabla \dispcont \right)^{T} \right)$, $g$ is the fluid source term, $\mathbf{f}$ is the body force on the mixture, and $\mathbf{b}$ is the body force on the fluid.  Here $\Omega$ is a bounded domain in $\mathbb{R}^{2}$ or $\mathbb{R}^{3}$, and for the purpose of defining boundary conditions, $\partial\Omega=\Gamma_D+\Gamma_N$ for displacement and stress boundary conditions and  $\partial\Omega=\Gamma_P+\Gamma_F$ for pressure and flux boundary conditions, with outward pointing unit normal $\mathbf{n}$. The parameters along with a description are given in Table \ref{tab:parameters}.
 \begin{table}[H]
 \begin{center}
 \scalebox{0.9}{
@@ -39,7 +39,7 @@ Constrained specific storage coefficient &  $c_{0}$.
 \caption{Poroelasticity parameters.} 
 \label{tab:parameters}
 \end{table}
-\noindent We have also set $\perm= \mu_{f}^{-1}\mathbf{k}$, where $\mu_{f}$ and $\mathbf{k}$ are the fluid viscosity and the permeability tensor, respectively. A derivation and more detailed explanation of these equations can be found in \citet{phillips2007coupling} and \citet{showalter2000diffusion}. In this work we will mainly consider a simplification of the full Biot model (\ref{eqn:strong_cont_system_biot}), by setting $\alpha=1$ and $c_{0}=0$. This yields the following fully saturated and incompressible model: 
+\noindent A derivation and more detailed explanation of these equations can be found in \citet{phillips2007coupling} and \citet{showalter2000diffusion}. In this work we will mainly consider a simplification of the full Biot model (\ref{eqn:strong_cont_system_biot}), by setting $\alpha=1$ and $c_{0}=0$. This yields a fully incompressible poroelastic model that retains all the numerical difficulties associated with approximating the original system of equations (\ref{eqn:strong_cont_system_biot}), see Remark \ref{remark:extension}. The linear fully saturated and incompressible poroelastic model is given by: 
 \begin{subequations}
 \begin{align}
 \label{eqn:strong_mixture_momentum_simple}
@@ -57,7 +57,14 @@ p = p_{D}   \;\;\; \mbox{on}\; \Gamma_{P}\times (0,T),
 \\
 \mathbf{u}(0,\cdot) = \mathbf{u}^{0}  \;\;\;  \mbox{in}\;\Omega.
 \end{align}
-\label{strong_cont_system}
+\label{eqn:linear_simple_system}
 \end{subequations}
 
-\noindent This model is the small deformation version of the simplified and reformulated large deformation poroelasticity model (\ref{eqn:simple_mixture_model}). The extension of the theoretical results presented in Chapter \ref{chap:linear_poro} to the full Biot equations (\ref{eqn:strong_cont_system_biot}), with $\alpha \in \mathbb{R}_{> 0} \text{ and } c_{0}\in \mathbb{R}_{> 0}$ is straightforward. In the analysis, the constant $\alpha$ would just get absorbed by a general constant $C$. When $c_{0}>0$, an additional pressure term is introduced into the mass conservation equation. Since this term is coercive, it only improves the stability of the system.
+\noindent This model is the small deformation version of the simplified and reformulated large deformation poroelasticity model (\ref{eqn:simple_mixture_model}), and will be the small deformation model considered from here onwards.
+
+
+\begin{remark}
+The extension of the theoretical results presented in Chapter \ref{chap:linear_poro} from (\ref{eqn:linear_simple_system}) to the full Biot equations (\ref{eqn:strong_cont_system_biot}), with $\alpha \in \mathbb{R}_{> 0} \text{ and } c_{0}\in \mathbb{R}_{> 0}$ is straightforward. In the analysis in Chapter \ref{chap:linear_poro}, the constant $\alpha$ would just get absorbed by a general constant $C$. When $c_{0}>0$, an additional pressure term is introduced into the mass conservation equation. Since this term is coercive, it only improves the stability of the system.
+\label{remark:extension}
+\end{remark}
+

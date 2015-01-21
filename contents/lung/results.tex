@@ -1,0 +1,214 @@
+\section{Model exploration}
+\label{sec:numerical_results}
+We will now explore the behavior of the proposed model using a series of simulations to investigate the coupling between the airways and the tissue, hysteresis effects and how mass is conserved within the tissue.
+
+In the subsequent analysis the total and elastic stress is calculated as $ \sqrt{\lambda_{1}^{2} + \lambda_{2}^{2}+\lambda_{3}^{2}} $, where $\lambda_{1},\lambda_{2},\lambda_{3}$ are the three eigenvalues of the stress tensor, respectively. We define the relative Jacobian, denoted by $J_{V}$, as a measure for ventilation, which is calculated to be the volume ratio between the current state and FRC, i.e., $J_V = J/J_{FRC}$, and is a direct measure of tissue expansion. By running simulations over many breaths we have found that differences between the second breath and subsequent breaths were negligible, and therefore only results from the second breath, $t=4s$ to $t=8s$ are presented. The sagital slice shown in Figure \ref{fig:slice_geometry} gives a good representation of the general dynamics within the tissue. Unless otherwise stated, all subsequent figures that do not show time courses are taken at $t=5.8s$ just before  peak inhalation of the second time breath the simulation.
+
+
+%Since accelarations of the skeleton are ignored in our model, the differences between the results during the second breath and subsequent breaths were negligible, and therefore only results from the second breath, $t=4s$ to $t=8s$ are presented.
+
+\begin{figure}[h]
+  \centering
+    \subfloat[]{\label{fig:slice_geometry}\includegraphics[width=0.5\textwidth]{figures/slice_out_shrink.pdf}}
+  \subfloat[]{\label{fig:ball_geometry}\includegraphics[width=0.5\textwidth]{figures/disease_out_shrink.pdf}}
+\caption{(a) The blue sagital slice indicates the position of subsequent slices used for the data analysis of the tissue. (b) The red ball represents the structurally modified region, used to prescribe airway constriction and tissue weakening.}
+\end{figure}
+%
+\subsection{Normal breathing}
+To simulate tidal breathing we apply the boundary conditions and simulation parameters previously discussed in sections \ref{sec:ref_state_bcs} and \ref{sec:sim_params}, respectively.
+
+\subsubsection{Lung volume, flow and pressure drop}
+Figure \ref{fig:trachea} details the lung tidal volume, flow rate and pressure drop obtained from simulations of tidal breathing. Due to the incompressibility of the poroelastic medium and the fixed nature of the airway network, the lung tidal volume (Figure \ref{fig:volume_trachea}) and flow rate (Figure \ref{fig:flowrate_trachea}) follow a sinusoidal pattern that matches the form of the deformation boundary condition prescribed by equation (\ref{eqn:deform_bc}). The mean pressure drop of the airways, is shown in Figure \ref{fig:pressure_trachea}, and agrees with previous simulation studies on full airway trees \cite{ismail2013coupled,Swan2012}.
+%
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:volume_trachea}\includegraphics[width=0.33\textwidth]{figures/volume_tracheaz-crop.pdf}}
+  \subfloat[]{\label{fig:flowrate_trachea}\includegraphics[width=0.32\textwidth]{figures/flowrate_tracheaz-crop.pdf}}
+   \subfloat[]{\label{fig:pressure_trachea}\includegraphics[width=0.33\textwidth]{figures/pressure_tracheaz-crop.pdf}}
+\caption{Simulated natural tidal breathing: (a) lung tidal volume (volume increase from FRC), (b) flow rate at the inlet, (c) mean pressure drop from the inlet to the most distal branches.}
+\label{fig:trachea}
+\end{figure}
+%
+\subsubsection{Pathway resistance}
+The pathway resistance (Poiseuille flow resistance) from the inlet (right bronchus) to each terminal airway is shown in Figure \ref{fig:H_AR} for the whole tree. In Figure \ref{fig:H_TR} we show the pathway resistance of the terminal airways mapped onto the tissue.
+\subsubsection{Airway tree-tissue coupling}
+In order to quantify the contribution of airway resistance to tissue expansion (ventilation), measured by $J_{V}$, the correlations between pathway resistance in the tissue and $J_V$ are plotted for each element in Figure \ref{fig:ventilation_scatter}. There is a clear correlation between pathway resistance and tissue expansion, as is expected since the elastic coefficients are constant throughout the lung model. The Pearson correlation coefficients is $-0.55$, hence ventilation decreases as pathway resistance increases, with a p-value $<0.0001$. Figure \ref{fig:pressure_scatter} shows there is also a strong correlation between the pathway resistance and pressure in the poroelastic tissue. Here the Pearson correlation coefficients is also $-0.55$, and pressure decreases (becomes more negative) with pathway resistance, with a p-value $<0.0001$. Note that for a very few regions that are coupled to terminal branches with a low pathway resistance, positive pressures are possible. This results in a pressure gradient that pushes fluid from these well ventilated regions to neighbouring less ventilated regions (collateral ventilation).
+%
+\begin{figure}[h]
+  \centering
+\subfloat[]{\label{fig:H_AR}\includegraphics[width=0.5\textwidth]{figures/pathway_res_HD.png}}
+  \subfloat[]{\label{fig:H_TR}\raisebox{4.3ex}{\includegraphics[width=0.5\textwidth]{figures/pathway_res_tissue.png}}}
+  \label{fig:acinar_units}
+\caption{(a) Pathway resistance $(\mbox{Pa}\,\mbox{mm}^{-3}\mbox{s})$ from the inlet to the terminal branches in the airway tree. (b) Pathway resistance mapped onto a slice of tissue. The deformation of both the tree and the tissue in this figure correspond to the reference configuration. }
+\end{figure}
+%
+\begin{figure}[h]
+  \centering\
+  \subfloat[]{\label{fig:ventilation_scatter}\includegraphics[width=0.5\textwidth]{figures/vent_res_scatter-crop.pdf}}
+  \subfloat[]{\label{fig:pressure_scatter}\includegraphics[width=0.5\textwidth]{figures/pressure_res_scatter-crop.pdf}}
+\caption{(a) Correlation between tissue expansion (ventilation) and resistance of the pathways from the inlet to the terminal branch. (b) Correlation between pressure in the poroelastic medium (alveolar pressure) and pathway resistance.}
+\label{fig:scatter}
+\end{figure}
+%
+The distribution of pressure in the airway tree is shown in Figure \ref{fig:H_TP} and the pressure inside the poroelastic tissue is shown in Figure \ref{fig:H_P}.  Figure \ref{fig:H_surfP} shows the pressure on the lung surface. The patchy pressure field is well approximated by the piecewise constant pressure elements employed by the finite element method used to solve the poroelastic equations. Figure \ref{fig:H_J} shows the distribution of tissue expansion. Despite the heterogeneity in the airway tree the variations in tissue expansion are quite small, since the elastic coefficients are constant throughout the computational domain.
+%
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:H_TP}\includegraphics[width=0.5\textwidth]{figures/T_H_h.pdf}}
+  \subfloat[]{\label{fig:H_P}\includegraphics[width=0.5\textwidth]{figures/P_H_low.pdf}}\\
+  \subfloat[]{\label{fig:H_surfP}\includegraphics[width=0.5\textwidth]{figures/P_H_surf_low.pdf}}
+  \subfloat[]{\label{fig:H_J}\includegraphics[width=0.43\textwidth]{figures/Jv_H_low.pdf}}
+  \label{fig:acinar_units}
+\caption{(a) Pressure in the airway tree. (b) Sagital slice showing pressure in the tissue using a linear interpolation. (c) Pressure on the lung surface.  (d) Sagital slice showing tissue expansion from FRC.}
+\end{figure}
+%
+
+
+%\subsubsection{Hysteresis}
+%Figure \ref{fig:recoil_trachea} shows the change in elastic recoil (total stress) with volume throughout the breathing cycle for three different breathing rates. This curve is also known as a dynamic pressure-volume (PV) curve. The increase of hysteresis in the PV curve and its shift to the right as the breathing rate increases agrees with findings in the literature \cite{rittner2005curves,harris2005pressure}. In our model, this shift and widening of the curve can be attributed to the resistance in the airway tree which causes a larger and more heterogeneous pressure drop and flow distribution within the airways at increased flow rates. For tissue regions coupled to airways with high resistance this results in delayed, out of phase, alveolar recruitment (tissue expansion). This delayed filling of tissue during inspiration and emptying during expiration causes delayed pressure gradients that give rise to the hysteresis seen in Figure \ref{fig:recoil_trachea}. In the literature, hysteresis associated with dynamic pressure volume (PV) curves is mostly hypothesized to be caused by flow-dependent resistances, pendelluft effects, chest wall rearrangement, and recruitment and derecruitment of lung
+%units \cite{albaiceta2008static,ranieri1994volume,harris2005pressure}.
+%%
+%\begin{figure}[h]
+%  \centering
+%  {\includegraphics[width=0.5\textwidth]{figures/recoil_tracheaz-crop.pdf}}
+%\caption{Pressure-volume curve: mean elastic recoil (total stress) against lung tidal volume during one full breathing cycle, for three different breathing rates. The arrows indicate the direction of time during the breathing cycle.}
+%\label{fig:recoil_trachea}
+%\end{figure}
+%
+
+
+
+\subsection{Breathing with airway constriction}
+\label{sec:constriction}
+We now simulate localized constriction of the airways by reducing the radii of the lower airways (with radius less than $4\mbox{mm}$) within a ball near the right middle lobe. This region is represented by a red ball in Figure \ref{fig:ball_geometry}. We reduce the radius of the aforementioned lower airways by $0\%,40\%,50\%,60\%$ and $65\%$. This corresponds to a mean pathway resistance within the ball of $0.0507,0.112,0.188,0.399$ and $0.651\;\mbox{Pa}\,\mbox{mm}^{-3} \mbox{s}$, respectively. Figure \ref{fig:constrict_errorbars} shows the changes in variables of physiological interest within the ball as the pathway resistance increases. The amount of tissue expansion during inspiration decreases as the airways become constricted (airway radius decreases and pathway resistance increases), as shown in Figure \ref{fig:J_Tball}. This is due to the reduced amount of flow in these airways. Further, the standard deviation increases because the pathway resistance of each branch increases by a different amount, depending on its original length and radius. Long and narrow branches will be affected most by the constriction. The pressure decreases with increasing pathway resistance as show in Figure \ref{fig:p_Tball}, since a larger pressure drop is needed to force the air down the constricted branches. Figure \ref{fig:sige_Tball} shows the elastic stress in the tissue decreases as pathway resistance increases due to the decrease in tissue deformation (strain). However, as seen in Figure \ref{fig:C_Se}, a large elastic stress appears near the boundary of the constricted region where the tissue is expanded by the surrounding tissue..
+%
+
+
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:J_Tball}\includegraphics[width=0.316\textwidth]{figures/j_Air_ball-crop.pdf}}  \hspace*{0.1cm}
+  \subfloat[]{\label{fig:p_Tball}\includegraphics[width=0.32\textwidth]{figures/p_Air_ball-crop.pdf}} \hspace*{0.1cm}
+  \subfloat[]{\label{fig:sige_Tball}\includegraphics[width=0.32\textwidth]{figures/sige_Air_ball-crop.pdf}}
+\caption{(a) Mean and standard deviations of the relative Jacobian from FRC, (b) pressure in the tissue and (c) elastic stress are plotted against increasing pathway resistance within the structurally modified region.}
+  \label{fig:constrict_errorbars}
+\end{figure}
+%
+%\begin{figure}[h]
+%  \centering
+%  \subfloat[]{\label{fig:J_Tball}\includegraphics[width=0.316\textwidth]{figures/j_Air_ball-crop.pdf}}  \hspace*{0.1cm}
+%  \subfloat[]{\label{fig:p_Tball}\includegraphics[width=0.32\textwidth]{figures/p_Air_ball-crop.pdf}} \hspace*{0.1cm}
+%  \subfloat[]{\label{fig:sige_Tball}\includegraphics[width=0.32\textwidth]{figures/sige_Air_ball-crop.pdf}}\\
+%  \subfloat[]{\label{fig:J_Cball}\includegraphics[width=0.313\textwidth]{figures/j_C_ball-crop.pdf}}  \hspace*{0.1cm}
+%  \subfloat[]{\label{fig:p_Cball}\includegraphics[width=0.33\textwidth]{figures/p_C_ball-crop.pdf}} \hspace*{0.1cm}
+%  \subfloat[]{\label{fig:sige_Cball}\includegraphics[width=0.322\textwidth]{figures/sige_C_ball-crop.pdf}}
+%\caption{(a) Mean and standard deviations of the relative Jacobian from FRC, (b) pressure in the tissue and (c) elastic stress are plotted against increasing pathway resistance and Young's modulus (d,e,f) within the structurally modified region.}
+%  \label{fig:constrict_errorbars}
+%\end{figure}
+%
+The simulations results shown in Figure \ref{fig:constriction_slices} were performed with $65\%$ airway constriction in the lower airways, applied within the structurally modified region. The volume conserving property (mass conservation) of the method is illustrated in Figure \ref{fig:C_J} where the tissue surrounding the constricted area is expanding to compensate for the reduction of tissue expansion due to the constriction within the structurally modified region. Figure \ref{fig:C_P} shows an increase in pressure near the boundary of this region. This facilitates a pressure gradient that allows for air to flow into the constricted region (collateral ventilation) to partially compensate for the reduced amount of ventilation, as is shown in Figure \ref{fig:C_Fz}. The magnitude of the maximum flow within the tissue is $8 \times 10^{-4} \;\mbox{m}\mbox{s}^{-1}$, this is quite small and is due to the low permeability applied homogeneously within the model.
+%
+%
+\label{sec:constriction}
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:C_P}\hspace*{-0.5cm}\includegraphics[width=0.5\textwidth]{figures/P_C_low.pdf}}
+  \subfloat[]{\label{fig:C_J}\includegraphics[width=0.43\textwidth]{figures/Jv_C_low.pdf}}  \\
+   \subfloat[]{\label{fig:C_Se}\includegraphics[width=0.53\textwidth]{figures/S_C_low.pdf}}
+    \subfloat[]{\label{fig:C_Fz}\hspace*{0.5cm}\includegraphics[width=0.3\textwidth]{figures/flux.pdf}\hspace*{1.1cm}}
+\caption{(a) Sagital slices showing the elastic stress, (b) Relative Jacobian, (c) pressure and (d) direction of the fluid flux near the structurally modified (constricted) region.}
+  \label{fig:constriction_slices}
+\end{figure}
+%
+%
+\subsection{Breathing with locally weakened tissue}
+\label{sec:weakening}
+%
+We now simulate localized weakening of the tissue by reducing the Young's modulus of the tissue within the structurally modified region represented by the red ball in Figure \ref{fig:ball_geometry}. We reduce the Young's modulus by $0\%,50\%,75\%$ and $90\%$. This corresponds to a modified Young's modulus of $730,365,182.5$ and $73\;\mbox{Pa}$, respectively.
+%
+Figures \ref{fig:J_Cball}-\ref{fig:sige_Cball} plot $J_V$, the pressure and the elastic stress in within the modified region. As expected the local expansion increases as the tissue weakens, and the elastic stress decreases. Note that in all cases the range (heterogeneity) of local ventilation,  pressure and elastic stress within the modified region increases dramatically as the stiffness of the modified region decreases.
+%
+
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:J_Cball}\includegraphics[width=0.313\textwidth]{figures/j_C_ball-crop.pdf}}  \hspace*{0.1cm}
+  \subfloat[]{\label{fig:p_Cball}\includegraphics[width=0.33\textwidth]{figures/p_C_ball-crop.pdf}} \hspace*{0.1cm}
+  \subfloat[]{\label{fig:sige_Cball}\includegraphics[width=0.322\textwidth]{figures/sige_C_ball-crop.pdf}}
+\caption{(a) Mean and standard deviations of the relative Jacobian from FRC, (b) pressure in the tissue and (c) elastic stress are plotted against Young's modulus within the structurally modified region.}
+  \label{fig:constrict_errorbars}
+\end{figure}
+%
+Due to the large amount of tissue expansion within the structurally modified region, the tissue immediately surrounding this region is effectively squeezed between the expanded modified region and the surrounding tissue and as a result, expands the least as seen in Figure \ref{fig:W_J}.
+%
+ \begin{figure}[h]
+  \centering
+ \includegraphics[width=0.48\textwidth]{figures/Jv_W_low2.pdf}
+  \caption{Slice showing the amount of tissue expansion ($J_{V}$) from FRC during inspiration with $90\%$ localized tissue weakening.}
+\label{fig:W_J}
+\end{figure}
+%
+%\begin{wrapfigure}{h}{0.5\textwidth}
+%  \begin{center}
+%    \includegraphics[width=0.48\textwidth]{figures/Jv_W_low2.pdf}
+%  \end{center}
+%  \caption{Slice showing the amount of tissue expansion ($J_{V}$) from FRC during inspiration with localised tissue weakening.}
+%\label{fig:W_J}
+%\end{wrapfigure}
+
+%
+\subsection{Dynamic hysteresis}
+With the current choice of hyperelastic strain energy law (\ref{eqn:Neo_Hookean}) for the tissue mechanics, our model does not produce classic hysteresis effects, often attributed to surface tension within lung tissue \cite{kowalczyk1994modelling}. However, we are able to produce dynamic hysteresis effects, caused by delayed emptying and filling of parts of the lung.
+
+Figure \ref{fig:recoil_trachea} shows the change in elastic recoil (total stress) with volume throughout the breathing cycle for three different breathing rates. This curve is commonly known as a dynamic pressure-volume (PV) curve, and shows the amount of dynamic hysteresis in the system. We will now explain the main features of this curve.
+
+Figure \ref{fig:4sec} and \ref{fig:1sec} both show the distribution of pressure against pathway resistance within the tissue, shortly after inhalation. At this point the lung as a whole has started to exhale air. However some segments of the tissue have a negative pressure and are still filling up. These parts of the lung also tend to have a higher pathway resistance associated with them, which can explain the delayed filling. The reason that these parts of the lung continue to fill up, even during expiration, is that the continuum mechanics model of the tissue aims to achieve an energy minimum where the tissue is inflated evenly throughout the lung, thus pulling open delayed segments of tissue. This is because the elasticity coefficients of the tissue have been parametrized homogeneously for these simulations. These negative pressures in the tissue, due to the delayed filling of parts of the lung, result in a larger total stress (elastic recoil), given by $\bb{\sigma}=\bb{\sigma}_{e}-p\bb{I}$. This effect is especially noticeable when transitioning form inspiration to expiration (and vice versa), causing the curve to shift right when moving from inspiration to expiration (due to delayed filling) and left when moving from expiration to inspiration (due to delayed emptying).
+
+
+Also, we can clearly see an increase in the heterogeneity of the tissue's pressure distribution with increased breathing rate when comparing Figures \ref{fig:4sec} and \ref{fig:1sec}, for a four second and a one second breathing cycle, respectively. This increase in pressure heterogeneity is caused by the increased flow rates within the tree, and results in an increase in total stress. Therefore, a faster breathing rate causes an increasing amount of hysteresis (widening of the dynamic PV curve in Figure \ref{fig:recoil_trachea}).
+
+
+The increase of hysteresis in the dynamic PV curve and its shift as the breathing rate increases agrees with findings in the literature \cite{rittner2005curves,harris2005pressure}. In the literature, hysteresis associated with dynamic PV curves is mostly hypothesized to be caused by flow-dependent resistances, pendelluft effects, chest wall rearrangement, and recruitment and derecruitment of lung
+units \cite{albaiceta2008static,ranieri1994volume,harris2005pressure}. Dynamic hysteresis has also been shown to exist in balloon type lung models \cite{ismail2013coupled}.
+
+
+\begin{figure}[H]
+  \centering
+   {\includegraphics[width=0.5\textwidth]{figures/recoil_tracheaz-crop.pdf}} \caption{ Dynamic pressure-volume curve: mean elastic recoil (total stress) against lung tidal volume during one full breathing cycle, for three different breathing rates. The arrows indicate the direction of time during the breathing cycle.}
+   \label{fig:recoil_trachea}
+ \end{figure}
+
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:4sec}\includegraphics[width=0.5\textwidth]{figures/pressure_res_scatter_4sec.pdf}} %\hspace*{0.1cm}
+  \subfloat[]{\label{fig:1sec}\includegraphics[width=0.5\textwidth]{figures/pressure_res_scatter_1sec.pdf}}
+\caption{(a) Pathway resistance against pressure with a $4$ second breathing cycle, 0.2 seconds after peak inhalation. (c) Pathway resistance against pressure with a $1$ second breathing cycle, 0.05 seconds after peak inhalation.}
+ \end{figure}
+
+
+
+%\begin{figure}[H]
+%  \centering
+%  \subfloat[]{\label{fig:recoil_trachea}\includegraphics[width=0.5\textwidth]{figures/recoil_tracheaz-crop.pdf}}  \\
+%  \subfloat[]{\label{fig:4sec}\includegraphics[width=0.5\textwidth]{figures/pressure_res_scatter_4sec.pdf}} %\hspace*{0.1cm}
+%  \subfloat[]{\label{fig:1sec}\includegraphics[width=0.5\textwidth]{figures/pressure_res_scatter_1sec.pdf}}
+%\caption{(a) Dynamic pressure-volume curve: mean elastic recoil (total stress) against lung tidal volume during one full breathing cycle, for three different breathing rates. The arrows indicate the direction of time during the breathing cycle. (b) Pathway resistance against pressure with a $4$ second breathing cycle, 0.2 seconds after peak inhalation. (c) Pathway resistance against pressure with a $1$ second breathing cycle, 0.05 seconds after peak inhalation.}
+%  \label{fig:constrict_errorbars}
+%\end{figure}
+
+
+%This combination of emptying and filling of parts of the lung results in a complicated pressure and elastic stress distribution within the tissue, and thus leads to a large total stress (elastic recoil).
+
+%
+%\begin{figure}[h]
+%  \centering
+%  {\includegraphics[width=0.5\textwidth]{figures/recoil_tracheaz-crop.pdf}}
+%\caption{Pressure-volume curve: mean elastic recoil (total stress) against lung tidal volume during one full breathing cycle, for three different breathing rates. The arrows indicate the direction of time during the breathing cycle.}
+%\label{fig:recoil_trachea}
+%\end{figure}
+%
+
+
+%The increase in the amount of dynamic hysteresis with increase in breathing rate, shown in Figure \ref{fig:recoil_trachea}, can be explained by the increase in pressure heterogeneity, which again results in a larger total stress. The increase in pressure heterogeneity within the tissue can be seen by comparing Figure \ref{fig:4sec}) and \ref{fig:1sec}, for a four and one second breathing cycle, respectively.
+%
+%In our model, this shift and widening of the curve can be attributed to the resistance in the airway tree which causes a larger and more heterogeneous pressure drop and flow distribution within the airways at increased flow rates. For tissue regions coupled to airways with high resistance this results in delayed, out of phase, alveolar recruitment (tissue expansion). This delayed filling of tissue during inspiration and emptying during expiration causes delayed pressure gradients that give rise to the hysteresis seen in Figure \ref{fig:recoil_trachea}.
+%
+%Due to the heterogeneity of the airway tree some segments of lung tissue take longer to inflate than others.

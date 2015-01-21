@@ -1,417 +1,664 @@
-\begin{thebibliography}{61}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{100}
 
-\bibitem[bow()]{bowenporouslectures}
+\bibitem{bowenporouslectures}
 Porous elasticity: Lectures on the elasticity of porous materials as an
   application of the theory of mixtures.
 
-\bibitem[Almeida and Spilker(1998)]{almeida1998finite}
-E.S. Almeida and R.L. Spilker.
+\bibitem{albaiceta2008static}
+G.~M. Albaiceta, L.~Blanch, and U.~Lucangelo.
+\newblock Static pressure--volume curves of the respiratory system: were they
+  just a passing fad?
+\newblock {\em Current opinion in critical care}, 14(1):80--86, 2008.
+
+\bibitem{almeida1998finite}
+E.~Almeida and R.~Spilker.
 \newblock Finite element formulations for hyperelastic transversely isotropic
   biphasic soft tissues.
-\newblock \emph{Computer {M}ethods in {A}pplied {M}echanics and {E}ngineering},
-  151\penalty0 (3):\penalty0 513--538, 1998.
+\newblock {\em Computer {M}ethods in {A}pplied {M}echanics and {E}ngineering},
+  151(3):513--538, 1998.
 
-\bibitem[Ateshian et~al.(2010)Ateshian, Maas, and Weiss]{ateshian2010finite}
-Gerard~A Ateshian, Steve Maas, and Jeffrey~A Weiss.
+\bibitem{amestoy2000multifrontal}
+P.~R. Amestoy, I.~S. Duff, and J.~L'Excellent.
+\newblock Multifrontal parallel distributed symmetric and unsymmetric solvers.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  184(2):501--520, 2000.
+
+\bibitem{armstrong1984analysis}
+C.~Armstrong, W.~Lai, and V.~Mow.
+\newblock An analysis of the unconfined compression of articular cartilage.
+\newblock {\em Journal of {B}iomechanical {E}ngineering}, 106:73--165, 1984.
+
+\bibitem{arthursthesis}
+C.~Arthurs.
+\newblock {\em Effcient {S}imulation of {C}ardiac {E}lectrical {P}ropagation
+  using {A}daptive {H}igh-{O}rder {F}inite {E}lements}.
+\newblock PhD thesis, University of Oxford, 2012.
+
+\bibitem{asnerthesis}
+L.~Asner.
+\newblock {\em Efficient numerical methods for the solution of coupled
+  multiphysics problems}.
+\newblock PhD thesis, University of Oxford, 2013.
+
+\bibitem{ateshian2010finite}
+G.~A. Ateshian, S.~Maas, and J.~A. Weiss.
 \newblock Finite element algorithm for frictionless contact of porous permeable
   media under finite deformation and sliding.
-\newblock \emph{Journal of biomechanical engineering}, 132\penalty0
-  (6):\penalty0 061006, 2010.
+\newblock {\em Journal of Biomechanical Engineering}, 132(6):061006, 2010.
 
-\bibitem[Badia et~al.(2009)Badia, Quaini, and Quarteroni]{badia2009coupling}
+\bibitem{babuvska1971error}
+I.~Babu{\v{s}}ka.
+\newblock Error-bounds for finite element method.
+\newblock {\em Numerische Mathematik}, 16(4):322--333, 1971.
+
+\bibitem{badia2009coupling}
 S.~Badia, A.~Quaini, and A.~Quarteroni.
 \newblock Coupling {B}iot and {N}avier-{S}tokes equations for modelling
   fluid-poroelastic media interaction.
-\newblock \emph{Journal of Computational Physics}, 228\penalty0 (21):\penalty0
-  7986--8014, 2009.
+\newblock {\em Journal of Computational Physics}, 228(21):7986--8014, 2009.
 
-\bibitem[Bates(2009)]{bates2009lung}
-J.H.T. Bates.
-\newblock \emph{Lung mechanics: an inverse modeling approach}.
+\bibitem{barucq2005some}
+H.~Barucq, M.~Madaune-Tort, and P.~Saint-Macary.
+\newblock Some existence-uniqueness results for a class of one-dimensional
+  nonlinear {B}iot models.
+\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications},
+  61(4):591--612, 2005.
+
+\bibitem{bates2009lung}
+J.~Bates.
+\newblock {\em Lung mechanics: an inverse modeling approach}.
 \newblock Cambridge {U}niversity {P}ress, 2009.
 
-\bibitem[Boer(2005)]{boer2005trends}
-Reint Boer.
-\newblock \emph{Trends in continuum mechanics of porous media}, volume~18.
+\bibitem{bernabeusthesis}
+M.~Bernabeu.
+\newblock {\em An open source {HPC}-enabled model of cardiac defibrillation of
+  the human heart}.
+\newblock PhD thesis, University of Oxford, 2011.
+
+\bibitem{bochev2006computational}
+P.~Bochev and C.~Dohrmann.
+\newblock A computational study of stabilized, low-order {C}0 finite element
+  approximations of {D}arcy equations.
+\newblock {\em Computational Mechanics}, 38(4):323--333, 2006.
+
+\bibitem{boer2005trends}
+R.~Boer.
+\newblock {\em Trends in continuum mechanics of porous media}, volume~18.
 \newblock Springer, 2005.
 
-\bibitem[Bonet and Wood(1997)]{bonet1997nonlinear}
-J.~Bonet and R.D. Wood.
-\newblock \emph{Nonlinear continuum mechanics for finite element analysis}.
+\bibitem{bonet1997nonlinear}
+J.~Bonet and R.~Wood.
+\newblock {\em Nonlinear continuum mechanics for finite element analysis}.
 \newblock Cambridge University Press, 1997.
 
-\bibitem[Bowen(1980)]{bowen1980incompressible}
-R.M. Bowen.
-\newblock Incompressible porous media models by use of the theory of mixtures.
-\newblock \emph{International Journal of Engineering Science}, 18\penalty0
-  (9):\penalty0 1129--1148, 1980.
+\bibitem{bordas2014}
+R.~Bordas, C.~Lefevre, B.~Veeckmans, J.~Pitt-Francis, C.~Fetita, D.~Kay,
+  S.~Siddiqui, and K.~Burrowes.
+\newblock Development and validation of patient-based complete conducting
+  airways models.
+\newblock {\em {PLoS ONE} (submitted)}, 2014.
 
-\bibitem[Chapelle et~al.(2010)Chapelle, Gerbeau, Sainte-Marie, and
-  Vignon-Clementel]{chapelle2010poroelastic}
-D.~Chapelle, J.F. Gerbeau, J.~Sainte-Marie, and I.E Vignon-Clementel.
+\bibitem{bowen1980incompressible}
+R.~Bowen.
+\newblock Incompressible porous media models by use of the theory of mixtures.
+\newblock {\em International Journal of Engineering Science}, 18(9):1129--1148,
+  1980.
+
+\bibitem{brenner2008mathematical}
+S.~C. Brenner and L.~R. Scott.
+\newblock {\em The mathematical theory of finite element methods}, volume~15.
+\newblock Springer, 2008.
+
+\bibitem{f1991mixed}
+F.~Brezzi and M.~Fortin.
+\newblock {\em Mixed and hybrid finite element methods}.
+\newblock Springer-Verlag, 1991.
+
+\bibitem{brezzi1991mixed}
+F.~Brezzi and M.~Fortin.
+\newblock {\em Mixed and hybrid finite element methods}.
+\newblock Springer-Verlag New York, Inc., 1991.
+
+\bibitem{burman2007unified}
+E.~Burman and P.~Hansbo.
+\newblock A unified stabilized method for {S}tokes' and {D}arcy's equations.
+\newblock {\em Journal of Computational and Applied Mathematics},
+  198(1):35--51, 2007.
+
+\bibitem{chapelle2010poroelastic}
+D.~Chapelle, J.~Gerbeau, J.~Sainte-Marie, and I.~Vignon-Clementel.
 \newblock A poroelastic model valid in large strains with applications to
   perfusion in cardiac modeling.
-\newblock \emph{Computational {M}echanics}, 46\penalty0 (1):\penalty0 91--101,
-  2010.
+\newblock {\em Computational {M}echanics}, 46(1):91--101, 2010.
 
-\bibitem[Cookson et~al.(2012)Cookson, Lee, Michler, Chabiniok, Hyde,
-  Nordsletten, Sinclair, Siebes, and Smith]{cookson2011novel}
-A.N. Cookson, J.~Lee, C.~Michler, R.~Chabiniok, E.~Hyde, D.A. Nordsletten,
-  M.~Sinclair, M.~Siebes, and N.P. Smith.
+\bibitem{chapelle2014general}
+D.~Chapelle and P.~Moireau.
+\newblock General coupling of porous flows and hyperelastic formulations—from
+  thermodynamics principles to energy balance and compatible time schemes.
+\newblock {\em European Journal of Mechanics-B/Fluids}, 46:82--96, 2014.
+
+\bibitem{ciarlet2002}
+P.~G. Ciarlet.
+\newblock {\em {The Finite Element Method for Elliptic Problems}}.
+\newblock SIAM, classics in applied mathematics edition, 2002.
+
+\bibitem{cookson2011novel}
+A.~Cookson, J.~Lee, C.~Michler, R.~Chabiniok, E.~Hyde, D.~Nordsletten,
+  M.~Sinclair, M.~Siebes, and N.~Smith.
 \newblock A novel porous mechanical framework for modelling the interaction
   between coronary perfusion and myocardial mechanics.
-\newblock \emph{Journal of {B}iomechanics}, 45\penalty0 (5):\penalty0 850 --
-  855, 2012.
+\newblock {\em Journal of {B}iomechanics}, 45(5):850 -- 855, 2012.
 
-\bibitem[Cotes et~al.(2009)Cotes, Chinn, and Miller]{cotes2009lung}
-John~E Cotes, David~J Chinn, and Martin~R Miller.
-\newblock \emph{Lung function: physiology, measurement and application in
+\bibitem{cotes2009lung}
+J.~E. Cotes, D.~J. Chinn, and M.~R. Miller.
+\newblock {\em Lung function: physiology, measurement and application in
   medicine}.
 \newblock John Wiley \& Sons, 2009.
 
-\bibitem[Coussy(2004)]{coussy2004poromechanics}
+\bibitem{coussy2004poromechanics}
 O.~Coussy.
-\newblock \emph{Poromechanics}.
+\newblock {\em Poromechanics}.
 \newblock John Wiley \& Sons Inc, 2004.
 
-\bibitem[Coussy et~al.(1998)Coussy, Dormieux, and Detournay]{coussy1998mixture}
+\bibitem{coussy1998mixture}
 O.~Coussy, L.~Dormieux, and E.~Detournay.
 \newblock From mixture theory to biot’s approach for porous media.
-\newblock \emph{International journal of solids and structures}, 35\penalty0
-  (34):\penalty0 4619--4635, 1998.
+\newblock {\em International Journal of Solids and Structures},
+  35(34):4619--4635, 1998.
 
-\bibitem[Criner et~al.(2011)Criner, Cordova, Sternberg, and
-  Martinez]{criner2011national}
-Gerard~J Criner, Francis Cordova, Alice~L Sternberg, and Fernando~J Martinez.
+\bibitem{criner2011national}
+G.~J. Criner, F.~Cordova, A.~L. Sternberg, and F.~J. Martinez.
 \newblock The national emphysema treatment trial (nett) part ii: lessons
   learned about lung volume reduction surgery.
-\newblock \emph{American journal of respiratory and critical care medicine},
-  184\penalty0 (8):\penalty0 881--893, 2011.
+\newblock {\em American Journal of Respiratory and Critical Care Medicine},
+  184(8):881--893, 2011.
 
-\bibitem[Feng and He(2010)]{feng2010fully}
-Xiaobing Feng and Yinnian He.
+\bibitem{de1981model}
+R.~De~Wilde, J.~Clement, J.~Hellemans, M.~Decramer, M.~Demedts, R.~Boving, and
+  K.~Van~de Woestijne.
+\newblock Model of elasticity of the human lung.
+\newblock {\em Journal of Applied Physiology}, 51(2):254--261, 1981.
+
+\bibitem{di2011mathematical}
+D.~A. Di~Pietro and A.~Ern.
+\newblock {\em Mathematical aspects of discontinuous Galerkin methods},
+  volume~69.
+\newblock Springer, 2011.
+
+\bibitem{elman2005finite}
+H.~Elman, D.~Silvester, and A.~Wathen.
+\newblock {\em Finite elements and fast iterative solvers: with applications in
+  incompressible fluid dynamics}.
+\newblock Oxford University Press, USA, 2005.
+
+\bibitem{fang2009tetrahedral}
+Q.~Fang and D.~A. Boas.
+\newblock Tetrahedral mesh generation from volumetric binary and grayscale
+  images.
+\newblock In {\em Biomedical Imaging: From Nano to Macro, 2009. ISBI'09. IEEE
+  International Symposium}, pages 1142--1145. IEEE, 2009.
+
+\bibitem{feng2010fully}
+X.~Feng and Y.~He.
 \newblock Fully discrete finite element approximations of a polymer gel model.
-\newblock \emph{SIAM Journal on Numerical Analysis}, 48\penalty0 (6):\penalty0
-  2186--2217, 2010.
+\newblock {\em SIAM Journal on Numerical Analysis}, 48(6):2186--2217, 2010.
 
-\bibitem[Ferronato et~al.(2010)Ferronato, Castelletto, and
-  Gambolati]{ferronato2010fully}
-Massimiliano Ferronato, Nicola Castelletto, and Giuseppe Gambolati.
+\bibitem{ferronato2010fully}
+M.~Ferronato, N.~Castelletto, and G.~Gambolati.
 \newblock A fully coupled 3-{D} mixed finite element model of {B}iot
   consolidation.
-\newblock \emph{Journal of Computational Physics}, 229\penalty0 (12):\penalty0
-  4813--4830, 2010.
+\newblock {\em Journal of Computational Physics}, 229(12):4813--4830, 2010.
 
-\bibitem[Galb{\'a}n et~al.(2012)Galb{\'a}n, Han, Boes, Chughtai, Meyer,
-  Johnson, Galb{\'a}n, Rehemtulla, Kazerooni, Martinez,
-  et~al.]{galban2012computed}
-Craig~J Galb{\'a}n, Meilan~K Han, Jennifer~L Boes, Komal~A Chughtai, Charles~R
-  Meyer, Timothy~D Johnson, Stefanie Galb{\'a}n, Alnawaz Rehemtulla, Ella~A
-  Kazerooni, Fernando~J Martinez, et~al.
+\bibitem{freed2013implicit}
+A.~D. Freed and D.~R. Einstein.
+\newblock An implicit elastic theory for lung parenchyma.
+\newblock {\em International Journal of Engineering Science}, 62:31--47, 2013.
+
+\bibitem{fung1975stress}
+Y.~Fung.
+\newblock Stress, deformation, and atelectasis of the lung.
+\newblock {\em Circulation Research}, 37(4):481--496, 1975.
+
+\bibitem{galban2012computed}
+C.~J. Galb{\'a}n, M.~K. Han, J.~L. Boes, K.~A. Chughtai, C.~R. Meyer, T.~D.
+  Johnson, S.~Galb{\'a}n, A.~Rehemtulla, E.~A. Kazerooni, F.~J. Martinez,
+  et~al.
 \newblock Computed tomography-based biomarker provides unique signature for
-  diagnosis of copd phenotypes and disease progression.
-\newblock \emph{Nature medicine}, 18\penalty0 (11):\penalty0 1711--1715, 2012.
+  diagnosis of {COPD} phenotypes and disease progression.
+\newblock {\em Nature Medicine}, 18(11):1711--1715, 2012.
 
-\bibitem[Galbusera et~al.(2011)Galbusera, Schmidt, Noailly, Malandrino,
-  Lacroix, Wilke, and Shirazi-Adl]{galbusera2011comparison}
-F.~Galbusera, H.~Schmidt, J.~Noailly, A.~Malandrino, D.~Lacroix, H.J. Wilke,
-  and A.~Shirazi-Adl.
+\bibitem{galbusera2011comparison}
+F.~Galbusera, H.~Schmidt, J.~Noailly, A.~Malandrino, D.~Lacroix, H.~Wilke, and
+  A.~Shirazi-Adl.
 \newblock Comparison of four methods to simulate swelling in poroelastic finite
   element models of intervertebral discs.
-\newblock \emph{Journal of the {M}echanical {B}ehavior of {B}iomedical
-  {M}aterials}, 4\penalty0 (7):\penalty0 1234 -- 1241, 2011.
+\newblock {\em Journal of the {M}echanical {B}ehavior of {B}iomedical
+  {M}aterials}, 4(7):1234 -- 1241, 2011.
 
-\bibitem[Galie et~al.(2011)Galie, Spilker, and Stegemann]{galie2011linear}
-P.A. Galie, R.L. Spilker, and J.P. Stegemann.
+\bibitem{galie2011linear}
+P.~Galie, R.~Spilker, and J.~Stegemann.
 \newblock A linear, biphasic model incorporating a {B}rinkman term to describe
   the mechanics of cell-seeded collagen hydrogels.
-\newblock \emph{Annals of {B}iomedical {E}ngineering}, 39:\penalty0 2767--2779,
-  2011.
+\newblock {\em Annals of {B}iomedical {E}ngineering}, 39:2767--2779, 2011.
 
-\bibitem[Gonzalez and Stuart(2008)]{gonzalez2008first}
-O.~Gonzalez and A.M. Stuart.
-\newblock \emph{A first course in continuum mechanics}, volume~42.
+\bibitem{gonzalez2008first}
+O.~Gonzalez and A.~Stuart.
+\newblock {\em A first course in continuum mechanics}, volume~42.
 \newblock Cambridge University Press, 2008.
 
-\bibitem[Haga et~al.(2012)Haga, Osnes, and Langtangen]{haga2012causes}
-J.B Haga, H~Osnes, and H.P Langtangen.
+\bibitem{haga2012causes}
+J.~Haga, H.~Osnes, and H.~Langtangen.
 \newblock On the causes of pressure oscillations in low-permeable and
   low-compressible porous media.
-\newblock \emph{International Journal for Numerical and Analytical Methods in
-  Geomechanics}, 36\penalty0 (12):\penalty0 1507--1522, 2012.
+\newblock {\em International Journal for Numerical and Analytical Methods in
+  Geomechanics}, 36(12):1507--1522, 2012.
 
-\bibitem[Hedges(2009)]{HedgesThesis}
-K.L. Hedges.
-\newblock \emph{{A Computational Model of Forced Expiration Through Anatomical
+\bibitem{harris2005pressure}
+R.~S. Harris.
+\newblock Pressure-volume curves of the respiratory system.
+\newblock {\em Respiratory Care}, 50(1):78--99, 2005.
+
+\bibitem{HedgesThesis}
+K.~Hedges.
+\newblock {\em {A Computational Model of Forced Expiration Through Anatomical
   Airways in Health and Disease}}.
 \newblock Ph{D} {T}hesis, {The University of Auckland}, 2009.
 
-\bibitem[Holmes and Mow(1990)]{holmes1990nonlinear}
-M.H Holmes and V.C Mow.
+\bibitem{heinrich2013mrf}
+H.~Heinrich, M.~Jenkinson, M.~Brady, and J.~A. Schnabel.
+\newblock {MRF}-based deformable registration and ventilation estimation of
+  lung ct.
+\newblock {\em Medical Imaging, IEEE Transactions on}, 32(7):1239--1248, 2013.
+
+\bibitem{holmes1990nonlinear}
+M.~Holmes and V.~Mow.
 \newblock The nonlinear characteristics of soft gels and hydrated connective
   tissues in ultrafiltration.
-\newblock \emph{Journal of {B}iomechanics}, 23\penalty0 (11):\penalty0
-  1145--1156, 1990.
+\newblock {\em Journal of {B}iomechanics}, 23(11):1145--1156, 1990.
 
-\bibitem[Holzapfel et~al.(2000)Holzapfel, Schulze-Bauer, and
-  Stadler]{holzapfel2000mechanics}
-G.A Holzapfel, C.A. Schulze-Bauer, and M.~Stadler.
+\bibitem{holzapfel2000mechanics}
+G.~Holzapfel, C.~Schulze-Bauer, and M.~Stadler.
 \newblock Mechanics of angioplasty: Wall, balloon and stent.
-\newblock \emph{Asme {A}pplied {Mechanics}}, 242:\penalty0 141--156, 2000.
+\newblock {\em {ASME} {A}pplied {Mechanics}}, 242:141--156, 2000.
 
-\bibitem[Ismail et~al.(2013)Ismail, Comerford, and Wall]{ismail2013coupled}
-M~Ismail, A~Comerford, and WA~Wall.
+\bibitem{ismail2013coupled}
+M.~Ismail, A.~Comerford, and W.~Wall.
 \newblock Coupled and reduced dimensional modeling of respiratory mechanics
   during spontaneous breathing.
-\newblock \emph{International journal for numerical methods in biomedical
-  engineering}, 29\penalty0 (11):\penalty0 1285--1305, 2013.
+\newblock {\em International Journal for Numerical Methods in Biomedical
+  Engineering}, 29(11):1285--1305, 2013.
 
-\bibitem[Kaushik et~al.(2011)Kaushik, Cleveland, Cofer, Metz, Beaver, Nouls,
-  Kraft, Auffermann, Wolber, McAdams, et~al.]{kaushikdiffusion}
-S.S. Kaushik, Z.I. Cleveland, G.P. Cofer, G.~Metz, D.~Beaver, J.~Nouls,
-  M.~Kraft, W.~Auffermann, J.~Wolber, H.P. McAdams, et~al.
+\bibitem{jahani2014assessment}
+N.~Jahani, Y.~Yin, E.~A. Hoffman, and C.-L. Lin.
+\newblock Assessment of regional non-linear tissue deformation and air volume
+  change of human lungs via image registration.
+\newblock {\em Journal of Biomechanics}, 47(7):1626--1633, 2014.
+
+\bibitem{kaushikdiffusion}
+S.~Kaushik, Z.~Cleveland, G.~Cofer, G.~Metz, D.~Beaver, J.~Nouls, M.~Kraft,
+  W.~Auffermann, J.~Wolber, H.~McAdams, et~al.
 \newblock Diffusion-weighted hyperpolarized 129{X}e {MRI} in healthy volunteers
   and subjects with chronic obstructive pulmonary disease.
-\newblock \emph{Magnetic Resonance in Medicine}, 2011.
+\newblock {\em Magnetic Resonance in Medicine}, 2011.
 
-\bibitem[Khaled and Vafai(2003)]{khaled2003role}
-A-RA Khaled and K~Vafai.
+\bibitem{khaled2003role}
+A.-R. Khaled and K.~Vafai.
 \newblock The role of porous media in modeling flow and heat transfer in
   biological tissues.
-\newblock \emph{International Journal of Heat and Mass Transfer}, 46\penalty0
-  (26):\penalty0 4989--5003, 2003.
+\newblock {\em International Journal of Heat and Mass Transfer},
+  46(26):4989--5003, 2003.
 
-\bibitem[Kim et~al.(2011)Kim, Tchelepi, and Juanes]{kim2011stability}
-J~Kim, HA~Tchelepi, and R~Juanes.
+\bibitem{kim2011stability}
+J.~Kim, H.~Tchelepi, and R.~Juanes.
 \newblock Stability and convergence of sequential methods for coupled flow and
   geomechanics: Fixed-stress and fixed-strain splits.
-\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
-  200\penalty0 (13):\penalty0 1591--1606, 2011.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  200(13):1591--1606, 2011.
 
-\bibitem[Kowalczyk(1993)]{kowalczyk1993mechanical}
+\bibitem{kirk2007libmesh}
+B.~S. Kirk, J.~W. Peterson, R.~H. Stogner, and G.~F. Carey.
+\newblock {\texttt{libMesh}: A C++ Library for Parallel Adaptive Mesh
+  Refinement/Coarsening Simulations}.
+\newblock {\em Engineering with Computers}, 22(3--4):237--254, 2006.
+
+\bibitem{kowalczyk1993mechanical}
 P.~Kowalczyk.
 \newblock Mechanical model of lung parenchyma as a two-phase porous medium.
-\newblock \emph{Transport in {P}orous {M}edia}, 11\penalty0 (3):\penalty0
-  281--295, 1993.
+\newblock {\em Transport in {P}orous {M}edia}, 11(3):281--295, 1993.
 
-\bibitem[Kowalczyk and Kleiber(1994)]{kowalczyk1994modelling}
+\bibitem{kowalczyk1994modelling}
 P.~Kowalczyk and M.~Kleiber.
 \newblock Modelling and numerical analysis of stresses and strains in the human
   lung including tissue-gas interaction.
-\newblock \emph{European {J}ournal of {M}echanics. {A}. {S}olids}, 13\penalty0
-  (3):\penalty0 367--393, 1994.
+\newblock {\em European {J}ournal of {M}echanics. {A}. {S}olids},
+  13(3):367--393, 1994.
 
-\bibitem[Lai and Mow(1980)]{lai1980drag}
-WM~Lai and VC~Mow.
+\bibitem{lai1980drag}
+W.~Lai and V.~Mow.
 \newblock Drag-induced compression of articular cartilage during a permeation
   experiment.
-\newblock \emph{Biorheology}, 17\penalty0 (1-2):\penalty0 111, 1980.
+\newblock {\em Biorheology}, 17(1-2):111, 1980.
 
-\bibitem[{Lawrence Berkeley National Laboratory}(1995)]{lunglab}
+\bibitem{lande2006analysis}
+B.~Lande and W.~Mitzner.
+\newblock Analysis of lung parenchyma as a parametric porous medium.
+\newblock {\em Journal of Applied Physiology}, 101(3):926--933, 2006.
+
+\bibitem{lunglabshort}
 {Lawrence Berkeley National Laboratory}.
 \newblock {LBNL} {L}ung{L}ab {T}our.
-\newblock \url{http://imglib.lbl.gov/cgi-bin/ImgLib/displaytag/LUNG_STRUCTURE},
-  1995.
+\newblock \url{http://www.whywasteyourbreath.com/images.html}, 1995.
 
-\bibitem[Leungchavaphongse(2013)]{leungchavaphongse2013mathematical}
-Kritsada Leungchavaphongse.
-\newblock \emph{Mathematical modelling of the liver microcirculation}.
+\bibitem{leary2014effects}
+D.~Leary, T.~Winkler, A.~Braune, and G.~N. Maksym.
+\newblock Effects of airway tree asymmetry on the emergence and spatial
+  persistence of ventilation defects.
+\newblock {\em Journal of Applied Physiology}, 117(4):353--362, 2014.
+
+\bibitem{lee1983finite}
+G.~Lee, N.~Tseng, and Y.~Yuan.
+\newblock Finite element modeling of lungs including interlobar fissures and
+  the heart cavity.
+\newblock {\em Journal of Biomechanics}, 16(9):679--690, 1983.
+
+\bibitem{leungchavaphongse2013mathematical}
+K.~Leungchavaphongse.
+\newblock {\em Mathematical modelling of the liver microcirculation}.
 \newblock PhD thesis, Imperial College London, 2013.
 
-\bibitem[Levenston et~al.(1998)Levenston, Frank, and
-  Grodzinsky]{levenston1998variationally}
-M.E. Levenston, E.H. Frank, and A.J. Grodzinsky.
+\bibitem{levenston1998variationally}
+M.~Levenston, E.~Frank, and A.~Grodzinsky.
 \newblock Variationally derived 3-field finite element formulations for
   quasistatic poroelastic analysis of hydrated biological tissues.
-\newblock \emph{Computer {M}ethods in {A}pplied {M}echanics and {E}ngineering},
-  156\penalty0 (1-4):\penalty0 231--246, 1998.
+\newblock {\em Computer {M}ethods in {A}pplied {M}echanics and {E}ngineering},
+  156(1-4):231--246, 1998.
 
-\bibitem[Li and Li(2012)]{li2012discontinuous}
-Huanrong Li and Yukun Li.
+\bibitem{li2004dynamics}
+C.~Li, R.~Borja, and R.~Regueiro.
+\newblock Dynamics of porous media at finite strain.
+\newblock {\em Computer {M}ethods in {A}pplied {M}echanics and {E}ngineering},
+  193(36):3837--3870, 2004.
+
+\bibitem{li2012discontinuous}
+H.~Li and Y.~Li.
 \newblock A discontinuous {G}alerkin finite element method for swelling model
   of polymer gels.
-\newblock \emph{Journal of Mathematical Analysis and Applications},
-  398\penalty0 (1):\penalty0 11--25, 2012.
+\newblock {\em Journal of Mathematical Analysis and Applications},
+  398(1):11--25, 2012.
 
-\bibitem[Li et~al.(2010)Li, Holst, Ho, and Kleiven]{li2010three}
-X.G. Li, H.~Holst, J.~Ho, and S.~Kleiven.
+\bibitem{li2010three}
+X.~Li, H.~Holst, J.~Ho, and S.~Kleiven.
 \newblock Three dimensional poroelastic simulation of brain edema: Initial
   studies on intracranial pressure.
-\newblock In \emph{World Congress on Medical Physics and Biomedical
+\newblock In {\em World Congress on Medical Physics and Biomedical
   Engineering}, pages 1478--1481. Springer, 2010.
 
-\bibitem[Mow et~al.(1980)Mow, Kuei, Lai, and Armstrong]{mow1980biphasic}
-V.C. Mow, S.C. Kuei, W.M. Lai, and C.G. Armstrong.
+\bibitem{lipnikov2002numerical}
+K.~Lipnikov.
+\newblock {\em Numerical methods for the {B}iot model in poroelasticity}.
+\newblock PhD thesis, University of Houston, 2002.
+
+\bibitem{mear2004discontinuous}
+R.~Liu.
+\newblock {\em Discontinuous {G}alerkin finite element solution for
+  poromechanics}.
+\newblock PhD thesis, {T}he {U}niversity of {T}exas at {A}ustin, 2004.
+
+\bibitem{maas2012febio}
+S.~A. Maas, B.~J. Ellis, G.~A. Ateshian, and J.~A. Weiss.
+\newblock {FEB}io: finite elements for biomechanics.
+\newblock {\em Journal of Biomechanical Engineering}, 134(1):1--10, 2012.
+
+\bibitem{markert2007constitutive}
+B.~Markert.
+\newblock A constitutive approach to 3-d nonlinear fluid flow through finite
+  deformable porous continua.
+\newblock {\em Transport in Porous Media}, 70(3):427--450, 2007.
+
+\bibitem{masud2002stabilized}
+A.~Masud and T.~J. Hughes.
+\newblock A stabilized mixed finite element method for darcy flow.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  191(39):4341--4370, 2002.
+
+\bibitem{mow1980biphasic}
+V.~Mow, S.~Kuei, W.~Lai, and C.~Armstrong.
 \newblock Biphasic creep and stress relaxation of articular cartilage in
   compression: {T}heory and experiments.
-\newblock \emph{Journal of {B}iomechanical {E}ngineering}, 102:\penalty0
-  73--84, 1980.
+\newblock {\em Journal of {B}iomechanical {E}ngineering}, 102:73--84, 1980.
 
-\bibitem[Murad and Loula(1994)]{murad1994stability}
-M{\'a}rcio~A Murad and Abimael~FD Loula.
+\bibitem{murad1994stability}
+M.~A. Murad and A.~F. Loula.
 \newblock On stability and convergence of finite element approximations of
   {B}iot's consolidation problem.
-\newblock \emph{International journal for numerical methods in engineering},
-  37\penalty0 (4):\penalty0 645--667, 1994.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  37(4):645--667, 1994.
 
-\bibitem[Owen and Lewis(2001)]{owen2001mechanics}
-M.R. Owen and M.A. Lewis.
+\bibitem{ochs2004number}
+M.~Ochs, J.~R. Nyengaard, A.~Jung, L.~Knudsen, M.~Voigt, T.~Wahlers,
+  J.~Richter, and H.~J.~G. Gundersen.
+\newblock The number of alveoli in the human lung.
+\newblock {\em American Journal of Respiratory and Critical Care Medicine},
+  169(1):120--124, 2004.
+
+\bibitem{owen2001mechanics}
+M.~Owen and M.~Lewis.
 \newblock The mechanics of lung tissue under high-frequency ventilation.
-\newblock \emph{SIAM Journal on Applied Mathematics}, pages 1731--1761, 2001.
+\newblock {\em SIAM Journal on Applied Mathematics}, pages 1731--1761, 2001.
 
-\bibitem[Patz et~al.(2007)Patz, Hersman, Muradian, Hrovat, Ruset, Ketel,
-  Jacobson, Topulos, Hatabu, and Butler]{patz2007hyperpolarized}
-S.~Patz, F.W. Hersman, I.~Muradian, M.I. Hrovat, I.C. Ruset, S.~Ketel,
-  F.~Jacobson, G.P. Topulos, H.~Hatabu, and J.P. Butler.
+\bibitem{patz2007hyperpolarized}
+S.~Patz, F.~Hersman, I.~Muradian, M.~Hrovat, I.~Ruset, S.~Ketel, F.~Jacobson,
+  G.~Topulos, H.~Hatabu, and J.~Butler.
 \newblock Hyperpolarized 129xe mri: A viable functional lung imaging modality?
-\newblock \emph{European journal of radiology}, 64\penalty0 (3):\penalty0
-  335--344, 2007.
+\newblock {\em European Journal of Radiology}, 64(3):335--344, 2007.
 
-\bibitem[Pedley et~al.(1970)Pedley, Schroter, and Sudlow]{pedley1970prediction}
-T.J. Pedley, R.C. Schroter, and M.F. Sudlow.
+\bibitem{pedley1970energy}
+T.~Pedley, R.~Schroter, and M.~Sudlow.
+\newblock Energy losses and pressure drop in models of human airways.
+\newblock {\em Respiration Physiology}, 9(3):371--386, 1970.
+
+\bibitem{pedley1970prediction}
+T.~Pedley, R.~Schroter, and M.~Sudlow.
 \newblock The prediction of pressure drop and variation of resistance within
   the human bronchial airways.
-\newblock \emph{Respiration Physiology}, 9\penalty0 (3):\penalty0 387--405,
-  1970.
+\newblock {\em Respiration Physiology}, 9(3):387--405, 1970.
 
-\bibitem[Phillips and Wheeler(2007{\natexlab{a}})]{phillips2007coupling}
-Phillip~Joseph Phillips and Mary~F Wheeler.
+\bibitem{phillips2007coupling}
+P.~J. Phillips and M.~F. Wheeler.
 \newblock A coupling of mixed and continuous {G}alerkin finite element methods
   for poroelasticity i: the continuous in time case.
-\newblock \emph{Computational Geosciences}, 11\penalty0 (2):\penalty0 131--144,
-  2007{\natexlab{a}}.
+\newblock {\em Computational Geosciences}, 11(2):131--144, 2007.
 
-\bibitem[Phillips and Wheeler(2007{\natexlab{b}})]{phillips2007couplingtwo}
-Phillip~Joseph Phillips and Mary~F Wheeler.
+\bibitem{phillips2007couplingtwo}
+P.~J. Phillips and M.~F. Wheeler.
 \newblock A coupling of mixed and continuous {G}alerkin finite element methods
   for poroelasticity ii: the discrete-in-time case.
-\newblock \emph{Computational Geosciences}, 11\penalty0 (2):\penalty0 145--158,
-  2007{\natexlab{b}}.
+\newblock {\em Computational Geosciences}, 11(2):145--158, 2007.
 
-\bibitem[Phillips and Wheeler(2009)]{phillips2009overcoming}
-Phillip~Joseph Phillips and Mary~F Wheeler.
+\bibitem{phillips2009overcoming}
+P.~J. Phillips and M.~F. Wheeler.
 \newblock Overcoming the problem of locking in linear elasticity and
   poroelasticity: an heuristic approach.
-\newblock \emph{Computational Geosciences}, 13\penalty0 (1):\penalty0 5--12,
-  2009.
+\newblock {\em Computational Geosciences}, 13(1):5--12, 2009.
 
-\bibitem[Showalter(2000)]{showalter2000diffusion}
-R.E Showalter.
+\bibitem{ranieri1994volume}
+V.~M. Ranieri, R.~Giuliani, T.~Fiore, M.~Dambrosio, and J.~Milic-Emili.
+\newblock Volume-pressure curve of the respiratory system predicts effects of
+  {PEEP} in {ARDS}: `occlusion' versus `constant flow' technique.
+\newblock {\em American Journal of Respiratory and Critical Care Medicine},
+  149(1):19--27, 1994.
+
+\bibitem{raviart1977mixed}
+P.-A. Raviart and J.-M. Thomas.
+\newblock A mixed finite element method for 2-nd order elliptic problems.
+\newblock In {\em Mathematical aspects of finite element methods}, pages
+  292--315. Springer, 1977.
+
+\bibitem{rittner2005curves}
+F.~Rittner and M.~D{\"o}ring.
+\newblock {\em Curves and loops in mechanical ventilation}.
+\newblock Dr{\"a}ger Medical Incorporated, 2005.
+
+\bibitem{sauter2010robust}
+M.~Sauter and C.~Wieners.
+\newblock Robust estimates for the approximation of the dynamic consolidation
+  problem.
+\newblock {\em IMA Journal of Numerical Analysis}, 30(3):832--856, 2010.
+
+\bibitem{showalter2000diffusion}
+R.~Showalter.
 \newblock Diffusion in poro-elastic media.
-\newblock \emph{Journal of mathematical analysis and applications},
-  251\penalty0 (1):\penalty0 310--340, 2000.
+\newblock {\em Journal of Mathematical Analysis and Applications},
+  251(1):310--340, 2000.
 
-\bibitem[Silvester and Wathen(1994)]{silvester1994fast}
-David Silvester and Andrew Wathen.
+\bibitem{silvester1994fast}
+D.~Silvester and A.~Wathen.
 \newblock Fast iterative solution of stabilised stokes systems part ii: using
   general block preconditioners.
-\newblock \emph{SIAM Journal on Numerical Analysis}, 31\penalty0 (5):\penalty0
-  1352--1367, 1994.
+\newblock {\em SIAM Journal on Numerical Analysis}, 31(5):1352--1367, 1994.
 
-\bibitem[Suki and Bates(2011)]{suki2011lung}
-B.~Suki and J.H.T. Bates.
+\bibitem{suki2011lung}
+B.~Suki and J.~Bates.
 \newblock Lung tissue mechanics as an emergent phenomenon.
-\newblock \emph{Journal of Applied Physiology}, 110\penalty0 (4):\penalty0
-  1111--1118, 2011.
+\newblock {\em Journal of Applied Physiology}, 110(4):1111--1118, 2011.
 
-\bibitem[Swan et~al.(2012)Swan, Clark, and Tawhai]{Swan2012}
-A.J. Swan, A.R. Clark, and M.H. Tawhai.
+\bibitem{Swan2012}
+A.~Swan, A.~Clark, and M.~Tawhai.
 \newblock A computational model of the topographic distribution of ventilation
   in healthy human lungs.
-\newblock \emph{Journal of Theoretical Biology}, 300\penalty0 (0):\penalty0 222
-  -- 231, 2012.
+\newblock {\em Journal of Theoretical Biology}, 300(0):222 -- 231, 2012.
 
-\bibitem[Tawhai and Lin(2010)]{tawhai2010image}
-M.H. Tawhai and C.L. Lin.
+\bibitem{tawhai2010image}
+M.~Tawhai and C.~Lin.
 \newblock Image-based modeling of lung structure and function.
-\newblock \emph{Journal of Magnetic Resonance Imaging}, 32\penalty0
-  (6):\penalty0 1421--1431, 2010.
+\newblock {\em Journal of Magnetic Resonance Imaging}, 32(6):1421--1431, 2010.
 
-\bibitem[Tawhai et~al.(2006)Tawhai, Nash, and Hoffman]{tawhai2006imaging}
-M.H. Tawhai, M.P. Nash, and E.A. Hoffman.
+\bibitem{tawhai2006imaging}
+M.~Tawhai, M.~Nash, and E.~Hoffman.
 \newblock An {I}maging-based {C}omputational {A}pproach to {M}odel
   {V}entilation {D}istribution and {S}oft-tissue {D}eformation in the {O}vine
   {L}ung.
-\newblock \emph{Academic radiology}, 13\penalty0 (1):\penalty0 113--120, 2006.
+\newblock {\em Academic Radiology}, 13(1):113--120, 2006.
 
-\bibitem[Venegas et~al.(2005)Venegas, Winkler, Musch, Melo, Layfield,
-  Tgavalekos, Fischman, Callahan, Bellani, and Harris]{venegas2005self}
-Jose~G Venegas, Tilo Winkler, Guido Musch, Marcos F~Vidal Melo, Dominick
-  Layfield, Nora Tgavalekos, Alan~J Fischman, Ronald~J Callahan, Giacomo
-  Bellani, and R~Scott Harris.
+\bibitem{tawhai2009supine}
+M.~H. Tawhai, M.~P. Nash, C.-L. Lin, and E.~A. Hoffman.
+\newblock Supine and prone differences in regional lung density and pleural
+  pressure gradients in the human lung with constant shape.
+\newblock {\em Journal of Applied Physiology}, 107(3):912--920, 2009.
+
+\bibitem{thomee2006galerkin}
+V.~Thom{\'e}e.
+\newblock {\em Galerkin finite element methods for parabolic problems},
+  volume~25.
+\newblock Springer, 2006.
+
+\bibitem{un2006penetration}
+K.~{\"U}n and R.~Spilker.
+\newblock A penetration-based finite element method for hyperelastic 3{D}
+  biphasic tissues in contact. {P}art {I}{I}: finite element simulations.
+\newblock {\em Journal of {B}iomechanical {E}ngineering}, 128:934, 2006.
+
+\bibitem{venegas2005self}
+J.~G. Venegas, T.~Winkler, G.~Musch, M.~F.~V. Melo, D.~Layfield, N.~Tgavalekos,
+  A.~J. Fischman, R.~J. Callahan, G.~Bellani, and R.~S. Harris.
 \newblock Self-organized patchiness in asthma as a prelude to catastrophic
   shifts.
-\newblock \emph{Nature}, 434\penalty0 (7034):\penalty0 777--782, 2005.
+\newblock {\em Nature}, 434(7034):777--782, 2005.
 
-\bibitem[Wathen and Silvester(1993)]{wathen1993fast}
-Andrew Wathen and David Silvester.
+\bibitem{verfurth1998posteriori}
+R.~Verf{\"u}rth.
+\newblock A posteriori error estimators for convection-diffusion equations.
+\newblock {\em Numerische Mathematik}, 80(4):641--663, 1998.
+
+\bibitem{vuong2014general}
+A.-T. Vuong, L.~Yoshihara, and W.~Wall.
+\newblock A general approach for modeling interacting flow through porous media
+  under finite deformations.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering}, 2014.
+
+\bibitem{wathen1993fast}
+A.~Wathen and D.~Silvester.
 \newblock Fast iterative solution of stabilised stokes systems. part i: Using
   simple diagonal preconditioners.
-\newblock \emph{SIAM Journal on Numerical Analysis}, 30\penalty0 (3):\penalty0
-  630--649, 1993.
+\newblock {\em SIAM Journal on Numerical Analysis}, 30(3):630--649, 1993.
 
-\bibitem[Weichert(2011)]{WeichertThesis}
+\bibitem{WeichertThesis}
 L.~Weichert.
-\newblock \emph{{Computational Modeling of Multi-Field and Multi-Scale
-  Phenomena in Respiratory Mechanics }}.
+\newblock {\em {Computational Modeling of Multi-Field and Multi-Scale Phenomena
+  in Respiratory Mechanics }}.
 \newblock Ph{D} {T}hesis, {Technischen Universit{\"a}t M{\"u}nchen}, 2011.
 
-\bibitem[West(2008)]{west2008respiratory}
-J.B. West.
-\newblock \emph{Respiratory physiology: the essentials}.
+\bibitem{werner2009patient}
+R.~Werner, J.~Ehrhardt, R.~Schmidt, and H.~Handels.
+\newblock Patient-specific finite element modeling of respiratory lung motion
+  using {4D} {CT} image data.
+\newblock {\em Medical physics}, 36(5):1500--1511, 2009.
+
+\bibitem{west2008respiratory}
+J.~West.
+\newblock {\em Respiratory physiology: the essentials}.
 \newblock Lippincott Williams \& Wilkins, 2008.
 
-\bibitem[Wheeler and Gai(2007)]{wheeler2007iteratively}
-Mary~F Wheeler and Xiuli Gai.
+\bibitem{wheeler2007iteratively}
+M.~F. Wheeler and X.~Gai.
 \newblock Iteratively coupled mixed and {G}alerkin finite element methods for
   poro-elasticity.
-\newblock \emph{Numerical Methods for Partial Differential Equations},
-  23\penalty0 (4):\penalty0 785--797, 2007.
+\newblock {\em Numerical Methods for Partial Differential Equations},
+  23(4):785--797, 2007.
 
-\bibitem[White and Borja(2008)]{white2008stabilized}
-J.A. White and R.I. Borja.
+\bibitem{white2008stabilized}
+J.~White and R.~Borja.
 \newblock Stabilized low-order finite elements for coupled
   solid-deformation/fluid-diffusion and their application to fault zone
   transients.
-\newblock \emph{Computer Methods in Applied Mechanics and Engineering},
-  197\penalty0 (49-50):\penalty0 4353--4366, 2008.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  197(49-50):4353--4366, 2008.
 
-\bibitem[White and Borja(2011)]{white2011block}
-Joshua~A White and Ronaldo~I Borja.
+\bibitem{white2011block}
+J.~A. White and R.~I. Borja.
 \newblock Block-preconditioned {N}ewton--{K}rylov solvers for fully coupled
   flow and geomechanics.
-\newblock \emph{Computational Geosciences}, 15\penalty0 (4):\penalty0 647--659,
-  2011.
+\newblock {\em Computational Geosciences}, 15(4):647--659, 2011.
 
-\bibitem[Wirth and Sobey(2006)]{wirth2006axisymmetric}
+\bibitem{wirth2006axisymmetric}
 B.~Wirth and I.~Sobey.
 \newblock An axisymmetric and fully 3{D} poroelastic model for the evolution of
   hydrocephalus.
-\newblock \emph{Mathematical Medicine and Biology}, 23\penalty0 (4):\penalty0
-  363--388, 2006.
+\newblock {\em Mathematical Medicine and Biology}, 23(4):363--388, 2006.
 
-\bibitem[Wriggers(2008)]{wriggers2008nonlinear}
+\bibitem{wriggers2008nonlinear}
 P.~Wriggers.
-\newblock \emph{Nonlinear finite element methods}.
+\newblock {\em Nonlinear finite element methods}.
 \newblock Springer Verlag, 2008.
 
-\bibitem[Yi(2013)]{yi2013coupling}
-Son-Young Yi.
+\bibitem{yi2013coupling}
+S.-Y. Yi.
 \newblock A coupling of nonconforming and mixed finite element methods for
   {B}iot's consolidation model.
-\newblock \emph{Numerical Methods for Partial Differential Equations}, 2013.
+\newblock {\em Numerical Methods for Partial Differential Equations}, 2013.
 
-\bibitem[Yin et~al.(2013)Yin, Choi, Hoffman, Tawhai, and
-  Lin]{yin2013multiscale}
-Youbing Yin, Jiwoong Choi, Eric~A Hoffman, Merryn~H Tawhai, and Ching-Long Lin.
-\newblock A multiscale mdct image-based breathing lung model with time-varying
-  regional ventilation.
-\newblock \emph{Journal of computational physics}, 244:\penalty0 168--192,
-  2013.
+\bibitem{yin2010simulation}
+Y.~Yin, J.~Choi, E.~A. Hoffman, M.~H. Tawhai, and C.-L. Lin.
+\newblock Simulation of pulmonary air flow with a subject-specific boundary
+  condition.
+\newblock {\em Journal of Biomechanics}, 43(11):2159--2163, 2010.
+
+\bibitem{yin2013multiscale}
+Y.~Yin, J.~Choi, E.~A. Hoffman, M.~H. Tawhai, and C.-L. Lin.
+\newblock A multiscale {MDCT} image-based breathing lung model with
+  time-varying regional ventilation.
+\newblock {\em Journal of Computational Physics}, 244:168--192, 2013.
+
+\bibitem{vzenivsek1984existence}
+A.~{\v{Z}}en{\'\i}{\v{s}}ek.
+\newblock The existence and uniqueness theorem in {B}iot's consolidation
+  theory.
+\newblock {\em Aplikace Matematiky}, 29(3):194--211, 1984.
+
+\bibitem{zhang2004technical}
+T.~Zhang, N.~P. Orton, T.~R. Mackie, and B.~R. Paliwal.
+\newblock Technical note: A novel boundary condition using contact elements for
+  finite element based deformable image registration.
+\newblock {\em Medical Physics}, 31(9):2412--2415, 2004.
 
 \end{thebibliography}

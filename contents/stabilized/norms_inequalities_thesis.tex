@@ -1,0 +1,127 @@
+\section{Norms and inequalities}
+\label{sec:norms_inequalities}
+In this section we will introduce some norms and inequalities required for the remainder of this chapter. Throughout this work, we will let $C$ denote a generic positive constant, whose value may change from instance to instance, but is independent of any mesh parameters.
+%\subsection{Schwarz' Inequality (Cauchy-Schwarz)}
+\subsection{Useful inequalities}
+Detailed derivations of the following four inequalities can be found in \citet{brenner2008mathematical}. If $f,g \in L^{2}(\Omega)$ then by the \textbf{Cauchy-Schwarz} inequality  we have 
+\begin{equation*}
+ \int_{\Omega}|f(x)g(x)|dx \leq \ltwonorm{f}\ltwonorm{g}.
+\label{cs}
+\end{equation*}
+%See (1.1.5) in \cite{brenner2008mathematical}. Squaring both side the inequality yields
+%\begin{equation*}
+%\left( \int_a^b f(x)g(x) \, dx \right)^2 \leq \left( \int_a^b f(x)^2 \, dx \right) \left( \int_a^b g(x)^2 \, dx \right)
+%\end{equation*}
+%
+%\subsubsection{Triangle Inequality }
+%\label{cs}
+From the \textbf{triangle inequality} we have
+\begin{equation*}
+\ltwonorm{f + g}\leq \ltwonorm{f} + \ltwonorm{g}.
+\end{equation*}
+%
+For any real numbers $a$ and $b$, by \textbf{Young's inequality},
+\begin{equation*}
+ ab \leq \frac{\epsilon}{2} a^{2} + \frac{1}{2\epsilon}b^{2} \;\;\forall \epsilon > 0.
+\end{equation*}
+This inequality is sometimes referred to as the arithmetric-geometric mean inequality.
+%
+Next, the \textbf{Poincar\'{e} inequality}, also known as Poincar\'{e}-Friedrich's inequality says
+\begin{equation*}
+\ltwonorm{v}\leq C_{p} \ltwonorm{\nabla v} \;\; \forall v \in H^{1}(\Omega).
+\end{equation*}
+%
+
+\subsection{J-norm}
+The stabilization term gives rise to the semi-norm 
+\begin{equation*}
+\jnorm{q}:=J(q,q)^{1/2}.
+\end{equation*}
+Using the scaling argument, also used in \citet{burman2007unified}, 
+\begin{equation}
+\label{eqn:scaling_arg}
+\ltwonormdk{h^{1/2}   {p_h}} \leq c_{z} \ltwonormk{  {p_h}},
+\end{equation}
+Cauchy-Schwarz and the triangle inequality the following bounds for the stabilization term hold.
+\begin{equation}
+\label{J_bound}
+\jnorm{p_h} \leq C\ltwonorm{p_h} \; \mbox{and} \; 
+J(p_h,\pdisctest,)  \leq  \jnorm{p_h}\jnorm{\pdisctest}, \; \forall  p_h, q_h \in \pspacedisc.
+\end{equation}
+Furthermore, for any   $q \in H^{1}(\Omega)$,
+\begin{equation}
+\label{zero_jump}
+J(p,q) = 0 , \; \forall p \in \pspace ,
+\end{equation}
+see lemma 1.23 in \cite{di2011mathematical}.
+
+
+
+\subsection{Approximation results}
+We now give some approximation results that will be useful later. Let $\projlinear:  H^{1}(\Omega) \rightarrow \dispspacedisc$ and $\projconst: L^2(\Omega) \rightarrow \pspacedisc$  be Cl\'ement projections (interpolation operators), see \cite{ciarlet2002}.
+\begin{lemma}
+\label{interp_error}
+For all ${\bf v} \in \left( H^{2}(\Omega) \right)^{d}$ and  $q \in  H^{1}(\Omega)$ the interpolation operators satisfy: For $s=0,1$
+\begin{eqnarray}
+||{{\bf v} - \projlinear {\bf v}}||_{s,\Omega} & \leq & Ch^{2-s} \htwonorm{{\bf v}},  \\
+ \ltwonorm{q - \projconst q} & \leq & Ch \honenorm{q}, \\
+ \jnorm{q - \projconst q} & \leq & Ch \honenorm{q}.
+\end{eqnarray}
+\end{lemma}
+\begin{proof}
+The first two results are standard \citet{brenner2008mathematical}. The final result is obtained by using the element error estimate provided in \cite{verfurth1998posteriori} and  then summing over all elements.
+\end{proof}
+
+Due to the surjectivity of the divergence operator, for every $p \in  L^2(\Omega)$  there exists a function ${\vp} \in (H^1(\Omega))^d$ such that  $\nabla \cdot {\vp} = -p$ and $\honenorm{{\vp}} \leq c\ltwonorm{p} $. This last inequality can be shown to hold by considering the famous inf-sup condition related to the continous Stokes problem \citep{brezzi1991mixed,brenner2008mathematical}. We assume that the projection, $\projscott{\vp}$, is stable such that
+\begin{equation}
+ \honenorm{\projscott{\vp}} \leq  \hat{c}\ltwonorm{p}.
+\label{clem_bound}
+\end{equation}
+Furthermore, for any element $ K \in \mathcal{T}^{h}$
+\begin{equation}
+\label{Clem_error}
+||{{\vp} - \projscott {\vp}}||_{L^2(K)} \leq C h ||{{\vp}}||_{H^1( \omega_K)} ,
+\end{equation}
+where $\omega_K$ is a domain made of the elements in $\mathcal{T}^{h}$ neighboring $K$, i.e. the union of all elements $J\in \mathcal{T}^{h}$ such that $\overline{K} \cap \overline{J} \neq \emptyset$. For more details about the properties of this projection we refer to section 4.8 in \citet{brenner2008mathematical}. This projection will allow us to obtain stability of the pressure and avoid spurious pressure oscillations. The discrepancy between the projection and its continuous counterpart will eventually be made up by the stabilization term, shown in section \ref{sec:existence_uniqueness}.
+%
+Combining the above with the trace inequality, see lemma 3.1 in \cite{verfurth1998posteriori},
+\begin{equation}
+\label{traceineq}
+\ltwonormdk{  ({\vp} - \projscott {\vp})  \cdot \normal }^{2} \leq C \ltwonormk{{\vp} - \projscott {\vp} } (h^{-1}\ltwonormk{ {\vp} - \projscott {\vp} }  + \honenormk{{\vp} - \projscott {\vp} }  ),
+\end{equation}
+we obtain
+\begin{equation}
+\label{Clem_error_Kbdy}
+\ltwonormdk{({\vp} - \projscott {\vp}) \cdot \normal )}^{2} \leq C h ||{{\vp}}||_{H^1( \omega_K)} ^{2}.
+\end{equation}
+Taking into account $\honenorm{{\vp}} \leq c\ltwonorm{p} $, we may write
+\begin{equation}
+\label{clem_jump_error}
+\sum_{K} \int_{\partial K } h^{-1} |({\vp} - \projscott {\vp}) \cdot \normal|^{2} \;ds \leq c_{t} \ltwonorm{p}^{2}.
+\end{equation}
+
+
+We also have the following approximation for the time-discretization error:
+For all ${\bf v} \in H^2(0,T; (L^2(\Omega))^d)$
+\begin{equation}
+\label{eq: time deriv error}
+\sum_{n=1}^{N} \Delta t \ltwonorm{{\bf v}_{\Delta t}^{n} - \frac{\partial {\bf v}}{\partial t} (t^n,\cdot) }^{2}
+\leq \Delta t^{2}  \int_{0}^{T} \ltwonorm{{\bf v}_{tt} }^{2} \mbox{d}s.
+\end{equation}
+See \citep{brenner2008mathematical,thomee2006galerkin} for details.
+
+\subsection{Triple-norms}
+For all $[{\bf v},{\bf w},q]  \in \left[( H^{1}(\Omega))^d \times H_{div} (\Omega) \times L^2 (\Omega) \right]$ we define the norm
+\begin{equation}
+\label{eqn:triple_norm}
+\triplenorm{[{\bf v},{\bf w},q] }^2
+:=\honenorm{{\bf v}}^2 + {\Delta t}^2\ltwonorm{\nabla \cdot {\bf w}}^2 + {\Delta t} \ltwonorm{{\bf w}}^2  + \ltwonorm{q}^2 + \jnorm{q}^2.
+\end{equation}
+
+For all $[{\bf v},{\bf w},q]  \in \left[L^{\infty} (0,T; ( H^{1}(\Omega))^d ) \times L^2(0,T;H_{div} (\Omega)) \times L^2(0,T; L^2(\Omega)) \right]$  the norm
+\begin{equation}
+\label{eqn:triple_norm time}
+\triplenormtime{[{\bf v},{\bf w},q] }^2
+:=  || {\bf v} ||_{L^{\infty}(H^1)}^2 + || {\bf w} ||_{L^{2}(L^2)}^2 + || q ||_{L^2(L^2)}^2,
+\end{equation}
+

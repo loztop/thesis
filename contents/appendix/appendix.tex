@@ -1,0 +1,328 @@
+%\section{Notation}
+
+%We summarize the model in the following tables.
+%
+%\subsection{Full model}
+%
+%First the complete model
+%\begin{table}[H]
+%\begin{center}
+%\scalebox{0.75}{
+%\begin{tabular}{ l c  || c c }
+%\hline
+%\bf Unknown & \bf Notation     & \bf Equation &  \\
+%\hline\bf{{Primary variables}}& &   \bf{{Primary equations (general model)}} & \\ \hline
+%Motion of the solid &  $\boldsymbol\chi$  & $\hat\rho^{s} \boldsymbol{a}^{s}+\hat \rho^{f} \boldsymbol{a}^{f} = \nabla \cdot( \boldsymbol{\sigma}_{e}+\boldsymbol{\sigma}_{vis}-p\boldsymbol{I}) + \rho\boldsymbol{f}$ & (\ref{mixture_motion_eulerian})  \\
+%Fluid velocity &  $\boldsymbol{v}^{f}$  & $\hat\rho^{f}\boldsymbol{a}^{f}+  \boldsymbol{v}^{f}\left(  \frac{d^{f}\hat{\rho}^{f}  }{dt}  + \hat{\rho}^{f}  \nabla \cdot \boldsymbol{v}^{f} \right)=\nabla \cdot( \boldsymbol{\sigma}_{vis}^{f}- \phi p \boldsymbol{I}) + p \nabla \phi - \phi \perm^{-1}(\boldsymbol{v}^{f}-\boldsymbol{v}^{s}) + \hat\rho^{f}\boldsymbol{f}$   &  (\ref{general_darcy}) \\
+%Pressure of the fluid  &  $p$ & $ \nabla \cdot((1-\phi) \boldsymbol{v}^{s}) + \nabla \cdot (\phi \boldsymbol{v}^f)=g $ & (\ref{eqn:continuity}) \\
+%\hline\bf{{Secondary variables}} & &   \bf{{Secondary equations}}  \\ \hline
+%Deformation gradient tensor &  $\boldsymbol{F}$ & $ \boldsymbol{F}=\frac{\partial }{\partial \boldsymbol{X}}\boldsymbol\chi(\boldsymbol{X},t) $ & (\ref{eqn:deformation_gradient})\\
+%Right Cauchy-Green tensor &  $\boldsymbol{C}$ & $\boldsymbol{C}={\boldsymbol{F}}^{T}{\boldsymbol{F}}$ & (\ref{eqn:right_cg_tensor}) \\
+%Jacobian &  $J$ & $J=\mbox{det}(\boldsymbol{F})$ & (\ref{eqn:jacobian}) \\
+%Velocity of the solid  &  $\boldsymbol{v}^{s}$ & $  \left. \boldsymbol{v}^{s}(\boldsymbol{x},t)
+%\right|_{\boldsymbol{x}=\boldsymbol{\chi}(\boldsymbol{X},t)} =  \pderiv{}{t}\boldsymbol{\chi}(\boldsymbol{X},t)$&  (\ref{eqn:spatial_velocity}) \\
+%Acceleration of the solid  &  $\boldsymbol{a}^{s}$  & $ \boldsymbol{a}^{s}(\boldsymbol{x},t)|_{\boldsymbol{x}={\chi}(\boldsymbol{X},t)}=   \frac{\partial^{2}}{\partial t^{2}}\boldsymbol\chi(\boldsymbol{X},t) $  & (\ref{eqn:spatial_solid_acceleration})  \\
+%Acceleration of the fluid  &  $\boldsymbol{a}^{f}$  & $ \boldsymbol{a}^{f}  = \pderiv{}{t}\boldsymbol{v}^{f} + (\nabla \boldsymbol{v}^{f})\boldsymbol{v}^{f}$ & (\ref{eqn:fluid_acceleration}) \\
+%Porosity &  $\phi$ & $ \phi = 1-\frac{1-\phi_{0}}{J}$ &  (\ref{incomp_mixture}) \\
+%Mixture density &  $\rho$ & $\rho=\rho^{s}(1-\phi)+\rho^{f}\phi$ & (\ref{rho_mixture})  \\
+%Eulerian solid density &  $\hat{\rho_s}$ & $\hat\rho^{s}=\rho^{s}(1-\phi)$ & (\ref{eqn:rhos_hat})  \\
+%Eulerian fluid density &  $\hat{\rho_f}$ & $\hat\rho^{f}=\rho^{f}\phi$ & (\ref{eqn:rhof_hat})  \\
+%\hline\bf{{Constitutive variables}}& &   \bf{{Constitutive equations}} & \\ \hline
+%Solid elastic stress tensor &  $\boldsymbol{\sigma}_{e}$ & $ \boldsymbol\sigma^{s}_{e}=\frac{1}{J}\boldsymbol{F}\cdot 2 \frac{\partial W(\boldsymbol\chi)}{\partial \boldsymbol{C}}  \cdot \boldsymbol{F}^{T}$ & (\ref{eqn:sigma_e}) \\
+%Fluid viscous stress tensor &  $\boldsymbol{\sigma}_{vis}$ & $\boldsymbol\sigma^{f}_{vis}= \mu_{f} \phi ( \nabla \boldsymbol{v}_f + (\nabla \boldsymbol{v}_f)^{T} - \frac{2}{3}\nabla \cdot\boldsymbol{v}_f)$ & (\ref{eqn:sigma_vis}) \\
+%Permeability tensor &  $\perm$& $ \perm=J^{-1} \boldsymbol{F} \perm_{0} \boldsymbol{F}^{T} $& (\ref{eqn:permeability_const})\\
+%\hline
+%\end{tabular}
+%}
+%\end{center}
+%\caption{Recapitulating the unknowns and equations of the general poroelasticity model.}
+%\label{tab:recap_full_model}
+%\end{table}
+
+
+
+
+\section{Spatial tangent modulus}
+\label{sec:incremental_spatial}
+\label{appendix}
+The spatial tangent modulus, fourth-order tensor, can be written as  (see \cite[section 5.3.2]{bonet1997nonlinear} and \cite[section 6.6]{holzapfel2000mechanics} )  
+\begin{equation}
+{\Theta}_{ijkl}= \frac{1}{J}F_{iI}F_{jJ}F_{kK}F_{lL}\mathbf{C}_{IJKL},
+\label{incremental_spatial}
+\end{equation}
+where ${\mathbf{C}}$ is the associated tangent modulus tensor in the reference configuration, given by
+\begin{equation}
+{\mathbf{C}}_{IJKL}= \frac{4 \partial^{2} W}{\partial C_{IJ} \partial C_{KL} } + pJ \frac{\partial {C}^{-1}_{IJ}}{\partial {C}_{KL}}.
+\end{equation}
+
+\section{Matrix Voigt notation}
+To ease the implementation of the spatial tangent modulus we make use of matrix voigt notation. The matrix form of $\mathbf{\Theta}$ is given by $\boldsymbol{D}$, which can be written as (see \cite[section 7.4.2]{bonet1997nonlinear})
+\begin{equation}\bb{D}=\frac{1}{2}
+\begin{pmatrix}
+  2\si_{1111}&2\si_{1122}&2\si_{1133}& \si_{1112}+\si_{1121}&\si_{1113}+\si_{1131}&\si_{1123}+\si_{1132}\\
+      & 2\si_{2222} & 2\si_{2233}  &\si_{2212}+\si_{2221} &\si_{2213}+\si_{2231}& \si_{2223}+\si_{2232} \\
+      &     & 2 \si_{3333}  &  \si_{3312}+\si_{3321} & \si_{3313}+\si_{3331} & \si_{3323}+\si_{3332} \\
+      &     &       & \si_{1212}+\si_{1221} & \si_{1213}+\si_{1231} & \si_{1223} + \si_{1232} \\
+      &  \mbox{sym.}   &       &     & \si_{1313}+\si_{1331} & \si_{1323}+\si_{1332} \\
+      &     &       &     &        & \si_{2323} + \si_{2332} \\
+\end{pmatrix}.
+\label{matrixvoigt}
+\end{equation}
+We also make use of the following implementation friendly matrix notation for $\nabla^{S}\boldsymbol{\phi}_{k}$,
+\begin{equation}
+\boldsymbol{E}_{k}=
+ \begin{bmatrix}
+       {\phi}_{k,1} & 0 & 0\\
+       0 & {\phi}_{k,2} & 0\\
+       0 & 0 & {\phi}_{k,3}\\
+       \phi_{k,2} & \phi_{k,1} & 0\\
+       0 & {\phi}_{k,3} & {\phi}_{k,2}\\
+       {\phi}_{k,3} & 0 & {\phi}_{k,1}\\
+      \end{bmatrix} .
+ \label{eqn:sym_matrix}
+\end{equation}
+%See Wriggers and Bonet
+
+%\subsection{Dyalic product notation}
+%The {dyadic product} of two vectors $\boldsymbol{a}$ and $\boldsymbol{b}$ is the second-order tensor $\boldsymbol{a} \otimes %\boldsymbol{b}$ defined by
+%\begin{equation}
+% (\boldsymbol{a} \otimes \boldsymbol{b})\boldsymbol{v}=(\boldsymbol{b}\cdot \boldsymbol{v})\boldsymbol{a},\;\;\;\forall \boldsymbol{v} \in \mathcal{V}.
+%\end{equation}
+%This implies
+%\begin{equation}
+% [\boldsymbol{a} \otimes \boldsymbol{b}]_{ij}=a_{i} b_{j}.
+%\end{equation}
+%We can extend this to build fourth order tensors from the two second order tensors $\boldsymbol{A}$ and $\boldsymbol{B}$ such that
+%\begin{equation}
+% [\boldsymbol{A} \otimes \boldsymbol{B}]_{ijkl}=A_{ij} B_{kl}.
+%\end{equation}
+%See \cite{gonzalez2008first} for details.
+
+\section{Neo-Hookean strain energy}
+\label{sec:neo_example}
+For the numerical examples we have used the following Neo-Hookean strain-energy law
+\begin{equation}
+W(\bb{C})=\frac{\mu}{2}(\mbox{tr}(\boldsymbol{C})-3)+\frac{\Lambda}{4}(J^{2}-1)-(\mu+\frac{\Lambda}{2})\mbox{ln}(J-1+\phi_{0}).
+\end{equation}
+Thus, the resulting effective stress tensor is given by
+\begin{equation}
+\boldsymbol{\sigma}_{e}=\frac{\Lambda}{2}\left(J-\frac{1}{J-1+\phi_{0}}\right)\boldsymbol{I} + {\mu}\left(\frac{\boldsymbol{C}^{T}}{J} - \frac{\boldsymbol{I}}{J-1+\phi_{0}}\right),
+\end{equation}
+and the spatial tangent modulus tensor is given as
+\begin{equation}
+\si=\si_{e} + p ( \boldsymbol{I} \otimes \boldsymbol{I} - 2 \mathcal{Z}),
+\end{equation} 
+where
+\begin{multline}
+\si_{e}=\left[\Lambda J-2\mu \left( \frac{1}{2(J-1+\phi_{0})} -\frac{J}{2(J-1+\phi_{0})^{2}} \right) \right]\boldsymbol{I}\otimes\boldsymbol{I}\\ + \left[\frac{2 \mu }{J-1+\phi_{0}} - \Lambda(J-\frac{1}{J-1+\phi_{0}} )  \right]\mathcal{B},
+\end{multline}
+and
+\begin{equation}
+\mathcal{B}_{ijkl}=\frac{1}{2}(\delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk}), \;\;\;\mathcal{Z}_{ijkl}= \delta_{ik}\delta_{jl}, \;\;\; \boldsymbol{I} \otimes \boldsymbol{I}= \delta_{ij}\delta_{kl}.
+\end{equation}
+See \cite[chapter 5]{bonet1997nonlinear} and \cite[chapter 3]{wriggers2008nonlinear} for further details.
+
+
+\begin{comment}
+\section{Summary of the simplified poroelastic model}
+\begin{table}[H]
+\begin{center}
+\scalebox{0.9}{
+\begin{tabular}{ l c  || c c }
+\hline
+\bf Unknown & \bf Notation     & \bf Equation &  \\
+\hline\bf{{Primary variables}}& &   \bf{{Primary equations}} & \\ \hline
+Motion of the solid &  $\boldsymbol\chi$  & $ -\nabla \cdot( \boldsymbol{\sigma}_{e} -p\boldsymbol{I}) = \rho\boldsymbol{f}$ & (\ref{eqn:mixture_momentum_reform})  \\
+Fluid flux  &  $\boldsymbol{z}$  &${\perm^{-1}\boldsymbol{z}} + \nabla p =  \rho^{f}\boldsymbol{f}$  &  (\ref{eqn:mixture_momentum_reform}) \\
+Pressure of the fluid  &  $p$ & $ \nabla \cdot(\boldsymbol{v}^{s} + \boldsymbol{z})=g $ & (\ref{eqn:mixture_momentum_reform}) \\
+\hline\bf{{Secondary variables}} & &   \bf{{Secondary equations}}  \\ \hline
+Deformation gradient tensor &  $\boldsymbol{F}$ & $ \boldsymbol{F}=\frac{\partial }{\partial \boldsymbol{X}}\boldsymbol\chi(\boldsymbol{X},t) $ & (\ref{eqn:deformation_gradient})\\
+Right Cauchy-Green tensor &  $\boldsymbol{C}$ & $\boldsymbol{C}={\boldsymbol{F}}^{T}{\boldsymbol{F}}$ & (\ref{eqn:right_cg_tensor}) \\
+Jacobian &  $J$ & $J=\mbox{det}(\boldsymbol{F})$ & (\ref{eqn:jacobian}) \\
+Velocity of the solid  &  $\boldsymbol{v}^{s}$ & $  \left. \boldsymbol{v}^{s}(\boldsymbol{x},t)
+\right|_{\boldsymbol{x}=\boldsymbol{\chi}(\boldsymbol{X},t)} =  \pderiv{}{t}\boldsymbol{\chi}(\boldsymbol{X},t)$&  (\ref{eqn:spatial_solid_velocity}) \\
+Porosity &  $\phi$ & $ \phi = 1-\frac{1-\phi_{0}}{J}$ &  (\ref{incomp_mixture}) \\
+Mixture density &  $\rho$ & $\rho=\rho^{s}(1-\phi)+\rho^{f}\phi$ & (\ref{rho_mixture})  \\
+\hline\bf{{Constitutive variables}}& &   \bf{{Constitutive equations}} & \\ \hline
+Solid elastic stress tensor &  $\boldsymbol{\sigma}_{e}$ & $ \boldsymbol\sigma^{s}_{e}=\frac{1}{J}\boldsymbol{F}\cdot 2 \frac{\partial W(\boldsymbol\chi)}{\partial \boldsymbol{C}}  \cdot \boldsymbol{F}^{T}$ & (\ref{eqn:sigma_e}) \\
+Permeability tensor &  $\perm$& $\perm=J^{-1} \boldsymbol{F} \perm_{0}(\boldsymbol{\chi}) \boldsymbol{F}^{T} $& (\ref{eqn:permeability_const})\\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Recapitulating the unknowns and equations of the reformulated and simplified model (\ref{eqn:mixture_momentum_reform}).}
+\label{tab:reform_full_model}
+\end{table}
+\end{comment}
+
+%\begin{table}[H]
+%\begin{center}
+%\scalebox{0.9}{
+%\begin{tabular}{ l c c }
+%\hline
+%\bf Parameters &    \\
+%\hline
+%Initial porosity &  $\phi_{0} $,         \\
+%Fluid dynamic viscosity   &  $\mu_{f}$,   \\
+%Solid density             &  $\rho_s$     \\
+%Fluid density             &  $\rho_f$     \\
+%Initial permeability      &  $k_{0}$     \\
+%\end{tabular}
+%}
+%\end{center}
+%\caption{Parameters for the simplified model (\ref{eqn:mixture_momentum_reform}).}
+%\label{tab:parameters_definitions}
+%\end{table}
+
+
+%To ease the implementation of the spatial tangent modulus we make use of matrix voigt notation. The matrix form of $\mathbf{\Theta}$ is given by $\boldsymbol{D}$, which can be written as (see \cite[section 7.4.2]{bonet1997nonlinear})
+%\begin{equation}\bb{D}=\frac{1}{2}
+%\begin{pmatrix}
+%  2\si_{1111}&2\si_{1122}&2\si_{1133}& \si_{1112}+\si_{1121}&\si_{1113}+\si_{1131}&\si_{1123}+\si_{1132}\\
+%      & 2\si_{2222} & 2\si_{2233}  &\si_{2212}+\si_{2221} &\si_{2213}+\si_{2231}& \si_{2223}+\si_{2232} \\
+%      &     & 2 \si_{3333}  &  \si_{3312}+\si_{3321} & \si_{3313}+\si_{3331} & \si_{3323}+\si_{3332} \\
+%      &     &       & \si_{1212}+\si_{1221} & \si_{1213}+\si_{1231} & \si_{1223} + \si_{1232} \\
+%      &  \mbox{sym.}   &       &     & \si_{1313}+\si_{1331} & \si_{1323}+\si_{1332} \\
+%      &     &       &     &        & \si_{2323} + \si_{2332} \\
+%\end{pmatrix}.
+%\label{matrixvoigt}
+%\end{equation}
+
+%We also make use of the following implementation friendly notation
+%\begin{equation}
+%\nabla^{S}\boldsymbol{\phi}_{k}=  \begin{bmatrix}
+%       {\phi}_{k,1} & 0 & 0\\
+%       0 & {\phi}_{k,2} & 0\\
+%       0 & 0 & {\phi}_{k,3}\\
+%       \phi_{k,2} & \phi_{k,1} & 0\\
+%       0 & {\phi}_{k,3} & {\phi}_{k,2}\\
+%       {\phi}_{k,3} & 0 & {\phi}_{k,1}\\
+%      \end{bmatrix}
+% = \boldsymbol{B}_{k}.
+% \label{eqn:sym_matrix}
+%\end{equation}
+%See Wriggers and Bonet
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Neo-Hookean example
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\subsection{Neo-Hookean example}
+%\label{sec:neo_example}
+%For the numerical examples shown in section \ref{sec:numerical_simulations} we have used the following Neo-Hookean strain-energy law
+%\begin{equation}
+%W(\bb{C})=\frac{\mu}{2}(\mbox{tr}(\boldsymbol{C})-3)+\frac{\Lambda}{4}(J^{2}-1)-(\mu+\frac{\Lambda}{2})\mbox{ln}J.
+%\end{equation}
+%Thus, the resulting effective stress tensor is given by
+%\begin{equation}
+%\boldsymbol{\sigma}_{e}=\frac{\Lambda}{2J}(J^{2}-1)\boldsymbol{I} + \frac{\mu}{J}(\boldsymbol{C}^{T} - \boldsymbol{I}),
+%\end{equation}
+%and the spatial tangent modulus tensor is given as
+%\begin{equation}
+%\si=\si_{e} + p ( \boldsymbol{I} \otimes \boldsymbol{I} - 2 \mathcal{Z})
+%\end{equation}
+%where
+%\begin{equation}
+%\si_{e}=\Lambda J^{2} \boldsymbol{I}\otimes\boldsymbol{I} + \left[2 \mu - \Lambda(J^{2}-1)  \right]\mathcal{E},
+%\end{equation}
+%and
+%\begin{equation}
+%\mathcal{E}_{ijkl}=\frac{1}{2}(\delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk}), \;\;\;\mathcal{Z}_{ijkl}= \delta_{ik}\delta_{jl}, \;\;\; \boldsymbol{I} \otimes \boldsymbol{I}= \delta_{ij}\delta_{kl}.
+%\end{equation}
+%See \cite[chapter 5]{bonet1997nonlinear} and \cite[chapter 3]{wriggers2008nonlinear} for details.
+
+%Here $\boldsymbol{\mathcal{E}}$ is the fourth order unit tensor. In index notation $\boldsymbol{\mathcal{E}}$ has the form (see \cite[exercise 3.8]{wriggers2008nonlinear})
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Dyadic product notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Dyadic product notation}
+%The {dyadic product} of two vectors $\boldsymbol{a}$ and $\boldsymbol{b}$ is the second-order tensor $\boldsymbol{a} \otimes \boldsymbol{b}$ defined by
+%\begin{equation}
+% (\boldsymbol{a} \otimes \boldsymbol{b})\boldsymbol{v}=(\boldsymbol{b}\cdot \boldsymbol{v})\boldsymbol{a},\;\;\;\forall \boldsymbol{v} \in \mathcal{V}.
+%\end{equation}
+%This implies
+%\begin{equation}
+% [\boldsymbol{a} \otimes \boldsymbol{b}]_{ij}=a_{i} b_{j}.
+%\end{equation}
+%See \cite{gonzalez2008first} for details. We can extend this to build fourth order tensors from the two second order tensors $\boldsymbol{A}$ and $\boldsymbol{B}$ such that
+%\begin{equation}
+% [\boldsymbol{A} \otimes \boldsymbol{B}]_{ijkl}=A_{ij} B_{kl}.
+%\end{equation}
+%(Reference for this)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Incremental constitutive tensor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\subsection{The incremental constitutive tensor}
+%The incremental constitutive tensor in the current configuration ${\Theta}$, which is given by (see pdf page 145 in Bonet, section 6.6 in Holzapfel \cite{holzapfel2000mechanics} and section 3.4 in Madsen \cite{marsden1994mathematical})   (Note that in Wriggers chapter 3 pdf page 56 the rhs is different to ones found in other books, however $\Theta_{iklm} = F_{iA}F_{lC}F_{mD}F_{kB}\mathbf{C}_{ABCD}$ might still be correct)
+%
+%\begin{equation}
+%{\Theta}_{iklm}= \frac{1}{J}F_{iI}F_{jJ}F_{kK}F_{lL}\mathbf{C}_{IJKL}.
+%\label{incremental_spatial_2}
+%\end{equation}
+%where ${\mathbf{C}}$, the incremental constitutive tensor in the reference configuration is given by. We can also write ${\mathbf{C}}$ in component form and in term of the second Piola-Kirchoff stress tensor as
+%\begin{equation}
+%{\mathbf{C}}_{IJKL}= 2\pderiv{{S}_{IJ}}{C_{KL}}.
+%\end{equation}
+%where
+%\begin{equation}
+%S_{MN}=\frac{\partial W}{\partial E_{MN}} =2\frac{\partial W}{\partial C_{MN}}.
+%\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     2nd Piola-Kirchoff Stress Tensor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\subsection{2nd Piola-Kirchoff Stress Tensor, $\boldsymbol{S}$}
+%The 2nd Piola-Kirchoff stress tensor (symmetric for isotropic materials) measures the force per unit undeformed area acting on the undeformed body, and therefore is a Lagrangian tensor. It relates to the Cauchy stress tensor $\boldsymbol{\sigma}$ as follows
+%\begin{equation}
+%\boldsymbol{\sigma}=\frac{1}{J}\boldsymbol{F}\boldsymbol{S}\boldsymbol{F}^{T}.
+%\label{cauchytansform}
+%\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Principal Invariants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Principal Invariants of $\boldsymbol{C}$}
+%Let $\lambda_{1},\lambda_{2},\lambda_{3}$ be the eigenvalues of $\boldsymbol{U}=\boldsymbol{C}^{2}$, the symmetrical stretch tensor. Then the principal invariants of $\boldsymbol{C}$ are,
+%\begin{equation}
+%I_{1} = \mbox{tr}(\boldsymbol{C})=\lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}
+%\end{equation}
+%\begin{equation}
+%I_{2} = \frac{1}{2}((\mathrm{tr}(\boldsymbol{C}))^{2}-\mathrm{tr}(\boldsymbol{C}^{2}))=\lambda_{1}^{2}+\lambda_{2}^{2}+\lambda_{3}^{2}
+%\end{equation}
+%\begin{equation}
+%I_{3} = \mbox{det}(\boldsymbol{C})=\lambda_{1}^{2}\lambda_{2}^{2}\lambda_{3}^{2}.
+%\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Hyperelasticity
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Hyperelasticity}
+%When the work done by the stresses during a deformation process is dependent only on the initial state at time $t=0$ and the final configuration at time $t$, the behavior of the material is said to be path independent and the material is termed hyperelastic. The stored strain energy function $W\equiv W(I_{1},I_{2},I_{3})$ per unit unreformed volume for a hyperelastic and isotropic material relates the 2nd Piola-Kirchoff stress tensor $S$ to the Green strain tensor $E$
+%\begin{equation}
+%S_{MN}=\frac{\partial W}{\partial E_{MN}} =2\frac{\partial W}{\partial C_{MN}}.
+%\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Calculation of the deformation gradient
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Calculation of the deformation gradient }
+%\begin{equation}
+%\mathbf{F}^{-1}=\frac{\partial \mathbf{X}}{\partial \mathbf{x} }= \sum_{I=1}^{n}\mathbf{X_{I}}\otimes\nabla_{x}N_{I}.
+%\end{equation}
+%Then just compute $\mathbf{F}=(\mathbf{F}^{-1})^{-1}$. Here $\nabla_{x}N_{I}$ is the gradient of the test function with respect to the current mesh configuration and $\mathbf{X_{I}}$ is the reference position.
+

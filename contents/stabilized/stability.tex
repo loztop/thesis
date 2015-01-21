@@ -1,0 +1,215 @@
+\section{Existence and uniqueness of solutions to the fully-discrete model}
+\label{sec:stability}
+
+%Well-posedness of the unstabilized fully-discretized system (\ref{eqns:weak_fulldisc_system}) (i.e., for $\delta=0$) is shown by \cite{phillips2007couplingtwo} for $c_{0}>0$ and by \cite{lipnikov2002numerical} for $c_{0} \geq 0$. 
+As the permeability tends to zero and the porous mixture becomes impermeable, the three-field linear poroelasticity tends to a mixed linear elasticity problem \cite{haga2012causes}. The discretization methods presented in \cite{phillips2007couplingtwo} and \cite{lipnikov2002numerical} both use piecewise linear approximations for displacements and mixed low-order Raviart Thomas elements for the fluid flux and pressure variables, which is unstable for the mixed linear elasticity problem. We hypothesise that this is why the method presented by \cite{phillips2007couplingtwo} experiences numerical instabilities, \cite{phillips2008couplingdiscontinuous} and \cite{phillips2009overcoming}.
+Our method is stable for both the Darcy problem (as the elasticity coefficients tend to infinity) and the mixed linear elasticity problem (as the permeability tends to zero), and  is therefore stable for all permeabilities and elasticity coefficients.
+
+
+\subsection{Norms and inequalities}
+\label{sec:norms_inequalities}
+
+The stabilization term gives rise to the semi-norm $\jnorm{q}:=J(q,q)^{1/2}$. Throughout this work, we will let $C$ denote a generic positive constant, whose value may change from instance to instance, but is independent of any mesh parameters. Using standard scaling arguments, Cauchy-Schwarz and the triangle inequality the following bounds for the stabilization term hold.
+\begin{equation}
+\label{J_bound}
+\jnorm{p_h} \leq C\ltwonorm{p_h} \; \mbox{and} \; 
+J(p_h,\pdisctest,)  \leq  \jnorm{p_h}\jnorm{\pdisctest}, \; \forall  p_h, q_h \in \pspacedisc.
+\end{equation}
+Furthermore, for any   $q \in H^{1}(\Omega)$,
+\begin{equation}
+\label{zero_jump}
+J(p,q) = 0 , \; \forall p \in \pspace ,
+\end{equation}
+see lemma 1.23 in \cite{di2011mathematical}.
+
+We now give some approximation results that will be useful later. Let $\projlinear:  H^{1}(\Omega) \rightarrow \dispspacedisc$ and $\projconst: L^2(\Omega) \rightarrow \pspacedisc$  be Cl\'ement projections, see \cite{ciarlet2002}.
+\begin{lemma}
+\label{interp_error}
+For all ${\bf v} \in \left( H^{2}(\Omega) \right)^{d}$ and  $q \in  H^{1}(\Omega)$ the interpolation operators satisfy: For $s=0,1$
+\begin{eqnarray}
+||{{\bf v} - \projlinear {\bf v}}||_{s,\Omega} & \leq & Ch^{2-s} \htwonorm{{\bf v}},  \\
+ \ltwonorm{q - \projconst q} & \leq & Ch \honenorm{q}, \\
+ \jnorm{q - \projconst q} & \leq & Ch \honenorm{q}.
+\end{eqnarray}
+\end{lemma}
+\begin{proof}
+The first two results are standard. The final result is obtained by using the element error estimate provided in \cite{verfurth1998posteriori} and  then summing over all elements.
+\end{proof}
+
+Due to the surjectivity of the divergence operator, for every $p \in  L^2(\Omega)$  there exists a function ${\vp} \in (H^1(\Omega))^d$ such that  $\nabla \cdot {\vp} = -p$ and $\honenorm{{\vp}} \leq c\ltwonorm{p} $.  We assume that the projection, $\projscott{\vp}$, is stable such that
+\begin{equation}
+ \honenorm{\projscott{\vp}} \leq  \hat{c}\ltwonorm{p}.
+\label{clem_bound}
+\end{equation}
+Furthermore, for any element $ K \in \mathcal{T}^{h}$
+\begin{equation}
+\label{Clem_error}
+||{{\vp} - \projscott {\vp}}||_{L^2(K)} \leq C h ||{{\vp}}||_{H^1( \omega_K)} ,
+\end{equation}
+where $\omega_K$ is the union of all elements $J\in \mathcal{T}^{h}$ such that $\overline{K} \cap \overline{J} \neq \emptyset$.
+
+Combining the above with the trace inequality, see lemma 3.1 in \cite{verfurth1998posteriori},
+\begin{equation}
+\label{traceineq}
+\ltwonormdk{  ({\vp} - \projscott {\vp})  \cdot \normal }^{2} \leq C \ltwonormk{{\vp} - \projscott {\vp} } (h^{-1}\ltwonormk{ {\vp} - \projscott {\vp} }  + \honenormk{{\vp} - \projscott {\vp} }  ),
+\end{equation}
+we obtain
+\begin{equation}
+\label{Clem_error_Kbdy}
+\ltwonormdk{({\vp} - \projscott {\vp}) \cdot \normal )}^{2} \leq C h ||{{\vp}}||_{H^1( \omega_K)} ^{2}.
+\end{equation}
+Taking into account $\honenorm{{\vp}} \leq c\ltwonorm{p} $, we may write
+\begin{equation}
+\label{clem_jump_error}
+\sum_{K} \int_{\partial K } h^{-1} |({\vp} - \projscott {\vp}) \cdot \normal|^{2} \;ds \leq c_{t} \ltwonorm{p}^{2}.
+\end{equation}
+
+We define the fully discrete finite element approximation for all time to be the piecewise constant in time functions $\dispdisc(t,{\bf x})  := \dispdisc^n({\bf x})$ for $t \in (t_{n-1}, t_n]$, $\fluxdisc$ and $\pdisc$ are defined similarly. For such piecewise continuous in time functions, $v$, the norms $L^2(0,T; X)$ satisfy
+\begin{equation*}
+ || v ||_{(L^2; X) }= \int_0^T || v (s,\cdot) ||^2_X ~ds = \sum_{n=1}^N \Delta t   || v^n||^2_X,
+\end{equation*}
+where $X$ is any given function space over $\Omega$.
+
+For all ${\bf v} \in H^2(0,T; (L^2(\Omega))^d)$
+\begin{equation}
+\label{eq: time deriv error}
+\sum_{n=1}^{N} \Delta t \ltwonorm{{\bf v}_{\Delta t}^{n} - \frac{\partial {\bf v}}{\partial t} (t^n,\cdot) }^{2}
+\leq \Delta t^{2}  \int_{0}^{T} \ltwonorm{{\bf v}_{tt} }^{2} \mbox{d}s.
+\end{equation}
+
+For all $[{\bf v},{\bf w},q]  \in \left[( H^{1}(\Omega))^d \times H_{div} (\Omega) \times L^2 (\Omega) \right]$ we define the norm
+\begin{equation}
+\label{eqn:triple_norm}
+\triplenorm{[{\bf v},{\bf w},q] }^2
+:=\honenorm{{\bf v}}^2 + {\Delta t}^2\ltwonorm{\nabla \cdot {\bf w}}^2 + {\Delta t} \ltwonorm{{\bf w}}^2  + \ltwonorm{q}^2 + \jnorm{q}^2.
+\end{equation}
+
+For all $[{\bf v},{\bf w},q]  \in \left[L^{\infty} (0,T; ( H^{1}(\Omega))^d ) \times L^2(0,T;H_{div} (\Omega)) \times L^2(0,T; L^2(\Omega)) \right]$  the norm
+\begin{equation}
+\label{eqn:triple_norm time}
+\triplenormtime{[{\bf v},{\bf w},q] }^2
+:=  || {\bf v} ||_{L^{\infty}(H^1)}^2 + || {\bf w} ||_{L^{2}(L^2)}^2 + || q ||_{L^2(L^2)}^2,
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Existence and uniqueness
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Existence and uniqueness}
+\label{sec:existence_uniqueness}
+
+Combining the fully discrete equations (\ref{eqn:weak_fulldisc_elast_mom}), (\ref{eqn:weak_fulldisc_flux_mom}) and (\ref{eqn:weak_fulldisc_mass}), after first multiplying (\ref{eqn:weak_fulldisc_flux_mom}) and (\ref{eqn:weak_fulldisc_mass}) by $\Delta t$, gives the equivalent problem; For $n = 1,2,\ldots, n$ find $\disctriple$ such that
+\begin{eqnarray*}
+\label{Btimestep_weakform}
+&&B_{h}^{n}[\disctriple,\disctripletest] \nonumber \\
+&& \quad = (\mathbf{f}^{n},\dispdisctest) + (\mathbf{t}_{N},\dispdisctest)_{\Gamma_{N}}
+          + \Delta t(\mathbf{b}^{n},\fluxdisctest)
+          %- \Delta t (p_{D},\fluxdisctest\cdot \normal)_{\Gamma_{P}}
+          +\Delta t(g^{n},\pdisctest) \nonumber \\
+&& \qquad + (\nabla \cdot \dispdisc^{n-1} ,\pdisctest)
+          + J(\pdisc^{n-1},\pdisctest)\;\;\;\; \forall \disctripletest \in \mixedspacedisc,
+\end{eqnarray*}
+where
+\begin{multline}
+B_{h}^{n}[\disctriple,\disctripletest] \\
+=a(\dispdisc^{n},\dispdisctest)+ \Delta t(\perminv \fluxdisc^{n}, \fluxdisctest) - (\pdisc^{n}, \nabla \cdot \dispdisctest)  - \Delta t (\pdisc^{n}, \nabla \cdot \fluxdisctest) \\ + (\nabla \cdot \dispdisc^{n},\pdisctest)  + \Delta t ( \nabla \cdot \fluxdisc^{n},\pdisctest) + J(\pdisc^{n},\pdisctest).
+\label{combined_weak_form_fem}
+\end{multline}
+
+The linear form  satisfies the following continuity property
+\begin{equation*}
+|B_{h}^{n}[\disctriple,\disctripletest] | \leq C \triplenorm{\disctriplen} \triplenorm{\disctripletest}.
+\end{equation*}
+We apply Babuska's theory \cite{babuvska1971error} to show well-posedness (existence and uniqueness) of this discretized system at a particular time step. This requires us to prove a discrete inf-sup type result (Theorem \ref{discrete_infsup}) for the combined bilinear form (\ref{combined_weak_form_fem}).
+\begin{theorem}
+\label{discrete_infsup}
+Let $\gamma>0$ be a constant independent of any mesh parameters. Then the finite element formulation (\ref{eqns:weak_fulldisc_system}) satisfies the following discrete inf-sup condition
+\begin{equation}
+  \gamma \triplenorm{\disctriplen} \leq \sup_{\disctripletest \in \mixedspacedisctest}\frac{B_{h}^{n}[\disctriple,\disctripletest]}{\triplenorm{\disctripletest}} \;\; \forall \disctriple \in \mixedspacedisc.
+\end{equation}
+Hence, given a solution at the previous time step the linear system arising from the fully discrete method for the subsequent time step is non-singular.
+\end{theorem}
+\noindent The following proof follows ideas presented by \cite{burman2007unified}.\newline
+\begin{proof}
+
+\noindent \newline {\em Step 1, bounding $\honenorm{\dispdiscn}$, ${\Delta t}^{1/2}\ltwonorm{\fluxdiscn}$, and $\jnorm{\pdiscn}$.} \newline
+Choose $\disctripletest = (\dispdiscn, \fluxdiscn,\pdiscn)$, then using (\ref{eqn:a_coercive}) and (\ref{eqn:m_coercive}), we obtain,
+\begin{multline}
+B_{h}^{n}[\disctriple,\disctriple]=a(\dispdiscn,\dispdiscn)+ {\Delta t}(\perminv \fluxdiscn,\fluxdiscn) +J(\pdiscn,\pdiscn) \\ \geq C_{k} \honenorm{\dispdiscn}^{2} + {\lambda_{max}^{-1}}{\Delta t}\ltwonorm{\fluxdiscn}^{2}  +\jnorm{\pdiscn}^{2}.
+\label{ltwo_bound}
+\end{multline}\newline
+
+\noindent {\em Step 2, bounding $\ltwonorm{\pdiscn}$.}
+
+Choose $\disctripletest = (\projscott {\vphn} ,0,0)$ and add $0=\ltwonorm{\pdiscn}^{2} + (\pdiscn, \nabla \cdot {\vphn})$ to obtain
+\begin{equation}
+ B_{h}^{n}[\disctriple,(\projscott {\vphn},0,0)] = a(\dispdiscn,\projscott {\vphn}) + \ltwonorm{\pdiscn}^{2} + (\pdiscn, \nabla \cdot ( {\vphn} - \projscott {\vphn} )).
+ \label{p_bound_B}
+\end{equation}
+\noindent Focusing on the third term in (\ref{p_bound_B}) only, we apply the divergence theorem and split the integral over local elements to get
+\begin{equation*}
+ (\pdiscn, \nabla \cdot ({\vphn} - \projscott {\vphn}))= \sum_{K} \int_{\partial K }  \pdiscn   ({\vphn} - \projscott {\vphn}) \cdot \normal \;{d}s=\sum_{K} \frac{1}{2}\int_{\partial K }  [\pdiscn]   ({\vphn} - \projscott {\vphn}) \cdot \normal \;ds.
+\end{equation*}
+We thus have
+\begin{equation*}
+  B_{h}^{n}[\disctriple,(\projscott {\vphn},0,0)]  =\ltwonorm{\pdiscn}^{2}+  a(\dispdiscn,\projscott {\vphn})+  \sum_{K} \frac{1}{2}\int_{\partial K }  [\pdiscn]   ({\vphn} - \projscott {\vphn}) \cdot \normal \;{d}s.
+\end{equation*}
+Now first applying the Cauchy-Schwarz inequality and (\ref{eqn:a_cont}) on the right hand side to get
+\begin{multline*}
+  B_{h}^{n}[\disctriple,(\projscott {\vphn},0,0)]  \geq \ltwonorm{\pdiscn}^{2} - C_{c} \honenorm{\dispdiscn} \honenorm{\projscott {\vphn}} \\ -  \sum_{K} \frac{1}{2} \left( \int_{\partial K } \left(h^{1/2} [\pdiscn]\right)^{2} \;ds \right)^{1/2} \cdot \left( \int_{\partial K } \left( h^{-1/2} ({\vphn} - \projscott {\vphn}) \cdot \normal\right)^{2} \;ds \right)^{1/2}.
+\end{multline*}
+Now apply Young's inequality and (\ref{clem_bound}) to obtain
+\begin{multline*}
+  B_{h}^{n}[\disctriple,(\projscott {\vphn},0,0)]  \geq \ltwonorm{\pdiscn}^{2} -  \frac{C_{c}^{2}}{2\epsilon} \honenorm{\dispdiscn}^{2}-\frac{\epsilon \hat{c}}{2} \ltwonorm{\pdiscn}^{2} \\ -  \frac{1}{2\epsilon\delta}  J(\pdiscn,\pdiscn) - \frac{\epsilon}{2} \sum_{K} \int_{\partial K } h^{-1} |({\vphn} - \projscott {\vphn}) \cdot \normal|^{2} \;ds .
+\end{multline*}
+
+Applying (\ref{clem_jump_error}) we obtain
+\begin{multline}
+ B_{h}^{n}[\disctriple,(\projscott {\vphn},0,0)] \geq  -\frac{C_{c}^{2}}{2\epsilon} \honenorm{\dispdiscn}^{2}+ \left(1-\left(\hat{c}+{c_{t}}\right) \frac{\epsilon}{2}\right) \ltwonorm{\pdiscn}^{2} -  \frac{1}{2 \epsilon \delta} \jnorm{\pdiscn}^{2}.
+    \label{ltwopbound}
+\end{multline} \newline
+
+\noindent {\em Step 3, bounding $\Delta t \ltwonorm{\nabla \cdot \fluxdiscn}$}.\newline  Choosing $\disctripletest=(0,0,\Delta t \nabla \cdot \fluxdiscn)$ yields
+\begin{equation*}
+  B_{h}^{n}[\disctriple,(0,0,\Delta t\nabla \cdot \fluxdiscn)]= (\nabla \cdot\dispdiscn,\Delta t\nabla \cdot \fluxdiscn) + \Delta t^{2}\ltwonorm{\nabla \cdot \fluxdiscn}^{2} + J(\pdiscn,\Delta t\nabla \cdot \fluxdiscn).
+\end{equation*}
+We bound the first term using the Cauchy-Schwarz inequality followed by Young's inequality such that
+\begin{equation*}
+(\nabla \cdot\dispdiscn,\Delta t\nabla \cdot \fluxdiscn) \leq \frac{C_{p}}{2\epsilon}\honenorm{\dispdiscn}^{2}+ \frac{\epsilon\Delta t^{2}}{2}\ltwonorm{\nabla \cdot \fluxdiscn}^{2}.
+\end{equation*}
+We can also bound the third term as before using the Cauchy-Schwarz inequality followed by Young's inequality such that
+\begin{multline}
+J(\pdiscn,\Delta t\nabla \cdot \fluxdiscn) \leq \frac{1}{2\epsilon}J(\pdiscn,\pdiscn) + \frac{\epsilon\Delta t^{2}}{2}J(\nabla \cdot \fluxdiscn,\nabla \cdot \fluxdiscn) \\
+= \frac{1}{2\epsilon}J(\pdiscn,\pdiscn) + {\epsilon \delta \Delta t^{2}}\sum_{K} \int_{\partial K }  |h^{1/2}\nabla \cdot \fluxdiscn|^{2} \;ds \\ \leq \frac{1}{2 \epsilon}J(\pdiscn,\pdiscn) + {\epsilon \delta c_{z}  \Delta t^{2}}\ltwonorm{\nabla \cdot \fluxdiscn}^{2}.
+\label{eqn:J_pdivzbound}
+\end{multline}
+Where we have used the fact that ${\nabla\cdot\fluxdiscn} \in \pspacedisc $ in conjunction with (\ref{J_bound}). This yields
+\begin{equation}
+  B_{h}^{n}[\disctriple,(0,0, \Delta t \nabla \cdot \fluxdiscn)] \geq (1-{\epsilon\delta c_{z}}-\frac{\epsilon}{2})\Delta t^{2}\ltwonorm{\nabla \cdot \fluxdiscn}^{2} -\frac{1}{2 \epsilon }\jnorm{\pdiscn}^{2}-\frac{C_{p}}{2 \epsilon }\honenorm{\dispdiscn}^{2}.
+  \label{divfluxbound}
+\end{equation} \newline
+
+
+\noindent {\em Step 4, Combining steps 1-3.} Finally we can combine (\ref{ltwo_bound}), (\ref{ltwopbound}) and (\ref{divfluxbound}) to get control over all the norms by choosing $\disctripletest=(\beta \dispdiscn + \projscott {\vphn}, \beta \fluxdiscn, \beta \pdiscn +   \Delta t \nabla \cdot \fluxdiscn   )$, which yields
+\begin{multline}
+  B_{h}^{n}[\disctriple,(\beta \dispdiscn + \projscott {\vphn},  \beta  \fluxdiscn, \beta \pdiscn +  \Delta t \nabla \cdot \fluxdiscn )] \geq  \\ (\beta C_{k}-\frac{C_{c}^{2}+C_{p}}{2\epsilon}) \honenorm{\dispdiscn}^{2}      +  \beta{\lambda_{max}^{-1}} {\Delta t} \ltwonorm{\fluxdiscn}^{2} + \left(1-{\epsilon \delta c_{z}  }-\frac{\epsilon}{2}\right)\Delta t^{2}\ltwonorm{\nabla \cdot \fluxdiscn}^{2}  \\ + \left(1-\left(\hat{c}+c_{t}\right) \frac{\epsilon}{2}\right) \ltwonorm{\pdiscn}^{2} + \left(\beta - \frac{1}{2 \epsilon } - \frac{1}{2 \epsilon \delta} \right) \jnorm{\pdiscn}^{2},
+\end{multline}
+where we can choose
+\begin{equation*}
+\beta \geq \max\left[ \frac{C^{2}_{c}+C_{p}}{2 \epsilon C_{k}} + \frac{1 -\bar{C} \epsilon }{ C_{k}}, \lambda_{max}\left( 1 - \bar{C} \epsilon \right),   \frac{1}{2 \epsilon } + \frac{1}{2 \epsilon \delta} +1- \bar{C} \epsilon \right],
+\end{equation*}
+with $\bar{C}=\max\left[  \frac{\hat{c}+{c}_{t}}{2} , \delta {c}_{z}   -\frac{1}{2} \right] $. This yields
+\begin{equation*}
+ B_{h}^{n}[\disctriple,(\beta \dispdiscn + \projscott {\vphn}, \beta \fluxdiscn, \beta \pdiscn + \nabla \cdot \fluxdiscn )] \geq  (1- \bar{C}\epsilon) \triplenorm{\disctriplen}^{2}.
+\end{equation*}
+To complete the proof, we let ${\disctripletest=(\beta \dispdiscn + \projscott {\vphn}, \beta \fluxdiscn, \beta \pdiscn +   \Delta t \nabla \cdot \fluxdiscn   )}$ and show that for $\epsilon$ sufficiently small there exists  a constant $C$ such that $\triplenorm{\disctriplen} \geq C \triplenorm{\disctripletest}$.
+Using the triangle inequality and  (\ref{clem_bound}) we obtain
+\begin{eqnarray*}
+&&\triplenorm{(\beta \dispdiscn + \projscott {\vphn}, \beta \fluxdiscn, \beta \pdiscn + \Delta t\nabla \cdot \fluxdiscn   )}^2 \\
+&&\quad \leq C \left( \beta^2\honenorm{\dispdiscn}^2 + \honenorm{\projscott {\vphn}}^2 + \Delta t^2 (1+\beta)^2 \ltwonorm{\nabla \cdot \fluxdiscn}^2 + \beta^2 {\Delta t} \ltwonorm{\fluxdiscn}^2 \right . \\
+&&\qquad\qquad \left . + \beta^2\ltwonorm{\pdiscn}^2 + \beta^2 \jnorm{\pdiscn}^2 + {\Delta t}^2 \jnorm{\nabla \cdot \fluxdiscn}^2 \right) \\
+&&\quad \leq C \triplenorm{\disctriplen}^2,
+\end{eqnarray*}
+as desired.
+\end{proof}

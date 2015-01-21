@@ -1,0 +1,175 @@
+\section{Numerical results}
+\label{sec:results}
+
+We  present four numerical examples to test the performance of the proposed stabilized finite element method. The first two examples are from mechanobiology and geotechnical applications, the third is a swelling example that undergoes significant large deformations and the fourth is an application from respiratory physiology. For the implementation we used the C++ library libmesh \cite{kirk2007libmesh}, and the multi-frontal direct solver mumps \cite{amestoy2000multifrontal} to solve the resulting linear systems. For the strain energy law we chose a Neo-Hookean law taken from \cite[eqn. (3.119)]{wriggers2008nonlinear}, with the penalty term chosen such that $0\leq\phi<1$, namely
+
+%from \cite[eqn. (3.119)]{wriggers2008nonlinear},
+\begin{equation}
+W(\bb{C})=\frac{\mu}{2}(\mbox{tr}(\boldsymbol{C})-3)+\frac{\lambda}{4}(J^{2}-1)-(\mu+\frac{\lambda}{2})\mbox{ln}(J-1+\phi_{0}).
+\label{eqn:NeoHookean}
+\end{equation}
+For further discussion on strain energy laws for porelasticity we refer to \cite{chapelle2014general} and \cite{vuong2014general}. The material parameters $\mu$ and $\lambda$ in (\ref{eqn:NeoHookean}) can be related to the Young's modulus $E$ and the Poisson ratio $\nu$ by $\mu=E/(2(1+\nu))$ and  $\lambda=(E\nu)/((1+\nu)(1-2\nu))$. Details of the effective stress tensor and fourth-order spatial tangent modulus for this particular law can be found in \ref{sec:neo_example}. For the permeability law we chose
+\begin{equation}
+\perm_{0}(\boldsymbol{C})=k_{0}\boldsymbol{I}.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3D unconfined compression stress relaxation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{3D unconfined compression stress relaxation}
+\label{sec:unconfined}
+
+In this test, a cylindrical specimen of porous tissue is exposed to a prescribed displacement in the axial direction while left free to expand radially. The original experiment involved a specimen of articular cartilage being compressed via impervious smooth plates as shown in Figure \ref{fig:unconfined_diag}. Note that the two plates are not explicitly modelled in the simulation, but are realised through displacement boundary conditions. After loading the tissue, the displacement is held constant and the tissue is allowed to relax in the radial direction. The fluid pressure was constrained to zero at the outer radial surface. The outer radial boundary is permeable and free-draining, the upper and lower fluid boundaries are impermeable and frictionless. The outer radius and height of the cylinder is $5mm$, whereas the axial compression is $0.01 mm$. The parameters used for the simulation can be found in Table \ref{tab:unconfined_parameters}. For the special case of a cylindrical geometry, \cite{armstrong1984analysis} provides a closed-form analytical solution for the radial displacement on the porous medium in response to a step loading function.
+
+\begin{figure}[h]
+  \centering
+  \subfloat[]{\label{fig:unconfined_diag}\includegraphics[width=0.45\textwidth]{figures/unconfined_diag.eps}}
+  \subfloat[]{\label{fig:unconfined_sim}\includegraphics[width=0.55\textwidth]{figures/unconfined_large.eps}}
+  \label{fig:animals}
+\caption{ (a) The test problem. (b) Pressure field at $t=200s$ using a mesh with 3080 tetrahedra.}
+\end{figure}
+
+
+\begin{table}[h]
+\begin{center}
+\scalebox{0.8}{
+\begin{tabular}{ l c c c c }
+\hline
+Parameter    &  Description                     & Value  \\
+\hline
+$k$          & Dynamic permeability             & $10^{-3} \; \mbox{m}^{3}\,\mbox{s}\,\mbox{kg}^{-1}$  \\
+$\nu$        & Poisson's ratio                  & $0.15$  \\
+$E$          & Young's modulus                  & $1000$ $\mbox{kg}\,\mbox{m}^{-1}\,\mbox{s}^{-2}$  \\
+\hline
+$\Delta t$   & Time step used in the simulation & $4\,\mbox{s}$       \\
+$T$          & Final time of the simulation     & $1000\,\mbox{s}$    \\
+$\delta$   & Stabilization parameter          & $ 10^{-3}$ \\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Parameters used for the unconfined compression test problem.} \label{tab:unconfined_parameters}
+\end{table}
+
+The analytical solution for the radial displacement to this unconfined compression test is given by
+\begin{equation}
+ \frac{u}{a}(a,t)=\epsilon_{0}
+ \left[ \nu + (1-2\nu)(1-\nu) \sum^{\infty}_{n=1}
+        \frac{\exp{( -\alpha_n^{2} \frac{Mkt}{a^{2}}})}{\alpha_{n}^{2}(1-\nu)^{2}-(1-\nu)}  \right].
+\end{equation}
+Here $\alpha_n$ are the solutions to the characteristic equation, given by $J_{1}(x)-(1-\nu)xJ_{0}(x)/(1-2\nu)=0,$ where $J_{0}$ and $J_{1}$ are Bessel functions. We also have that $\epsilon_{0}$ is the amplitude of the applied axial strain, $a$ is the radius of the cylinder, and $t_{g}$ is the characteristic time of diffusion given by $t_{g}= a^{2}/M k$, where $M=\lambda + 2\mu$ is the P-wave modulus of the elastic solid skeleton, and $k$ is the permeability. The computed radial displacement (Figure \ref{fig:anal_unconfined_plot}) shows good agreement with the analytical solution provided by \cite{armstrong1984analysis}. The same problem has  been used to test other large deformation poroelastic software such as FEBio \cite{maas2012febio}. The effect of the stabilization parameter on the numerical solution has already been investigated in section \ref{sec:unconfined}.
+
+%The analytical solution available for this test problem describes the displacement of the outer radius which is directly dependent on the amount of mass in the system since the porous medium is assumed to be incompressible and fully saturated. It is therefore an ideal test problem for analyzing the effect that the added stabilization term has on the conservation of mass. In Figure \ref{fig:anal_unconfined_plot} we can see that for large values of $\delta$ the numerical solution looses mass faster and comes to a steady state that has less mass than the analytical solution. This is a clear limitation of the method and the stability parameter therefore needs to be chosen carefully. However, for 3D problems $\delta$ can be chosen to be very small so this effect is negligible, as can be seen in Figure \ref{fig:anal_unconfined_plot} for a stable value of $\delta=0.001$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{figures/unconfined_large_plot.pdf}
+\caption{Radial expansion versus time comparing the analytical and numerical solutions with $\delta=0.001$.}
+\label{fig:anal_unconfined_plot}
+\end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Terzaghi's problem
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Terzaghi's problem}
+\label{sec:Terzaghi}
+
+This is a classical geomechanics example with an analytical solution, and has been used to investigate finite element pressure oscillations, caused by overshooting of the numerical solution near the boundary \cite{murad1994stability,white2008stabilized}. The domain consists of a porous column of unit height, bounded at the sides and bottom by rigid and impermeable walls. The top is free to drain ($p_{D}=0$) and has a downward traction force, $p_{0}$, applied to it. The boundary and initial conditions for this 1D problem can be written as
+\begin{equation}
+\begin{gathered}\begin{aligned}
+t_{N} = -p_{0},\;\;p_{D}=0\;\;  &\mbox{on} \; x=0,\\
+u=0,\;\;z=0,\;\; &\mbox{on} \; x=1, \\
+u=0,\;\;z=0,\;\;p=0 \; &\mbox{in} \; (0,1).
+\end{aligned}\end{gathered}
+\label{eqn:compression}
+\end{equation}
+The analytical pressure solution, in non-dimensional form is given by
+\begin{equation}
+p^{*}=\sum_{n}^{\infty}\frac{2}{\pi(n+1/2)} \sin (\pi(n+1/2)) \exp^{-\pi(n+1/2)(\lambda+2\mu)k t}.
+\end{equation}
+When the poroelastic medium is subjected to the sudden loading, the saturating fluid undergoes an overpressurization. Subsequently this overpressure progressively vanishes, owing to the
+diffusion process of the fluid towards the boundary at the top of the column, which remains drained. For a detailed explanation and derivation of this solution see \cite[section 5.2.2]{wriggers2008nonlinear}. We discretized the column using 60 hexahedra elements and solved the problem using the proposed stabilized low-order finite element method and a higher-order inf-sup stable finite element method that uses a piecewise linear pressure approximation. The simulation results of the pressure for the two methods, taken at $t=0.01s$ and $t=1s$ are shown in Figure \ref{fig:compression}. The material parameters used for the simulation can be found in Table \ref{tab:terzaghi_parameters}. At $t=0.01s$ the piecewise linear (continuous) approximation suffers from overshooting due to the boundary layer solution (Figure \ref{fig:pone001}). The proposed method, which uses a piecewise constant pressure approximation does not suffer from this problem, and captures the pressure boundary layer solution reliably (Figure \ref{fig:pzero001}). At $t=1s$ the boundary layer has grown and both the piecewise linear (Figure \ref{fig:pone1}) and piecewise constant (Figure \ref{fig:pzero1}) approximation yield satisfactory results.
+
+\begin{table}[h]
+\begin{center}
+\scalebox{0.8}{
+\begin{tabular}{ l c c c c }
+\hline
+Parameter     &  Description                     & Value  \\
+\hline
+$k_{0}$       & Dynamic permeability             & $10^{-5} \; \mbox{m}^{3}\,\mbox{s}\,\mbox{kg}^{-1}$  \\
+$\nu$         & Poisson ratio                    & $0.25$  \\
+$E$           & Young's modulus                  & $100$ $\mbox{kg}\,\mbox{m}^{-1}\,\mbox{s}^{-2}$  \\
+\hline
+$\Delta t$    & Time step used in the simulation & $0.01\,\mbox{s}$    \\
+$T$           & Final time of the simulation     & $1\,\mbox{s}$    \\
+$\delta$    & Stabilization parameter          & $2\times10^{-5}$ \\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Parameters used for Terzaghi's problem. \label{tab:terzaghi_parameters}}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:pone001} \includegraphics[width=0.5\textwidth]{figures/pone001.eps}}
+  \subfloat[]{\label{fig:pzero001}\includegraphics[width=0.5\textwidth]{figures/pzero001.eps}} \newline
+  \subfloat[]{\label{fig:pone1}   \includegraphics[width=0.5\textwidth]{figures/pone1.eps}}
+  \subfloat[]{\label{fig:pzero1}  \includegraphics[width=0.5\textwidth]{figures/pzero1.eps}}
+\caption{(a) Pressure at $t=0.01s$ using a continuous linear pressure approximation. (b) Pressure at $t=0.01s$ using a discontinuous piecewise constant approximation. (c) Pressure at $t=1s$ using a continuous linear pressure approximation. (d) Pressure at $t=1s$ using a discontinuous piecewise constant approximation. \label{fig:compression}}
+
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Swelling test
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Swelling test}
+\label{sec:swelling}
+
+This  problem is similar to the one in \cite{chapelle2010poroelastic} and highlights the method's ability to reliably capture jumps in the pressure solution due to changes in material parameters. Given a unit cube of material, a fluid pressure gradient is imposed between the two opposite faces at $X=0$ and $X=1$. The pressure $p_{D}$ on the inlet face $X = 0$ is increased very rapidly from zero to a limiting value of $10 \mbox{kPa}$, i.e., $p_{D} = 10^{4} (1-\mbox{exp}(-t^{2}/0.25)) \;\mbox{Pa})$. On the outlet face $X = 1$, the pressure is fixed to be zero, $p_{D} =0$. There are no sources of sinks of fluid. A zero flux condition is applied for the fluid velocity on the four other faces ($Y=0,1, \;Z=0,1$). Normal displacements are required to be zero on the planes $X = 0$, $Y = 0$ and $Z = 0$.  The permeability of the cube $0 < X < 0.5, 0.5 < Y < 1, 0 < Z <0.5$ (1/8 of the volume of the unit cube) is smaller than in the rest of the domain by a factor of 500. The computational domain shown in Figure \ref{fig:swell_setup}, highlighting the region of reduced permeability. The parameters chosen for this test problem are shown in Table \ref{tab:parameters}.
+
+Fluid enters the region from the inlet face and the material swells like a sponge, undergoing large deformation as shown in Figure (\ref{fig:swell_sim}). The evolution of the pressure and the Jacobian at the points at $(0,0,1)$, $(0.5,0,1)$ and $(1,0,1)$ in the reference configuration is shown in Figures (\ref{fig:swell_p}) and (\ref{fig:swell_j}) respectively. These position are indicated by the red, blue and green balls in Figure \ref{fig:swell_setup}. The pressure decreases roughly linearly with $x$, the increase in volume also follows a similar pattern.  The pressure and volume change at the point $(0,1,0)$ (black ball in Figure \ref{fig:swell_setup}) is also shown in Figures (\ref{fig:swell_p}) and (\ref{fig:swell_j}). Due to its reduced permeability this region is much slower to swell and achieve its ultimate equilibrium state and the fluid mainly flows around the area of reduced permeability, see Figure \ref{fig:swell_sim}. The steep pressure gradients at the boundary of the less permeable region seen in Figure \ref{fig:swell_sim} are well approximated by the piecewise constant (discontinuous) pressure space even on this relatively coarse discretization. Continuous pressure spaces would require a much finer discretization in this region.
+
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:swell_setup}\includegraphics[width=0.45\textwidth]{figures/setup_balls.eps}}
+  \subfloat[]{\label{fig:swell_sim}\includegraphics[width=0.6\textwidth]{figures/bigswell_1s.eps}}
+  \caption{(a) Initial simulation setup. The grey cube represents the area of reduced permeability. The colored balls highlight the position of the points used for tracking the pressure and volume change during the simulation, shown in Figures \ref{fig:swell_p} and \ref{fig:swell_j}. (b) The deformed cube after $1s$. The pressure solution is plotted and the jumps in pressure at the interface between the high and low permeability regions can clearly be seen. The arrows illustrate the fluid-flux profile. \label{fig:animals_two} }
+
+\end{figure}
+
+\begin{table}[h]
+\begin{center}
+\scalebox{0.9}{
+\begin{tabular}{ l c c }
+\hline
+Parameter    & Value \\
+\hline
+$k_{0}$      & $10^{-5} \; \mbox{m}^{3}\,\mbox{s}\,\mbox{kg}^{-1}$ \\
+$\nu$        & $0.3$ \\
+$E$          & $8000$ $\mbox{kg}\,\mbox{m}^{-1}\,\mbox{s}^{-2}$ \\
+\hline
+$\Delta t$   & $0.02\,\mbox{s}$     \\
+$T$          & $20\,\mbox{s}$     \\
+$\delta$   & $10^{-4}$     \\
+\hline
+\end{tabular}
+}
+\end{center}
+\caption{Parameters used for the swelling test problem. \label{tab:parameters}}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:swell_p}\includegraphics[width=0.5\textwidth]{figures/swell_plong.eps}}
+  \subfloat[]{\label{fig:swell_j}\includegraphics[width=0.5\textwidth]{figures/swell_jlong.eps}}
+\caption{ Pressure (a) and volume change, $J$, (b) are plotted against time for four points, $(0,0,1)$ (red), $(0.5,0,1)$ (blue), $(1,0,1)$ (green), and $(1,0,1)$ (black) in the reference configuration. The position of these balls is also shown in Figure \ref{fig:swell_setup}. \label{fig:animals_three} }
+\end{figure}
+
+

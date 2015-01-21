@@ -1,0 +1,216 @@
+\section{The stabilized finite element method}
+\label{sec:fem}
+For ease of presentation, we will assume all Dirichlet boundary conditions are homogeneous, ie., $\boldsymbol{u}_{D} = {\bf 0}, {q_{D}} = 0, p_{D}=0$.  %
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Weak formulation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Weak formulation}
+\label{sec:weak_forms}
+To keep the notation similar to chapter \ref{chap:linear_poro}, we solve for the displacement $\boldsymbol{u}(\boldsymbol{X},t) = \boldsymbol{\chi}(\boldsymbol{X},t)-\boldsymbol{X}$ rather than the deformation map $\boldsymbol{\chi}(\boldsymbol{X},t)$, and define the following spaces for deformed location, fluid flux and pressure respectively,
+\begin{eqnarray*}
+\dispspace &=& \{ \dispcont \in (H^{1} (\Omega))^d :\dispcont= {\bf 0} \;\mbox{on} \;\Gamma_{D} \}, \\
+\fluxspace &=& \{ \fluxcont \in H_{div}(\Omega):\fluxcont \cdot \normal = 0 \;\mbox{on} \;\Gamma_{F} \}, \\
+\pspace    &=& \left\{
+  \begin{array}{l l}
+    L^{2}(\Omega)     &\; \text{if} \; \Gamma_{n} \cup \Gamma_{p} \neq \emptyset \\
+    L^{2}_{0}(\Omega) &\; \text{if} \;\Gamma_{n} \cup \Gamma_{p} = \emptyset,
+  \end{array} \right \},
+\end{eqnarray*}
+where
+$L^{2}_{0}(\Omega) = \left\{ q \in L^{2}(\Omega) : \int_{\Omega} q\;\mbox{d}x=0\right\}$.
+We combine these to construct the mixed solution space
+\begin{equation*}
+\mixedspace = \left\{ \dispspace
+  \times \fluxspace  \times  \pspace \right\}.
+\end{equation*}
+
+
+We make use of the identity $\nabla \cdot ( \boldsymbol{\sigma}_{e} \dispconttest)= \nabla \cdot \boldsymbol{\sigma}_{e} \cdot \dispconttest -  \boldsymbol{\sigma}_{e} : \nabla \dispconttest $, and  the symmetry of $\boldsymbol{\sigma}_{e}$ to yield the following continuous weak problem. Find $\dispcont(\boldsymbol{X},t) \in \dispspace$, $\fluxcont(\boldsymbol{x},t) \in \fluxspace$, and $\pcont(\boldsymbol{x},t) \in \mathcal{L}(\Omega)$ for any time $t\in[0,T]$ such that
+\begin{equation}
+\label{eqns:weak_cont_system}
+%\left .
+\begin{aligned}
+\int_{\Omega_{t}}  \boldsymbol{\sigma}_{e}
+                : \nabla^{S} \dispconttest    \; dv
+ - \int_{\Omega_{t}}  \pcont   \nabla \cdot \dispconttest  \; dv
+&= \int_{\Omega_{t}}  \rho \boldsymbol{f} \cdot \dispconttest  \; dv
+ + \int_{\Gamma_{t}} \boldsymbol{t}_{N} \cdot \dispconttest  \; ds \; \forall \dispconttest\in \dispspace, \\
+\int_{\Omega_{t}} \perminv \fluxcont \cdot \fluxconttest \; dv
+  - \int_{\Omega_{t}}  \pcont  \nabla \cdot\fluxconttest \; dv
+&= \int_{\Omega_{t}} \rho^{f} \boldsymbol{f} \cdot \fluxconttest \; dv \; \forall\fluxconttest\in \fluxspace,  \\
+\int_{\Omega_{t}} \pconttest \nabla \cdot  \dispconttime \; dv
+ + \int_{\Omega_{t}} \pconttest \nabla \cdot \fluxcont \; dv
+&= \int_{\Omega_{t}} g   \pconttest \; dv  \; \forall \pconttest \in \mathcal{L}(\Omega).
+\end{aligned}
+%\quad \right \}
+\end{equation}
+Here $ \nabla^{S} \boldsymbol{s}=\frac{1}{2}\left( \nabla \boldsymbol{s} + (\nabla \boldsymbol{s})^{T} \right)$ for some vector $\boldsymbol{s}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     The fully discrete model
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The fully discrete model}
+\label{sec:fully_discrete}
+
+Let $\mathcal{T}^{h}$ be a partition of $\Omega$ into non-overlapping elements $K$, where $h$ denotes the size of the largest element in $\mathcal{T}^{h}$ and assume that the partition is quasi-uniform. We define the following finite element spaces,
+\begin{eqnarray*}
+\dispspacedisc &=& \left\{ \dispdisc  \in C^{0}(\Omega): \dispdisc |_{K} \in P_{1}(K) \ \forall K \in \mathcal{T}^{h}, \dispdisc  = 0 \; \mbox{on} \;\Gamma_{D} \right\},  \\
+\fluxspacedisc &=&\left\{ \fluxdisc  \in C^{0}(\Omega): \fluxdisc |_{K} \in P_{1}(K) \ \forall K \in \mathcal{T}^{h},  \fluxdisc \cdot \normal = 0 \; \mbox{on} \;\Gamma_{F} \right\}, \\
+\pspacedisc &=& \left\{
+  \begin{array}{l l}
+    \left\{ \pdisc: \pdisc |_{K} \in P_{0}(K) \ \forall K \in \mathcal{T}^{h} \right\} & \; \text{if $\Gamma_{n} \cup \Gamma_{p} \neq \emptyset$}\\
+    \left\{ \pdisc: \pdisc |_{K} \in P_{0}(K), \int_{\Omega}  \pdisc =0 \ \forall K \in \mathcal{T}^{h}\right\} & \; \text{if $\Gamma_{n} \cup \Gamma_{p}=\emptyset$}
+  \end{array} \right. ,
+\end{eqnarray*}
+where $P_{0}(K)$ and $P_{1}(K)$ are respectively the spaces of constant and linear polynomials on $K$. We partition $[0,T]$ into $N$ evenly spaced non-overlapping regions $(t_{n-1}, t_n]$, $n=1,2,\dots, N$ , where $t_n-t_{n-1} = \Delta t$. For any sufficiently smooth function $v(t,x)$ we define $v^n(x) = v(t_n,x)$  and the discrete time derivative by $v_{\Delta t}^{n} := \frac{v^{n}-v^{n-1}}{\Delta t}$.
+
+The fully discrete weak problem is: For $n = 1,2, \ldots,N$, find $\dispdisc^{n} \in \dispspacedisc$, $\fluxdisc^{n} \in \fluxspacedisc$ and $\pdisc^{n} \in \pspacedisc $ such that
+
+
+\begin{multline}
+\label{eqns:weak_disc_system}
+\int_{\Omega_{t}}\boldsymbol{\sigma}_{e,h}^{n}
+                 : \nabla^{S} \dispdisctest \; dv
+ - \int_{\Omega_{t}}  \pdisc^{n}   \nabla \cdot \dispdisctest  \; dv
+= \int_{\Omega_{t}}  \rho \boldsymbol{f}^{n} \cdot \dispdisctest  \; dv
+ + \int_{\Gamma_{t}} \boldsymbol{t}_{N}^{n} \cdot \dispdisctest  \; ds \;
+   \forall \dispdisctest \in \dispspacedisc, \\
+\int_{\Omega_{t}} \perminv \fluxdisc^{n} \cdot \fluxdisctest \; dv
+  - \int_{\Omega_{t}}  \pdisc^{n}  \nabla \cdot\fluxdisctest \; dv
+= \int_{\Omega_{t}} \rho^{f} \boldsymbol{f}^{n} \cdot \fluxdisctest \; dv \; \forall\fluxdisctest\in \fluxspacedisc,  \\
+\int_{\Omega_{t}} \pdisctest \nabla \cdot  \dispdisctimen \; dv
+ + \int_{\Omega_{t}} \pdisctest \nabla \cdot \fluxdisc^{n} \; dv + J(\pdisctimediscn,\pdisctest)
+= \int_{\Omega_{t}} g^{n}   \pdisctest \; dv  \; \forall \pdisctest \in \pspacedisc.
+\end{multline}
+ 
+
+%The stabilization term is
+%\begin{equation}
+%J(\pcont,\pconttest)= \delta \sum_{K} \int_{\partial K \backslash \partial \Omega} h_{\partial K} [\pcont][\pconttest] \;\mbox{d}s.
+%\end{equation}
+%Here $\delta$ is a stabilization parameter that is independent of $h$ and $\Delta t $.  Here $ h_{\partial K} $ denotes the size (diameter) of an element edge in 2D or face in 3D, and $[\cdot]$ is the jump across an edge or face (taken on the interior edges only). %We will see in the numerical results, section \ref{sec:results} that the convergence is not sensitive to $\delta$. 
+
+
+
+%\begin{multline}
+%\int_{\Omega_{t}}  \nabla \cdot ( \frac{\Delta\dispdisc}{\Delta t } +  \cdot \Delta\fluxdisc ) \cdot \pdisctest  \;dv + %\frac{\delta}{\Delta t} \sum_{K} \int_{\partial k \backslash \partial \Omega} h_{\partial K} [\Delta \pdisc][\pdisctest] %\;{d}s \\ = \int_{\Omega_{t}}  \nabla \cdot ( \overline{\dispdisctimedisc} +  \cdot \overline{\fluxdisc} ) \cdot \pdisctest - g %\cdot \pdisctest \; dv  +  \delta \sum_{K} \int_{\partial k \backslash \partial \Omega} h_{\partial K} %[\overline{\pdisctimedisc
+%}][\pdisctest] \;{d}s  \;\; \;\; \forall \pdisctest\in \pspacedisctest.
+%\end{multline}
+
+%Comment about straight forward extension to keep solid acceleration, using commonly used newmark scheme and linearization from forcing term.
+
+%\subsection{Existence of a unique solution}
+
+%This particular element is commonly used for ‘mixed’ finite element
+%analysis in the infinitesimal regime, and passes the LBB condition for infinitesimal deformation [58].
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Newton's method
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%outline: linearize the virtual work statement and then discretize
+\subsection{Newton's Method}
+\label{sec:newton_method}
+
+Since the system of equations (\ref{eqns:weak_disc_system}) is highly nonlinear, its solution requires a scheme such as Newton's method. With Newton's method, an improved solution is obtained from a linear approximation of the nonlinear equation at an already computed solution. This first order Taylor expansion corresponds in finite element applications to the linearization of the weak form, and can be obtained by the directional derivative, explained in section \ref{sec:linearization}. Let $\solntrip^{n}=\{ \dispdiscn, \fluxdiscn, \pdiscn \} $ denote the solution vector at a particular time step, $\solnchangetrip=\{ \dispcontchange,  \fluxcontchange, \pcontchange \} $ denote the solution increment vector, and $\testtrip=\{ \dispdisctest, \fluxdisctest, \pdisctest \} $ the corresponding vector of test functions. Then the nonlinear system of equations (\ref{eqns:weak_disc_system}) can be recast in the form
+\begin{equation}
+ G(\solntrip,\testtrip)=0,
+  \label{eqn:G_zero}
+\end{equation}
+where
+\begin{multline}
+G(\solntrip,\testtrip)=
+\int_{\Omega_{t}}  \boldsymbol{\sigma}^{n}_{e,h}
+                :  \nabla^{S} \dispdisctest 
+- \pdiscn  \nabla\cdot \dispdisctest  \\
++ \int_{\Omega_{t}}\perminv \fluxdiscn \cdot \fluxdisctest
+- \pdiscn  \nabla \cdot \fluxdisctest + \pdisctest\nabla \cdot ( {\dispdisctimediscn} +  \fluxdiscn ) \;dv  + J(\pdisctimediscn,\pdisctest)\\
+- \int_{\Omega_{t}} \rho \boldsymbol{f}^{n}  \cdot \dispdisctest
++ \rho^{f} \boldsymbol{f}^{n} \cdot \fluxdisctest
++ g \pdisctest \; dv
+- \int_{\Gamma_{t}}   \boldsymbol{t}_{N}^{n}  \cdot \dispdisctest  \; ds.
+ \label{eqn:G_defintion}
+\end{multline}
+Considering a trial solution $ \solnattrip$, equation (\ref{eqn:G_zero}) can now be linearized in the direction of an increment $\solnchangetrip$ at $\solnattrip$ as
+\begin{equation}
+ G(\solnattrip,\testtrip) + DG(\solnattrip,\testtrip)[ \solnchangetrip] =0,
+\end{equation}
+or
+\begin{equation}
+ DG(\solnattrip,\testtrip)[ \solnchangetrip]= - G(\solnattrip,\testtrip),
+\end{equation}
+which essentially is Newton's method (see algorithm \ref{algo:newton} for the fully discrete version).
+
+\subsubsection{Linearization}
+\label{sec:linearization}
+In biphasic tissue problems, it is common to approximate the tangent by taking the nonlinear elasticity term as the only nonlinearity present and ignoring the other nonlinearities \cite{un2006penetration,white2008stabilized}. 
+
+
+ %This approach has been implemented with success in \cite{un2006penetration}, \cite{oomens1987mixture}, \cite{almeida1997mixed} and also seems to be robust for our proposed method.
+The dominant nonlinearity in (\ref{eqn:G_defintion}) is the elasticity term denoted by
+\begin{equation}
+{E}((\dispdiscn,\pdiscn) ,\dispdisctest)=\int_{\Omega_{t}}
+ \boldsymbol{\sigma}^{n}_{e,h}: \nabla^{S} \dispdisctest -  \pdiscn  \nabla\cdot \dispdisctest \; dv.
+\end{equation}
+For Newton's method we require the directional derivative of ${E}(\dispdisc ,\dispdisctest)$ at a particular trial solution $ \overline{\dispdisc}$ in the direction $\dispcontchange$, given by (see \cite[section 3.5.3]{wriggers2008nonlinear})
+\begin{equation}
+\begin{gathered}\begin{aligned}
+D{E}( (\overline{\dispdiscn}, \overline{\pdiscn}) ,\dispdisctest)[\dispcontchange]
+&=\int_{\Omega_{t}} \nabla^{S} \dispdisctest : \overline{\mathbf\Theta^{n}_{h}} :
+ \nabla^{S} \dispcontchange  \\
+&+
+\overline{\boldsymbol{\sigma}^{n}_{e,h}} : \left( (\nabla \dispcontchange)^{T} \cdot \nabla \dispdisctest \right) \; dv,
+\end{aligned}\end{gathered}
+\end{equation}
+where $\overline{\mathbf{\Theta}^{n}_{h}}$ is the fully-discrete, fourth-order spatial tangent modulus tensor and $\overline{\boldsymbol{\sigma}^{n}_{e,h}}$ is the effective (elastic) stress tensor both evaluated at a trial solution $ \overline{\dispdiscn}$. Any variable with a bar above it will correspond to it being evaluated at a trial solution and will therefore be considered as a known quantity. In the fully discrete algorithm \ref{algo:newton}, this trial solution will correspond to the solution of the previous Newton step. The spatial tangent modulus tensor $\mathbf\Theta$, due to its complexity, is described in section \ref{sec:incremental_spatial}. For a detailed explanation and derivation see \cite{wriggers2008nonlinear,bonet1997nonlinear}. The approximate linearization of the nonlinear problem (\ref{eqn:G_zero}) is thus given by
+\begin{equation}
+\begin{gathered}\begin{aligned}
+&DG(\solnattrip , \testtrip ) \solnchangetrip \\
+&\approx \int_{\Omega_{t}}  \nabla^{S} \dispdisctest  : \overline{\mathbf \Theta^{n}_{h}} :
+         \nabla^{S} \dispcontchange \\
+&+ \overline{\boldsymbol{\sigma}_{e,h}} :
+            \left( (\nabla \dispcontchange)^{T} \cdot \nabla \dispdisctest \right)
+- \pcontchange  \nabla \cdot\dispdisctest \; dv \\
+&+ \int_{\Omega_{t}}  \perminvat \fluxcontchange \cdot \fluxdisctest
+- \pcontchange  \nabla\cdot \fluxdisctest \;dv
++  \int_{\Omega_{t}} \pdisctest\nabla \cdot \left( \frac{\dispcontchange}{\Delta t }
++  \fluxcontchange \right) \; dv + J(\pdisctimediscn,\pdisctest).
+\end{aligned}\end{gathered}
+\end{equation}
+
+
+The fully discretized weak problem at each Newton step, to get an update for the approximate solution, is to find $ \dispcontchange \in \dispspacedisc$, $\fluxcontchange \in \fluxspacedisc$ and $\pcontchange \in \pspacedisc $ such that:
+
+\begin{multline}
+\label{eqn:newton_mass}
+\int_{\Omega_{t}} \nabla^{S} \dispdisctest : \overline{\mathbf \Theta^{n}_{h}} : \nabla^{S} \dispcontchange  + \overline{\boldsymbol{\sigma}^{n}_{e,h}}:
+            \left( (\nabla \dispcontchange)^{T} \cdot \nabla \dispdisctest \right)
+ - {\pcontchange}  \nabla \cdot\dispdisctest \; dv \\+ \int_{\Omega_{t}}  \perminvat \fluxcontchange \cdot \fluxdisctest \; dv -  \pcontchange  \nabla \cdot \fluxdisctest \;dv \\+ \int_{\Omega_{t}} \pdisctest \nabla \cdot
+       \left( \frac{\dispcontchange}{\Delta t } +  \fluxcontchange \right)  \;dv
++ J\left(\frac{ \pcontchange }{\Delta t},\pdisctest\right) \\
+\quad = \int_{\Omega_{t}}
+  \frac{1}{2} \overline{\boldsymbol{\sigma}^{n}_{e,h}}:
+              \left( \nabla \dispdisctest + (\nabla \dispdisctest)^{T} \right)
+- \overline{\pdiscn}  \nabla \cdot \dispdisctest  - \overline{\rho} \boldsymbol{f}^{n} \cdot \dispdisctest \; dv
+- \int_{\Gamma_{t}}  \boldsymbol{t}_{N}^{n} \cdot \dispdisctest \; ds \; \\ + \int_{\Omega_{t}}  \perminvat \overline{\fluxdiscn} \cdot \fluxdisctest \; dv -     \overline{\pdiscn} \cdot \nabla \fluxdisctest \;dv -  \overline{\rho^{f}} \boldsymbol{f}^{n} \cdot \fluxconttest \; dv \;\; \\ + \int_{\Omega_{t}}
+         \pdisctest \nabla \cdot ( \overline{\dispdisctimedisc} + \overline{\fluxdisc} )
+         + J\left(\overline{\pdisctimedisc},\pdisctest\right) - g   \pdisctest \; dv  \;\; \forall (\dispdisctest,\fluxdisctest,\pdisctest )\in\dispspacedisc,\fluxspacedisc,\pspacedisctest.
+\end{multline} 
+We can rewrite this using more compact notation
+\begin{equation}
+ DG(\solnattrip,\testtrip) \solnchangetrip = - G(\solnattrip,\testtrip).
+\end{equation}
+
+
+%Finally we can now rewrite the problem of finding the Newton update as
+%\begin{equation}
+% \mathcal{K}(\solnattripdisc,\testtripdisc)[ \solnchangetripdisc]= - \mathcal{R}(\solnattripdisc,\testtripdisc),
+%\end{equation}
+%where $ \mathcal{K}(\solnattripdisc,\testtripdisc)[ \solnchangetripdisc]=DG_{h}(\solnattripdisc,\testtripdisc)[\solnchangetripdisc]+J(\pdisctimedisc,\pdisctest)[\solnchangetripdisc]$, and $ \mathcal{R}(\solnattripdisc,\testtripdisc)=G(\solnattripdisc,\testtripdisc)+J(\pdisctimedisc,\pdisctest)$.
+%

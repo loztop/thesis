@@ -16,22 +16,25 @@
 \doublespacing
 
 %\usepackage{fullpage}
-\usepackage[sort&compress,square,comma,authoryear]{natbib}
+%\usepackage[sort&compress,square,comma,authoryear]{natbib}
+\usepackage[sort&compress,square,comma,numbers]{natbib}
 
+%\usepackage[numbers]{natbib}
 
-%% The amssymb package provides various useful mathematical symbols
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb,float,graphicx,multirow,subfig}
+
+\usepackage[utf8]{inputenc}
+ 
+\usepackage{amsthm}
+
 \usepackage{bm} 
-\usepackage{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
 
 %\usepackage{nomencl}
 \usepackage{amsmath}
 \usepackage{verbatim}
-\usepackage{subfig}
 \usepackage{epsfig}
-\usepackage{subfig}
 \usepackage{tikz}
 \usetikzlibrary{snakes}
 \usepackage{pstricks}
@@ -67,8 +70,9 @@
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/defines_poro}
 \input{contents/defines_thesis}
 
-\graphicspath{{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/}{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/}{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/}}
+%\graphicspath{{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/}{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/}{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/}}
 
+\graphicspath{{/home/lorenz/Dropbox/Dphil/poroelasticity_papers/coupling-nmbe/}{/home/lorenz/Dropbox/Dphil/poroelasticity_papers/ZZZ-OLD-versions/coupling_paper/}{/home/lorenz/Dropbox/Dphil/poroelasticity_papers/ZZZ-OLD-versions/large_deformation/}{/home/lorenz/Dropbox/Dphil/poroelasticity_papers/ZZZ-OLD-versions/ima_submission/}{/home/lorenz/Dropbox/Dphil/poroelasticity_papers/ZZZ-OLD-versions/poro-nonlinear-cmame-Dec-2014/}}
 
 
 %\makenomenclature
@@ -84,9 +88,11 @@
 
 \input{contents/frontmatter/title}
 \input{contents/frontmatter/abstract}
+\input{contents/frontmatter/publications}
+
 \tableofcontents
 \newpage
-\input{contents/frontmatter/acknowledgements}
+%\input{contents/frontmatter/acknowledgements}
 
 
 %\tableofcontents
@@ -124,7 +130,6 @@
 \input{contents/poroelasticity_chapter}
 
 
-\begin{comment}
 
 
 %% FEM intro
@@ -137,45 +142,47 @@
 %%Stabilized poroelasticity 
 \chapter{Stabilized low-order finite element approximation for linear three-field poroelasticity}
 \label{chap:linear_poro}
-%\begin{abstractchap}
-% \input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/abstract}
-%\end{abstractchap}
+\input{contents/linearfem_chapter}
 
-%\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/introduction_jcam}
-%\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/themodel_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/bilinearforms_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/cont_formulations_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/full_discrete_model_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/stability_fully_discrete_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/energy_fully_discrete_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/apriori_jcam}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/implementation}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/simulations}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/ima_submission/conclusion}
+
+
 
 
 %%Large deformation poroelasticity 
-\chapter{A stabilized nonlinear finite element method for three-field incompressible poroelasticity valid in large deformations}
-\label{chap:linear_fem}
+\chapter{A stabilized finite element method for nonlinear poroelasticity valid in large deformations}
+\label{chap:large_fem}
+\input{contents/large_chapter}
+
+
 %\begin{abstractchap}
 % \input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/abstract}
 %\end{abstractchap}
 
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/review}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/overview}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/overview}
+
+%Don't need these
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_theory}
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/continuum_mechanics_theory}
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/mixture_theory}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_fem}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/cont_weak_fem}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/discretized_fem}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/implementation_fem}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/simulations}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/conclusion}
+
+
+%Keep these
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/intro_fem}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/cont_weak_fem}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/discretized_fem}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/implementation_fem}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/simulations}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/conclusion}
 %
+
+%\begin{comment}
+
 %%Coupled lung model
-\chapter{A poroelastic model coupled to a fluid network with applications
-in lung modelling}
+\chapter{A poroelastic-fluid-network model of the lung}
+\label{chap:lung}
+\input{contents/lung_chapter}
+
 %
 
 %\begin{abstractchap}
@@ -185,19 +192,22 @@ in lung modelling}
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/introduction}
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/literature}
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/physiology}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/breathing_mechanics}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_assumptions_united}
-% Split this up bit (take out/divide up poro theory)
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/proposed_lung_model}
-%
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/summary_model_equations}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/implementation}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_generation}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/simulation_lung}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
 
-\end{comment}
+
+%Keep these
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/breathing_mechanics}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_assumptions_united}
+% Split this up bit (take out/divide up poro theory)
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/proposed_lung_model}
+%
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/summary_model_equations}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/implementation}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/model_generation}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/simulation_lung}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/conclusion}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
+
+%\end{comment}
 
 %% Conclusion
 \chapter{Conclusion}
@@ -211,13 +221,19 @@ in lung modelling}
 
 \appendix
 \chapter{Appendix}
+\input{contents/appendix/appendix}
 
 %%coupling paper appendix
 %\input{/users/lorenzb/Dphil/poroelasticity_papers/coupling_paper/contents/appendix_paper}
-\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/appendix_paper}
+%\input{/users/lorenzb/Dphil/poroelasticity_papers/large_deformation/contents/appendix_paper}
 
-\bibliographystyle{plainnat}
+%\bibliographystyle{plainnat}
+\bibliographystyle{abbrv}
+
+%\bibliographystyle{plain}
+
 %Central bibliography
-\bibliography{/home/scratch/Dropbox/Dphil/bibliography/lung}
+%\bibliography{/home/scratch/Dropbox/Dphil/bibliography/lung}
+\bibliography{/home/lorenz/Dropbox/Dphil/bibliography/lung}
 
 \end{document}
